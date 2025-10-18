@@ -1,0 +1,245 @@
+name: Check for New Presidential Polls
+
+on:
+  schedule:
+    # Run every day at 9:00 AM UTC
+    - cron: '0 9 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  check-polls:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install requests
+      
+      - name: Check for new polls and create issues
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python - <<'EOF'
+          import csv
+          import json
+          import os
+          import requests
+          from datetime import datetime
+          from pathlib import Path
+
+          # Configuration
+          CATALOG_URL = "https://raw.githubusercontent.com/MieuxVoter/sondages-commission-index/refs/heads/main/notices_catalog.csv"
+          CATALOG_REPO_URL = "https://github.com/MieuxVoter/sondages-commission-index"
+          GITHUB_TOKEN = os.environ["GITHUB_TOKEN"]
+          REPO = os.environ["GITHUB_REPOSITORY"]
+          LAST_COUNT_FILE = Path(".last_poll_count")
+          
+          def get_last_poll_count():
+              """Get the last recorded number of polls"""
+              if LAST_COUNT_FILE.exists():
+                  return int(LAST_COUNT_FILE.read_text().strip())
+              return 261  # Default starting count
+          
+          def save_poll_count(count):
+              """Save the current number of polls"""
+              LAST_COUNT_FILE.write_text(str(count))
+              print(f"📝 Updated counter to {count}")
+          
+          def get_catalog_polls():
+              """Fetch presidential polls from the catalog"""
+              response = requests.get(CATALOG_URL)
+              response.raise_for_status()
+              
+              polls = []
+              lines = response.text.splitlines()
+              reader = csv.DictReader(lines)
+              
+              for row in reader:
+                  category = row.get("categorie", "").strip()
+                  if category == "Pres":
+                      polls.append(row)
+              
+              return polls
+          
+          def get_existing_issues():
+              """Get existing issues to avoid duplicates"""
+              url = f"https://api.github.com/repos/{REPO}/issues"
+              headers = {
+                  "Authorization": f"token {GITHUB_TOKEN}",
+                  "Accept": "application/vnd.github.v3+json"
+              }
+              
+              existing_filenames = set()
+              page = 1
+              
+              while True:
+                  response = requests.get(
+                      url,
+                      headers=headers,
+                      params={"state": "open", "labels": "new-poll", "per_page": 100, "page": page}
+                  )
+                  response.raise_for_status()
+                  issues = response.json()
+                  
+                  if not issues:
+                      break
+                  
+                  for issue in issues:
+                      body = issue.get("body", "")
+                      # Extract filename from body
+                      if "Fichier PDF à vérifier:**" in body:
+                          import re
+                          match = re.search(r'\*\*Fichier PDF à vérifier:\*\* `([^`]+)`', body)
+                          if match:
+                              existing_filenames.add(match.group(1))
+                  
+                  page += 1
+              
+              return existing_filenames
+          
+          def create_issue(poll_data):
+              """Create a GitHub issue for a new poll"""
+              url = f"https://api.github.com/repos/{REPO}/issues"
+              headers = {
+                  "Authorization": f"token {GITHUB_TOKEN}",
+                  "Accept": "application/vnd.github.v3+json"
+              }
+              
+              # Extract poll information
+              filename = poll_data.get("filename", "Unknown")
+              name = poll_data.get("name", "")
+              year = poll_data.get("year", "")
+              pdf_url = poll_data.get("url", "")
+              creation_date = poll_data.get("pdf creation-date", "")
+              
+              title = f"📊 Nouveau sondage: {name}"
+              
+              body = f"""## Nouveau sondage présidentiel détecté
+
+          **Fichier PDF à vérifier:** `{filename}`
+
+          **URL PDF:** {pdf_url}
+
+          ### Informations complémentaires
+          - **Nom:** {name}
+          - **Année:** {year}
+          - **Date de création:** {creation_date}
+
+          ### Ressources
+          - 📁 [Voir dans le catalogue]({CATALOG_REPO_URL})
+          - 📄 [Télécharger le PDF]({pdf_url})
+          - 📖 [Guide d'ajout de sondage](https://github.com/{REPO}/blob/main/COMMENT_AJOUTER_UN_SONDAGE.md)
+
+          ### À faire
+          - [ ] Vérifier le PDF `{filename}`
+          - [ ] Extraire les données du sondage
+          - [ ] Créer le fichier `polls/<poll_id>.csv`
+          - [ ] Ajouter les métadonnées dans `polls.csv`
+          - [ ] Vérifier que les candidats existent dans `candidats.csv`
+          - [ ] Tester avec `pytest`
+          - [ ] Vérifier le merge avec `python merge.py`
+
+          ---
+          *Issue créée automatiquement par le workflow check-new-polls*
+          """
+              
+              data = {
+                  "title": title,
+                  "body": body,
+                  "labels": ["new-poll", "automated"]
+              }
+              
+              response = requests.post(url, headers=headers, json=data)
+              response.raise_for_status()
+              return response.json()
+          
+          def main():
+              print("🔍 Checking for new presidential polls...")
+              
+              # Get last recorded count
+              last_count = get_last_poll_count()
+              print(f"📋 Last recorded poll count: {last_count}")
+              
+              # Get catalog polls
+              catalog_polls = get_catalog_polls()
+              current_count = len(catalog_polls)
+              print(f"📊 Current presidential polls in catalog: {current_count}")
+              
+              # Calculate new polls
+              new_poll_count = current_count - last_count
+              
+              if new_poll_count <= 0:
+                  print(f"✅ No new polls detected (count unchanged or decreased)")
+                  return
+              
+              print(f"✨ Detected {new_poll_count} new poll(s)")
+              
+              # Get existing open issues to avoid duplicates
+              existing_issue_filenames = get_existing_issues()
+              print(f"🎫 Found {len(existing_issue_filenames)} open issues already")
+              
+              # Get the newest polls (last N polls from catalog)
+              new_polls = catalog_polls[-new_poll_count:]
+              
+              # Filter out polls that already have open issues
+              polls_to_create = []
+              for poll in new_polls:
+                  filename = poll.get("filename", "").strip()
+                  if filename and filename not in existing_issue_filenames:
+                      polls_to_create.append(poll)
+              
+              print(f"📝 Will create {len(polls_to_create)} new issue(s)")
+              
+              # Create issues for new polls
+              created_count = 0
+              for poll in polls_to_create[:10]:  # Limit to 10 issues per run
+                  try:
+                      issue = create_issue(poll)
+                      print(f"✅ Created issue #{issue['number']}: {issue['title']}")
+                      created_count += 1
+                  except Exception as e:
+                      print(f"❌ Failed to create issue for {poll.get('filename')}: {e}")
+              
+              # Update the counter only if we created issues
+              if created_count > 0:
+                  save_poll_count(current_count)
+              
+              print(f"\n📊 Summary:")
+              print(f"  - Previous count: {last_count}")
+              print(f"  - Current count: {current_count}")
+              print(f"  - New polls: {new_poll_count}")
+              print(f"  - Issues created: {created_count}")
+              
+              if created_count > 0:
+                  print(f"\n🎉 Successfully created {created_count} issue(s) for new polls!")
+              else:
+                  print(f"\n✅ All new polls already have open issues!")
+          
+          if __name__ == "__main__":
+              main()
+          EOF
+      
+      - name: Commit counter update
+        if: always()
+        run: |
+          if [ -f .last_poll_count ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add .last_poll_count
+            git diff --quiet --cached || git commit -m "🤖 Update poll counter [skip ci]"
+            git push || echo "No changes to push"
+          fi
+      
+      - name: Summary
+        if: always()
+        run: |
+          echo "## 📊 Poll Check Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Workflow completed. Check the logs above for details." >> $GITHUB_STEP_SUMMARY
