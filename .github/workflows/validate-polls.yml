@@ -1,0 +1,30 @@
+name: Validate polls and merge
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install test deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements_pytests.txt
+      - name: Run unit tests
+        run: pytest -q
+      - name: Build merged CSV
+        run: python merge.py
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: presidentielle2027
+          path: presidentielle2027.csv
