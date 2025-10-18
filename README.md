@@ -32,29 +32,6 @@ presidentielle2027/
 └── tests/                     # Suite de tests
 ```
 
-## 🚀 Utilisation
-
-### Générer le fichier consolidé
-
-```bash
-python merge.py
-```
-
-Cette commande produit `presidentielle2027.csv` à partir de tous les sondages disponibles.
-
-### Lancer les tests
-
-```bash
-pip install pytest
-pytest
-```
-
-Les tests valident :
-- La structure des fichiers CSV
-- L'intégrité des données
-- Le fonctionnement du merge
-- L'unicité des identifiants
-
 ## ➕ Contribuer
 
 ### Ajouter un nouveau sondage
@@ -113,39 +90,6 @@ Une fois mergé, `presidentielle2027.csv` est mis à jour automatiquement.
 | `erreur_sup` | Marge erreur supérieure (optionnel) |
 | `erreur_inf` | Marge erreur inférieure (optionnel) |
 
-## 🛠️ Développement
-
-### Prérequis
-
-- Python 3.11+
-- pytest (pour les tests)
-
-### Installation développeur
-
-```bash
-git clone https://github.com/MieuxVoter/presidentielle2027.git
-cd presidentielle2027
-pip install -r requirements_pytests.txt
-```
-
-### Workflow de développement
-
-1. Créez une branche : `git checkout -b ajout-sondage-ifop-avril`
-2. Ajoutez vos données
-3. Testez : `pytest && python merge.py`
-4. Committez : `git commit -m "Ajout sondage IFOP avril 2025"`
-5. Pushez et créez une PR
-
 ## 📜 Licence
 
 Ce projet est sous licence [MIT](LICENSE).
-
-## 🤝 Partenaires
-
-Projet porté par **[Mieux Voter](https://mieuxvoter.fr/)** pour promouvoir des méthodes de vote alternatives et la transparence démocratique.
-
-## 📞 Contact
-
-Pour toute question ou suggestion :
-- Ouvrez une [issue](https://github.com/MieuxVoter/presidentielle2027/issues)
-- Contactez Mieux Voter : contact@mieuxvoter.fr
