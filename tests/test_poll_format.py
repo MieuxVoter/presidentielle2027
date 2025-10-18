@@ -1,4 +1,5 @@
 """Validate that all poll result CSVs conform to the expected schema."""
+
 import csv
 from pathlib import Path
 
@@ -34,9 +35,7 @@ def test_poll_has_required_columns(poll_path: Path):
         reader = csv.DictReader(f)
         fieldnames = set(reader.fieldnames or [])
         required = {"candidat", "intentions", "erreur_sup", "erreur_inf"}
-        assert required.issubset(fieldnames), (
-            f"{poll_path.name} missing required columns: {required - fieldnames}"
-        )
+        assert required.issubset(fieldnames), f"{poll_path.name} missing required columns: {required - fieldnames}"
 
 
 @pytest.mark.parametrize("poll_path", get_poll_files())
@@ -66,27 +65,23 @@ def test_poll_intentions_are_numeric_or_blank(poll_path: Path):
                 try:
                     float(intentions)
                 except ValueError:
-                    pytest.fail(
-                        f"{poll_path.name} row {i} ({candidat}): intentions '{intentions}' not numeric"
-                    )
+                    pytest.fail(f"{poll_path.name} row {i} ({candidat}): intentions '{intentions}' not numeric")
 
 
 @pytest.mark.parametrize("poll_path", get_poll_files())
 def test_poll_filename_format(poll_path: Path):
     """Poll filenames should follow the format: YYYYMMDD_DDMM_ii_X.csv."""
     filename = poll_path.name
-    
+
     # Check extension
     assert filename.endswith(".csv"), f"Invalid extension for {filename}"
-    
+
     # Check underscore presence (format indicator)
     assert "_" in filename, f"Poll filename should contain underscores: {filename}"
-    
+
     # Additional format check: should have at least 3 parts when split by underscore
     parts = filename[:-4].split("_")  # Remove .csv extension
-    assert len(parts) >= 3, (
-        f"Poll filename {filename} should follow format YYYYMMDD_DDMM_ii_X"
-    )
+    assert len(parts) >= 3, f"Poll filename {filename} should follow format YYYYMMDD_DDMM_ii_X"
 
 
 @pytest.mark.parametrize("poll_path", get_poll_files())
@@ -109,16 +104,14 @@ def test_poll_error_margins_numeric_or_blank(poll_path: Path):
             candidat = (row.get("candidat") or "").strip()
             if not candidat:
                 continue
-            
+
             for field in ["erreur_sup", "erreur_inf"]:
                 value = (row.get(field) or "").strip()
                 if value:
                     try:
                         float(value)
                     except ValueError:
-                        pytest.fail(
-                            f"{poll_path.name} row {i} ({candidat}): {field} '{value}' not numeric"
-                        )
+                        pytest.fail(f"{poll_path.name} row {i} ({candidat}): {field} '{value}' not numeric")
 
 
 def test_poll_candidates_are_recognizable():
@@ -127,11 +120,13 @@ def test_poll_candidates_are_recognizable():
     This is a softer check that warns if candidates might be unrecognized.
     """
     import sys
+
     # Add parent to path for merge module
     sys.path.insert(0, str(ROOT))
-    
+
     try:
         import merge
+
         # Try to run merge - it will fail if candidates can't be mapped
         # This is already tested in test_merge.py but good to verify here too
         merge.merge(ROOT)

@@ -1,4 +1,5 @@
 """Validate core file structure and encoding."""
+
 import csv
 from pathlib import Path
 
@@ -76,7 +77,7 @@ def test_merge_script_is_executable():
     """The merge.py script should be a valid Python file."""
     merge_path = ROOT / "merge.py"
     assert merge_path.exists()
-    
+
     # Try to compile it (syntax check)
     with merge_path.open("r", encoding="utf-8") as f:
         code = f.read()
@@ -115,7 +116,7 @@ def test_github_workflows_exist():
     workflows_dir = ROOT / ".github" / "workflows"
     if not workflows_dir.exists():
         pytest.skip("No .github/workflows directory (optional for local dev)")
-    
+
     yml_files = list(workflows_dir.glob("*.yml")) + list(workflows_dir.glob("*.yaml"))
     assert len(yml_files) > 0, ".github/workflows exists but has no workflow files"
 

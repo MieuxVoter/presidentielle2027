@@ -18,15 +18,15 @@ def check_file_exists(path: Path, name: str) -> bool:
 
 def main() -> int:
     print("🔍 Checking presidentielle2027 repository health...\n")
-    
+
     all_ok = True
-    
+
     # Check core data files
     all_ok &= check_file_exists(ROOT / "candidats.csv", "candidats.csv")
     all_ok &= check_file_exists(ROOT / "hypotheses.csv", "hypotheses.csv")
     all_ok &= check_file_exists(ROOT / "polls.csv", "polls.csv")
     all_ok &= check_file_exists(ROOT / "merge.py", "merge.py")
-    
+
     # Check directories
     polls_dir = ROOT / "polls"
     if polls_dir.is_dir():
@@ -35,7 +35,7 @@ def main() -> int:
     else:
         print("❌ polls/ directory missing")
         all_ok = False
-    
+
     # Check tests
     tests_dir = ROOT / "tests"
     if tests_dir.is_dir():
@@ -44,7 +44,7 @@ def main() -> int:
     else:
         print("❌ tests/ directory missing")
         all_ok = False
-    
+
     # Check GitHub Actions
     workflows_dir = ROOT / ".github" / "workflows"
     if workflows_dir.is_dir():
@@ -53,7 +53,7 @@ def main() -> int:
     else:
         print("❌ .github/workflows/ missing")
         all_ok = False
-    
+
     # Check if merge output exists
     merged = ROOT / "presidentielle2027.csv"
     if merged.exists():
@@ -62,8 +62,8 @@ def main() -> int:
         print(f"✅ presidentielle2027.csv exists with {lines} rows (including header)")
     else:
         print("⚠️  presidentielle2027.csv not generated yet (run: python merge.py)")
-    
-    print("\n" + "="*60)
+
+    print("\n" + "=" * 60)
     if all_ok:
         print("✅ Repository structure is healthy!")
         print("\nNext steps:")

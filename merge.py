@@ -31,13 +31,7 @@ def _norm(s: str) -> str:
     if s is None:
         return ""
     # Replace fancy punctuation with ASCII equivalents
-    s2 = (
-        s.replace("’", "'")
-        .replace("`", "'")
-        .replace("–", "-")
-        .replace("—", "-")
-        .replace("‐", "-")
-    )
+    s2 = s.replace("’", "'").replace("`", "'").replace("–", "-").replace("—", "-").replace("‐", "-")
     # NFD then remove diacritics
     s2 = unicodedata.normalize("NFD", s2)
     s2 = "".join(ch for ch in s2 if unicodedata.category(ch) != "Mn")
@@ -101,7 +95,7 @@ def load_hypotheses(path: Path) -> Dict[str, List[str]]:
             raise ValueError("hypotheses.csv missing required columns")
         for row in rdr:
             hid = (row.get("id_hypothese") or "").strip()
-            raw = (row.get("hypothese_complete") or "")
+            raw = row.get("hypothese_complete") or ""
             # Split on commas, strip trailing punctuation/spaces
             names = [x.strip() for x in raw.split(",") if x.strip()]
             mapping[hid] = [_norm(x) for x in names]
@@ -158,9 +152,7 @@ def merge(repo_root: Path = ROOT) -> List[dict]:
         # Only warn if hypothesis known and non-empty
         if expected and got != expected:
             # Soft warning on stderr, continue merging
-            sys.stderr.write(
-                f"Warning: Poll {poll_id} candidates differ from hypothesis {hyp}.\n"
-            )
+            sys.stderr.write(f"Warning: Poll {poll_id} candidates differ from hypothesis {hyp}.\n")
 
         for r in results:
             name_key = _norm(r["candidat"])

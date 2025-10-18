@@ -74,7 +74,9 @@ def test_add_new_poll_file_updates_merge(tmp_path: Path):
     # Create results file by copying an existing one
     src_results = next((tmp_path / "polls").glob("*.csv"))
     assert src_results.exists()
-    (tmp_path / "polls" / f"{new_meta['poll_id']}.csv").write_text(src_results.read_text(encoding="utf-8"), encoding="utf-8")
+    (tmp_path / "polls" / f"{new_meta['poll_id']}.csv").write_text(
+        src_results.read_text(encoding="utf-8"), encoding="utf-8"
+    )
 
     # Act: re-merge
     rows_after = merge.merge(tmp_path)
@@ -89,16 +91,32 @@ def test_merged_output_has_expected_columns(tmp_path: Path):
 
     merge = load_merge_module()
     rows = merge.merge(tmp_path)
-    
+
     # Expected columns based on merge.py implementation
     expected = {
-        "poll_id", "hypothese", "nom_institut", "commanditaire",
-        "debut_enquete", "fin_enquete", "echantillon", "population",
-        "rolling", "media", "tour", "filename",
-        "candidate_id", "candidat", "complete_name", "name", "surname", "parti",
-        "intentions", "erreur_sup", "erreur_inf"
+        "poll_id",
+        "hypothese",
+        "nom_institut",
+        "commanditaire",
+        "debut_enquete",
+        "fin_enquete",
+        "echantillon",
+        "population",
+        "rolling",
+        "media",
+        "tour",
+        "filename",
+        "candidate_id",
+        "candidat",
+        "complete_name",
+        "name",
+        "surname",
+        "parti",
+        "intentions",
+        "erreur_sup",
+        "erreur_inf",
     }
-    
+
     if rows:
         actual = set(rows[0].keys())
         missing = expected - actual
@@ -117,7 +135,7 @@ def test_merged_output_has_no_duplicates(tmp_path: Path):
 
     merge = load_merge_module()
     rows = merge.merge(tmp_path)
-    
+
     # Create a signature for each row (poll_id + candidate_id should be unique)
     signatures = set()
     for row in rows:
@@ -143,7 +161,7 @@ def test_merged_output_candidate_references_valid(tmp_path: Path):
 
     merge = load_merge_module()
     rows = merge.merge(tmp_path)
-    
+
     for row in rows:
         cid = row.get("candidate_id")
         # Note: merge.py has fallback logic that generates IDs for unknown candidates
@@ -159,12 +177,10 @@ def test_merged_output_is_not_empty(tmp_path: Path):
 
     merge = load_merge_module()
     rows = merge.merge(tmp_path)
-    
+
     assert len(rows) > 0, "Merged output should not be empty"
-    
+
     # Verify we have at least as many rows as there are poll files × average candidates
     poll_files = list((tmp_path / "polls").glob("*.csv"))
     min_expected = len(poll_files)  # At least 1 candidate per poll
-    assert len(rows) >= min_expected, (
-        f"Expected at least {min_expected} rows but got {len(rows)}"
-    )
+    assert len(rows) >= min_expected, f"Expected at least {min_expected} rows but got {len(rows)}"
