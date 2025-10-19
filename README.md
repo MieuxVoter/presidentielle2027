@@ -1,13 +1,17 @@
 # presidentielle2027
-
-[![Validate polls and merge](https://github.com/MieuxVoter/presidentielle2027/actions/workflows/validate-polls.yml/badge.svg)](https://github.com/MieuxVoter/presidentielle2027/actions/workflows/validate-polls.yml)
 ![Sondages agrégés](https://img.shields.io/badge/sondages_agrégés-53-blue)
 
 Compilation des sondages d'opinion produits à l'occasion des élections présidentielles 2027 en France.
 
 ## 📊 Données consolidées
 
-Le fichier principal **`presidentielle2027.csv`** contient l'ensemble des résultats de sondages consolidés avec leurs métadonnées.
+Deux fichiers principaux contiennent l'ensemble des résultats de sondages consolidés avec leurs métadonnées:
+
+➡️ [Le fichier CSV des sondages pour l'élection présidentielle 2027](presidentielle2027.csv)
+
+➡️ [Le flux JSON des sondages pour l'élection présidentielle 2027](presidentielle2027.json)
+
+
 
 ### Structure du fichier
 

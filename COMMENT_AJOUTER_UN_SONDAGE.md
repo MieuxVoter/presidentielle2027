@@ -112,7 +112,7 @@ Lors de la PR, GitHub Actions va :
 - ✅ Tester que le merge fonctionne
 - ✅ Valider l'intégrité des données
 
-Une fois la PR mergée, le fichier `presidentielle2027.csv` sera automatiquement mis à jour.
+Une fois la PR mergée, les fichiers `presidentielle2027.csv` et `presidentielle2027.json` seront automatiquement mis à jour.
 
 ## Format de nommage des poll_id
 
