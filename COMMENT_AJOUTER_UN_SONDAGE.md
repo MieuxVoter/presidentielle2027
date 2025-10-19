@@ -8,7 +8,8 @@ Ce guide explique comment ajouter un nouveau sondage au projet **presidentielle2
 - **hypotheses.csv** : scénarios avec différentes listes de candidats
 - **polls.csv** : métadonnées des sondages (institut, dates, échantillon, etc.)
 - **polls/*.csv** : résultats individuels par sondage
-- **presidentielle2027.csv** : fichier consolidé (généré automatiquement)
+- **presidentielle2027.csv** : fichier consolidé CSV (généré automatiquement)
+- **presidentielle2027.json** : fichier consolidé JSON (généré automatiquement)
 
 ## Étapes pour ajouter un sondage
 
@@ -79,13 +80,15 @@ pip install pytest
 # Lancer les tests
 pytest tests/
 
-# Générer le CSV consolidé
+# Générer les fichiers consolidés (CSV et JSON)
 python merge.py
+python csv_to_json.py
 ```
 
 Si tout fonctionne, vous devriez voir :
 - ✅ Tous les tests passent
 - ✅ `presidentielle2027.csv` est créé/mis à jour
+- ✅ `presidentielle2027.json` est créé/mis à jour
 
 ### 5. Soumettre une Pull Request
 
