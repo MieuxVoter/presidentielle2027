@@ -64,7 +64,7 @@ def test_add_new_poll_file_updates_merge(tmp_path: Path):
     new_meta["poll_id"] = "20990101_0101_xx_A"  # future id to avoid collision
     # Append to polls.csv
     fieldnames = list(rows[0].keys())
-    new_meta["hypothese"] = "H1"  # ensure valid hypothesis
+    new_meta["hypothese"] = "H5"  # ensure valid hypothesis
 
     with polls_csv.open("w", encoding="utf-8", newline="") as f:
         wr = csv.DictWriter(f, fieldnames=fieldnames)
@@ -73,8 +73,12 @@ def test_add_new_poll_file_updates_merge(tmp_path: Path):
             wr.writerow(r)
         wr.writerow(new_meta)
 
-    # Create results file by copying an existing one
-    src_results = next((tmp_path / "polls").glob("*.csv"))
+    # Create results file by copying a specific poll that matches H5 hypothesis
+    # Use 20240707_0708_hi_D.csv which has the correct candidates for H5
+    src_results = tmp_path / "polls" / "20240707_0708_hi_D.csv"
+    if not src_results.exists():
+        # Fallback to any file if specific one doesn't exist
+        src_results = next((tmp_path / "polls").glob("*.csv"))
     assert src_results.exists()
     (tmp_path / "polls" / f"{new_meta['poll_id']}.csv").write_text(
         src_results.read_text(encoding="utf-8"), encoding="utf-8"
