@@ -153,3 +153,128 @@ def test_hypothesis_references_in_polls_are_valid():
             hyp = row.get("hypothese", "").strip()
             if hyp:
                 assert hyp in valid_hypotheses, f"Poll {row.get('poll_id')} references unknown hypothesis: {hyp}"
+
+
+def test_hypotheses_have_no_duplicates():
+    """Each hypothesis should have a unique set of candidates (no redundant hypotheses)."""
+    hypotheses_csv = ROOT / "hypotheses.csv"
+
+    # Map normalized candidate sets to hypothesis IDs
+    candidate_sets = {}
+
+    with hypotheses_csv.open("r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            hid = row.get("id_hypothese", "").strip()
+            candidates_str = row.get("hypothese_complete", "").strip()
+
+            if not hid or not candidates_str:
+                continue
+
+            # Normalize: split by comma, strip whitespace, sort alphabetically, ignore empty strings
+            candidates = [c.strip() for c in candidates_str.split(",") if c.strip()]
+            candidates_normalized = tuple(sorted(c.lower() for c in candidates))
+
+            if candidates_normalized in candidate_sets:
+                existing_hid = candidate_sets[candidates_normalized]
+                pytest.fail(
+                    f"Redundant hypothesis detected:\n"
+                    f"  {hid} and {existing_hid} have the same candidates:\n"
+                    f"  {', '.join(sorted(candidates))}\n"
+                    f"  Consider removing one of these hypotheses or verifying the data."
+                )
+
+            candidate_sets[candidates_normalized] = hid
+
+
+def test_poll_candidates_match_declared_hypothesis():
+    """Verify that candidates in each poll file match the declared hypothesis."""
+    import unicodedata
+
+    def normalize_name(name: str) -> str:
+        """Normalize candidate name for comparison (same logic as merge.py)."""
+        # NFD decomposition + filter combining marks
+        nfd = unicodedata.normalize("NFD", name.strip().lower())
+        return "".join(c for c in nfd if not unicodedata.combining(c))
+
+    hypotheses_csv = ROOT / "hypotheses.csv"
+    polls_csv = ROOT / "polls.csv"
+    polls_dir = ROOT / "polls"
+
+    # Load hypotheses: map id -> set of normalized candidate names
+    hypotheses = {}
+    with hypotheses_csv.open("r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            hid = row.get("id_hypothese", "").strip()
+            candidates_str = row.get("hypothese_complete", "").strip()
+            if not hid or not candidates_str:
+                continue
+
+            candidates = [c.strip() for c in candidates_str.split(",") if c.strip()]
+            hypotheses[hid] = set(normalize_name(c) for c in candidates)
+
+    # Check each poll
+    with polls_csv.open("r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            poll_id = row.get("poll_id", "").strip()
+            declared_hyp = row.get("hypothese", "").strip()
+
+            if not poll_id or not declared_hyp:
+                continue
+
+            # Read candidates from poll file
+            poll_file = polls_dir / f"{poll_id}.csv"
+            if not poll_file.exists():
+                continue  # This is checked by another test
+
+            poll_candidates = set()
+            with poll_file.open("r", encoding="utf-8") as pf:
+                poll_reader = csv.DictReader(pf)
+                for poll_row in poll_reader:
+                    candidat = poll_row.get("candidat", "").strip()
+                    if candidat:
+                        poll_candidates.add(normalize_name(candidat))
+
+            # Get expected candidates from hypothesis
+            if declared_hyp not in hypotheses:
+                pytest.fail(f"Poll {poll_id} references unknown hypothesis: {declared_hyp}")
+
+            expected_candidates = hypotheses[declared_hyp]
+
+            # Compare
+            if poll_candidates != expected_candidates:
+                missing = expected_candidates - poll_candidates
+                extra = poll_candidates - expected_candidates
+
+                error_msg = [
+                    f"\nPoll {poll_id} candidates don't match hypothesis {declared_hyp}:",
+                ]
+
+                if missing:
+                    # Find original names from hypothesis for better error message
+                    with hypotheses_csv.open("r", encoding="utf-8") as hf:
+                        reader = csv.DictReader(hf)
+                        for hrow in reader:
+                            if hrow.get("id_hypothese", "").strip() == declared_hyp:
+                                candidates_list = [
+                                    c.strip() for c in hrow.get("hypothese_complete", "").split(",") if c.strip()
+                                ]
+                                missing_names = [c for c in candidates_list if normalize_name(c) in missing]
+                                error_msg.append(f"  Missing in poll file: {missing_names}")
+                                break
+
+                if extra:
+                    # Find original names from poll file
+                    with poll_file.open("r", encoding="utf-8") as pf:
+                        poll_reader = csv.DictReader(pf)
+                        extra_names = [
+                            poll_row.get("candidat", "").strip()
+                            for poll_row in poll_reader
+                            if normalize_name(poll_row.get("candidat", "").strip()) in extra
+                        ]
+                        error_msg.append(f"  Extra in poll file: {extra_names}")
+
+                error_msg.append(f"  → Check if hypothesis {declared_hyp} is correct for this poll")
+                pytest.fail("\n".join(error_msg))
