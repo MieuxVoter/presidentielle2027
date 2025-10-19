@@ -1,0 +1,5261 @@
+[
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "PP",
+        "candidat": "Philippe Poutou",
+        "complete_name": "Philippe Poutou",
+        "name": "Philippe",
+        "surname": "Poutou",
+        "parti": "Nouveau Parti Anticapitaliste",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 17
+      },
+      {
+        "candidate_id": "OF",
+        "candidat": "Olivier Faure",
+        "complete_name": "Olivier Faure",
+        "name": "Olivier",
+        "surname": "Faure",
+        "parti": "Parti Socialiste",
+        "intentions": 5
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 24
+      },
+      {
+        "candidate_id": "LW",
+        "candidat": "Laurent Wauquiez",
+        "complete_name": "Laurent Wauquiez",
+        "name": "Laurent",
+        "surname": "Wauquiez",
+        "parti": "Les Républicains",
+        "intentions": 5
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "intentions": 32
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 4
+      }
+    ],
+    "poll_id": "20240707_0708_hi_A",
+    "institut": "Harris Interactive",
+    "commanditaire": "M6, RTL",
+    "debut_enquete": "2024-07-07",
+    "fin_enquete": "2024-07-08",
+    "echantillon": 2496,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H2",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9888-pres-harris-interactive-challenges-m6-rtl-le-8-juillet.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "PP",
+        "candidat": "Philippe Poutou",
+        "complete_name": "Philippe Poutou",
+        "name": "Philippe",
+        "surname": "Poutou",
+        "parti": "Nouveau Parti Anticapitaliste",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 5
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 16
+      },
+      {
+        "candidate_id": "OF",
+        "candidat": "Olivier Faure",
+        "complete_name": "Olivier Faure",
+        "name": "Olivier",
+        "surname": "Faure",
+        "parti": "Parti Socialiste",
+        "intentions": 6
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "GA",
+        "candidat": "Gabriel Attal",
+        "complete_name": "Gabriel Attal",
+        "name": "Gabriel",
+        "surname": "Attal",
+        "parti": "La République En Marche",
+        "intentions": 23
+      },
+      {
+        "candidate_id": "LW",
+        "candidat": "Laurent Wauquiez",
+        "complete_name": "Laurent Wauquiez",
+        "name": "Laurent",
+        "surname": "Wauquiez",
+        "parti": "Les Républicains",
+        "intentions": 5
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "intentions": 32
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 4
+      }
+    ],
+    "poll_id": "20240707_0708_hi_B",
+    "institut": "Harris Interactive",
+    "commanditaire": "M6, RTL",
+    "debut_enquete": "2024-07-07",
+    "fin_enquete": "2024-07-08",
+    "echantillon": 2496,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H1",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9888-pres-harris-interactive-challenges-m6-rtl-le-8-juillet.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "PP",
+        "candidat": "Philippe Poutou",
+        "complete_name": "Philippe Poutou",
+        "name": "Philippe",
+        "surname": "Poutou",
+        "parti": "Nouveau Parti Anticapitaliste",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 15
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 14
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 22
+      },
+      {
+        "candidate_id": "LW",
+        "candidat": "Laurent Wauquiez",
+        "complete_name": "Laurent Wauquiez",
+        "name": "Laurent",
+        "surname": "Wauquiez",
+        "parti": "Les Républicains",
+        "intentions": 5
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "intentions": 31
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 3
+      }
+    ],
+    "poll_id": "20240707_0708_hi_C",
+    "institut": "Harris Interactive",
+    "commanditaire": "M6, RTL",
+    "debut_enquete": "2024-07-07",
+    "fin_enquete": "2024-07-08",
+    "echantillon": 2496,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H4",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9888-pres-harris-interactive-challenges-m6-rtl-le-8-juillet.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "PP",
+        "candidat": "Philippe Poutou",
+        "complete_name": "Philippe Poutou",
+        "name": "Philippe",
+        "surname": "Poutou",
+        "parti": "Nouveau Parti Anticapitaliste",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 15
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 14
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "GA",
+        "candidat": "Gabriel Attal",
+        "complete_name": "Gabriel Attal",
+        "name": "Gabriel",
+        "surname": "Attal",
+        "parti": "La République En Marche",
+        "intentions": 20
+      },
+      {
+        "candidate_id": "LW",
+        "candidat": "Laurent Wauquiez",
+        "complete_name": "Laurent Wauquiez",
+        "name": "Laurent",
+        "surname": "Wauquiez",
+        "parti": "Les Républicains",
+        "intentions": 5
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "intentions": 31
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 4
+      }
+    ],
+    "poll_id": "20240707_0708_hi_D",
+    "institut": "Harris Interactive",
+    "commanditaire": "M6, RTL",
+    "debut_enquete": "2024-07-07",
+    "fin_enquete": "2024-07-08",
+    "echantillon": 2496,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H5",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9888-pres-harris-interactive-challenges-m6-rtl-le-8-juillet.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "PP",
+        "candidat": "Philippe Poutou",
+        "complete_name": "Philippe Poutou",
+        "name": "Philippe",
+        "surname": "Poutou",
+        "parti": "Nouveau Parti Anticapitaliste",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 12
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "OF",
+        "candidat": "Olivier Faure",
+        "complete_name": "Olivier Faure",
+        "name": "Olivier",
+        "surname": "Faure",
+        "parti": "Parti Socialiste",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 25
+      },
+      {
+        "candidate_id": "LW",
+        "candidat": "Laurent Wauquiez",
+        "complete_name": "Laurent Wauquiez",
+        "name": "Laurent",
+        "surname": "Wauquiez",
+        "parti": "Les Républicains",
+        "intentions": 5
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "intentions": 36
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 5
+      }
+    ],
+    "poll_id": "20250326_0327_if_A",
+    "institut": "IFOP",
+    "commanditaire": "JDD",
+    "debut_enquete": "2025-03-26",
+    "fin_enquete": "2025-03-27",
+    "echantillon": 1200,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H2",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9912-pres-ifop-jdd-30-mars-notice-pour-publication.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "PP",
+        "candidat": "Philippe Poutou",
+        "complete_name": "Philippe Poutou",
+        "name": "Philippe",
+        "surname": "Poutou",
+        "parti": "Nouveau Parti Anticapitaliste",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 13
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "OF",
+        "candidat": "Olivier Faure",
+        "complete_name": "Olivier Faure",
+        "name": "Olivier",
+        "surname": "Faure",
+        "parti": "Parti Socialiste",
+        "intentions": 5
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "GA",
+        "candidat": "Gabriel Attal",
+        "complete_name": "Gabriel Attal",
+        "name": "Gabriel",
+        "surname": "Attal",
+        "parti": "La République En Marche",
+        "intentions": 20
+      },
+      {
+        "candidate_id": "LW",
+        "candidat": "Laurent Wauquiez",
+        "complete_name": "Laurent Wauquiez",
+        "name": "Laurent",
+        "surname": "Wauquiez",
+        "parti": "Les Républicains",
+        "intentions": 8
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "intentions": 37
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 5
+      }
+    ],
+    "poll_id": "20250326_0327_if_B",
+    "institut": "IFOP",
+    "commanditaire": "JDD",
+    "debut_enquete": "2025-03-26",
+    "fin_enquete": "2025-03-27",
+    "echantillon": 1200,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H1",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9912-pres-ifop-jdd-30-mars-notice-pour-publication.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "PP",
+        "candidat": "Philippe Poutou",
+        "complete_name": "Philippe Poutou",
+        "name": "Philippe",
+        "surname": "Poutou",
+        "parti": "Nouveau Parti Anticapitaliste",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 13
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "OF",
+        "candidat": "Olivier Faure",
+        "complete_name": "Olivier Faure",
+        "name": "Olivier",
+        "surname": "Faure",
+        "parti": "Parti Socialiste",
+        "intentions": 5
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 21
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 11
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "intentions": 34
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 5
+      }
+    ],
+    "poll_id": "20250326_0327_if_C",
+    "institut": "IFOP",
+    "commanditaire": "JDD",
+    "debut_enquete": "2025-03-26",
+    "fin_enquete": "2025-03-27",
+    "echantillon": 1200,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H3",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9912-pres-ifop-jdd-30-mars-notice-pour-publication.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "PP",
+        "candidat": "Philippe Poutou",
+        "complete_name": "Philippe Poutou",
+        "name": "Philippe",
+        "surname": "Poutou",
+        "parti": "Nouveau Parti Anticapitaliste",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 13
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 11
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 20
+      },
+      {
+        "candidate_id": "LW",
+        "candidat": "Laurent Wauquiez",
+        "complete_name": "Laurent Wauquiez",
+        "name": "Laurent",
+        "surname": "Wauquiez",
+        "parti": "Les Républicains",
+        "intentions": 5
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "intentions": 35
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 6
+      }
+    ],
+    "poll_id": "20250326_0327_if_D",
+    "institut": "IFOP",
+    "commanditaire": "JDD",
+    "debut_enquete": "2025-03-26",
+    "fin_enquete": "2025-03-27",
+    "echantillon": 1200,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H4",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9912-pres-ifop-jdd-30-mars-notice-pour-publication.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "PP",
+        "candidat": "Philippe Poutou",
+        "complete_name": "Philippe Poutou",
+        "name": "Philippe",
+        "surname": "Poutou",
+        "parti": "Nouveau Parti Anticapitaliste",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 13
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "OF",
+        "candidat": "Olivier Faure",
+        "complete_name": "Olivier Faure",
+        "name": "Olivier",
+        "surname": "Faure",
+        "parti": "Parti Socialiste",
+        "intentions": 5
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 25
+      },
+      {
+        "candidate_id": "LW",
+        "candidat": "Laurent Wauquiez",
+        "complete_name": "Laurent Wauquiez",
+        "name": "Laurent",
+        "surname": "Wauquiez",
+        "parti": "Les Républicains",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 36
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 5
+      }
+    ],
+    "poll_id": "20250331_0331_hi_A",
+    "institut": "Harris Interactive",
+    "commanditaire": "RTL",
+    "debut_enquete": "2025-03-31",
+    "fin_enquete": "2025-03-31",
+    "echantillon": 1162,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H6",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9913-pres-toluna-harris-interactive-rtl-1er-avril.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "PP",
+        "candidat": "Philippe Poutou",
+        "complete_name": "Philippe Poutou",
+        "name": "Philippe",
+        "surname": "Poutou",
+        "parti": "Nouveau Parti Anticapitaliste",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 13
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "OF",
+        "candidat": "Olivier Faure",
+        "complete_name": "Olivier Faure",
+        "name": "Olivier",
+        "surname": "Faure",
+        "parti": "Parti Socialiste",
+        "intentions": 5
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 23
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 7
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 35
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 5
+      }
+    ],
+    "poll_id": "20250331_0331_hi_B",
+    "institut": "Harris Interactive",
+    "commanditaire": "RTL",
+    "debut_enquete": "2025-03-31",
+    "fin_enquete": "2025-03-31",
+    "echantillon": 1162,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H7",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9913-pres-toluna-harris-interactive-rtl-1er-avril.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "PP",
+        "candidat": "Philippe Poutou",
+        "complete_name": "Philippe Poutou",
+        "name": "Philippe",
+        "surname": "Poutou",
+        "parti": "Nouveau Parti Anticapitaliste",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 6
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 10
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 5.5
+      },
+      {
+        "candidate_id": "FH",
+        "candidat": "François Hollande",
+        "complete_name": "François Hollande",
+        "name": "François",
+        "surname": "Hollande",
+        "parti": "Parti Socialiste",
+        "intentions": 5.5
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 23.5
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 8
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "intentions": 32
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 3.5
+      }
+    ],
+    "poll_id": "20250402_0404_el_A",
+    "institut": "ELABE",
+    "commanditaire": "BFMTV, La Tribune Dimanche",
+    "debut_enquete": "2025-04-02",
+    "fin_enquete": "2025-04-04",
+    "echantillon": 1533,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H9",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9916-pres-elabe-bfmtv-tribune-dimanche-5-avril.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "PP",
+        "candidat": "Philippe Poutou",
+        "complete_name": "Philippe Poutou",
+        "name": "Philippe",
+        "surname": "Poutou",
+        "parti": "Nouveau Parti Anticapitaliste",
+        "intentions": 1.5
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 5.5
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 10
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 6
+      },
+      {
+        "candidate_id": "FH",
+        "candidat": "François Hollande",
+        "complete_name": "François Hollande",
+        "name": "François",
+        "surname": "Hollande",
+        "parti": "Parti Socialiste",
+        "intentions": 6
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 23
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 9
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2.5
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 31.5
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 4
+      }
+    ],
+    "poll_id": "20250402_0404_el_B",
+    "institut": "ELABE",
+    "commanditaire": "BFMTV, La Tribune Dimanche",
+    "debut_enquete": "2025-04-02",
+    "fin_enquete": "2025-04-04",
+    "echantillon": 1533,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H10",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9916-pres-elabe-bfmtv-tribune-dimanche-5-avril.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "PP",
+        "candidat": "Philippe Poutou",
+        "complete_name": "Philippe Poutou",
+        "name": "Philippe",
+        "surname": "Poutou",
+        "parti": "Nouveau Parti Anticapitaliste",
+        "intentions": 1.5
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 4.5
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 9.5
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 3.5
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 10.5
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 20.5
+      },
+      {
+        "candidate_id": "DV",
+        "candidat": "Dominique de Villepin",
+        "complete_name": "Dominique de Villepin",
+        "name": "Dominique",
+        "surname": "de Villepin",
+        "parti": "",
+        "intentions": 2.5
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 8.5
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 31
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 4
+      }
+    ],
+    "poll_id": "20250402_0404_el_C",
+    "institut": "ELABE",
+    "commanditaire": "BFMTV, La Tribune Dimanche",
+    "debut_enquete": "2025-04-02",
+    "fin_enquete": "2025-04-04",
+    "echantillon": 1533,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H11",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9916-pres-elabe-bfmtv-tribune-dimanche-5-avril.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 0,
+        "erreur_sup": 5
+      },
+      {
+        "candidate_id": "PP",
+        "candidat": "Philippe Poutou",
+        "complete_name": "Philippe Poutou",
+        "name": "Philippe",
+        "surname": "Poutou",
+        "parti": "Nouveau Parti Anticapitaliste",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 5
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 9.5
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 10.5
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 24
+      },
+      {
+        "candidate_id": "LW",
+        "candidat": "Laurent Wauquiez",
+        "complete_name": "Laurent Wauquiez",
+        "name": "Laurent",
+        "surname": "Wauquiez",
+        "parti": "Les Républicains",
+        "intentions": 4.5
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "intentions": 33.5
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 3.5
+      }
+    ],
+    "poll_id": "20250402_0404_el_D",
+    "institut": "ELABE",
+    "commanditaire": "BFMTV, La Tribune Dimanche",
+    "debut_enquete": "2025-04-02",
+    "fin_enquete": "2025-04-04",
+    "echantillon": 1533,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H4",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9916-pres-elabe-bfmtv-tribune-dimanche-5-avril.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "PP",
+        "candidat": "Philippe Poutou",
+        "complete_name": "Philippe Poutou",
+        "name": "Philippe",
+        "surname": "Poutou",
+        "parti": "Nouveau Parti Anticapitaliste",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 13
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "OF",
+        "candidat": "Olivier Faure",
+        "complete_name": "Olivier Faure",
+        "name": "Olivier",
+        "surname": "Faure",
+        "parti": "Parti Socialiste",
+        "intentions": 5
+      },
+      {
+        "candidate_id": "GA",
+        "candidat": "Gabriel Attal",
+        "complete_name": "Gabriel Attal",
+        "name": "Gabriel",
+        "surname": "Attal",
+        "parti": "La République En Marche",
+        "intentions": 18
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 10
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "intentions": 36
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 3.5
+      }
+    ],
+    "poll_id": "20250402_0404_el_E",
+    "institut": "ELABE",
+    "commanditaire": "BFMTV, La Tribune Dimanche",
+    "debut_enquete": "2025-04-02",
+    "fin_enquete": "2025-04-04",
+    "echantillon": 1533,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H13",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9916-pres-elabe-bfmtv-tribune-dimanche-5-avril.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1.5
+      },
+      {
+        "candidate_id": "PP",
+        "candidat": "Philippe Poutou",
+        "complete_name": "Philippe Poutou",
+        "name": "Philippe",
+        "surname": "Poutou",
+        "parti": "Nouveau Parti Anticapitaliste",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 5.5
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 10.5
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 4.5
+      },
+      {
+        "candidate_id": "OF",
+        "candidat": "Olivier Faure",
+        "complete_name": "Olivier Faure",
+        "name": "Olivier",
+        "surname": "Faure",
+        "parti": "Parti Socialiste",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "GA",
+        "candidat": "Gabriel Attal",
+        "complete_name": "Gabriel Attal",
+        "name": "Gabriel",
+        "surname": "Attal",
+        "parti": "La République En Marche",
+        "intentions": 18
+      },
+      {
+        "candidate_id": "DV",
+        "candidat": "Dominique de Villepin",
+        "complete_name": "Dominique de Villepin",
+        "name": "Dominique",
+        "surname": "de Villepin",
+        "parti": "",
+        "intentions": 5
+      },
+      {
+        "candidate_id": "LW",
+        "candidat": "Laurent Wauquiez",
+        "complete_name": "Laurent Wauquiez",
+        "name": "Laurent",
+        "surname": "Wauquiez",
+        "parti": "Les Républicains",
+        "intentions": 4.5
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 35.5
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 5
+      }
+    ],
+    "poll_id": "20250402_0404_el_F",
+    "institut": "ELABE",
+    "commanditaire": "BFMTV, La Tribune Dimanche",
+    "debut_enquete": "2025-04-02",
+    "fin_enquete": "2025-04-04",
+    "echantillon": 1533,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H14",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9916-pres-elabe-bfmtv-tribune-dimanche-5-avril.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "intentions": 52
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 48
+      }
+    ],
+    "poll_id": "20250411_0418_if_2A",
+    "institut": "IFOP",
+    "commanditaire": "Hexagone",
+    "debut_enquete": "2025-04-11",
+    "fin_enquete": "2025-04-18",
+    "echantillon": 10000,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H2_2",
+    "tour": "2nd Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9930-pres-ifop-hexagone-5-mai.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 47
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 53
+      }
+    ],
+    "poll_id": "20250411_0418_if_2B",
+    "institut": "IFOP",
+    "commanditaire": "Hexagone",
+    "debut_enquete": "2025-04-11",
+    "fin_enquete": "2025-04-18",
+    "echantillon": 10000,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H2_3",
+    "tour": "2nd Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9930-pres-ifop-hexagone-5-mai.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "GA",
+        "candidat": "Gabriel Attal",
+        "complete_name": "Gabriel Attal",
+        "name": "Gabriel",
+        "surname": "Attal",
+        "parti": "La République En Marche",
+        "intentions": 48
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 52
+      }
+    ],
+    "poll_id": "20250411_0418_if_2C",
+    "institut": "IFOP",
+    "commanditaire": "Hexagone",
+    "debut_enquete": "2025-04-11",
+    "fin_enquete": "2025-04-18",
+    "echantillon": 10000,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H2_4",
+    "tour": "2nd Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9930-pres-ifop-hexagone-5-mai.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 33
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 67
+      }
+    ],
+    "poll_id": "20250411_0418_if_2D",
+    "institut": "IFOP",
+    "commanditaire": "Hexagone",
+    "debut_enquete": "2025-04-11",
+    "fin_enquete": "2025-04-18",
+    "echantillon": 10000,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H2_5",
+    "tour": "2nd Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9930-pres-ifop-hexagone-5-mai.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 10
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 2.5
+      },
+      {
+        "candidate_id": "FR",
+        "candidat": "François Ruffin",
+        "complete_name": "François Ruffin",
+        "name": "François",
+        "surname": "Ruffin",
+        "parti": "La France Insoumise",
+        "intentions": 4.5
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 9
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "DV",
+        "candidat": "Dominique de Villepin",
+        "complete_name": "Dominique de Villepin",
+        "name": "Dominique",
+        "surname": "de Villepin",
+        "parti": "",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "GA",
+        "candidat": "Gabriel Attal",
+        "complete_name": "Gabriel Attal",
+        "name": "Gabriel",
+        "surname": "Attal",
+        "parti": "La République En Marche",
+        "intentions": 8
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 15
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 7.5
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2.5
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 32
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 2
+      }
+    ],
+    "poll_id": "20250411_0418_if_A",
+    "institut": "IFOP",
+    "commanditaire": "Hexagone",
+    "debut_enquete": "2025-04-11",
+    "fin_enquete": "2025-04-18",
+    "echantillon": 10000,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H17",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9930-pres-ifop-hexagone-5-mai.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 10
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 2.5
+      },
+      {
+        "candidate_id": "FR",
+        "candidat": "François Ruffin",
+        "complete_name": "François Ruffin",
+        "name": "François",
+        "surname": "Ruffin",
+        "parti": "La France Insoumise",
+        "intentions": 5
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 10
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 2.5
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 22
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 8
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 33
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 4
+      }
+    ],
+    "poll_id": "20250411_0418_if_B",
+    "institut": "IFOP",
+    "commanditaire": "Hexagone",
+    "debut_enquete": "2025-04-11",
+    "fin_enquete": "2025-04-18",
+    "echantillon": 10000,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H18",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9930-pres-ifop-hexagone-5-mai.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 10
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 2.5
+      },
+      {
+        "candidate_id": "FR",
+        "candidat": "François Ruffin",
+        "complete_name": "François Ruffin",
+        "name": "François",
+        "surname": "Ruffin",
+        "parti": "La France Insoumise",
+        "intentions": 5
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 10
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 24
+      },
+      {
+        "candidate_id": "LW",
+        "candidat": "Laurent Wauquiez",
+        "complete_name": "Laurent Wauquiez",
+        "name": "Laurent",
+        "surname": "Wauquiez",
+        "parti": "Les Républicains",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2.5
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 35
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 4
+      }
+    ],
+    "poll_id": "20250411_0418_if_C",
+    "institut": "IFOP",
+    "commanditaire": "Hexagone",
+    "debut_enquete": "2025-04-11",
+    "fin_enquete": "2025-04-18",
+    "echantillon": 10000,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H19",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9930-pres-ifop-hexagone-5-mai.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 10
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 2.5
+      },
+      {
+        "candidate_id": "FR",
+        "candidat": "François Ruffin",
+        "complete_name": "François Ruffin",
+        "name": "François",
+        "surname": "Ruffin",
+        "parti": "La France Insoumise",
+        "intentions": 5
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 11.5
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "GA",
+        "candidat": "Gabriel Attal",
+        "complete_name": "Gabriel Attal",
+        "name": "Gabriel",
+        "surname": "Attal",
+        "parti": "La République En Marche",
+        "intentions": 14
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 14
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 33
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 4
+      }
+    ],
+    "poll_id": "20250411_0418_if_D",
+    "institut": "IFOP",
+    "commanditaire": "Hexagone",
+    "debut_enquete": "2025-04-11",
+    "fin_enquete": "2025-04-18",
+    "echantillon": 10000,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H20",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9930-pres-ifop-hexagone-5-mai.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1.5
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 13
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 15
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 22
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 9
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2.5
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 33
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 4
+      }
+    ],
+    "poll_id": "20250411_0418_if_E",
+    "institut": "IFOP",
+    "commanditaire": "Hexagone",
+    "debut_enquete": "2025-04-11",
+    "fin_enquete": "2025-04-18",
+    "echantillon": 10000,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H21",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9930-pres-ifop-hexagone-5-mai.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 12
+      },
+      {
+        "candidate_id": "FR",
+        "candidat": "François Ruffin",
+        "complete_name": "François Ruffin",
+        "name": "François",
+        "surname": "Ruffin",
+        "parti": "La France Insoumise",
+        "intentions": 10
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 26
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 10
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 33
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 4
+      }
+    ],
+    "poll_id": "20250411_0418_if_F",
+    "institut": "IFOP",
+    "commanditaire": "Hexagone",
+    "debut_enquete": "2025-04-11",
+    "fin_enquete": "2025-04-18",
+    "echantillon": 10000,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H22",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9930-pres-ifop-hexagone-5-mai.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 54
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 46
+      }
+    ],
+    "poll_id": "20250423_0424_od_2A",
+    "institut": "ODOXA",
+    "commanditaire": "Public Senat, Presse Regionale",
+    "debut_enquete": "2025-04-23",
+    "fin_enquete": "2025-04-24",
+    "echantillon": 1005,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H2_1",
+    "tour": "2nd Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9916-pres-elabe-bfmtv-tribune-dimanche-5-avril.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 54
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "intentions": 46
+      }
+    ],
+    "poll_id": "20250423_0424_od_2B",
+    "institut": "ODOXA",
+    "commanditaire": "Public Senat, Presse Regionale",
+    "debut_enquete": "2025-04-23",
+    "fin_enquete": "2025-04-24",
+    "echantillon": 1005,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H2_2",
+    "tour": "2nd Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9916-pres-elabe-bfmtv-tribune-dimanche-5-avril.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "PP",
+        "candidat": "Philippe Poutou",
+        "complete_name": "Philippe Poutou",
+        "name": "Philippe",
+        "surname": "Poutou",
+        "parti": "Nouveau Parti Anticapitaliste",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 12
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 11.5
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 20.5
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 10
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "intentions": 32
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 3
+      }
+    ],
+    "poll_id": "20250423_0424_od_A",
+    "institut": "ODOXA",
+    "commanditaire": "Public Senat, Presse Regionale",
+    "debut_enquete": "2025-04-23",
+    "fin_enquete": "2025-04-24",
+    "echantillon": 1005,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H15",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9916-pres-elabe-bfmtv-tribune-dimanche-5-avril.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "PP",
+        "candidat": "Philippe Poutou",
+        "complete_name": "Philippe Poutou",
+        "name": "Philippe",
+        "surname": "Poutou",
+        "parti": "Nouveau Parti Anticapitaliste",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 12
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 12
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 20
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 9.5
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 31.5
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 3
+      }
+    ],
+    "poll_id": "20250423_0424_od_B",
+    "institut": "ODOXA",
+    "commanditaire": "Public Senat, Presse Regionale",
+    "debut_enquete": "2025-04-23",
+    "fin_enquete": "2025-04-24",
+    "echantillon": 1005,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H16",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9916-pres-elabe-bfmtv-tribune-dimanche-5-avril.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 52
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "intentions": 48
+      }
+    ],
+    "poll_id": "20250429_0430_if_2A",
+    "institut": "IFOP",
+    "commanditaire": "Hexagone",
+    "debut_enquete": "2025-04-29",
+    "fin_enquete": "2025-04-30",
+    "echantillon": 2000,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H2_2",
+    "tour": "2nd Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9930-pres-ifop-hexagone-5-mai.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 0.5
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 10
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "FR",
+        "candidat": "François Ruffin",
+        "complete_name": "François Ruffin",
+        "name": "François",
+        "surname": "Ruffin",
+        "parti": "La France Insoumise",
+        "intentions": 5.5
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 10
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 21
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 9
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "intentions": 32
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 4
+      }
+    ],
+    "poll_id": "20250429_0430_if_A",
+    "institut": "IFOP",
+    "commanditaire": "Hexagone",
+    "debut_enquete": "2025-04-29",
+    "fin_enquete": "2025-04-30",
+    "echantillon": 2000,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H23",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9930-pres-ifop-hexagone-5-mai.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 10
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "FR",
+        "candidat": "François Ruffin",
+        "complete_name": "François Ruffin",
+        "name": "François",
+        "surname": "Ruffin",
+        "parti": "La France Insoumise",
+        "intentions": 5
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 10
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 23
+      },
+      {
+        "candidate_id": "LW",
+        "candidat": "Laurent Wauquiez",
+        "complete_name": "Laurent Wauquiez",
+        "name": "Laurent",
+        "surname": "Wauquiez",
+        "parti": "Les Républicains",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "intentions": 34
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 5
+      }
+    ],
+    "poll_id": "20250429_0430_if_B",
+    "institut": "IFOP",
+    "commanditaire": "Hexagone",
+    "debut_enquete": "2025-04-29",
+    "fin_enquete": "2025-04-30",
+    "echantillon": 2000,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H24",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9930-pres-ifop-hexagone-5-mai.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 14
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 10
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 21
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 13
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 30
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 5
+      }
+    ],
+    "poll_id": "20250519_0519_hi_A",
+    "institut": "Harris Interactive",
+    "commanditaire": "LCI",
+    "debut_enquete": "2025-05-19",
+    "fin_enquete": "2025-05-19",
+    "echantillon": 1217,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H25",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9942-p-toluna-hi-lci-20-mai.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 14
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 10
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 21
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 12
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "intentions": 31
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 5
+      }
+    ],
+    "poll_id": "20250519_0519_hi_B",
+    "institut": "Harris Interactive",
+    "commanditaire": "LCI",
+    "debut_enquete": "2025-05-19",
+    "fin_enquete": "2025-05-19",
+    "echantillon": 1217,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H26",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9942-p-toluna-hi-lci-20-mai.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 14
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 11
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "GA",
+        "candidat": "Gabriel Attal",
+        "complete_name": "Gabriel Attal",
+        "name": "Gabriel",
+        "surname": "Attal",
+        "parti": "La République En Marche",
+        "intentions": 15
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 17
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 31
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 5
+      }
+    ],
+    "poll_id": "20250519_0519_hi_C",
+    "institut": "Harris Interactive",
+    "commanditaire": "LCI",
+    "debut_enquete": "2025-05-19",
+    "fin_enquete": "2025-05-19",
+    "echantillon": 1217,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H27",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9942-p-toluna-hi-lci-20-mai.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 15
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 11
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "GA",
+        "candidat": "Gabriel Attal",
+        "complete_name": "Gabriel Attal",
+        "name": "Gabriel",
+        "surname": "Attal",
+        "parti": "La République En Marche",
+        "intentions": 15
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 16
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "intentions": 31
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 5
+      }
+    ],
+    "poll_id": "20250519_0519_hi_D",
+    "institut": "Harris Interactive",
+    "commanditaire": "LCI",
+    "debut_enquete": "2025-05-19",
+    "fin_enquete": "2025-05-19",
+    "echantillon": 1217,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H28",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9942-p-toluna-hi-lci-20-mai.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 13.5
+      },
+      {
+        "candidate_id": "OF",
+        "candidat": "Olivier Faure",
+        "complete_name": "Olivier Faure",
+        "name": "Olivier",
+        "surname": "Faure",
+        "parti": "Parti Socialiste",
+        "intentions": 4.5
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 5
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 21
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 16
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "intentions": 31
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 3
+      }
+    ],
+    "poll_id": "20250519_0520_if_A",
+    "institut": "IFOP",
+    "commanditaire": "Le Figaro, Sud Radio",
+    "debut_enquete": "2025-05-19",
+    "fin_enquete": "2025-05-20",
+    "echantillon": 2000,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H35",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9944-pres-ifop-le-figaro-sud-radio-21-mai.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 3.5
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 13
+      },
+      {
+        "candidate_id": "OF",
+        "candidat": "Olivier Faure",
+        "complete_name": "Olivier Faure",
+        "name": "Olivier",
+        "surname": "Faure",
+        "parti": "Parti Socialiste",
+        "intentions": 4.5
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 4.5
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 21
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 16
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 31
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 3.5
+      }
+    ],
+    "poll_id": "20250519_0520_if_B",
+    "institut": "IFOP",
+    "commanditaire": "Le Figaro, Sud Radio",
+    "debut_enquete": "2025-05-19",
+    "fin_enquete": "2025-05-20",
+    "echantillon": 2000,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H36",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9944-pres-ifop-le-figaro-sud-radio-21-mai.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 12
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 15
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 16
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 9
+      },
+      {
+        "candidate_id": "DV",
+        "candidat": "Dominique de Villepin",
+        "complete_name": "Dominique de Villepin",
+        "name": "Dominique",
+        "surname": "de Villepin",
+        "parti": "",
+        "intentions": 5
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "intentions": 33
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 4
+      }
+    ],
+    "poll_id": "20250924_0925_if_A",
+    "institut": "IFOP",
+    "commanditaire": "L'Opinion, Sud Radio",
+    "debut_enquete": "2025-09-24",
+    "fin_enquete": "2025-09-25",
+    "echantillon": 1210,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H29",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9987-pres-ifop-lopinion-sud-radio-29-septembre.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 3.5
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 12
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 15
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 16
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 9
+      },
+      {
+        "candidate_id": "DV",
+        "candidat": "Dominique de Villepin",
+        "complete_name": "Dominique de Villepin",
+        "name": "Dominique",
+        "surname": "de Villepin",
+        "parti": "",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 33
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 4.5
+      }
+    ],
+    "poll_id": "20250924_0925_if_B",
+    "institut": "IFOP",
+    "commanditaire": "L'Opinion, Sud Radio",
+    "debut_enquete": "2025-09-24",
+    "fin_enquete": "2025-09-25",
+    "echantillon": 1210,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H30",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9987-pres-ifop-lopinion-sud-radio-29-septembre.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 5
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 13
+      },
+      {
+        "candidate_id": "OF",
+        "candidat": "Olivier Faure",
+        "complete_name": "Olivier Faure",
+        "name": "Olivier",
+        "surname": "Faure",
+        "parti": "Parti Socialiste",
+        "intentions": 7
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 19
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 10
+      },
+      {
+        "candidate_id": "DV",
+        "candidat": "Dominique de Villepin",
+        "complete_name": "Dominique de Villepin",
+        "name": "Dominique",
+        "surname": "de Villepin",
+        "parti": "",
+        "intentions": 4.5
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 34
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 4.5
+      }
+    ],
+    "poll_id": "20250924_0925_if_C",
+    "institut": "IFOP",
+    "commanditaire": "L'Opinion, Sud Radio",
+    "debut_enquete": "2025-09-24",
+    "fin_enquete": "2025-09-25",
+    "echantillon": 1210,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H31",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9987-pres-ifop-lopinion-sud-radio-29-septembre.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1.5
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 13
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 14
+      },
+      {
+        "candidate_id": "GA",
+        "candidat": "Gabriel Attal",
+        "complete_name": "Gabriel Attal",
+        "name": "Gabriel",
+        "surname": "Attal",
+        "parti": "La République En Marche",
+        "intentions": 10
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 12
+      },
+      {
+        "candidate_id": "DV",
+        "candidat": "Dominique de Villepin",
+        "complete_name": "Dominique de Villepin",
+        "name": "Dominique",
+        "surname": "de Villepin",
+        "parti": "",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2.5
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 34
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 5
+      }
+    ],
+    "poll_id": "20250924_0925_if_D",
+    "institut": "IFOP",
+    "commanditaire": "L'Opinion, Sud Radio",
+    "debut_enquete": "2025-09-24",
+    "fin_enquete": "2025-09-25",
+    "echantillon": 1210,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H32",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9987-pres-ifop-lopinion-sud-radio-29-septembre.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 13
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 16
+      },
+      {
+        "candidate_id": "GD",
+        "candidat": "Gérald Darmanin",
+        "complete_name": "Gérald Darmanin",
+        "name": "Gérald",
+        "surname": "Darmanin",
+        "parti": "",
+        "intentions": 7
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 13
+      },
+      {
+        "candidate_id": "DV",
+        "candidat": "Dominique de Villepin",
+        "complete_name": "Dominique de Villepin",
+        "name": "Dominique",
+        "surname": "de Villepin",
+        "parti": "",
+        "intentions": 5
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 35
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 4
+      }
+    ],
+    "poll_id": "20250924_0925_if_E",
+    "institut": "IFOP",
+    "commanditaire": "L'Opinion, Sud Radio",
+    "debut_enquete": "2025-09-24",
+    "fin_enquete": "2025-09-25",
+    "echantillon": 1210,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H33",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9987-pres-ifop-lopinion-sud-radio-29-septembre.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 13
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 16
+      },
+      {
+        "candidate_id": "FB",
+        "candidat": "François Bayrou",
+        "complete_name": "François Bayrou",
+        "name": "François",
+        "surname": "Bayrou",
+        "parti": "Mouvement Démocrate",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 13
+      },
+      {
+        "candidate_id": "DV",
+        "candidat": "Dominique de Villepin",
+        "complete_name": "Dominique de Villepin",
+        "name": "Dominique",
+        "surname": "de Villepin",
+        "parti": "",
+        "intentions": 6
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 35
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 5
+      }
+    ],
+    "poll_id": "20250924_0925_if_F",
+    "institut": "IFOP",
+    "commanditaire": "L'Opinion, Sud Radio",
+    "debut_enquete": "2025-09-24",
+    "fin_enquete": "2025-09-25",
+    "echantillon": 1210,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H34",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9987-pres-ifop-lopinion-sud-radio-29-septembre.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 15
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 15
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 15
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 12
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 3.5
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 30
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 5.5
+      }
+    ],
+    "poll_id": "20250930_1001_cl_A",
+    "institut": "Cluster17",
+    "commanditaire": "Le Point",
+    "debut_enquete": "2025-09-30",
+    "fin_enquete": "2025-10-01",
+    "echantillon": 1531,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H37",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9990-pres-cluster-17-le-point-3-octobre.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1.5
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 15
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 15
+      },
+      {
+        "candidate_id": "GA",
+        "candidat": "Gabriel Attal",
+        "complete_name": "Gabriel Attal",
+        "name": "Gabriel",
+        "surname": "Attal",
+        "parti": "La République En Marche",
+        "intentions": 12
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 14
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 3.5
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "intentions": 30.5
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 5.5
+      }
+    ],
+    "poll_id": "20250930_1001_cl_B",
+    "institut": "Cluster17",
+    "commanditaire": "Le Point",
+    "debut_enquete": "2025-09-30",
+    "fin_enquete": "2025-10-01",
+    "echantillon": 1531,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H38",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9990-pres-cluster-17-le-point-3-octobre.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 15
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 7.5
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 19.5
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 12.5
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 31
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 5.5
+      }
+    ],
+    "poll_id": "20250930_1001_cl_C",
+    "institut": "Cluster17",
+    "commanditaire": "Le Point",
+    "debut_enquete": "2025-09-30",
+    "fin_enquete": "2025-10-01",
+    "echantillon": 1531,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H39",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9990-pres-cluster-17-le-point-3-octobre.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1.5
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 14
+      },
+      {
+        "candidate_id": "OF",
+        "candidat": "Olivier Faure",
+        "complete_name": "Olivier Faure",
+        "name": "Olivier",
+        "surname": "Faure",
+        "parti": "Parti Socialiste",
+        "intentions": 8
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 19.5
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 13
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 4.5
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 30
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 5.5
+      }
+    ],
+    "poll_id": "20250930_1001_cl_D",
+    "institut": "Cluster17",
+    "commanditaire": "Le Point",
+    "debut_enquete": "2025-09-30",
+    "fin_enquete": "2025-10-01",
+    "echantillon": 1531,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H40",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9990-pres-cluster-17-le-point-3-octobre.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 14
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 12
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 15
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 10
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 35
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 6
+      }
+    ],
+    "poll_id": "20251007_1007_hi_A",
+    "institut": "Harris Interactive",
+    "commanditaire": "RTL",
+    "debut_enquete": "2025-10-07",
+    "fin_enquete": "2025-10-07",
+    "echantillon": 1289,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H41",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9995-pres-toluna-harris-interactive-rtl-8-octobre.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 14
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 12
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 16
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 10
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "intentions": 34
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 6
+      }
+    ],
+    "poll_id": "20251007_1007_hi_B",
+    "institut": "Harris Interactive",
+    "commanditaire": "RTL",
+    "debut_enquete": "2025-10-07",
+    "fin_enquete": "2025-10-07",
+    "echantillon": 1289,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H42",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9995-pres-toluna-harris-interactive-rtl-8-octobre.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 14
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 14
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "GA",
+        "candidat": "Gabriel Attal",
+        "complete_name": "Gabriel Attal",
+        "name": "Gabriel",
+        "surname": "Attal",
+        "parti": "La République En Marche",
+        "intentions": 12
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 11
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 35
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 6
+      }
+    ],
+    "poll_id": "20251007_1007_hi_C",
+    "institut": "Harris Interactive",
+    "commanditaire": "RTL",
+    "debut_enquete": "2025-10-07",
+    "fin_enquete": "2025-10-07",
+    "echantillon": 1289,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H43",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9995-pres-toluna-harris-interactive-rtl-8-octobre.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 14
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 14
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "GA",
+        "candidat": "Gabriel Attal",
+        "complete_name": "Gabriel Attal",
+        "name": "Gabriel",
+        "surname": "Attal",
+        "parti": "La République En Marche",
+        "intentions": 12
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 11
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "intentions": 34
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 6
+      }
+    ],
+    "poll_id": "20251007_1007_hi_D",
+    "institut": "Harris Interactive",
+    "commanditaire": "RTL",
+    "debut_enquete": "2025-10-07",
+    "fin_enquete": "2025-10-07",
+    "echantillon": 1289,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H44",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "9995-pres-toluna-harris-interactive-rtl-8-octobre.pdf"
+  }
+]
