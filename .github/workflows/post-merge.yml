@@ -26,16 +26,19 @@ jobs:
       - name: Build merged CSV
         run: python merge.py
       
+      - name: Update poll count badge
+        run: python update_badge.py
+      
       - name: Check for changes
         id: changes
         run: |
-          git diff --exit-code presidentielle2027.csv || echo "changed=true" >> $GITHUB_OUTPUT
+          git diff --exit-code presidentielle2027.csv README.md || echo "changed=true" >> $GITHUB_OUTPUT
       
       - name: Commit and push if changed
         if: steps.changes.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add presidentielle2027.csv
-          git commit -m "🤖 Auto-update presidentielle2027.csv"
+          git add presidentielle2027.csv README.md
+          git commit -m "🤖 Auto-update presidentielle2027.csv and poll count badge"
           git push
