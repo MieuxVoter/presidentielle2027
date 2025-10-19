@@ -151,8 +151,21 @@ def merge(repo_root: Path = ROOT) -> List[dict]:
         got = {_norm(r["candidat"]) for r in results}
         # Only warn if hypothesis known and non-empty
         if expected and got != expected:
-            # Soft warning on stderr, continue merging
-            sys.stderr.write(f"Warning: Poll {poll_id} candidates differ from hypothesis {hyp}.\n")
+            candidate_that_is_missing = expected - got
+            candidate_that_is_extra = got - expected
+            closest_hypothesis = None
+            for h_id, h_names in hypothesis_to_names.items():
+                if got == set(h_names):
+                    closest_hypothesis = h_id
+                    break
+
+            raise LookupError(
+                f"Poll {poll_id} candidates {got} differ from hypothesis {hyp} \n"
+                f"expected {expected}. \n"
+                f"Missing: {candidate_that_is_missing}. \n"
+                f"Extra: {candidate_that_is_extra}.\n"
+                f" Closest hypothesis match: {closest_hypothesis if closest_hypothesis is not None else "None"}."
+            )
 
         for r in results:
             name_key = _norm(r["candidat"])
