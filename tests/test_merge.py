@@ -64,6 +64,8 @@ def test_add_new_poll_file_updates_merge(tmp_path: Path):
     new_meta["poll_id"] = "20990101_0101_xx_A"  # future id to avoid collision
     # Append to polls.csv
     fieldnames = list(rows[0].keys())
+    new_meta["hypothese"] = "H1"  # ensure valid hypothesis
+
     with polls_csv.open("w", encoding="utf-8", newline="") as f:
         wr = csv.DictWriter(f, fieldnames=fieldnames)
         wr.writeheader()
