@@ -1,7 +1,7 @@
 # presidentielle2027
 
 [![Validate polls and merge](https://github.com/MieuxVoter/presidentielle2027/actions/workflows/validate-polls.yml/badge.svg)](https://github.com/MieuxVoter/presidentielle2027/actions/workflows/validate-polls.yml)
-![Sondages agrégés](https://img.shields.io/badge/sondages_agrégés-16-blue)
+![Sondages agrégés](https://img.shields.io/badge/sondages_agrégés-20-blue)
 
 Compilation des sondages d'opinion produits à l'occasion des élections présidentielles 2027 en France.
 
