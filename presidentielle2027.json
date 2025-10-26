@@ -1512,8 +1512,7 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 0,
-        "erreur_sup": 5
+        "intentions": 0.5
       },
       {
         "candidate_id": "PP",
