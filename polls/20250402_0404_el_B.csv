@@ -1,12 +1,12 @@
 candidat,intentions,erreur_sup,erreur_inf
-Nathalie Arthaud,1.0,0.002,0.0
-Philippe Poutou,1.5,0.003,0.0
-Fabien Roussel,5.5,0.007,0.001
-Jean-Luc Mélenchon,10.0,0.011,0.003
-Marine Tondelier,6.0,0.008,0.001
-François Hollande,6.0,0.008,0.001
-Édouard Philippe,23.0,0.023,0.01
-Bruno Retailleau,9.0,0.011,0.002
-Nicolas Dupont-Aignan,2.5,0.004,0.0
-Jordan Bardella,31.5,0.03,0.015
-Éric Zemmour,4.0,0.006,0.0
+Nathalie Arthaud,1.0,0.52,-0.52
+Philippe Poutou,1.5,0.63,-0.63
+Fabien Roussel,5.5,1.19,-1.19
+Jean-Luc Mélenchon,10.0,1.56,-1.56
+Marine Tondelier,6.0,1.24,-1.24
+François Hollande,6.0,1.24,-1.24
+Édouard Philippe,23.0,2.19,-2.19
+Bruno Retailleau,9.0,1.49,-1.49
+Nicolas Dupont-Aignan,2.5,0.81,-0.81
+Jordan Bardella,31.5,2.42,-2.42
+Éric Zemmour,4.0,1.02,-1.02
