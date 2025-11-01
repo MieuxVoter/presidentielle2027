@@ -1,9 +1,9 @@
 candidat,intentions,erreur_sup,erreur_inf
-Nathalie Arthaud,2,,
-Jean-Luc Mélenchon,12,,
-François Ruffin,10,,
-Édouard Philippe,26,,
-Bruno Retailleau,10,,
-Nicolas Dupont-Aignan,3,,
-Jordan Bardella,33,,
-Éric Zemmour,4,,
+Nathalie Arthaud,2,0.29,-0.29
+Jean-Luc Mélenchon,12,0.67,-0.67
+François Ruffin,10,0.62,-0.62
+Édouard Philippe,26,0.9,-0.9
+Bruno Retailleau,10,0.62,-0.62
+Nicolas Dupont-Aignan,3,0.35,-0.35
+Jordan Bardella,33,0.96,-0.96
+Éric Zemmour,4,0.4,-0.4

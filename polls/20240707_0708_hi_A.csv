@@ -1,12 +1,12 @@
 candidat,intentions,erreur_sup,erreur_inf
-Nathalie Arthaud,1,,
-Philippe Poutou,2,,
-Fabien Roussel,4,,
-Jean-Luc Mélenchon,17,,
-Olivier Faure,5,,
-Marine Tondelier,4,,
-Édouard Philippe,24,,
-Laurent Wauquiez,5,,
-Nicolas Dupont-Aignan,2,,
-Marine Le Pen,32,,
-Éric Zemmour,4,,
+Nathalie Arthaud,1,0.41,-0.41
+Philippe Poutou,2,0.57,-0.57
+Fabien Roussel,4,0.8,-0.8
+Jean-Luc Mélenchon,17,1.53,-1.53
+Olivier Faure,5,0.89,-0.89
+Marine Tondelier,4,0.8,-0.8
+Édouard Philippe,24,1.74,-1.74
+Laurent Wauquiez,5,0.89,-0.89
+Nicolas Dupont-Aignan,2,0.57,-0.57
+Marine Le Pen,32,1.9,-1.9
+Éric Zemmour,4,0.8,-0.8
