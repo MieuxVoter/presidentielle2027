@@ -2,7 +2,7 @@ import os
 
 import numpy as np
 import pandas as pd
-
+from scipy.stats import norm
 
 FOLDER = "polls"
 POLL_CSV = "polls.csv"
@@ -32,6 +32,12 @@ def compute_confidence_intervals(intentions, sample, z=1.96):
         margin_of_error * 100, 2
     )
 
+def compute_p_value(intentions, sample, p0=0.5):
+    """Compute the p-value for a given proportion and sample size."""
+    proportion = intentions / 100
+    se = np.sqrt(p0 * (1 - p0) / sample)
+    z = (proportion - p0) / se
+    return round(2 * (1 - norm.cdf(abs(z))), 3)
 
 def get_poll_ids():
     """Get all ids within the poll Folder"""
@@ -71,12 +77,17 @@ for id in poll_ids:
     try:
         erreur_inf = []
         erreur_sup = []
+        p_values = []
         for intention in intentions:
             lower_bound, upper_bound = compute_confidence_intervals(intention, sample)
             erreur_inf.append(lower_bound)
             erreur_sup.append(upper_bound)
+            p_value = compute_p_value(intention, sample)
+            p_values.append(p_value)
         poll_df["erreur_inf"] = erreur_inf
         poll_df["erreur_sup"] = erreur_sup
+        poll_df["p_value"] = p_values
+        poll_df["significant"] = poll_df["p_value"] < 0.05
         poll_df.to_csv(f"{FOLDER}/{id}.csv", index=False)
     except Exception as e:
         print(f"Erreur pour le sondage {id} : {e}")
