@@ -75,8 +75,16 @@ for id in poll_ids:
             lower_bound, upper_bound = compute_confidence_intervals(intention, sample)
             erreur_inf.append(lower_bound)
             erreur_sup.append(upper_bound)
-        poll_df["erreur_inf"] = erreur_inf
-        poll_df["erreur_sup"] = erreur_sup
-        poll_df.to_csv(f"{FOLDER}/{id}.csv", index=False)
+        
+        # Créer un nouveau DataFrame avec toutes les colonnes d'origine
+        result_df = poll_df.copy()
+        result_df["erreur_inf"] = erreur_inf
+        result_df["erreur_sup"] = erreur_sup
+        
+        # Réorganiser les colonnes dans le bon ordre
+        cols = ["candidat", "intentions", "erreur_sup", "erreur_inf"]
+        result_df = result_df[cols]
+        
+        result_df.to_csv(f"{FOLDER}/{id}.csv", index=False)
     except Exception as e:
         print(f"Erreur pour le sondage {id} : {e}")
