@@ -8,7 +8,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.41,
+        "erreur_inf": -0.41
       },
       {
         "candidate_id": "PP",
@@ -17,7 +19,9 @@
         "name": "Philippe",
         "surname": "Poutou",
         "parti": "Nouveau Parti Anticapitaliste",
-        "intentions": 2
+        "intentions": 2,
+        "erreur_sup": 0.57,
+        "erreur_inf": -0.57
       },
       {
         "candidate_id": "FRo",
@@ -26,7 +30,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 0.8,
+        "erreur_inf": -0.8
       },
       {
         "candidate_id": "JLM",
@@ -35,7 +41,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 17
+        "intentions": 17,
+        "erreur_sup": 1.53,
+        "erreur_inf": -1.53
       },
       {
         "candidate_id": "OF",
@@ -44,7 +52,9 @@
         "name": "Olivier",
         "surname": "Faure",
         "parti": "Parti Socialiste",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 0.89,
+        "erreur_inf": -0.89
       },
       {
         "candidate_id": "MT",
@@ -53,7 +63,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 0.8,
+        "erreur_inf": -0.8
       },
       {
         "candidate_id": "EP",
@@ -62,7 +74,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 24
+        "intentions": 24,
+        "erreur_sup": 1.74,
+        "erreur_inf": -1.74
       },
       {
         "candidate_id": "LW",
@@ -71,7 +85,9 @@
         "name": "Laurent",
         "surname": "Wauquiez",
         "parti": "Les Républicains",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 0.89,
+        "erreur_inf": -0.89
       },
       {
         "candidate_id": "NDA",
@@ -80,7 +96,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 2
+        "intentions": 2,
+        "erreur_sup": 0.57,
+        "erreur_inf": -0.57
       },
       {
         "candidate_id": "MLP",
@@ -89,7 +107,9 @@
         "name": "Marine",
         "surname": "Le Pen",
         "parti": "Rassemblement National",
-        "intentions": 32
+        "intentions": 32,
+        "erreur_sup": 1.9,
+        "erreur_inf": -1.9
       },
       {
         "candidate_id": "EZ",
@@ -98,7 +118,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 0.8,
+        "erreur_inf": -0.8
       }
     ],
     "poll_id": "20240707_0708_hi_A",
@@ -123,7 +145,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.41,
+        "erreur_inf": -0.41
       },
       {
         "candidate_id": "PP",
@@ -132,7 +156,9 @@
         "name": "Philippe",
         "surname": "Poutou",
         "parti": "Nouveau Parti Anticapitaliste",
-        "intentions": 2
+        "intentions": 2,
+        "erreur_sup": 0.57,
+        "erreur_inf": -0.57
       },
       {
         "candidate_id": "FRo",
@@ -141,7 +167,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 0.89,
+        "erreur_inf": -0.89
       },
       {
         "candidate_id": "JLM",
@@ -150,7 +178,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 16
+        "intentions": 16,
+        "erreur_sup": 1.49,
+        "erreur_inf": -1.49
       },
       {
         "candidate_id": "OF",
@@ -159,7 +189,9 @@
         "name": "Olivier",
         "surname": "Faure",
         "parti": "Parti Socialiste",
-        "intentions": 6
+        "intentions": 6,
+        "erreur_sup": 0.97,
+        "erreur_inf": -0.97
       },
       {
         "candidate_id": "MT",
@@ -168,7 +200,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 0.8,
+        "erreur_inf": -0.8
       },
       {
         "candidate_id": "GA",
@@ -177,7 +211,9 @@
         "name": "Gabriel",
         "surname": "Attal",
         "parti": "La République En Marche",
-        "intentions": 23
+        "intentions": 23,
+        "erreur_sup": 1.71,
+        "erreur_inf": -1.71
       },
       {
         "candidate_id": "LW",
@@ -186,7 +222,9 @@
         "name": "Laurent",
         "surname": "Wauquiez",
         "parti": "Les Républicains",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 0.89,
+        "erreur_inf": -0.89
       },
       {
         "candidate_id": "NDA",
@@ -195,7 +233,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 2
+        "intentions": 2,
+        "erreur_sup": 0.57,
+        "erreur_inf": -0.57
       },
       {
         "candidate_id": "MLP",
@@ -204,7 +244,9 @@
         "name": "Marine",
         "surname": "Le Pen",
         "parti": "Rassemblement National",
-        "intentions": 32
+        "intentions": 32,
+        "erreur_sup": 1.9,
+        "erreur_inf": -1.9
       },
       {
         "candidate_id": "EZ",
@@ -213,7 +255,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 0.8,
+        "erreur_inf": -0.8
       }
     ],
     "poll_id": "20240707_0708_hi_B",
@@ -238,7 +282,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.41,
+        "erreur_inf": -0.41
       },
       {
         "candidate_id": "PP",
@@ -247,7 +293,9 @@
         "name": "Philippe",
         "surname": "Poutou",
         "parti": "Nouveau Parti Anticapitaliste",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.41,
+        "erreur_inf": -0.41
       },
       {
         "candidate_id": "FRo",
@@ -256,7 +304,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 0.69,
+        "erreur_inf": -0.69
       },
       {
         "candidate_id": "JLM",
@@ -265,7 +315,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 15
+        "intentions": 15,
+        "erreur_sup": 1.45,
+        "erreur_inf": -1.45
       },
       {
         "candidate_id": "RG",
@@ -274,7 +326,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 14
+        "intentions": 14,
+        "erreur_sup": 1.41,
+        "erreur_inf": -1.41
       },
       {
         "candidate_id": "MT",
@@ -283,7 +337,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 0.69,
+        "erreur_inf": -0.69
       },
       {
         "candidate_id": "EP",
@@ -292,7 +348,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 22
+        "intentions": 22,
+        "erreur_sup": 1.69,
+        "erreur_inf": -1.69
       },
       {
         "candidate_id": "LW",
@@ -301,7 +359,9 @@
         "name": "Laurent",
         "surname": "Wauquiez",
         "parti": "Les Républicains",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 0.89,
+        "erreur_inf": -0.89
       },
       {
         "candidate_id": "NDA",
@@ -310,7 +370,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 2
+        "intentions": 2,
+        "erreur_sup": 0.57,
+        "erreur_inf": -0.57
       },
       {
         "candidate_id": "MLP",
@@ -319,7 +381,9 @@
         "name": "Marine",
         "surname": "Le Pen",
         "parti": "Rassemblement National",
-        "intentions": 31
+        "intentions": 31,
+        "erreur_sup": 1.88,
+        "erreur_inf": -1.88
       },
       {
         "candidate_id": "EZ",
@@ -328,7 +392,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 0.69,
+        "erreur_inf": -0.69
       }
     ],
     "poll_id": "20240707_0708_hi_C",
@@ -353,7 +419,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.41,
+        "erreur_inf": -0.41
       },
       {
         "candidate_id": "PP",
@@ -362,7 +430,9 @@
         "name": "Philippe",
         "surname": "Poutou",
         "parti": "Nouveau Parti Anticapitaliste",
-        "intentions": 2
+        "intentions": 2,
+        "erreur_sup": 0.57,
+        "erreur_inf": -0.57
       },
       {
         "candidate_id": "FRo",
@@ -371,7 +441,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 0.69,
+        "erreur_inf": -0.69
       },
       {
         "candidate_id": "JLM",
@@ -380,7 +452,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 15
+        "intentions": 15,
+        "erreur_sup": 1.45,
+        "erreur_inf": -1.45
       },
       {
         "candidate_id": "RG",
@@ -389,7 +463,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 14
+        "intentions": 14,
+        "erreur_sup": 1.41,
+        "erreur_inf": -1.41
       },
       {
         "candidate_id": "MT",
@@ -398,7 +474,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 0.69,
+        "erreur_inf": -0.69
       },
       {
         "candidate_id": "GA",
@@ -407,7 +485,9 @@
         "name": "Gabriel",
         "surname": "Attal",
         "parti": "La République En Marche",
-        "intentions": 20
+        "intentions": 20,
+        "erreur_sup": 1.63,
+        "erreur_inf": -1.63
       },
       {
         "candidate_id": "LW",
@@ -416,7 +496,9 @@
         "name": "Laurent",
         "surname": "Wauquiez",
         "parti": "Les Républicains",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 0.89,
+        "erreur_inf": -0.89
       },
       {
         "candidate_id": "NDA",
@@ -425,7 +507,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 2
+        "intentions": 2,
+        "erreur_sup": 0.57,
+        "erreur_inf": -0.57
       },
       {
         "candidate_id": "MLP",
@@ -434,7 +518,9 @@
         "name": "Marine",
         "surname": "Le Pen",
         "parti": "Rassemblement National",
-        "intentions": 31
+        "intentions": 31,
+        "erreur_sup": 1.88,
+        "erreur_inf": -1.88
       },
       {
         "candidate_id": "EZ",
@@ -443,7 +529,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 0.8,
+        "erreur_inf": -0.8
       }
     ],
     "poll_id": "20240707_0708_hi_D",
@@ -468,7 +556,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.79,
+        "erreur_inf": -0.79
       },
       {
         "candidate_id": "PP",
@@ -477,7 +567,9 @@
         "name": "Philippe",
         "surname": "Poutou",
         "parti": "Nouveau Parti Anticapitaliste",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.79,
+        "erreur_inf": -0.79
       },
       {
         "candidate_id": "JLM",
@@ -486,7 +578,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 12
+        "intentions": 12,
+        "erreur_sup": 2.59,
+        "erreur_inf": -2.59
       },
       {
         "candidate_id": "FRo",
@@ -495,7 +589,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 1.56,
+        "erreur_inf": -1.56
       },
       {
         "candidate_id": "OF",
@@ -504,7 +600,9 @@
         "name": "Olivier",
         "surname": "Faure",
         "parti": "Parti Socialiste",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 1.56,
+        "erreur_inf": -1.56
       },
       {
         "candidate_id": "MT",
@@ -513,7 +611,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.36,
+        "erreur_inf": -1.36
       },
       {
         "candidate_id": "EP",
@@ -522,7 +622,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 25
+        "intentions": 25,
+        "erreur_sup": 3.45,
+        "erreur_inf": -3.45
       },
       {
         "candidate_id": "LW",
@@ -531,7 +633,9 @@
         "name": "Laurent",
         "surname": "Wauquiez",
         "parti": "Les Républicains",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 1.74,
+        "erreur_inf": -1.74
       },
       {
         "candidate_id": "NDA",
@@ -540,7 +644,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 1.56,
+        "erreur_inf": -1.56
       },
       {
         "candidate_id": "MLP",
@@ -549,7 +655,9 @@
         "name": "Marine",
         "surname": "Le Pen",
         "parti": "Rassemblement National",
-        "intentions": 36
+        "intentions": 36,
+        "erreur_sup": 3.83,
+        "erreur_inf": -3.83
       },
       {
         "candidate_id": "EZ",
@@ -558,7 +666,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 1.74,
+        "erreur_inf": -1.74
       }
     ],
     "poll_id": "20250326_0327_if_A",
@@ -583,7 +693,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.81,
+        "erreur_inf": -0.81
       },
       {
         "candidate_id": "PP",
@@ -592,7 +704,9 @@
         "name": "Philippe",
         "surname": "Poutou",
         "parti": "Nouveau Parti Anticapitaliste",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.81,
+        "erreur_inf": -0.81
       },
       {
         "candidate_id": "JLM",
@@ -601,7 +715,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 13
+        "intentions": 13,
+        "erreur_sup": 2.73,
+        "erreur_inf": -2.73
       },
       {
         "candidate_id": "FRo",
@@ -610,7 +726,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 1.59,
+        "erreur_inf": -1.59
       },
       {
         "candidate_id": "OF",
@@ -619,7 +737,9 @@
         "name": "Olivier",
         "surname": "Faure",
         "parti": "Parti Socialiste",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 1.77,
+        "erreur_inf": -1.77
       },
       {
         "candidate_id": "MT",
@@ -628,7 +748,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.39,
+        "erreur_inf": -1.39
       },
       {
         "candidate_id": "GA",
@@ -637,7 +759,9 @@
         "name": "Gabriel",
         "surname": "Attal",
         "parti": "La République En Marche",
-        "intentions": 20
+        "intentions": 20,
+        "erreur_sup": 3.25,
+        "erreur_inf": -3.25
       },
       {
         "candidate_id": "LW",
@@ -646,7 +770,9 @@
         "name": "Laurent",
         "surname": "Wauquiez",
         "parti": "Les Républicains",
-        "intentions": 8
+        "intentions": 8,
+        "erreur_sup": 2.2,
+        "erreur_inf": -2.2
       },
       {
         "candidate_id": "NDA",
@@ -655,7 +781,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.39,
+        "erreur_inf": -1.39
       },
       {
         "candidate_id": "MLP",
@@ -664,7 +792,9 @@
         "name": "Marine",
         "surname": "Le Pen",
         "parti": "Rassemblement National",
-        "intentions": 37
+        "intentions": 37,
+        "erreur_sup": 3.92,
+        "erreur_inf": -3.92
       },
       {
         "candidate_id": "EZ",
@@ -673,7 +803,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 1.77,
+        "erreur_inf": -1.77
       }
     ],
     "poll_id": "20250326_0327_if_B",
@@ -698,7 +830,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.79,
+        "erreur_inf": -0.79
       },
       {
         "candidate_id": "PP",
@@ -707,7 +841,9 @@
         "name": "Philippe",
         "surname": "Poutou",
         "parti": "Nouveau Parti Anticapitaliste",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.79,
+        "erreur_inf": -0.79
       },
       {
         "candidate_id": "JLM",
@@ -716,7 +852,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 13
+        "intentions": 13,
+        "erreur_sup": 2.66,
+        "erreur_inf": -2.66
       },
       {
         "candidate_id": "FRo",
@@ -725,7 +863,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.35,
+        "erreur_inf": -1.35
       },
       {
         "candidate_id": "OF",
@@ -734,7 +874,9 @@
         "name": "Olivier",
         "surname": "Faure",
         "parti": "Parti Socialiste",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 1.72,
+        "erreur_inf": -1.72
       },
       {
         "candidate_id": "MT",
@@ -743,7 +885,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.35,
+        "erreur_inf": -1.35
       },
       {
         "candidate_id": "EP",
@@ -752,7 +896,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 21
+        "intentions": 21,
+        "erreur_sup": 3.22,
+        "erreur_inf": -3.22
       },
       {
         "candidate_id": "BR",
@@ -761,7 +907,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 11
+        "intentions": 11,
+        "erreur_sup": 2.47,
+        "erreur_inf": -2.47
       },
       {
         "candidate_id": "NDA",
@@ -770,7 +918,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.35,
+        "erreur_inf": -1.35
       },
       {
         "candidate_id": "MLP",
@@ -779,7 +929,9 @@
         "name": "Marine",
         "surname": "Le Pen",
         "parti": "Rassemblement National",
-        "intentions": 34
+        "intentions": 34,
+        "erreur_sup": 3.75,
+        "erreur_inf": -3.75
       },
       {
         "candidate_id": "EZ",
@@ -788,7 +940,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 1.72,
+        "erreur_inf": -1.72
       }
     ],
     "poll_id": "20250326_0327_if_C",
@@ -813,7 +967,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.79,
+        "erreur_inf": -0.79
       },
       {
         "candidate_id": "PP",
@@ -822,7 +978,9 @@
         "name": "Philippe",
         "surname": "Poutou",
         "parti": "Nouveau Parti Anticapitaliste",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.79,
+        "erreur_inf": -0.79
       },
       {
         "candidate_id": "JLM",
@@ -831,7 +989,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 13
+        "intentions": 13,
+        "erreur_sup": 2.66,
+        "erreur_inf": -2.66
       },
       {
         "candidate_id": "FRo",
@@ -840,7 +1000,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 2
+        "intentions": 2,
+        "erreur_sup": 1.11,
+        "erreur_inf": -1.11
       },
       {
         "candidate_id": "RG",
@@ -849,7 +1011,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 11
+        "intentions": 11,
+        "erreur_sup": 2.47,
+        "erreur_inf": -2.47
       },
       {
         "candidate_id": "MT",
@@ -858,7 +1022,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.35,
+        "erreur_inf": -1.35
       },
       {
         "candidate_id": "EP",
@@ -867,7 +1033,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 20
+        "intentions": 20,
+        "erreur_sup": 3.16,
+        "erreur_inf": -3.16
       },
       {
         "candidate_id": "LW",
@@ -876,7 +1044,9 @@
         "name": "Laurent",
         "surname": "Wauquiez",
         "parti": "Les Républicains",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 1.72,
+        "erreur_inf": -1.72
       },
       {
         "candidate_id": "NDA",
@@ -885,7 +1055,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.35,
+        "erreur_inf": -1.35
       },
       {
         "candidate_id": "MLP",
@@ -894,7 +1066,9 @@
         "name": "Marine",
         "surname": "Le Pen",
         "parti": "Rassemblement National",
-        "intentions": 35
+        "intentions": 35,
+        "erreur_sup": 3.77,
+        "erreur_inf": -3.77
       },
       {
         "candidate_id": "EZ",
@@ -903,7 +1077,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 6
+        "intentions": 6,
+        "erreur_sup": 1.88,
+        "erreur_inf": -1.88
       }
     ],
     "poll_id": "20250326_0327_if_D",
@@ -928,7 +1104,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.61,
+        "erreur_inf": -0.61
       },
       {
         "candidate_id": "PP",
@@ -937,7 +1115,9 @@
         "name": "Philippe",
         "surname": "Poutou",
         "parti": "Nouveau Parti Anticapitaliste",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.61,
+        "erreur_inf": -0.61
       },
       {
         "candidate_id": "FRo",
@@ -946,7 +1126,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 1.2,
+        "erreur_inf": -1.2
       },
       {
         "candidate_id": "JLM",
@@ -955,7 +1137,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 13
+        "intentions": 13,
+        "erreur_sup": 2.05,
+        "erreur_inf": -2.05
       },
       {
         "candidate_id": "MT",
@@ -964,7 +1148,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 1.2,
+        "erreur_inf": -1.2
       },
       {
         "candidate_id": "OF",
@@ -973,7 +1159,9 @@
         "name": "Olivier",
         "surname": "Faure",
         "parti": "Parti Socialiste",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 1.33,
+        "erreur_inf": -1.33
       },
       {
         "candidate_id": "EP",
@@ -982,7 +1170,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 25
+        "intentions": 25,
+        "erreur_sup": 2.64,
+        "erreur_inf": -2.64
       },
       {
         "candidate_id": "LW",
@@ -991,7 +1181,9 @@
         "name": "Laurent",
         "surname": "Wauquiez",
         "parti": "Les Républicains",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 1.2,
+        "erreur_inf": -1.2
       },
       {
         "candidate_id": "NDA",
@@ -1000,7 +1192,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 2
+        "intentions": 2,
+        "erreur_sup": 0.85,
+        "erreur_inf": -0.85
       },
       {
         "candidate_id": "JB",
@@ -1009,7 +1203,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 36
+        "intentions": 36,
+        "erreur_sup": 2.93,
+        "erreur_inf": -2.93
       },
       {
         "candidate_id": "EZ",
@@ -1018,7 +1214,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 1.33,
+        "erreur_inf": -1.33
       }
     ],
     "poll_id": "20250331_0331_hi_A",
@@ -1043,7 +1241,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.61,
+        "erreur_inf": -0.61
       },
       {
         "candidate_id": "PP",
@@ -1052,7 +1252,9 @@
         "name": "Philippe",
         "surname": "Poutou",
         "parti": "Nouveau Parti Anticapitaliste",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.61,
+        "erreur_inf": -0.61
       },
       {
         "candidate_id": "FRo",
@@ -1061,7 +1263,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 1.2,
+        "erreur_inf": -1.2
       },
       {
         "candidate_id": "JLM",
@@ -1070,7 +1274,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 13
+        "intentions": 13,
+        "erreur_sup": 2.05,
+        "erreur_inf": -2.05
       },
       {
         "candidate_id": "MT",
@@ -1079,7 +1285,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 1.2,
+        "erreur_inf": -1.2
       },
       {
         "candidate_id": "OF",
@@ -1088,7 +1296,9 @@
         "name": "Olivier",
         "surname": "Faure",
         "parti": "Parti Socialiste",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 1.33,
+        "erreur_inf": -1.33
       },
       {
         "candidate_id": "EP",
@@ -1097,7 +1307,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 23
+        "intentions": 23,
+        "erreur_sup": 2.57,
+        "erreur_inf": -2.57
       },
       {
         "candidate_id": "BR",
@@ -1106,7 +1318,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 7
+        "intentions": 7,
+        "erreur_sup": 1.56,
+        "erreur_inf": -1.56
       },
       {
         "candidate_id": "NDA",
@@ -1115,7 +1329,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 2
+        "intentions": 2,
+        "erreur_sup": 0.85,
+        "erreur_inf": -0.85
       },
       {
         "candidate_id": "JB",
@@ -1124,7 +1340,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 35
+        "intentions": 35,
+        "erreur_sup": 2.91,
+        "erreur_inf": -2.91
       },
       {
         "candidate_id": "EZ",
@@ -1133,7 +1351,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 1.33,
+        "erreur_inf": -1.33
       }
     ],
     "poll_id": "20250331_0331_hi_B",
@@ -1158,7 +1378,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1.0,
+        "erreur_sup": 0.52,
+        "erreur_inf": -0.52
       },
       {
         "candidate_id": "PP",
@@ -1167,7 +1389,9 @@
         "name": "Philippe",
         "surname": "Poutou",
         "parti": "Nouveau Parti Anticapitaliste",
-        "intentions": 2
+        "intentions": 2.0,
+        "erreur_sup": 0.73,
+        "erreur_inf": -0.73
       },
       {
         "candidate_id": "FRo",
@@ -1176,7 +1400,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 6
+        "intentions": 6.0,
+        "erreur_sup": 1.24,
+        "erreur_inf": -1.24
       },
       {
         "candidate_id": "JLM",
@@ -1185,7 +1411,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 10
+        "intentions": 10.0,
+        "erreur_sup": 1.56,
+        "erreur_inf": -1.56
       },
       {
         "candidate_id": "MT",
@@ -1194,7 +1422,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 5.5
+        "intentions": 5.5,
+        "erreur_sup": 1.19,
+        "erreur_inf": -1.19
       },
       {
         "candidate_id": "FH",
@@ -1203,7 +1433,9 @@
         "name": "François",
         "surname": "Hollande",
         "parti": "Parti Socialiste",
-        "intentions": 5.5
+        "intentions": 5.5,
+        "erreur_sup": 1.19,
+        "erreur_inf": -1.19
       },
       {
         "candidate_id": "EP",
@@ -1212,7 +1444,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 23.5
+        "intentions": 23.5,
+        "erreur_sup": 2.21,
+        "erreur_inf": -2.21
       },
       {
         "candidate_id": "BR",
@@ -1221,7 +1455,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 8
+        "intentions": 8.0,
+        "erreur_sup": 1.41,
+        "erreur_inf": -1.41
       },
       {
         "candidate_id": "NDA",
@@ -1230,7 +1466,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 3
+        "intentions": 3.0,
+        "erreur_sup": 0.89,
+        "erreur_inf": -0.89
       },
       {
         "candidate_id": "MLP",
@@ -1239,7 +1477,9 @@
         "name": "Marine",
         "surname": "Le Pen",
         "parti": "Rassemblement National",
-        "intentions": 32
+        "intentions": 32.0,
+        "erreur_sup": 2.43,
+        "erreur_inf": -2.43
       },
       {
         "candidate_id": "EZ",
@@ -1248,7 +1488,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 3.5
+        "intentions": 3.5,
+        "erreur_sup": 0.96,
+        "erreur_inf": -0.96
       }
     ],
     "poll_id": "20250402_0404_el_A",
@@ -1273,7 +1515,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1.0,
+        "erreur_sup": 0.52,
+        "erreur_inf": -0.52
       },
       {
         "candidate_id": "PP",
@@ -1282,7 +1526,9 @@
         "name": "Philippe",
         "surname": "Poutou",
         "parti": "Nouveau Parti Anticapitaliste",
-        "intentions": 1.5
+        "intentions": 1.5,
+        "erreur_sup": 0.63,
+        "erreur_inf": -0.63
       },
       {
         "candidate_id": "FRo",
@@ -1291,7 +1537,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 5.5
+        "intentions": 5.5,
+        "erreur_sup": 1.19,
+        "erreur_inf": -1.19
       },
       {
         "candidate_id": "JLM",
@@ -1300,7 +1548,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 10
+        "intentions": 10.0,
+        "erreur_sup": 1.56,
+        "erreur_inf": -1.56
       },
       {
         "candidate_id": "MT",
@@ -1309,7 +1559,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 6
+        "intentions": 6.0,
+        "erreur_sup": 1.24,
+        "erreur_inf": -1.24
       },
       {
         "candidate_id": "FH",
@@ -1318,7 +1570,9 @@
         "name": "François",
         "surname": "Hollande",
         "parti": "Parti Socialiste",
-        "intentions": 6
+        "intentions": 6.0,
+        "erreur_sup": 1.24,
+        "erreur_inf": -1.24
       },
       {
         "candidate_id": "EP",
@@ -1327,7 +1581,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 23
+        "intentions": 23.0,
+        "erreur_sup": 2.19,
+        "erreur_inf": -2.19
       },
       {
         "candidate_id": "BR",
@@ -1336,7 +1592,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 9
+        "intentions": 9.0,
+        "erreur_sup": 1.49,
+        "erreur_inf": -1.49
       },
       {
         "candidate_id": "NDA",
@@ -1345,7 +1603,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 2.5
+        "intentions": 2.5,
+        "erreur_sup": 0.81,
+        "erreur_inf": -0.81
       },
       {
         "candidate_id": "JB",
@@ -1354,7 +1614,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 31.5
+        "intentions": 31.5,
+        "erreur_sup": 2.42,
+        "erreur_inf": -2.42
       },
       {
         "candidate_id": "EZ",
@@ -1363,7 +1625,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 4
+        "intentions": 4.0,
+        "erreur_sup": 1.02,
+        "erreur_inf": -1.02
       }
     ],
     "poll_id": "20250402_0404_el_B",
@@ -1388,7 +1652,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1.0,
+        "erreur_sup": 0.52,
+        "erreur_inf": -0.52
       },
       {
         "candidate_id": "PP",
@@ -1397,7 +1663,9 @@
         "name": "Philippe",
         "surname": "Poutou",
         "parti": "Nouveau Parti Anticapitaliste",
-        "intentions": 1.5
+        "intentions": 1.5,
+        "erreur_sup": 0.63,
+        "erreur_inf": -0.63
       },
       {
         "candidate_id": "FRo",
@@ -1406,7 +1674,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 4.5
+        "intentions": 4.5,
+        "erreur_sup": 1.08,
+        "erreur_inf": -1.08
       },
       {
         "candidate_id": "JLM",
@@ -1415,7 +1685,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 9.5
+        "intentions": 9.5,
+        "erreur_sup": 1.53,
+        "erreur_inf": -1.53
       },
       {
         "candidate_id": "MT",
@@ -1424,7 +1696,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 3.5
+        "intentions": 3.5,
+        "erreur_sup": 0.96,
+        "erreur_inf": -0.96
       },
       {
         "candidate_id": "RG",
@@ -1433,7 +1707,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 10.5
+        "intentions": 10.5,
+        "erreur_sup": 1.6,
+        "erreur_inf": -1.6
       },
       {
         "candidate_id": "EP",
@@ -1442,7 +1718,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 20.5
+        "intentions": 20.5,
+        "erreur_sup": 2.1,
+        "erreur_inf": -2.1
       },
       {
         "candidate_id": "DV",
@@ -1451,7 +1729,9 @@
         "name": "Dominique",
         "surname": "de Villepin",
         "parti": "",
-        "intentions": 2.5
+        "intentions": 2.5,
+        "erreur_sup": 0.81,
+        "erreur_inf": -0.81
       },
       {
         "candidate_id": "BR",
@@ -1460,7 +1740,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 8.5
+        "intentions": 8.5,
+        "erreur_sup": 1.45,
+        "erreur_inf": -1.45
       },
       {
         "candidate_id": "NDA",
@@ -1469,7 +1751,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 3
+        "intentions": 3.0,
+        "erreur_sup": 0.89,
+        "erreur_inf": -0.89
       },
       {
         "candidate_id": "JB",
@@ -1478,7 +1762,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 31
+        "intentions": 31.0,
+        "erreur_sup": 2.41,
+        "erreur_inf": -2.41
       },
       {
         "candidate_id": "EZ",
@@ -1487,7 +1773,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 4
+        "intentions": 4.0,
+        "erreur_sup": 1.02,
+        "erreur_inf": -1.02
       }
     ],
     "poll_id": "20250402_0404_el_C",
@@ -1512,7 +1800,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 0.5
+        "intentions": 0.5,
+        "erreur_sup": 0.37,
+        "erreur_inf": -0.37
       },
       {
         "candidate_id": "PP",
@@ -1521,7 +1811,9 @@
         "name": "Philippe",
         "surname": "Poutou",
         "parti": "Nouveau Parti Anticapitaliste",
-        "intentions": 2
+        "intentions": 2.0,
+        "erreur_sup": 0.73,
+        "erreur_inf": -0.73
       },
       {
         "candidate_id": "FRo",
@@ -1530,7 +1822,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 5
+        "intentions": 5.0,
+        "erreur_sup": 1.14,
+        "erreur_inf": -1.14
       },
       {
         "candidate_id": "JLM",
@@ -1539,7 +1833,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 9.5
+        "intentions": 9.5,
+        "erreur_sup": 1.53,
+        "erreur_inf": -1.53
       },
       {
         "candidate_id": "MT",
@@ -1548,7 +1844,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 4
+        "intentions": 4.0,
+        "erreur_sup": 1.02,
+        "erreur_inf": -1.02
       },
       {
         "candidate_id": "RG",
@@ -1557,7 +1855,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 10.5
+        "intentions": 10.5,
+        "erreur_sup": 1.6,
+        "erreur_inf": -1.6
       },
       {
         "candidate_id": "EP",
@@ -1566,7 +1866,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 24
+        "intentions": 24.0,
+        "erreur_sup": 2.23,
+        "erreur_inf": -2.23
       },
       {
         "candidate_id": "LW",
@@ -1575,7 +1877,9 @@
         "name": "Laurent",
         "surname": "Wauquiez",
         "parti": "Les Républicains",
-        "intentions": 4.5
+        "intentions": 4.5,
+        "erreur_sup": 1.08,
+        "erreur_inf": -1.08
       },
       {
         "candidate_id": "NDA",
@@ -1584,7 +1888,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 3
+        "intentions": 3.0,
+        "erreur_sup": 0.89,
+        "erreur_inf": -0.89
       },
       {
         "candidate_id": "MLP",
@@ -1593,7 +1899,9 @@
         "name": "Marine",
         "surname": "Le Pen",
         "parti": "Rassemblement National",
-        "intentions": 33.5
+        "intentions": 33.5,
+        "erreur_sup": 2.46,
+        "erreur_inf": -2.46
       },
       {
         "candidate_id": "EZ",
@@ -1602,7 +1910,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 3.5
+        "intentions": 3.5,
+        "erreur_sup": 0.96,
+        "erreur_inf": -0.96
       }
     ],
     "poll_id": "20250402_0404_el_D",
@@ -1627,7 +1937,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1.0,
+        "erreur_sup": 0.52,
+        "erreur_inf": -0.52
       },
       {
         "candidate_id": "PP",
@@ -1636,7 +1948,9 @@
         "name": "Philippe",
         "surname": "Poutou",
         "parti": "Nouveau Parti Anticapitaliste",
-        "intentions": 1
+        "intentions": 1.0,
+        "erreur_sup": 0.52,
+        "erreur_inf": -0.52
       },
       {
         "candidate_id": "FRo",
@@ -1645,7 +1959,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 4
+        "intentions": 4.0,
+        "erreur_sup": 1.02,
+        "erreur_inf": -1.02
       },
       {
         "candidate_id": "JLM",
@@ -1654,7 +1970,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 13
+        "intentions": 13.0,
+        "erreur_sup": 1.75,
+        "erreur_inf": -1.75
       },
       {
         "candidate_id": "MT",
@@ -1663,7 +1981,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 4
+        "intentions": 4.0,
+        "erreur_sup": 1.02,
+        "erreur_inf": -1.02
       },
       {
         "candidate_id": "OF",
@@ -1672,7 +1992,9 @@
         "name": "Olivier",
         "surname": "Faure",
         "parti": "Parti Socialiste",
-        "intentions": 5
+        "intentions": 5.0,
+        "erreur_sup": 1.14,
+        "erreur_inf": -1.14
       },
       {
         "candidate_id": "GA",
@@ -1681,7 +2003,9 @@
         "name": "Gabriel",
         "surname": "Attal",
         "parti": "La République En Marche",
-        "intentions": 18
+        "intentions": 18.0,
+        "erreur_sup": 2.0,
+        "erreur_inf": -2.0
       },
       {
         "candidate_id": "BR",
@@ -1690,7 +2014,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 10
+        "intentions": 10.0,
+        "erreur_sup": 1.56,
+        "erreur_inf": -1.56
       },
       {
         "candidate_id": "NDA",
@@ -1699,7 +2025,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 2
+        "intentions": 2.0,
+        "erreur_sup": 0.73,
+        "erreur_inf": -0.73
       },
       {
         "candidate_id": "MLP",
@@ -1708,7 +2036,9 @@
         "name": "Marine",
         "surname": "Le Pen",
         "parti": "Rassemblement National",
-        "intentions": 36
+        "intentions": 36.0,
+        "erreur_sup": 2.5,
+        "erreur_inf": -2.5
       },
       {
         "candidate_id": "EZ",
@@ -1717,7 +2047,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 3.5
+        "intentions": 3.5,
+        "erreur_sup": 0.96,
+        "erreur_inf": -0.96
       }
     ],
     "poll_id": "20250402_0404_el_E",
@@ -1742,7 +2074,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1.5
+        "intentions": 1.5,
+        "erreur_sup": 0.63,
+        "erreur_inf": -0.63
       },
       {
         "candidate_id": "PP",
@@ -1751,7 +2085,9 @@
         "name": "Philippe",
         "surname": "Poutou",
         "parti": "Nouveau Parti Anticapitaliste",
-        "intentions": 2
+        "intentions": 2.0,
+        "erreur_sup": 0.73,
+        "erreur_inf": -0.73
       },
       {
         "candidate_id": "FRo",
@@ -1760,7 +2096,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 5.5
+        "intentions": 5.5,
+        "erreur_sup": 1.19,
+        "erreur_inf": -1.19
       },
       {
         "candidate_id": "JLM",
@@ -1769,7 +2107,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 10.5
+        "intentions": 10.5,
+        "erreur_sup": 1.6,
+        "erreur_inf": -1.6
       },
       {
         "candidate_id": "MT",
@@ -1778,7 +2118,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 4.5
+        "intentions": 4.5,
+        "erreur_sup": 1.08,
+        "erreur_inf": -1.08
       },
       {
         "candidate_id": "OF",
@@ -1787,7 +2129,9 @@
         "name": "Olivier",
         "surname": "Faure",
         "parti": "Parti Socialiste",
-        "intentions": 4
+        "intentions": 4.0,
+        "erreur_sup": 1.02,
+        "erreur_inf": -1.02
       },
       {
         "candidate_id": "GA",
@@ -1796,7 +2140,9 @@
         "name": "Gabriel",
         "surname": "Attal",
         "parti": "La République En Marche",
-        "intentions": 18
+        "intentions": 18.0,
+        "erreur_sup": 2.0,
+        "erreur_inf": -2.0
       },
       {
         "candidate_id": "DV",
@@ -1805,7 +2151,9 @@
         "name": "Dominique",
         "surname": "de Villepin",
         "parti": "",
-        "intentions": 5
+        "intentions": 5.0,
+        "erreur_sup": 1.14,
+        "erreur_inf": -1.14
       },
       {
         "candidate_id": "LW",
@@ -1814,7 +2162,9 @@
         "name": "Laurent",
         "surname": "Wauquiez",
         "parti": "Les Républicains",
-        "intentions": 4.5
+        "intentions": 4.5,
+        "erreur_sup": 1.08,
+        "erreur_inf": -1.08
       },
       {
         "candidate_id": "NDA",
@@ -1823,7 +2173,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 4
+        "intentions": 4.0,
+        "erreur_sup": 1.02,
+        "erreur_inf": -1.02
       },
       {
         "candidate_id": "JB",
@@ -1832,7 +2184,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 35.5
+        "intentions": 35.5,
+        "erreur_sup": 2.5,
+        "erreur_inf": -2.5
       },
       {
         "candidate_id": "EZ",
@@ -1841,7 +2195,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 5
+        "intentions": 5.0,
+        "erreur_sup": 1.14,
+        "erreur_inf": -1.14
       }
     ],
     "poll_id": "20250402_0404_el_F",
@@ -1866,7 +2222,9 @@
         "name": "Marine",
         "surname": "Le Pen",
         "parti": "Rassemblement National",
-        "intentions": 52
+        "intentions": 52,
+        "erreur_sup": 1.02,
+        "erreur_inf": -1.02
       },
       {
         "candidate_id": "EP",
@@ -1875,7 +2233,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 48
+        "intentions": 48,
+        "erreur_sup": 1.02,
+        "erreur_inf": -1.02
       }
     ],
     "poll_id": "20250411_0418_if_2A",
@@ -1900,7 +2260,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 47
+        "intentions": 47,
+        "erreur_sup": 1.02,
+        "erreur_inf": -1.02
       },
       {
         "candidate_id": "JB",
@@ -1909,7 +2271,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 53
+        "intentions": 53,
+        "erreur_sup": 1.02,
+        "erreur_inf": -1.02
       }
     ],
     "poll_id": "20250411_0418_if_2B",
@@ -1934,7 +2298,9 @@
         "name": "Gabriel",
         "surname": "Attal",
         "parti": "La République En Marche",
-        "intentions": 48
+        "intentions": 48,
+        "erreur_sup": 1.02,
+        "erreur_inf": -1.02
       },
       {
         "candidate_id": "JB",
@@ -1943,7 +2309,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 52
+        "intentions": 52,
+        "erreur_sup": 1.02,
+        "erreur_inf": -1.02
       }
     ],
     "poll_id": "20250411_0418_if_2C",
@@ -1968,7 +2336,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 33
+        "intentions": 33,
+        "erreur_sup": 0.96,
+        "erreur_inf": -0.96
       },
       {
         "candidate_id": "JB",
@@ -1977,7 +2347,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 67
+        "intentions": 67,
+        "erreur_sup": 0.96,
+        "erreur_inf": -0.96
       }
     ],
     "poll_id": "20250411_0418_if_2D",
@@ -2002,7 +2374,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1.0,
+        "erreur_sup": 0.2,
+        "erreur_inf": -0.2
       },
       {
         "candidate_id": "JLM",
@@ -2011,7 +2385,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 10
+        "intentions": 10.0,
+        "erreur_sup": 0.62,
+        "erreur_inf": -0.62
       },
       {
         "candidate_id": "FRo",
@@ -2020,7 +2396,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 2.5
+        "intentions": 2.5,
+        "erreur_sup": 0.32,
+        "erreur_inf": -0.32
       },
       {
         "candidate_id": "FR",
@@ -2029,7 +2407,9 @@
         "name": "François",
         "surname": "Ruffin",
         "parti": "La France Insoumise",
-        "intentions": 4.5
+        "intentions": 4.5,
+        "erreur_sup": 0.43,
+        "erreur_inf": -0.43
       },
       {
         "candidate_id": "RG",
@@ -2038,7 +2418,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 9
+        "intentions": 9.0,
+        "erreur_sup": 0.59,
+        "erreur_inf": -0.59
       },
       {
         "candidate_id": "MT",
@@ -2047,7 +2429,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 2
+        "intentions": 2.0,
+        "erreur_sup": 0.29,
+        "erreur_inf": -0.29
       },
       {
         "candidate_id": "DV",
@@ -2056,7 +2440,9 @@
         "name": "Dominique",
         "surname": "de Villepin",
         "parti": "",
-        "intentions": 2
+        "intentions": 2.0,
+        "erreur_sup": 0.29,
+        "erreur_inf": -0.29
       },
       {
         "candidate_id": "GA",
@@ -2065,7 +2451,9 @@
         "name": "Gabriel",
         "surname": "Attal",
         "parti": "La République En Marche",
-        "intentions": 8
+        "intentions": 8.0,
+        "erreur_sup": 0.56,
+        "erreur_inf": -0.56
       },
       {
         "candidate_id": "EP",
@@ -2074,7 +2462,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 15
+        "intentions": 15.0,
+        "erreur_sup": 0.73,
+        "erreur_inf": -0.73
       },
       {
         "candidate_id": "BR",
@@ -2083,7 +2473,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 7.5
+        "intentions": 7.5,
+        "erreur_sup": 0.54,
+        "erreur_inf": -0.54
       },
       {
         "candidate_id": "NDA",
@@ -2092,7 +2484,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 2.5
+        "intentions": 2.5,
+        "erreur_sup": 0.32,
+        "erreur_inf": -0.32
       },
       {
         "candidate_id": "JB",
@@ -2101,7 +2495,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 32
+        "intentions": 32.0,
+        "erreur_sup": 0.96,
+        "erreur_inf": -0.96
       },
       {
         "candidate_id": "EZ",
@@ -2110,7 +2506,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 2
+        "intentions": 2.0,
+        "erreur_sup": 0.29,
+        "erreur_inf": -0.29
       }
     ],
     "poll_id": "20250411_0418_if_A",
@@ -2135,7 +2533,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1.0,
+        "erreur_sup": 0.2,
+        "erreur_inf": -0.2
       },
       {
         "candidate_id": "JLM",
@@ -2144,7 +2544,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 10
+        "intentions": 10.0,
+        "erreur_sup": 0.62,
+        "erreur_inf": -0.62
       },
       {
         "candidate_id": "FRo",
@@ -2153,7 +2555,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 2.5
+        "intentions": 2.5,
+        "erreur_sup": 0.32,
+        "erreur_inf": -0.32
       },
       {
         "candidate_id": "FR",
@@ -2162,7 +2566,9 @@
         "name": "François",
         "surname": "Ruffin",
         "parti": "La France Insoumise",
-        "intentions": 5
+        "intentions": 5.0,
+        "erreur_sup": 0.45,
+        "erreur_inf": -0.45
       },
       {
         "candidate_id": "RG",
@@ -2171,7 +2577,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 10
+        "intentions": 10.0,
+        "erreur_sup": 0.62,
+        "erreur_inf": -0.62
       },
       {
         "candidate_id": "MT",
@@ -2180,7 +2588,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 2.5
+        "intentions": 2.5,
+        "erreur_sup": 0.32,
+        "erreur_inf": -0.32
       },
       {
         "candidate_id": "EP",
@@ -2189,7 +2599,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 22
+        "intentions": 22.0,
+        "erreur_sup": 0.85,
+        "erreur_inf": -0.85
       },
       {
         "candidate_id": "BR",
@@ -2198,7 +2610,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 8
+        "intentions": 8.0,
+        "erreur_sup": 0.56,
+        "erreur_inf": -0.56
       },
       {
         "candidate_id": "NDA",
@@ -2207,7 +2621,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 2
+        "intentions": 2.0,
+        "erreur_sup": 0.29,
+        "erreur_inf": -0.29
       },
       {
         "candidate_id": "JB",
@@ -2216,7 +2632,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 33
+        "intentions": 33.0,
+        "erreur_sup": 0.96,
+        "erreur_inf": -0.96
       },
       {
         "candidate_id": "EZ",
@@ -2225,7 +2643,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 4
+        "intentions": 4.0,
+        "erreur_sup": 0.4,
+        "erreur_inf": -0.4
       }
     ],
     "poll_id": "20250411_0418_if_B",
@@ -2250,7 +2670,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1.0,
+        "erreur_sup": 0.2,
+        "erreur_inf": -0.2
       },
       {
         "candidate_id": "JLM",
@@ -2259,7 +2681,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 10
+        "intentions": 10.0,
+        "erreur_sup": 0.62,
+        "erreur_inf": -0.62
       },
       {
         "candidate_id": "FRo",
@@ -2268,7 +2692,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 2.5
+        "intentions": 2.5,
+        "erreur_sup": 0.32,
+        "erreur_inf": -0.32
       },
       {
         "candidate_id": "FR",
@@ -2277,7 +2703,9 @@
         "name": "François",
         "surname": "Ruffin",
         "parti": "La France Insoumise",
-        "intentions": 5
+        "intentions": 5.0,
+        "erreur_sup": 0.45,
+        "erreur_inf": -0.45
       },
       {
         "candidate_id": "RG",
@@ -2286,7 +2714,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 10
+        "intentions": 10.0,
+        "erreur_sup": 0.62,
+        "erreur_inf": -0.62
       },
       {
         "candidate_id": "MT",
@@ -2295,7 +2725,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 3
+        "intentions": 3.0,
+        "erreur_sup": 0.35,
+        "erreur_inf": -0.35
       },
       {
         "candidate_id": "EP",
@@ -2304,7 +2736,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 24
+        "intentions": 24.0,
+        "erreur_sup": 0.88,
+        "erreur_inf": -0.88
       },
       {
         "candidate_id": "LW",
@@ -2313,7 +2747,9 @@
         "name": "Laurent",
         "surname": "Wauquiez",
         "parti": "Les Républicains",
-        "intentions": 3
+        "intentions": 3.0,
+        "erreur_sup": 0.35,
+        "erreur_inf": -0.35
       },
       {
         "candidate_id": "NDA",
@@ -2322,7 +2758,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 2.5
+        "intentions": 2.5,
+        "erreur_sup": 0.32,
+        "erreur_inf": -0.32
       },
       {
         "candidate_id": "JB",
@@ -2331,7 +2769,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 35
+        "intentions": 35.0,
+        "erreur_sup": 0.98,
+        "erreur_inf": -0.98
       },
       {
         "candidate_id": "EZ",
@@ -2340,7 +2780,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 4
+        "intentions": 4.0,
+        "erreur_sup": 0.4,
+        "erreur_inf": -0.4
       }
     ],
     "poll_id": "20250411_0418_if_C",
@@ -2365,7 +2807,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1.0,
+        "erreur_sup": 0.2,
+        "erreur_inf": -0.2
       },
       {
         "candidate_id": "JLM",
@@ -2374,7 +2818,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 10
+        "intentions": 10.0,
+        "erreur_sup": 0.62,
+        "erreur_inf": -0.62
       },
       {
         "candidate_id": "FRo",
@@ -2383,7 +2829,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 2.5
+        "intentions": 2.5,
+        "erreur_sup": 0.32,
+        "erreur_inf": -0.32
       },
       {
         "candidate_id": "FR",
@@ -2392,7 +2840,9 @@
         "name": "François",
         "surname": "Ruffin",
         "parti": "La France Insoumise",
-        "intentions": 5
+        "intentions": 5.0,
+        "erreur_sup": 0.45,
+        "erreur_inf": -0.45
       },
       {
         "candidate_id": "RG",
@@ -2401,7 +2851,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 11.5
+        "intentions": 11.5,
+        "erreur_sup": 0.65,
+        "erreur_inf": -0.65
       },
       {
         "candidate_id": "MT",
@@ -2410,7 +2862,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 3
+        "intentions": 3.0,
+        "erreur_sup": 0.35,
+        "erreur_inf": -0.35
       },
       {
         "candidate_id": "GA",
@@ -2419,7 +2873,9 @@
         "name": "Gabriel",
         "surname": "Attal",
         "parti": "La République En Marche",
-        "intentions": 14
+        "intentions": 14.0,
+        "erreur_sup": 0.71,
+        "erreur_inf": -0.71
       },
       {
         "candidate_id": "BR",
@@ -2428,7 +2884,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 14
+        "intentions": 14.0,
+        "erreur_sup": 0.71,
+        "erreur_inf": -0.71
       },
       {
         "candidate_id": "NDA",
@@ -2437,7 +2895,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 2
+        "intentions": 2.0,
+        "erreur_sup": 0.29,
+        "erreur_inf": -0.29
       },
       {
         "candidate_id": "JB",
@@ -2446,7 +2906,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 33
+        "intentions": 33.0,
+        "erreur_sup": 0.96,
+        "erreur_inf": -0.96
       },
       {
         "candidate_id": "EZ",
@@ -2455,7 +2917,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 4
+        "intentions": 4.0,
+        "erreur_sup": 0.4,
+        "erreur_inf": -0.4
       }
     ],
     "poll_id": "20250411_0418_if_D",
@@ -2480,7 +2944,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1.5
+        "intentions": 1.5,
+        "erreur_sup": 0.25,
+        "erreur_inf": -0.25
       },
       {
         "candidate_id": "JLM",
@@ -2489,7 +2955,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 13
+        "intentions": 13.0,
+        "erreur_sup": 0.69,
+        "erreur_inf": -0.69
       },
       {
         "candidate_id": "RG",
@@ -2498,7 +2966,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 15
+        "intentions": 15.0,
+        "erreur_sup": 0.73,
+        "erreur_inf": -0.73
       },
       {
         "candidate_id": "EP",
@@ -2507,7 +2977,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 22
+        "intentions": 22.0,
+        "erreur_sup": 0.85,
+        "erreur_inf": -0.85
       },
       {
         "candidate_id": "BR",
@@ -2516,7 +2988,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 9
+        "intentions": 9.0,
+        "erreur_sup": 0.59,
+        "erreur_inf": -0.59
       },
       {
         "candidate_id": "NDA",
@@ -2525,7 +2999,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 2.5
+        "intentions": 2.5,
+        "erreur_sup": 0.32,
+        "erreur_inf": -0.32
       },
       {
         "candidate_id": "JB",
@@ -2534,7 +3010,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 33
+        "intentions": 33.0,
+        "erreur_sup": 0.96,
+        "erreur_inf": -0.96
       },
       {
         "candidate_id": "EZ",
@@ -2543,7 +3021,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 4
+        "intentions": 4.0,
+        "erreur_sup": 0.4,
+        "erreur_inf": -0.4
       }
     ],
     "poll_id": "20250411_0418_if_E",
@@ -2568,7 +3048,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 2
+        "intentions": 2,
+        "erreur_sup": 0.29,
+        "erreur_inf": -0.29
       },
       {
         "candidate_id": "JLM",
@@ -2577,7 +3059,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 12
+        "intentions": 12,
+        "erreur_sup": 0.67,
+        "erreur_inf": -0.67
       },
       {
         "candidate_id": "FR",
@@ -2586,7 +3070,9 @@
         "name": "François",
         "surname": "Ruffin",
         "parti": "La France Insoumise",
-        "intentions": 10
+        "intentions": 10,
+        "erreur_sup": 0.62,
+        "erreur_inf": -0.62
       },
       {
         "candidate_id": "EP",
@@ -2595,7 +3081,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 26
+        "intentions": 26,
+        "erreur_sup": 0.9,
+        "erreur_inf": -0.9
       },
       {
         "candidate_id": "BR",
@@ -2604,7 +3092,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 10
+        "intentions": 10,
+        "erreur_sup": 0.62,
+        "erreur_inf": -0.62
       },
       {
         "candidate_id": "NDA",
@@ -2613,7 +3103,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 0.35,
+        "erreur_inf": -0.35
       },
       {
         "candidate_id": "JB",
@@ -2622,7 +3114,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 33
+        "intentions": 33,
+        "erreur_sup": 0.96,
+        "erreur_inf": -0.96
       },
       {
         "candidate_id": "EZ",
@@ -2631,7 +3125,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 0.4,
+        "erreur_inf": -0.4
       }
     ],
     "poll_id": "20250411_0418_if_F",
@@ -2656,7 +3152,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 54
+        "intentions": 54,
+        "erreur_sup": 3.91,
+        "erreur_inf": -3.91
       },
       {
         "candidate_id": "JB",
@@ -2665,7 +3163,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 46
+        "intentions": 46,
+        "erreur_sup": 3.91,
+        "erreur_inf": -3.91
       }
     ],
     "poll_id": "20250423_0424_od_2A",
@@ -2690,7 +3190,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 54
+        "intentions": 54,
+        "erreur_sup": 3.91,
+        "erreur_inf": -3.91
       },
       {
         "candidate_id": "MLP",
@@ -2699,7 +3201,9 @@
         "name": "Marine",
         "surname": "Le Pen",
         "parti": "Rassemblement National",
-        "intentions": 46
+        "intentions": 46,
+        "erreur_sup": 3.91,
+        "erreur_inf": -3.91
       }
     ],
     "poll_id": "20250423_0424_od_2B",
@@ -2724,7 +3228,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1.0,
+        "erreur_sup": 0.75,
+        "erreur_inf": -0.75
       },
       {
         "candidate_id": "PP",
@@ -2733,7 +3239,9 @@
         "name": "Philippe",
         "surname": "Poutou",
         "parti": "Nouveau Parti Anticapitaliste",
-        "intentions": 2
+        "intentions": 2.0,
+        "erreur_sup": 1.06,
+        "erreur_inf": -1.06
       },
       {
         "candidate_id": "FRo",
@@ -2742,7 +3250,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 3
+        "intentions": 3.0,
+        "erreur_sup": 1.29,
+        "erreur_inf": -1.29
       },
       {
         "candidate_id": "JLM",
@@ -2751,7 +3261,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 12
+        "intentions": 12.0,
+        "erreur_sup": 2.45,
+        "erreur_inf": -2.45
       },
       {
         "candidate_id": "MT",
@@ -2760,7 +3272,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 3
+        "intentions": 3.0,
+        "erreur_sup": 1.29,
+        "erreur_inf": -1.29
       },
       {
         "candidate_id": "RG",
@@ -2769,7 +3283,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 11.5
+        "intentions": 11.5,
+        "erreur_sup": 2.4,
+        "erreur_inf": -2.4
       },
       {
         "candidate_id": "EP",
@@ -2778,7 +3294,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 20.5
+        "intentions": 20.5,
+        "erreur_sup": 3.04,
+        "erreur_inf": -3.04
       },
       {
         "candidate_id": "BR",
@@ -2787,7 +3305,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 10
+        "intentions": 10.0,
+        "erreur_sup": 2.26,
+        "erreur_inf": -2.26
       },
       {
         "candidate_id": "NDA",
@@ -2796,7 +3316,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 2
+        "intentions": 2.0,
+        "erreur_sup": 1.06,
+        "erreur_inf": -1.06
       },
       {
         "candidate_id": "MLP",
@@ -2805,7 +3327,9 @@
         "name": "Marine",
         "surname": "Le Pen",
         "parti": "Rassemblement National",
-        "intentions": 32
+        "intentions": 32.0,
+        "erreur_sup": 3.52,
+        "erreur_inf": -3.52
       },
       {
         "candidate_id": "EZ",
@@ -2814,7 +3338,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 3
+        "intentions": 3.0,
+        "erreur_sup": 1.29,
+        "erreur_inf": -1.29
       }
     ],
     "poll_id": "20250423_0424_od_A",
@@ -2839,7 +3365,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1.0,
+        "erreur_sup": 0.76,
+        "erreur_inf": -0.76
       },
       {
         "candidate_id": "PP",
@@ -2848,7 +3376,9 @@
         "name": "Philippe",
         "surname": "Poutou",
         "parti": "Nouveau Parti Anticapitaliste",
-        "intentions": 2
+        "intentions": 2.0,
+        "erreur_sup": 1.06,
+        "erreur_inf": -1.06
       },
       {
         "candidate_id": "FRo",
@@ -2857,7 +3387,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 3
+        "intentions": 3.0,
+        "erreur_sup": 1.29,
+        "erreur_inf": -1.29
       },
       {
         "candidate_id": "JLM",
@@ -2866,7 +3398,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 12
+        "intentions": 12.0,
+        "erreur_sup": 2.47,
+        "erreur_inf": -2.47
       },
       {
         "candidate_id": "MT",
@@ -2875,7 +3409,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 4
+        "intentions": 4.0,
+        "erreur_sup": 1.49,
+        "erreur_inf": -1.49
       },
       {
         "candidate_id": "RG",
@@ -2884,7 +3420,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 12
+        "intentions": 12.0,
+        "erreur_sup": 2.47,
+        "erreur_inf": -2.47
       },
       {
         "candidate_id": "EP",
@@ -2893,7 +3431,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 20
+        "intentions": 20.0,
+        "erreur_sup": 3.04,
+        "erreur_inf": -3.04
       },
       {
         "candidate_id": "BR",
@@ -2902,7 +3442,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 9.5
+        "intentions": 9.5,
+        "erreur_sup": 2.23,
+        "erreur_inf": -2.23
       },
       {
         "candidate_id": "NDA",
@@ -2911,7 +3453,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 2
+        "intentions": 2.0,
+        "erreur_sup": 1.06,
+        "erreur_inf": -1.06
       },
       {
         "candidate_id": "JB",
@@ -2920,7 +3464,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 31.5
+        "intentions": 31.5,
+        "erreur_sup": 3.53,
+        "erreur_inf": -3.53
       },
       {
         "candidate_id": "EZ",
@@ -2929,7 +3475,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 3
+        "intentions": 3.0,
+        "erreur_sup": 1.29,
+        "erreur_inf": -1.29
       }
     ],
     "poll_id": "20250423_0424_od_B",
@@ -2954,7 +3502,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 52
+        "intentions": 52,
+        "erreur_sup": 2.28,
+        "erreur_inf": -2.28
       },
       {
         "candidate_id": "MLP",
@@ -2963,7 +3513,9 @@
         "name": "Marine",
         "surname": "Le Pen",
         "parti": "Rassemblement National",
-        "intentions": 48
+        "intentions": 48,
+        "erreur_sup": 2.28,
+        "erreur_inf": -2.28
       }
     ],
     "poll_id": "20250429_0430_if_2A",
@@ -2988,7 +3540,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 0.5
+        "intentions": 0.5,
+        "erreur_sup": 0.32,
+        "erreur_inf": -0.32
       },
       {
         "candidate_id": "JLM",
@@ -2997,7 +3551,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 10
+        "intentions": 10.0,
+        "erreur_sup": 1.37,
+        "erreur_inf": -1.37
       },
       {
         "candidate_id": "FRo",
@@ -3006,7 +3562,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 2
+        "intentions": 2.0,
+        "erreur_sup": 0.64,
+        "erreur_inf": -0.64
       },
       {
         "candidate_id": "FR",
@@ -3015,7 +3573,9 @@
         "name": "François",
         "surname": "Ruffin",
         "parti": "La France Insoumise",
-        "intentions": 5.5
+        "intentions": 5.5,
+        "erreur_sup": 1.04,
+        "erreur_inf": -1.04
       },
       {
         "candidate_id": "RG",
@@ -3024,7 +3584,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 10
+        "intentions": 10.0,
+        "erreur_sup": 1.37,
+        "erreur_inf": -1.37
       },
       {
         "candidate_id": "MT",
@@ -3033,7 +3595,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 4
+        "intentions": 4.0,
+        "erreur_sup": 0.9,
+        "erreur_inf": -0.9
       },
       {
         "candidate_id": "EP",
@@ -3042,7 +3606,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 21
+        "intentions": 21.0,
+        "erreur_sup": 1.86,
+        "erreur_inf": -1.86
       },
       {
         "candidate_id": "BR",
@@ -3051,7 +3617,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 9
+        "intentions": 9.0,
+        "erreur_sup": 1.31,
+        "erreur_inf": -1.31
       },
       {
         "candidate_id": "NDA",
@@ -3060,7 +3628,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 2
+        "intentions": 2.0,
+        "erreur_sup": 0.64,
+        "erreur_inf": -0.64
       },
       {
         "candidate_id": "MLP",
@@ -3069,7 +3639,9 @@
         "name": "Marine",
         "surname": "Le Pen",
         "parti": "Rassemblement National",
-        "intentions": 32
+        "intentions": 32.0,
+        "erreur_sup": 2.13,
+        "erreur_inf": -2.13
       },
       {
         "candidate_id": "EZ",
@@ -3078,7 +3650,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 4
+        "intentions": 4.0,
+        "erreur_sup": 0.9,
+        "erreur_inf": -0.9
       }
     ],
     "poll_id": "20250429_0430_if_A",
@@ -3103,7 +3677,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.45,
+        "erreur_inf": -0.45
       },
       {
         "candidate_id": "JLM",
@@ -3112,7 +3688,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 10
+        "intentions": 10,
+        "erreur_sup": 1.37,
+        "erreur_inf": -1.37
       },
       {
         "candidate_id": "FRo",
@@ -3121,7 +3699,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 2
+        "intentions": 2,
+        "erreur_sup": 0.64,
+        "erreur_inf": -0.64
       },
       {
         "candidate_id": "FR",
@@ -3130,7 +3710,9 @@
         "name": "François",
         "surname": "Ruffin",
         "parti": "La France Insoumise",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 1.0,
+        "erreur_inf": -1.0
       },
       {
         "candidate_id": "RG",
@@ -3139,7 +3721,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 10
+        "intentions": 10,
+        "erreur_sup": 1.37,
+        "erreur_inf": -1.37
       },
       {
         "candidate_id": "MT",
@@ -3148,7 +3732,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 0.9,
+        "erreur_inf": -0.9
       },
       {
         "candidate_id": "EP",
@@ -3157,7 +3743,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 23
+        "intentions": 23,
+        "erreur_sup": 1.92,
+        "erreur_inf": -1.92
       },
       {
         "candidate_id": "LW",
@@ -3166,7 +3754,9 @@
         "name": "Laurent",
         "surname": "Wauquiez",
         "parti": "Les Républicains",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 0.9,
+        "erreur_inf": -0.9
       },
       {
         "candidate_id": "NDA",
@@ -3175,7 +3765,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 2
+        "intentions": 2,
+        "erreur_sup": 0.64,
+        "erreur_inf": -0.64
       },
       {
         "candidate_id": "MLP",
@@ -3184,7 +3776,9 @@
         "name": "Marine",
         "surname": "Le Pen",
         "parti": "Rassemblement National",
-        "intentions": 34
+        "intentions": 34,
+        "erreur_sup": 2.17,
+        "erreur_inf": -2.17
       },
       {
         "candidate_id": "EZ",
@@ -3193,7 +3787,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 1.0,
+        "erreur_inf": -1.0
       }
     ],
     "poll_id": "20250429_0430_if_B",
@@ -3218,7 +3814,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.6,
+        "erreur_inf": -0.6
       },
       {
         "candidate_id": "FRo",
@@ -3227,7 +3825,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.02,
+        "erreur_inf": -1.02
       },
       {
         "candidate_id": "JLM",
@@ -3236,7 +3836,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 14
+        "intentions": 14,
+        "erreur_sup": 2.08,
+        "erreur_inf": -2.08
       },
       {
         "candidate_id": "RG",
@@ -3245,7 +3847,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 10
+        "intentions": 10,
+        "erreur_sup": 1.8,
+        "erreur_inf": -1.8
       },
       {
         "candidate_id": "MT",
@@ -3254,7 +3858,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.02,
+        "erreur_inf": -1.02
       },
       {
         "candidate_id": "EP",
@@ -3263,7 +3869,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 21
+        "intentions": 21,
+        "erreur_sup": 2.44,
+        "erreur_inf": -2.44
       },
       {
         "candidate_id": "BR",
@@ -3272,7 +3880,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 13
+        "intentions": 13,
+        "erreur_sup": 2.01,
+        "erreur_inf": -2.01
       },
       {
         "candidate_id": "JB",
@@ -3281,7 +3891,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 30
+        "intentions": 30,
+        "erreur_sup": 2.74,
+        "erreur_inf": -2.74
       },
       {
         "candidate_id": "EZ",
@@ -3290,7 +3902,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 1.31,
+        "erreur_inf": -1.31
       }
     ],
     "poll_id": "20250519_0519_hi_A",
@@ -3315,7 +3929,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.6,
+        "erreur_inf": -0.6
       },
       {
         "candidate_id": "FRo",
@@ -3324,7 +3940,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.02,
+        "erreur_inf": -1.02
       },
       {
         "candidate_id": "JLM",
@@ -3333,7 +3951,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 14
+        "intentions": 14,
+        "erreur_sup": 2.08,
+        "erreur_inf": -2.08
       },
       {
         "candidate_id": "RG",
@@ -3342,7 +3962,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 10
+        "intentions": 10,
+        "erreur_sup": 1.8,
+        "erreur_inf": -1.8
       },
       {
         "candidate_id": "MT",
@@ -3351,7 +3973,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.02,
+        "erreur_inf": -1.02
       },
       {
         "candidate_id": "EP",
@@ -3360,7 +3984,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 21
+        "intentions": 21,
+        "erreur_sup": 2.44,
+        "erreur_inf": -2.44
       },
       {
         "candidate_id": "BR",
@@ -3369,7 +3995,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 12
+        "intentions": 12,
+        "erreur_sup": 1.95,
+        "erreur_inf": -1.95
       },
       {
         "candidate_id": "MLP",
@@ -3378,7 +4006,9 @@
         "name": "Marine",
         "surname": "Le Pen",
         "parti": "Rassemblement National",
-        "intentions": 31
+        "intentions": 31,
+        "erreur_sup": 2.77,
+        "erreur_inf": -2.77
       },
       {
         "candidate_id": "EZ",
@@ -3387,7 +4017,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 1.31,
+        "erreur_inf": -1.31
       }
     ],
     "poll_id": "20250519_0519_hi_B",
@@ -3412,7 +4044,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.6,
+        "erreur_inf": -0.6
       },
       {
         "candidate_id": "FRo",
@@ -3421,7 +4055,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.02,
+        "erreur_inf": -1.02
       },
       {
         "candidate_id": "JLM",
@@ -3430,7 +4066,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 14
+        "intentions": 14,
+        "erreur_sup": 2.08,
+        "erreur_inf": -2.08
       },
       {
         "candidate_id": "RG",
@@ -3439,7 +4077,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 11
+        "intentions": 11,
+        "erreur_sup": 1.87,
+        "erreur_inf": -1.87
       },
       {
         "candidate_id": "MT",
@@ -3448,7 +4088,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.02,
+        "erreur_inf": -1.02
       },
       {
         "candidate_id": "GA",
@@ -3457,7 +4099,9 @@
         "name": "Gabriel",
         "surname": "Attal",
         "parti": "La République En Marche",
-        "intentions": 15
+        "intentions": 15,
+        "erreur_sup": 2.14,
+        "erreur_inf": -2.14
       },
       {
         "candidate_id": "BR",
@@ -3466,7 +4110,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 17
+        "intentions": 17,
+        "erreur_sup": 2.25,
+        "erreur_inf": -2.25
       },
       {
         "candidate_id": "JB",
@@ -3475,7 +4121,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 31
+        "intentions": 31,
+        "erreur_sup": 2.77,
+        "erreur_inf": -2.77
       },
       {
         "candidate_id": "EZ",
@@ -3484,7 +4132,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 1.31,
+        "erreur_inf": -1.31
       }
     ],
     "poll_id": "20250519_0519_hi_C",
@@ -3509,7 +4159,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.6,
+        "erreur_inf": -0.6
       },
       {
         "candidate_id": "FRo",
@@ -3518,7 +4170,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.02,
+        "erreur_inf": -1.02
       },
       {
         "candidate_id": "JLM",
@@ -3527,7 +4181,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 15
+        "intentions": 15,
+        "erreur_sup": 2.14,
+        "erreur_inf": -2.14
       },
       {
         "candidate_id": "RG",
@@ -3536,7 +4192,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 11
+        "intentions": 11,
+        "erreur_sup": 1.87,
+        "erreur_inf": -1.87
       },
       {
         "candidate_id": "MT",
@@ -3545,7 +4203,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.02,
+        "erreur_inf": -1.02
       },
       {
         "candidate_id": "GA",
@@ -3554,7 +4214,9 @@
         "name": "Gabriel",
         "surname": "Attal",
         "parti": "La République En Marche",
-        "intentions": 15
+        "intentions": 15,
+        "erreur_sup": 2.14,
+        "erreur_inf": -2.14
       },
       {
         "candidate_id": "BR",
@@ -3563,7 +4225,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 16
+        "intentions": 16,
+        "erreur_sup": 2.2,
+        "erreur_inf": -2.2
       },
       {
         "candidate_id": "MLP",
@@ -3572,7 +4236,9 @@
         "name": "Marine",
         "surname": "Le Pen",
         "parti": "Rassemblement National",
-        "intentions": 31
+        "intentions": 31,
+        "erreur_sup": 2.77,
+        "erreur_inf": -2.77
       },
       {
         "candidate_id": "EZ",
@@ -3581,7 +4247,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 1.31,
+        "erreur_inf": -1.31
       }
     ],
     "poll_id": "20250519_0519_hi_D",
@@ -3606,7 +4274,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1.0,
+        "erreur_sup": 0.78,
+        "erreur_inf": -0.78
       },
       {
         "candidate_id": "FRo",
@@ -3615,7 +4285,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 3
+        "intentions": 3.0,
+        "erreur_sup": 1.33,
+        "erreur_inf": -1.33
       },
       {
         "candidate_id": "JLM",
@@ -3624,7 +4296,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 13.5
+        "intentions": 13.5,
+        "erreur_sup": 2.66,
+        "erreur_inf": -2.66
       },
       {
         "candidate_id": "OF",
@@ -3633,7 +4307,9 @@
         "name": "Olivier",
         "surname": "Faure",
         "parti": "Parti Socialiste",
-        "intentions": 4.5
+        "intentions": 4.5,
+        "erreur_sup": 1.61,
+        "erreur_inf": -1.61
       },
       {
         "candidate_id": "MT",
@@ -3642,7 +4318,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 5
+        "intentions": 5.0,
+        "erreur_sup": 1.7,
+        "erreur_inf": -1.7
       },
       {
         "candidate_id": "EP",
@@ -3651,7 +4329,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 21
+        "intentions": 21.0,
+        "erreur_sup": 3.17,
+        "erreur_inf": -3.17
       },
       {
         "candidate_id": "BR",
@@ -3660,7 +4340,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 16
+        "intentions": 16.0,
+        "erreur_sup": 2.86,
+        "erreur_inf": -2.86
       },
       {
         "candidate_id": "NDA",
@@ -3669,7 +4351,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 2
+        "intentions": 2.0,
+        "erreur_sup": 1.09,
+        "erreur_inf": -1.09
       },
       {
         "candidate_id": "MLP",
@@ -3678,7 +4362,9 @@
         "name": "Marine",
         "surname": "Le Pen",
         "parti": "Rassemblement National",
-        "intentions": 31
+        "intentions": 31.0,
+        "erreur_sup": 3.6,
+        "erreur_inf": -3.6
       },
       {
         "candidate_id": "EZ",
@@ -3687,7 +4373,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 3
+        "intentions": 3.0,
+        "erreur_sup": 1.33,
+        "erreur_inf": -1.33
       }
     ],
     "poll_id": "20250519_0520_if_A",
@@ -3712,7 +4400,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1.0,
+        "erreur_sup": 0.78,
+        "erreur_inf": -0.78
       },
       {
         "candidate_id": "FRo",
@@ -3721,7 +4411,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 3.5
+        "intentions": 3.5,
+        "erreur_sup": 1.44,
+        "erreur_inf": -1.44
       },
       {
         "candidate_id": "JLM",
@@ -3730,7 +4422,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 13
+        "intentions": 13.0,
+        "erreur_sup": 2.64,
+        "erreur_inf": -2.64
       },
       {
         "candidate_id": "OF",
@@ -3739,7 +4433,9 @@
         "name": "Olivier",
         "surname": "Faure",
         "parti": "Parti Socialiste",
-        "intentions": 4.5
+        "intentions": 4.5,
+        "erreur_sup": 1.63,
+        "erreur_inf": -1.63
       },
       {
         "candidate_id": "MT",
@@ -3748,7 +4444,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 4.5
+        "intentions": 4.5,
+        "erreur_sup": 1.63,
+        "erreur_inf": -1.63
       },
       {
         "candidate_id": "EP",
@@ -3757,7 +4455,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 21
+        "intentions": 21.0,
+        "erreur_sup": 3.2,
+        "erreur_inf": -3.2
       },
       {
         "candidate_id": "BR",
@@ -3766,7 +4466,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 16
+        "intentions": 16.0,
+        "erreur_sup": 2.88,
+        "erreur_inf": -2.88
       },
       {
         "candidate_id": "NDA",
@@ -3775,7 +4477,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 2
+        "intentions": 2.0,
+        "erreur_sup": 1.1,
+        "erreur_inf": -1.1
       },
       {
         "candidate_id": "JB",
@@ -3784,7 +4488,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 31
+        "intentions": 31.0,
+        "erreur_sup": 3.63,
+        "erreur_inf": -3.63
       },
       {
         "candidate_id": "EZ",
@@ -3793,7 +4499,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 3.5
+        "intentions": 3.5,
+        "erreur_sup": 1.44,
+        "erreur_inf": -1.44
       }
     ],
     "poll_id": "20250519_0520_if_B",
@@ -3818,7 +4526,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.58,
+        "erreur_inf": -0.58
       },
       {
         "candidate_id": "FRo",
@@ -3827,7 +4537,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.0,
+        "erreur_inf": -1.0
       },
       {
         "candidate_id": "JLM",
@@ -3836,7 +4548,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 12
+        "intentions": 12,
+        "erreur_sup": 1.9,
+        "erreur_inf": -1.9
       },
       {
         "candidate_id": "RG",
@@ -3845,7 +4559,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 15
+        "intentions": 15,
+        "erreur_sup": 2.08,
+        "erreur_inf": -2.08
       },
       {
         "candidate_id": "EP",
@@ -3854,7 +4570,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 16
+        "intentions": 16,
+        "erreur_sup": 2.14,
+        "erreur_inf": -2.14
       },
       {
         "candidate_id": "BR",
@@ -3863,7 +4581,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 9
+        "intentions": 9,
+        "erreur_sup": 1.67,
+        "erreur_inf": -1.67
       },
       {
         "candidate_id": "DV",
@@ -3872,7 +4592,9 @@
         "name": "Dominique",
         "surname": "de Villepin",
         "parti": "",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 1.27,
+        "erreur_inf": -1.27
       },
       {
         "candidate_id": "NDA",
@@ -3881,7 +4603,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 2
+        "intentions": 2,
+        "erreur_sup": 0.82,
+        "erreur_inf": -0.82
       },
       {
         "candidate_id": "MLP",
@@ -3890,7 +4614,9 @@
         "name": "Marine",
         "surname": "Le Pen",
         "parti": "Rassemblement National",
-        "intentions": 33
+        "intentions": 33,
+        "erreur_sup": 2.75,
+        "erreur_inf": -2.75
       },
       {
         "candidate_id": "EZ",
@@ -3899,7 +4625,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 1.14,
+        "erreur_inf": -1.14
       }
     ],
     "poll_id": "20250924_0925_if_A",
@@ -3924,7 +4652,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1.0,
+        "erreur_sup": 0.58,
+        "erreur_inf": -0.58
       },
       {
         "candidate_id": "FRo",
@@ -3933,7 +4663,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 3.5
+        "intentions": 3.5,
+        "erreur_sup": 1.07,
+        "erreur_inf": -1.07
       },
       {
         "candidate_id": "JLM",
@@ -3942,7 +4674,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 12
+        "intentions": 12.0,
+        "erreur_sup": 1.9,
+        "erreur_inf": -1.9
       },
       {
         "candidate_id": "RG",
@@ -3951,7 +4685,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 15
+        "intentions": 15.0,
+        "erreur_sup": 2.08,
+        "erreur_inf": -2.08
       },
       {
         "candidate_id": "EP",
@@ -3960,7 +4696,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 16
+        "intentions": 16.0,
+        "erreur_sup": 2.14,
+        "erreur_inf": -2.14
       },
       {
         "candidate_id": "BR",
@@ -3969,7 +4707,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 9
+        "intentions": 9.0,
+        "erreur_sup": 1.67,
+        "erreur_inf": -1.67
       },
       {
         "candidate_id": "DV",
@@ -3978,7 +4718,9 @@
         "name": "Dominique",
         "surname": "de Villepin",
         "parti": "",
-        "intentions": 4
+        "intentions": 4.0,
+        "erreur_sup": 1.14,
+        "erreur_inf": -1.14
       },
       {
         "candidate_id": "NDA",
@@ -3987,7 +4729,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 2
+        "intentions": 2.0,
+        "erreur_sup": 0.82,
+        "erreur_inf": -0.82
       },
       {
         "candidate_id": "JB",
@@ -3996,7 +4740,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 33
+        "intentions": 33.0,
+        "erreur_sup": 2.75,
+        "erreur_inf": -2.75
       },
       {
         "candidate_id": "EZ",
@@ -4005,7 +4751,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 4.5
+        "intentions": 4.5,
+        "erreur_sup": 1.21,
+        "erreur_inf": -1.21
       }
     ],
     "poll_id": "20250924_0925_if_B",
@@ -4030,7 +4778,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1.0,
+        "erreur_sup": 0.58,
+        "erreur_inf": -0.58
       },
       {
         "candidate_id": "FRo",
@@ -4039,7 +4789,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 5
+        "intentions": 5.0,
+        "erreur_sup": 1.27,
+        "erreur_inf": -1.27
       },
       {
         "candidate_id": "JLM",
@@ -4048,7 +4800,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 13
+        "intentions": 13.0,
+        "erreur_sup": 1.96,
+        "erreur_inf": -1.96
       },
       {
         "candidate_id": "OF",
@@ -4057,7 +4811,9 @@
         "name": "Olivier",
         "surname": "Faure",
         "parti": "Parti Socialiste",
-        "intentions": 7
+        "intentions": 7.0,
+        "erreur_sup": 1.49,
+        "erreur_inf": -1.49
       },
       {
         "candidate_id": "EP",
@@ -4066,7 +4822,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 19
+        "intentions": 19.0,
+        "erreur_sup": 2.29,
+        "erreur_inf": -2.29
       },
       {
         "candidate_id": "BR",
@@ -4075,7 +4833,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 10
+        "intentions": 10.0,
+        "erreur_sup": 1.75,
+        "erreur_inf": -1.75
       },
       {
         "candidate_id": "DV",
@@ -4084,7 +4844,9 @@
         "name": "Dominique",
         "surname": "de Villepin",
         "parti": "",
-        "intentions": 4.5
+        "intentions": 4.5,
+        "erreur_sup": 1.21,
+        "erreur_inf": -1.21
       },
       {
         "candidate_id": "NDA",
@@ -4093,7 +4855,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 2
+        "intentions": 2.0,
+        "erreur_sup": 0.82,
+        "erreur_inf": -0.82
       },
       {
         "candidate_id": "JB",
@@ -4102,7 +4866,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 34
+        "intentions": 34.0,
+        "erreur_sup": 2.77,
+        "erreur_inf": -2.77
       },
       {
         "candidate_id": "EZ",
@@ -4111,7 +4877,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 4.5
+        "intentions": 4.5,
+        "erreur_sup": 1.21,
+        "erreur_inf": -1.21
       }
     ],
     "poll_id": "20250924_0925_if_C",
@@ -4136,7 +4904,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1.5
+        "intentions": 1.5,
+        "erreur_sup": 0.71,
+        "erreur_inf": -0.71
       },
       {
         "candidate_id": "FRo",
@@ -4145,7 +4915,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 4
+        "intentions": 4.0,
+        "erreur_sup": 1.14,
+        "erreur_inf": -1.14
       },
       {
         "candidate_id": "JLM",
@@ -4154,7 +4926,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 13
+        "intentions": 13.0,
+        "erreur_sup": 1.96,
+        "erreur_inf": -1.96
       },
       {
         "candidate_id": "RG",
@@ -4163,7 +4937,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 14
+        "intentions": 14.0,
+        "erreur_sup": 2.03,
+        "erreur_inf": -2.03
       },
       {
         "candidate_id": "GA",
@@ -4172,7 +4948,9 @@
         "name": "Gabriel",
         "surname": "Attal",
         "parti": "La République En Marche",
-        "intentions": 10
+        "intentions": 10.0,
+        "erreur_sup": 1.75,
+        "erreur_inf": -1.75
       },
       {
         "candidate_id": "BR",
@@ -4181,7 +4959,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 12
+        "intentions": 12.0,
+        "erreur_sup": 1.9,
+        "erreur_inf": -1.9
       },
       {
         "candidate_id": "DV",
@@ -4190,7 +4970,9 @@
         "name": "Dominique",
         "surname": "de Villepin",
         "parti": "",
-        "intentions": 4
+        "intentions": 4.0,
+        "erreur_sup": 1.14,
+        "erreur_inf": -1.14
       },
       {
         "candidate_id": "NDA",
@@ -4199,7 +4981,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 2.5
+        "intentions": 2.5,
+        "erreur_sup": 0.91,
+        "erreur_inf": -0.91
       },
       {
         "candidate_id": "JB",
@@ -4208,7 +4992,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 34
+        "intentions": 34.0,
+        "erreur_sup": 2.77,
+        "erreur_inf": -2.77
       },
       {
         "candidate_id": "EZ",
@@ -4217,7 +5003,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 5
+        "intentions": 5.0,
+        "erreur_sup": 1.27,
+        "erreur_inf": -1.27
       }
     ],
     "poll_id": "20250924_0925_if_D",
@@ -4242,7 +5030,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.58,
+        "erreur_inf": -0.58
       },
       {
         "candidate_id": "FRo",
@@ -4251,7 +5041,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 1.14,
+        "erreur_inf": -1.14
       },
       {
         "candidate_id": "JLM",
@@ -4260,7 +5052,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 13
+        "intentions": 13,
+        "erreur_sup": 1.96,
+        "erreur_inf": -1.96
       },
       {
         "candidate_id": "RG",
@@ -4269,7 +5063,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 16
+        "intentions": 16,
+        "erreur_sup": 2.14,
+        "erreur_inf": -2.14
       },
       {
         "candidate_id": "GD",
@@ -4278,7 +5074,9 @@
         "name": "Gérald",
         "surname": "Darmanin",
         "parti": "",
-        "intentions": 7
+        "intentions": 7,
+        "erreur_sup": 1.49,
+        "erreur_inf": -1.49
       },
       {
         "candidate_id": "BR",
@@ -4287,7 +5085,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 13
+        "intentions": 13,
+        "erreur_sup": 1.96,
+        "erreur_inf": -1.96
       },
       {
         "candidate_id": "DV",
@@ -4296,7 +5096,9 @@
         "name": "Dominique",
         "surname": "de Villepin",
         "parti": "",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 1.27,
+        "erreur_inf": -1.27
       },
       {
         "candidate_id": "NDA",
@@ -4305,7 +5107,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 2
+        "intentions": 2,
+        "erreur_sup": 0.82,
+        "erreur_inf": -0.82
       },
       {
         "candidate_id": "JB",
@@ -4314,7 +5118,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 35
+        "intentions": 35,
+        "erreur_sup": 2.78,
+        "erreur_inf": -2.78
       },
       {
         "candidate_id": "EZ",
@@ -4323,7 +5129,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 1.14,
+        "erreur_inf": -1.14
       }
     ],
     "poll_id": "20250924_0925_if_E",
@@ -4348,7 +5156,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 2
+        "intentions": 2,
+        "erreur_sup": 0.82,
+        "erreur_inf": -0.82
       },
       {
         "candidate_id": "FRo",
@@ -4357,7 +5167,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 1.14,
+        "erreur_inf": -1.14
       },
       {
         "candidate_id": "JLM",
@@ -4366,7 +5178,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 13
+        "intentions": 13,
+        "erreur_sup": 1.96,
+        "erreur_inf": -1.96
       },
       {
         "candidate_id": "RG",
@@ -4375,7 +5189,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 16
+        "intentions": 16,
+        "erreur_sup": 2.14,
+        "erreur_inf": -2.14
       },
       {
         "candidate_id": "FB",
@@ -4384,7 +5200,9 @@
         "name": "François",
         "surname": "Bayrou",
         "parti": "Mouvement Démocrate",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.0,
+        "erreur_inf": -1.0
       },
       {
         "candidate_id": "BR",
@@ -4393,7 +5211,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 13
+        "intentions": 13,
+        "erreur_sup": 1.96,
+        "erreur_inf": -1.96
       },
       {
         "candidate_id": "DV",
@@ -4402,7 +5222,9 @@
         "name": "Dominique",
         "surname": "de Villepin",
         "parti": "",
-        "intentions": 6
+        "intentions": 6,
+        "erreur_sup": 1.39,
+        "erreur_inf": -1.39
       },
       {
         "candidate_id": "NDA",
@@ -4411,7 +5233,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.0,
+        "erreur_inf": -1.0
       },
       {
         "candidate_id": "JB",
@@ -4420,7 +5244,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 35
+        "intentions": 35,
+        "erreur_sup": 2.78,
+        "erreur_inf": -2.78
       },
       {
         "candidate_id": "EZ",
@@ -4429,7 +5255,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 1.27,
+        "erreur_inf": -1.27
       }
     ],
     "poll_id": "20250924_0925_if_F",
@@ -4454,7 +5282,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1.0,
+        "erreur_sup": 0.64,
+        "erreur_inf": -0.64
       },
       {
         "candidate_id": "FRo",
@@ -4463,7 +5293,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 3
+        "intentions": 3.0,
+        "erreur_sup": 1.1,
+        "erreur_inf": -1.1
       },
       {
         "candidate_id": "JLM",
@@ -4472,7 +5304,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 15
+        "intentions": 15.0,
+        "erreur_sup": 2.3,
+        "erreur_inf": -2.3
       },
       {
         "candidate_id": "RG",
@@ -4481,7 +5315,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 15
+        "intentions": 15.0,
+        "erreur_sup": 2.3,
+        "erreur_inf": -2.3
       },
       {
         "candidate_id": "EP",
@@ -4490,7 +5326,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 15
+        "intentions": 15.0,
+        "erreur_sup": 2.3,
+        "erreur_inf": -2.3
       },
       {
         "candidate_id": "BR",
@@ -4499,7 +5337,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 12
+        "intentions": 12.0,
+        "erreur_sup": 2.1,
+        "erreur_inf": -2.1
       },
       {
         "candidate_id": "NDA",
@@ -4508,7 +5348,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 3.5
+        "intentions": 3.5,
+        "erreur_sup": 1.18,
+        "erreur_inf": -1.18
       },
       {
         "candidate_id": "JB",
@@ -4517,7 +5359,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 30
+        "intentions": 30.0,
+        "erreur_sup": 2.95,
+        "erreur_inf": -2.95
       },
       {
         "candidate_id": "EZ",
@@ -4526,7 +5370,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 5.5
+        "intentions": 5.5,
+        "erreur_sup": 1.47,
+        "erreur_inf": -1.47
       }
     ],
     "poll_id": "20250930_1001_cl_A",
@@ -4551,7 +5397,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1.5
+        "intentions": 1.5,
+        "erreur_sup": 0.79,
+        "erreur_inf": -0.79
       },
       {
         "candidate_id": "FRo",
@@ -4560,7 +5408,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 3
+        "intentions": 3.0,
+        "erreur_sup": 1.11,
+        "erreur_inf": -1.11
       },
       {
         "candidate_id": "JLM",
@@ -4569,7 +5419,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 15
+        "intentions": 15.0,
+        "erreur_sup": 2.32,
+        "erreur_inf": -2.32
       },
       {
         "candidate_id": "RG",
@@ -4578,7 +5430,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 15
+        "intentions": 15.0,
+        "erreur_sup": 2.32,
+        "erreur_inf": -2.32
       },
       {
         "candidate_id": "GA",
@@ -4587,7 +5441,9 @@
         "name": "Gabriel",
         "surname": "Attal",
         "parti": "La République En Marche",
-        "intentions": 12
+        "intentions": 12.0,
+        "erreur_sup": 2.11,
+        "erreur_inf": -2.11
       },
       {
         "candidate_id": "BR",
@@ -4596,7 +5452,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 14
+        "intentions": 14.0,
+        "erreur_sup": 2.26,
+        "erreur_inf": -2.26
       },
       {
         "candidate_id": "NDA",
@@ -4605,7 +5463,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 3.5
+        "intentions": 3.5,
+        "erreur_sup": 1.2,
+        "erreur_inf": -1.2
       },
       {
         "candidate_id": "MLP",
@@ -4614,7 +5474,9 @@
         "name": "Marine",
         "surname": "Le Pen",
         "parti": "Rassemblement National",
-        "intentions": 30.5
+        "intentions": 30.5,
+        "erreur_sup": 3.0,
+        "erreur_inf": -3.0
       },
       {
         "candidate_id": "EZ",
@@ -4623,7 +5485,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 5.5
+        "intentions": 5.5,
+        "erreur_sup": 1.48,
+        "erreur_inf": -1.48
       }
     ],
     "poll_id": "20250930_1001_cl_B",
@@ -4648,7 +5512,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1.0,
+        "erreur_sup": 0.65,
+        "erreur_inf": -0.65
       },
       {
         "candidate_id": "FRo",
@@ -4657,7 +5523,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 4
+        "intentions": 4.0,
+        "erreur_sup": 1.27,
+        "erreur_inf": -1.27
       },
       {
         "candidate_id": "JLM",
@@ -4666,7 +5534,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 15
+        "intentions": 15.0,
+        "erreur_sup": 2.32,
+        "erreur_inf": -2.32
       },
       {
         "candidate_id": "MT",
@@ -4675,7 +5545,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 7.5
+        "intentions": 7.5,
+        "erreur_sup": 1.71,
+        "erreur_inf": -1.71
       },
       {
         "candidate_id": "EP",
@@ -4684,7 +5556,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 19.5
+        "intentions": 19.5,
+        "erreur_sup": 2.57,
+        "erreur_inf": -2.57
       },
       {
         "candidate_id": "BR",
@@ -4693,7 +5567,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 12.5
+        "intentions": 12.5,
+        "erreur_sup": 2.15,
+        "erreur_inf": -2.15
       },
       {
         "candidate_id": "NDA",
@@ -4702,7 +5578,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 4
+        "intentions": 4.0,
+        "erreur_sup": 1.27,
+        "erreur_inf": -1.27
       },
       {
         "candidate_id": "JB",
@@ -4711,7 +5589,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 31
+        "intentions": 31.0,
+        "erreur_sup": 3.0,
+        "erreur_inf": -3.0
       },
       {
         "candidate_id": "EZ",
@@ -4720,7 +5600,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 5.5
+        "intentions": 5.5,
+        "erreur_sup": 1.48,
+        "erreur_inf": -1.48
       }
     ],
     "poll_id": "20250930_1001_cl_C",
@@ -4745,7 +5627,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1.5
+        "intentions": 1.5,
+        "erreur_sup": 0.78,
+        "erreur_inf": -0.78
       },
       {
         "candidate_id": "FRo",
@@ -4754,7 +5638,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 4
+        "intentions": 4.0,
+        "erreur_sup": 1.26,
+        "erreur_inf": -1.26
       },
       {
         "candidate_id": "JLM",
@@ -4763,7 +5649,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 14
+        "intentions": 14.0,
+        "erreur_sup": 2.24,
+        "erreur_inf": -2.24
       },
       {
         "candidate_id": "OF",
@@ -4772,7 +5660,9 @@
         "name": "Olivier",
         "surname": "Faure",
         "parti": "Parti Socialiste",
-        "intentions": 8
+        "intentions": 8.0,
+        "erreur_sup": 1.75,
+        "erreur_inf": -1.75
       },
       {
         "candidate_id": "EP",
@@ -4781,7 +5671,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 19.5
+        "intentions": 19.5,
+        "erreur_sup": 2.55,
+        "erreur_inf": -2.55
       },
       {
         "candidate_id": "BR",
@@ -4790,7 +5682,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 13
+        "intentions": 13.0,
+        "erreur_sup": 2.17,
+        "erreur_inf": -2.17
       },
       {
         "candidate_id": "NDA",
@@ -4799,7 +5693,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 4.5
+        "intentions": 4.5,
+        "erreur_sup": 1.34,
+        "erreur_inf": -1.34
       },
       {
         "candidate_id": "JB",
@@ -4808,7 +5704,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 30
+        "intentions": 30.0,
+        "erreur_sup": 2.95,
+        "erreur_inf": -2.95
       },
       {
         "candidate_id": "EZ",
@@ -4817,7 +5715,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 5.5
+        "intentions": 5.5,
+        "erreur_sup": 1.47,
+        "erreur_inf": -1.47
       }
     ],
     "poll_id": "20250930_1001_cl_D",
@@ -4842,7 +5742,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.58,
+        "erreur_inf": -0.58
       },
       {
         "candidate_id": "FRo",
@@ -4851,7 +5753,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.0,
+        "erreur_inf": -1.0
       },
       {
         "candidate_id": "JLM",
@@ -4860,7 +5764,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 14
+        "intentions": 14,
+        "erreur_sup": 2.03,
+        "erreur_inf": -2.03
       },
       {
         "candidate_id": "RG",
@@ -4869,7 +5775,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 12
+        "intentions": 12,
+        "erreur_sup": 1.9,
+        "erreur_inf": -1.9
       },
       {
         "candidate_id": "MT",
@@ -4878,7 +5786,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.0,
+        "erreur_inf": -1.0
       },
       {
         "candidate_id": "EP",
@@ -4887,7 +5797,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 15
+        "intentions": 15,
+        "erreur_sup": 2.09,
+        "erreur_inf": -2.09
       },
       {
         "candidate_id": "BR",
@@ -4896,7 +5808,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 10
+        "intentions": 10,
+        "erreur_sup": 1.75,
+        "erreur_inf": -1.75
       },
       {
         "candidate_id": "NDA",
@@ -4905,7 +5819,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.58,
+        "erreur_inf": -0.58
       },
       {
         "candidate_id": "JB",
@@ -4914,7 +5830,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 35
+        "intentions": 35,
+        "erreur_sup": 2.79,
+        "erreur_inf": -2.79
       },
       {
         "candidate_id": "EZ",
@@ -4923,7 +5841,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 6
+        "intentions": 6,
+        "erreur_sup": 1.39,
+        "erreur_inf": -1.39
       }
     ],
     "poll_id": "20251007_1007_hi_A",
@@ -4948,7 +5868,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.58,
+        "erreur_inf": -0.58
       },
       {
         "candidate_id": "FRo",
@@ -4957,7 +5879,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.0,
+        "erreur_inf": -1.0
       },
       {
         "candidate_id": "JLM",
@@ -4966,7 +5890,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 14
+        "intentions": 14,
+        "erreur_sup": 2.03,
+        "erreur_inf": -2.03
       },
       {
         "candidate_id": "RG",
@@ -4975,7 +5901,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 12
+        "intentions": 12,
+        "erreur_sup": 1.9,
+        "erreur_inf": -1.9
       },
       {
         "candidate_id": "MT",
@@ -4984,7 +5912,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.0,
+        "erreur_inf": -1.0
       },
       {
         "candidate_id": "EP",
@@ -4993,7 +5923,9 @@
         "name": "Edouard",
         "surname": "Philippe",
         "parti": "Horizon",
-        "intentions": 16
+        "intentions": 16,
+        "erreur_sup": 2.14,
+        "erreur_inf": -2.14
       },
       {
         "candidate_id": "BR",
@@ -5002,7 +5934,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 10
+        "intentions": 10,
+        "erreur_sup": 1.75,
+        "erreur_inf": -1.75
       },
       {
         "candidate_id": "NDA",
@@ -5011,7 +5945,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.58,
+        "erreur_inf": -0.58
       },
       {
         "candidate_id": "MLP",
@@ -5020,7 +5956,9 @@
         "name": "Marine",
         "surname": "Le Pen",
         "parti": "Rassemblement National",
-        "intentions": 34
+        "intentions": 34,
+        "erreur_sup": 2.77,
+        "erreur_inf": -2.77
       },
       {
         "candidate_id": "EZ",
@@ -5029,7 +5967,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 6
+        "intentions": 6,
+        "erreur_sup": 1.39,
+        "erreur_inf": -1.39
       }
     ],
     "poll_id": "20251007_1007_hi_B",
@@ -5054,7 +5994,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.58,
+        "erreur_inf": -0.58
       },
       {
         "candidate_id": "FRo",
@@ -5063,7 +6005,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.0,
+        "erreur_inf": -1.0
       },
       {
         "candidate_id": "JLM",
@@ -5072,7 +6016,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 14
+        "intentions": 14,
+        "erreur_sup": 2.03,
+        "erreur_inf": -2.03
       },
       {
         "candidate_id": "RG",
@@ -5081,7 +6027,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 14
+        "intentions": 14,
+        "erreur_sup": 2.03,
+        "erreur_inf": -2.03
       },
       {
         "candidate_id": "MT",
@@ -5090,7 +6038,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.0,
+        "erreur_inf": -1.0
       },
       {
         "candidate_id": "GA",
@@ -5099,7 +6049,9 @@
         "name": "Gabriel",
         "surname": "Attal",
         "parti": "La République En Marche",
-        "intentions": 12
+        "intentions": 12,
+        "erreur_sup": 1.9,
+        "erreur_inf": -1.9
       },
       {
         "candidate_id": "BR",
@@ -5108,7 +6060,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 11
+        "intentions": 11,
+        "erreur_sup": 1.83,
+        "erreur_inf": -1.83
       },
       {
         "candidate_id": "NDA",
@@ -5117,7 +6071,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.58,
+        "erreur_inf": -0.58
       },
       {
         "candidate_id": "JB",
@@ -5126,7 +6082,9 @@
         "name": "Jordan",
         "surname": "Bardella",
         "parti": "Rassemblement National",
-        "intentions": 35
+        "intentions": 35,
+        "erreur_sup": 2.79,
+        "erreur_inf": -2.79
       },
       {
         "candidate_id": "EZ",
@@ -5135,7 +6093,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 6
+        "intentions": 6,
+        "erreur_sup": 1.39,
+        "erreur_inf": -1.39
       }
     ],
     "poll_id": "20251007_1007_hi_C",
@@ -5160,7 +6120,9 @@
         "name": "Nathalie",
         "surname": "Arthaud",
         "parti": "Lutte Ouvrière",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.58,
+        "erreur_inf": -0.58
       },
       {
         "candidate_id": "FRo",
@@ -5169,7 +6131,9 @@
         "name": "Fabien",
         "surname": "Roussel",
         "parti": "Parti Communiste Français",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.0,
+        "erreur_inf": -1.0
       },
       {
         "candidate_id": "JLM",
@@ -5178,7 +6142,9 @@
         "name": "Jean-Luc",
         "surname": "Mélenchon",
         "parti": "La France Insoumise",
-        "intentions": 14
+        "intentions": 14,
+        "erreur_sup": 2.03,
+        "erreur_inf": -2.03
       },
       {
         "candidate_id": "RG",
@@ -5187,7 +6153,9 @@
         "name": "Raphaël",
         "surname": "Glucksmann",
         "parti": "Place Publique",
-        "intentions": 14
+        "intentions": 14,
+        "erreur_sup": 2.03,
+        "erreur_inf": -2.03
       },
       {
         "candidate_id": "MT",
@@ -5196,7 +6164,9 @@
         "name": "Marine",
         "surname": "Tondelier",
         "parti": "Europe Écologie Les Verts",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.0,
+        "erreur_inf": -1.0
       },
       {
         "candidate_id": "GA",
@@ -5205,7 +6175,9 @@
         "name": "Gabriel",
         "surname": "Attal",
         "parti": "La République En Marche",
-        "intentions": 12
+        "intentions": 12,
+        "erreur_sup": 1.9,
+        "erreur_inf": -1.9
       },
       {
         "candidate_id": "BR",
@@ -5214,7 +6186,9 @@
         "name": "Bruno",
         "surname": "Retailleau",
         "parti": "Les Républicains",
-        "intentions": 11
+        "intentions": 11,
+        "erreur_sup": 1.83,
+        "erreur_inf": -1.83
       },
       {
         "candidate_id": "NDA",
@@ -5223,7 +6197,9 @@
         "name": "Nicolas",
         "surname": "Dupont-Aignan",
         "parti": "",
-        "intentions": 2
+        "intentions": 2,
+        "erreur_sup": 0.82,
+        "erreur_inf": -0.82
       },
       {
         "candidate_id": "MLP",
@@ -5232,7 +6208,9 @@
         "name": "Marine",
         "surname": "Le Pen",
         "parti": "Rassemblement National",
-        "intentions": 34
+        "intentions": 34,
+        "erreur_sup": 2.77,
+        "erreur_inf": -2.77
       },
       {
         "candidate_id": "EZ",
@@ -5241,7 +6219,9 @@
         "name": "Eric",
         "surname": "Zemmour",
         "parti": "Reconquête",
-        "intentions": 6
+        "intentions": 6,
+        "erreur_sup": 1.39,
+        "erreur_inf": -1.39
       }
     ],
     "poll_id": "20251007_1007_hi_D",
@@ -5256,5 +6236,690 @@
     "rolling": "",
     "media": "True",
     "filename": "9995-pres-toluna-harris-interactive-rtl-8-octobre.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1.0,
+        "erreur_sup": 0.52,
+        "erreur_inf": -0.52
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 3.0,
+        "erreur_sup": 0.89,
+        "erreur_inf": -0.89
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 12.5,
+        "erreur_sup": 1.73,
+        "erreur_inf": -1.73
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 4.5,
+        "erreur_sup": 1.09,
+        "erreur_inf": -1.09
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 11.0,
+        "erreur_sup": 1.64,
+        "erreur_inf": -1.64
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 15.5,
+        "erreur_sup": 1.9,
+        "erreur_inf": -1.9
+      },
+      {
+        "candidate_id": "DV",
+        "candidat": "Dominique de Villepin",
+        "complete_name": "Dominique de Villepin",
+        "name": "Dominique",
+        "surname": "de Villepin",
+        "parti": "",
+        "intentions": 3.0,
+        "erreur_sup": 0.89,
+        "erreur_inf": -0.89
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 8.0,
+        "erreur_sup": 1.42,
+        "erreur_inf": -1.42
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2.0,
+        "erreur_sup": 0.73,
+        "erreur_inf": -0.73
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 35.0,
+        "erreur_sup": 2.5,
+        "erreur_inf": -2.5
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 4.5,
+        "erreur_sup": 1.09,
+        "erreur_inf": -1.09
+      }
+    ],
+    "poll_id": "20251030_1031_el_A",
+    "institut": "ELABE",
+    "commanditaire": "BFMTV, La Tribune Dimanche",
+    "debut_enquete": "2025-10-30",
+    "fin_enquete": "2025-10-31",
+    "echantillon": 1501,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H45",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "10007-pres-elabe-bfmtv-la-tribune-1er-novembre.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1.5,
+        "erreur_sup": 0.64,
+        "erreur_inf": -0.64
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 3.0,
+        "erreur_sup": 0.89,
+        "erreur_inf": -0.89
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 11.5,
+        "erreur_sup": 1.67,
+        "erreur_inf": -1.67
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 4.5,
+        "erreur_sup": 1.09,
+        "erreur_inf": -1.09
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 12.0,
+        "erreur_sup": 1.7,
+        "erreur_inf": -1.7
+      },
+      {
+        "candidate_id": "GA",
+        "candidat": "Gabriel Attal",
+        "complete_name": "Gabriel Attal",
+        "name": "Gabriel",
+        "surname": "Attal",
+        "parti": "La République En Marche",
+        "intentions": 12.5,
+        "erreur_sup": 1.73,
+        "erreur_inf": -1.73
+      },
+      {
+        "candidate_id": "DV",
+        "candidat": "Dominique de Villepin",
+        "complete_name": "Dominique de Villepin",
+        "name": "Dominique",
+        "surname": "de Villepin",
+        "parti": "",
+        "intentions": 4.0,
+        "erreur_sup": 1.03,
+        "erreur_inf": -1.03
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 8.0,
+        "erreur_sup": 1.42,
+        "erreur_inf": -1.42
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2.5,
+        "erreur_sup": 0.82,
+        "erreur_inf": -0.82
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "intentions": 34.0,
+        "erreur_sup": 2.48,
+        "erreur_inf": -2.48
+      },
+      {
+        "candidate_id": "SK",
+        "candidat": "Sarah Knafo",
+        "complete_name": "Sarah Knafo",
+        "name": "Sarah",
+        "surname": "Knafo",
+        "parti": "",
+        "intentions": 6.5,
+        "erreur_sup": 1.29,
+        "erreur_inf": -1.29
+      }
+    ],
+    "poll_id": "20251030_1031_el_B",
+    "institut": "ELABE",
+    "commanditaire": "BFMTV, La Tribune Dimanche",
+    "debut_enquete": "2025-10-30",
+    "fin_enquete": "2025-10-31",
+    "echantillon": 1501,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H46",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "10007-pres-elabe-bfmtv-la-tribune-1er-novembre.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1.5,
+        "erreur_sup": 0.64,
+        "erreur_inf": -0.64
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 3.0,
+        "erreur_sup": 0.89,
+        "erreur_inf": -0.89
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 13.0,
+        "erreur_sup": 1.76,
+        "erreur_inf": -1.76
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 5.0,
+        "erreur_sup": 1.14,
+        "erreur_inf": -1.14
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 13.0,
+        "erreur_sup": 1.76,
+        "erreur_inf": -1.76
+      },
+      {
+        "candidate_id": "GD",
+        "candidat": "Gérald Darmanin",
+        "complete_name": "Gérald Darmanin",
+        "name": "Gérald",
+        "surname": "Darmanin",
+        "parti": "",
+        "intentions": 7.0,
+        "erreur_sup": 1.34,
+        "erreur_inf": -1.34
+      },
+      {
+        "candidate_id": "DV",
+        "candidat": "Dominique de Villepin",
+        "complete_name": "Dominique de Villepin",
+        "name": "Dominique",
+        "surname": "de Villepin",
+        "parti": "",
+        "intentions": 5.0,
+        "erreur_sup": 1.14,
+        "erreur_inf": -1.14
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 8.5,
+        "erreur_sup": 1.46,
+        "erreur_inf": -1.46
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2.0,
+        "erreur_sup": 0.73,
+        "erreur_inf": -0.73
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 37.5,
+        "erreur_sup": 2.54,
+        "erreur_inf": -2.54
+      },
+      {
+        "candidate_id": "PdV",
+        "candidat": "Philippe de Villiers",
+        "complete_name": "Philippe de Villiers",
+        "name": "Philippe",
+        "surname": "de Villiers",
+        "parti": "",
+        "intentions": 4.5,
+        "erreur_sup": 1.09,
+        "erreur_inf": -1.09
+      }
+    ],
+    "poll_id": "20251030_1031_el_C",
+    "institut": "ELABE",
+    "commanditaire": "BFMTV, La Tribune Dimanche",
+    "debut_enquete": "2025-10-30",
+    "fin_enquete": "2025-10-31",
+    "echantillon": 1501,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H47",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "10007-pres-elabe-bfmtv-la-tribune-1er-novembre.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1.0,
+        "erreur_sup": 0.52,
+        "erreur_inf": -0.52
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 4.5,
+        "erreur_sup": 1.09,
+        "erreur_inf": -1.09
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 12.5,
+        "erreur_sup": 1.73,
+        "erreur_inf": -1.73
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 5.5,
+        "erreur_sup": 1.2,
+        "erreur_inf": -1.2
+      },
+      {
+        "candidate_id": "OF",
+        "candidat": "Olivier Faure",
+        "complete_name": "Olivier Faure",
+        "name": "Olivier",
+        "surname": "Faure",
+        "parti": "Parti Socialiste",
+        "intentions": 5.5,
+        "erreur_sup": 1.2,
+        "erreur_inf": -1.2
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 19.5,
+        "erreur_sup": 2.08,
+        "erreur_inf": -2.08
+      },
+      {
+        "candidate_id": "DV",
+        "candidat": "Dominique de Villepin",
+        "complete_name": "Dominique de Villepin",
+        "name": "Dominique",
+        "surname": "de Villepin",
+        "parti": "",
+        "intentions": 4.0,
+        "erreur_sup": 1.03,
+        "erreur_inf": -1.03
+      },
+      {
+        "candidate_id": "LW",
+        "candidat": "Laurent Wauquiez",
+        "complete_name": "Laurent Wauquiez",
+        "name": "Laurent",
+        "surname": "Wauquiez",
+        "parti": "Les Républicains",
+        "intentions": 3.0,
+        "erreur_sup": 0.89,
+        "erreur_inf": -0.89
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2.0,
+        "erreur_sup": 0.73,
+        "erreur_inf": -0.73
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 36.5,
+        "erreur_sup": 2.53,
+        "erreur_inf": -2.53
+      },
+      {
+        "candidate_id": "SK",
+        "candidat": "Sarah Knafo",
+        "complete_name": "Sarah Knafo",
+        "name": "Sarah",
+        "surname": "Knafo",
+        "parti": "",
+        "intentions": 6.0,
+        "erreur_sup": 1.25,
+        "erreur_inf": -1.25
+      }
+    ],
+    "poll_id": "20251030_1031_el_D",
+    "institut": "ELABE",
+    "commanditaire": "BFMTV, La Tribune Dimanche",
+    "debut_enquete": "2025-10-30",
+    "fin_enquete": "2025-10-31",
+    "echantillon": 1501,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H48",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "10007-pres-elabe-bfmtv-la-tribune-1er-novembre.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1.0,
+        "erreur_sup": 0.52,
+        "erreur_inf": -0.52
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 3.0,
+        "erreur_sup": 0.89,
+        "erreur_inf": -0.89
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 12.0,
+        "erreur_sup": 1.7,
+        "erreur_inf": -1.7
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 5.5,
+        "erreur_sup": 1.2,
+        "erreur_inf": -1.2
+      },
+      {
+        "candidate_id": "FH",
+        "candidat": "François Hollande",
+        "complete_name": "François Hollande",
+        "name": "François",
+        "surname": "Hollande",
+        "parti": "Parti Socialiste",
+        "intentions": 6.5,
+        "erreur_sup": 1.29,
+        "erreur_inf": -1.29
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 19.0,
+        "erreur_sup": 2.06,
+        "erreur_inf": -2.06
+      },
+      {
+        "candidate_id": "DV",
+        "candidat": "Dominique de Villepin",
+        "complete_name": "Dominique de Villepin",
+        "name": "Dominique",
+        "surname": "de Villepin",
+        "parti": "",
+        "intentions": 4.0,
+        "erreur_sup": 1.03,
+        "erreur_inf": -1.03
+      },
+      {
+        "candidate_id": "XB",
+        "candidat": "Xavier Bertrand",
+        "complete_name": "Xavier Bertrand",
+        "name": "Xavier",
+        "surname": "Bertrand",
+        "parti": "Les Républicains",
+        "intentions": 5.5,
+        "erreur_sup": 1.2,
+        "erreur_inf": -1.2
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2.5,
+        "erreur_sup": 0.82,
+        "erreur_inf": -0.82
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 35.0,
+        "erreur_sup": 2.5,
+        "erreur_inf": -2.5
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 6.0,
+        "erreur_sup": 1.25,
+        "erreur_inf": -1.25
+      }
+    ],
+    "poll_id": "20251030_1031_el_E",
+    "institut": "ELABE",
+    "commanditaire": "BFMTV, La Tribune Dimanche",
+    "debut_enquete": "2025-10-30",
+    "fin_enquete": "2025-10-31",
+    "echantillon": 1501,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H49",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "10007-pres-elabe-bfmtv-la-tribune-1er-novembre.pdf"
   }
 ]
