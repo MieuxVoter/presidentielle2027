@@ -25,8 +25,8 @@ jobs:
         with:
           python-version: '3.13'
 
-      - name: install numpy
-        run: pip install numpy
+      - name: install numpy & pandas
+        run: pip install numpy pandas
 
       - name: Compute Margin of errors
         run: python compute_confidence_intervals.py
