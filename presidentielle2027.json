@@ -6921,5 +6921,409 @@
     "rolling": "",
     "media": "True",
     "filename": "10007-pres-elabe-bfmtv-la-tribune-1er-novembre.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 47.0,
+        "erreur_sup": 3.45,
+        "erreur_inf": -3.45
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 53.0,
+        "erreur_sup": 3.45,
+        "erreur_inf": -3.45
+      }
+    ],
+    "poll_id": "20251119_1120_od_2A",
+    "institut": "ODOXA",
+    "commanditaire": "Public Sénat, La Presse Regionale",
+    "debut_enquete": "2025-11-19",
+    "fin_enquete": "2025-11-20",
+    "echantillon": 1300,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H2_1",
+    "tour": "2nd Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "10023-pres-odoxa-25-novembre.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 42.0,
+        "erreur_sup": 3.43,
+        "erreur_inf": -3.43
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 58.0,
+        "erreur_sup": 3.43,
+        "erreur_inf": -3.43
+      }
+    ],
+    "poll_id": "20251119_1120_od_2B",
+    "institut": "ODOXA",
+    "commanditaire": "Public Sénat, La Presse Regionale",
+    "debut_enquete": "2025-11-19",
+    "fin_enquete": "2025-11-20",
+    "echantillon": 1300,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H2_6",
+    "tour": "2nd Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "10023-pres-odoxa-25-novembre.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 26.0,
+        "erreur_sup": 3.28,
+        "erreur_inf": -3.28
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 74.0,
+        "erreur_sup": 3.28,
+        "erreur_inf": -3.28
+      }
+    ],
+    "poll_id": "20251119_1120_od_2C",
+    "institut": "ODOXA",
+    "commanditaire": "Public Sénat, La Presse Regionale",
+    "debut_enquete": "2025-11-19",
+    "fin_enquete": "2025-11-20",
+    "echantillon": 1300,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H2_5",
+    "tour": "2nd Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "10023-pres-odoxa-25-novembre.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "GA",
+        "candidat": "Gabriel Attal",
+        "complete_name": "Gabriel Attal",
+        "name": "Gabriel",
+        "surname": "Attal",
+        "parti": "La République En Marche",
+        "intentions": 44.0,
+        "erreur_sup": 3.49,
+        "erreur_inf": -3.49
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 56.0,
+        "erreur_sup": 3.49,
+        "erreur_inf": -3.49
+      }
+    ],
+    "poll_id": "20251119_1120_od_2D",
+    "institut": "ODOXA",
+    "commanditaire": "Public Sénat, La Presse Regionale",
+    "debut_enquete": "2025-11-19",
+    "fin_enquete": "2025-11-20",
+    "echantillon": 1300,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H2_4",
+    "tour": "2nd Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "10023-pres-odoxa-25-novembre.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1.0,
+        "erreur_sup": 0.66,
+        "erreur_inf": -0.66
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 3.0,
+        "erreur_sup": 1.13,
+        "erreur_inf": -1.13
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 11.0,
+        "erreur_sup": 2.07,
+        "erreur_inf": -2.07
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 6.0,
+        "erreur_sup": 1.57,
+        "erreur_inf": -1.57
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 13.5,
+        "erreur_sup": 2.27,
+        "erreur_inf": -2.27
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 17.0,
+        "erreur_sup": 2.49,
+        "erreur_inf": -2.49
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 8.0,
+        "erreur_sup": 1.8,
+        "erreur_inf": -1.8
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2.0,
+        "erreur_sup": 0.93,
+        "erreur_inf": -0.93
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 35.0,
+        "erreur_sup": 3.16,
+        "erreur_inf": -3.16
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 3.5,
+        "erreur_sup": 1.22,
+        "erreur_inf": -1.22
+      }
+    ],
+    "poll_id": "20251119_1120_od_A",
+    "institut": "ODOXA",
+    "commanditaire": "Public Sénat, La Presse Regionale",
+    "debut_enquete": "2025-11-19",
+    "fin_enquete": "2025-11-20",
+    "echantillon": 1300,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H41",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "10023-pres-odoxa-25-novembre.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "intentions": 1.0,
+        "erreur_sup": 0.66,
+        "erreur_inf": -0.66
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 3.0,
+        "erreur_sup": 1.14,
+        "erreur_inf": -1.14
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 12.0,
+        "erreur_sup": 2.17,
+        "erreur_inf": -2.17
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 6.5,
+        "erreur_sup": 1.64,
+        "erreur_inf": -1.64
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 14.5,
+        "erreur_sup": 2.35,
+        "erreur_inf": -2.35
+      },
+      {
+        "candidate_id": "GA",
+        "candidat": "Gabriel Attal",
+        "complete_name": "Gabriel Attal",
+        "name": "Gabriel",
+        "surname": "Attal",
+        "parti": "La République En Marche",
+        "intentions": 11.0,
+        "erreur_sup": 2.09,
+        "erreur_inf": -2.09
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 10.0,
+        "erreur_sup": 2.0,
+        "erreur_inf": -2.0
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 3.0,
+        "erreur_sup": 1.14,
+        "erreur_inf": -1.14
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 36.0,
+        "erreur_sup": 3.2,
+        "erreur_inf": -3.2
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 3.0,
+        "erreur_sup": 1.14,
+        "erreur_inf": -1.14
+      }
+    ],
+    "poll_id": "20251119_1120_od_B",
+    "institut": "ODOXA",
+    "commanditaire": "Public Sénat, La Presse Regionale",
+    "debut_enquete": "2025-11-19",
+    "fin_enquete": "2025-11-20",
+    "echantillon": 1300,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H43",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "10023-pres-odoxa-25-novembre.pdf"
   }
 ]
