@@ -6925,6 +6925,121 @@
   {
     "candidats": [
       {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "intentions": 3.0,
+        "erreur_sup": 1.2,
+        "erreur_inf": -1.2
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "intentions": 12.0,
+        "erreur_sup": 2.29,
+        "erreur_inf": -2.29
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "intentions": 5.0,
+        "erreur_sup": 1.53,
+        "erreur_inf": -1.53
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "intentions": 13.0,
+        "erreur_sup": 2.37,
+        "erreur_inf": -2.37
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "intentions": 17.0,
+        "erreur_sup": 2.64,
+        "erreur_inf": -2.64
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "intentions": 7.5,
+        "erreur_sup": 1.85,
+        "erreur_inf": -1.85
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "intentions": 2.0,
+        "erreur_sup": 0.99,
+        "erreur_inf": -0.99
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "intentions": 36.5,
+        "erreur_sup": 3.39,
+        "erreur_inf": -3.39
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "intentions": 4.0,
+        "erreur_sup": 1.38,
+        "erreur_inf": -1.38
+      }
+    ],
+    "poll_id": "20251118_1120_ve",
+    "institut": "verian",
+    "commanditaire": "L’hémicycle",
+    "debut_enquete": "2025-11-18",
+    "fin_enquete": "2025-11-20",
+    "echantillon": 1000,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "10024-pres-verian-lhemicycle-27-novembre.pdf"
+  },
+  {
+    "candidats": [
+      {
         "candidate_id": "EP",
         "candidat": "Édouard Philippe",
         "complete_name": "Edouard Philippe",
