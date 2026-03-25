@@ -6425,7 +6425,7 @@
         "surname": "Bayrou",
         "parti": "Mouvement Démocrate",
         "annonce_candidature": "",
-        "retrait_candidature": "",
+        "retrait_candidature": "2026-03-06",
         "second_round": "",
         "intentions": 3,
         "erreur_sup": 1.0,
@@ -8569,7 +8569,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.0
+        "intentions": 3.0,
+        "erreur_sup": 1.2,
+        "erreur_inf": -1.2
       },
       {
         "candidate_id": "JLM",
@@ -8581,7 +8583,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 12.0
+        "intentions": 12.0,
+        "erreur_sup": 2.29,
+        "erreur_inf": -2.29
       },
       {
         "candidate_id": "MT",
@@ -8593,7 +8597,9 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 5.0
+        "intentions": 5.0,
+        "erreur_sup": 1.53,
+        "erreur_inf": -1.53
       },
       {
         "candidate_id": "RG",
@@ -8605,7 +8611,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 13.0
+        "intentions": 13.0,
+        "erreur_sup": 2.37,
+        "erreur_inf": -2.37
       },
       {
         "candidate_id": "EP",
@@ -8617,7 +8625,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 17.0
+        "intentions": 17.0,
+        "erreur_sup": 2.64,
+        "erreur_inf": -2.64
       },
       {
         "candidate_id": "BR",
@@ -8629,7 +8639,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 7.5
+        "intentions": 7.5,
+        "erreur_sup": 1.85,
+        "erreur_inf": -1.85
       },
       {
         "candidate_id": "NDA",
@@ -8641,7 +8653,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2.0
+        "intentions": 2.0,
+        "erreur_sup": 0.99,
+        "erreur_inf": -0.99
       },
       {
         "candidate_id": "JB",
@@ -8653,7 +8667,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 36.5
+        "intentions": 36.5,
+        "erreur_sup": 3.39,
+        "erreur_inf": -3.39
       },
       {
         "candidate_id": "EZ",
@@ -8665,7 +8681,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4.0
+        "intentions": 4.0,
+        "erreur_sup": 1.38,
+        "erreur_inf": -1.38
       }
     ],
     "poll_id": "20251118_1120_ve",
@@ -8693,7 +8711,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 47.0
+        "intentions": 47.0,
+        "erreur_sup": 3.45,
+        "erreur_inf": -3.45
       },
       {
         "candidate_id": "JB",
@@ -8705,7 +8725,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 53.0
+        "intentions": 53.0,
+        "erreur_sup": 3.45,
+        "erreur_inf": -3.45
       }
     ],
     "poll_id": "20251119_1120_od_2A",
@@ -8733,7 +8755,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 42.0
+        "intentions": 42.0,
+        "erreur_sup": 3.43,
+        "erreur_inf": -3.43
       },
       {
         "candidate_id": "JB",
@@ -8745,7 +8769,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 58.0
+        "intentions": 58.0,
+        "erreur_sup": 3.43,
+        "erreur_inf": -3.43
       }
     ],
     "poll_id": "20251119_1120_od_2B",
@@ -8773,7 +8799,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 26.0
+        "intentions": 26.0,
+        "erreur_sup": 3.28,
+        "erreur_inf": -3.28
       },
       {
         "candidate_id": "JB",
@@ -8785,7 +8813,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 74.0
+        "intentions": 74.0,
+        "erreur_sup": 3.28,
+        "erreur_inf": -3.28
       }
     ],
     "poll_id": "20251119_1120_od_2C",
@@ -8813,7 +8843,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 44.0
+        "intentions": 44.0,
+        "erreur_sup": 3.49,
+        "erreur_inf": -3.49
       },
       {
         "candidate_id": "JB",
@@ -8825,7 +8857,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 56.0
+        "intentions": 56.0,
+        "erreur_sup": 3.49,
+        "erreur_inf": -3.49
       }
     ],
     "poll_id": "20251119_1120_od_2D",
@@ -8853,7 +8887,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 1.0
+        "intentions": 1.0,
+        "erreur_sup": 0.66,
+        "erreur_inf": -0.66
       },
       {
         "candidate_id": "FRo",
@@ -8865,7 +8901,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.0
+        "intentions": 3.0,
+        "erreur_sup": 1.13,
+        "erreur_inf": -1.13
       },
       {
         "candidate_id": "JLM",
@@ -8877,7 +8915,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11.0
+        "intentions": 11.0,
+        "erreur_sup": 2.07,
+        "erreur_inf": -2.07
       },
       {
         "candidate_id": "MT",
@@ -8889,7 +8929,9 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 6.0
+        "intentions": 6.0,
+        "erreur_sup": 1.57,
+        "erreur_inf": -1.57
       },
       {
         "candidate_id": "RG",
@@ -8901,7 +8943,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 13.5
+        "intentions": 13.5,
+        "erreur_sup": 2.27,
+        "erreur_inf": -2.27
       },
       {
         "candidate_id": "EP",
@@ -8913,7 +8957,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 17.0
+        "intentions": 17.0,
+        "erreur_sup": 2.49,
+        "erreur_inf": -2.49
       },
       {
         "candidate_id": "BR",
@@ -8925,7 +8971,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 8.0
+        "intentions": 8.0,
+        "erreur_sup": 1.8,
+        "erreur_inf": -1.8
       },
       {
         "candidate_id": "NDA",
@@ -8937,7 +8985,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2.0
+        "intentions": 2.0,
+        "erreur_sup": 0.93,
+        "erreur_inf": -0.93
       },
       {
         "candidate_id": "JB",
@@ -8949,7 +8999,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 35.0
+        "intentions": 35.0,
+        "erreur_sup": 3.16,
+        "erreur_inf": -3.16
       },
       {
         "candidate_id": "EZ",
@@ -8961,7 +9013,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.5
+        "intentions": 3.5,
+        "erreur_sup": 1.22,
+        "erreur_inf": -1.22
       }
     ],
     "poll_id": "20251119_1120_od_A",
@@ -8989,7 +9043,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 1.0
+        "intentions": 1.0,
+        "erreur_sup": 0.66,
+        "erreur_inf": -0.66
       },
       {
         "candidate_id": "FRo",
@@ -9001,7 +9057,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.0
+        "intentions": 3.0,
+        "erreur_sup": 1.14,
+        "erreur_inf": -1.14
       },
       {
         "candidate_id": "JLM",
@@ -9013,7 +9071,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 12.0
+        "intentions": 12.0,
+        "erreur_sup": 2.17,
+        "erreur_inf": -2.17
       },
       {
         "candidate_id": "MT",
@@ -9025,7 +9085,9 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 6.5
+        "intentions": 6.5,
+        "erreur_sup": 1.64,
+        "erreur_inf": -1.64
       },
       {
         "candidate_id": "RG",
@@ -9037,7 +9099,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 14.5
+        "intentions": 14.5,
+        "erreur_sup": 2.35,
+        "erreur_inf": -2.35
       },
       {
         "candidate_id": "GA",
@@ -9049,7 +9113,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11.0
+        "intentions": 11.0,
+        "erreur_sup": 2.09,
+        "erreur_inf": -2.09
       },
       {
         "candidate_id": "BR",
@@ -9061,7 +9127,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 10.0
+        "intentions": 10.0,
+        "erreur_sup": 2.0,
+        "erreur_inf": -2.0
       },
       {
         "candidate_id": "NDA",
@@ -9073,7 +9141,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.0
+        "intentions": 3.0,
+        "erreur_sup": 1.14,
+        "erreur_inf": -1.14
       },
       {
         "candidate_id": "JB",
@@ -9085,7 +9155,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 36.0
+        "intentions": 36.0,
+        "erreur_sup": 3.2,
+        "erreur_inf": -3.2
       },
       {
         "candidate_id": "EZ",
@@ -9097,7 +9169,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.0
+        "intentions": 3.0,
+        "erreur_sup": 1.14,
+        "erreur_inf": -1.14
       }
     ],
     "poll_id": "20251119_1120_od_B",
@@ -9125,7 +9199,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 1
+        "intentions": 1.0,
+        "erreur_sup": 0.7,
+        "erreur_inf": -0.7
       },
       {
         "candidate_id": "JLM",
@@ -9137,7 +9213,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11
+        "intentions": 11.0,
+        "erreur_sup": 2.19,
+        "erreur_inf": -2.19
       },
       {
         "candidate_id": "FRo",
@@ -9149,7 +9227,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2
+        "intentions": 2.0,
+        "erreur_sup": 0.98,
+        "erreur_inf": -0.98
       },
       {
         "candidate_id": "RG",
@@ -9161,7 +9241,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 10
+        "intentions": 10.0,
+        "erreur_sup": 2.1,
+        "erreur_inf": -2.1
       },
       {
         "candidate_id": "MT",
@@ -9173,7 +9255,9 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4
+        "intentions": 4.0,
+        "erreur_sup": 1.37,
+        "erreur_inf": -1.37
       },
       {
         "candidate_id": "EP",
@@ -9185,7 +9269,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 16
+        "intentions": 16.0,
+        "erreur_sup": 2.57,
+        "erreur_inf": -2.57
       },
       {
         "candidate_id": "BR",
@@ -9197,7 +9283,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 10
+        "intentions": 10.0,
+        "erreur_sup": 2.1,
+        "erreur_inf": -2.1
       },
       {
         "candidate_id": "DV",
@@ -9209,7 +9297,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.5
+        "intentions": 3.5,
+        "erreur_sup": 1.29,
+        "erreur_inf": -1.29
       },
       {
         "candidate_id": "NDA",
@@ -9221,7 +9311,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2.5
+        "intentions": 2.5,
+        "erreur_sup": 1.09,
+        "erreur_inf": -1.09
       },
       {
         "candidate_id": "JB",
@@ -9233,7 +9325,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 36
+        "intentions": 36.0,
+        "erreur_sup": 3.36,
+        "erreur_inf": -3.36
       },
       {
         "candidate_id": "EZ",
@@ -9245,7 +9339,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4
+        "intentions": 4.0,
+        "erreur_sup": 1.37,
+        "erreur_inf": -1.37
       }
     ],
     "poll_id": "20260226_0227_if_A",
@@ -9273,7 +9369,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.69,
+        "erreur_inf": -0.69
       },
       {
         "candidate_id": "JLM",
@@ -9285,7 +9383,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 10
+        "intentions": 10,
+        "erreur_sup": 2.09,
+        "erreur_inf": -2.09
       },
       {
         "candidate_id": "FRo",
@@ -9297,7 +9397,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2
+        "intentions": 2,
+        "erreur_sup": 0.97,
+        "erreur_inf": -0.97
       },
       {
         "candidate_id": "RG",
@@ -9309,7 +9411,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11
+        "intentions": 11,
+        "erreur_sup": 2.18,
+        "erreur_inf": -2.18
       },
       {
         "candidate_id": "MT",
@@ -9321,7 +9425,9 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 1.36,
+        "erreur_inf": -1.36
       },
       {
         "candidate_id": "EP",
@@ -9333,7 +9439,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 16
+        "intentions": 16,
+        "erreur_sup": 2.55,
+        "erreur_inf": -2.55
       },
       {
         "candidate_id": "BR",
@@ -9345,7 +9453,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11
+        "intentions": 11,
+        "erreur_sup": 2.18,
+        "erreur_inf": -2.18
       },
       {
         "candidate_id": "DV",
@@ -9357,7 +9467,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 1.52,
+        "erreur_inf": -1.52
       },
       {
         "candidate_id": "NDA",
@@ -9369,7 +9481,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2
+        "intentions": 2,
+        "erreur_sup": 0.97,
+        "erreur_inf": -0.97
       },
       {
         "candidate_id": "MLP",
@@ -9381,7 +9495,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 34
+        "intentions": 34,
+        "erreur_sup": 3.3,
+        "erreur_inf": -3.3
       },
       {
         "candidate_id": "EZ",
@@ -9393,7 +9509,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 1.36,
+        "erreur_inf": -1.36
       }
     ],
     "poll_id": "20260226_0227_if_B",
@@ -9421,7 +9539,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2
+        "intentions": 2,
+        "erreur_sup": 0.97,
+        "erreur_inf": -0.97
       },
       {
         "candidate_id": "JLM",
@@ -9433,7 +9553,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 10
+        "intentions": 10,
+        "erreur_sup": 2.09,
+        "erreur_inf": -2.09
       },
       {
         "candidate_id": "FRo",
@@ -9445,7 +9567,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.19,
+        "erreur_inf": -1.19
       },
       {
         "candidate_id": "RG",
@@ -9457,7 +9581,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 12
+        "intentions": 12,
+        "erreur_sup": 2.26,
+        "erreur_inf": -2.26
       },
       {
         "candidate_id": "MT",
@@ -9469,7 +9595,9 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 1.36,
+        "erreur_inf": -1.36
       },
       {
         "candidate_id": "GA",
@@ -9481,7 +9609,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11
+        "intentions": 11,
+        "erreur_sup": 2.18,
+        "erreur_inf": -2.18
       },
       {
         "candidate_id": "BR",
@@ -9493,7 +9623,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 12
+        "intentions": 12,
+        "erreur_sup": 2.26,
+        "erreur_inf": -2.26
       },
       {
         "candidate_id": "DV",
@@ -9505,7 +9637,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 1.36,
+        "erreur_inf": -1.36
       },
       {
         "candidate_id": "NDA",
@@ -9517,7 +9651,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2
+        "intentions": 2,
+        "erreur_sup": 0.97,
+        "erreur_inf": -0.97
       },
       {
         "candidate_id": "JB",
@@ -9529,7 +9665,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 36
+        "intentions": 36,
+        "erreur_sup": 3.34,
+        "erreur_inf": -3.34
       },
       {
         "candidate_id": "EZ",
@@ -9541,7 +9679,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 1.36,
+        "erreur_inf": -1.36
       }
     ],
     "poll_id": "20260226_0227_if_C",
@@ -9569,7 +9709,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2
+        "intentions": 2.0,
+        "erreur_sup": 0.98,
+        "erreur_inf": -0.98
       },
       {
         "candidate_id": "JLM",
@@ -9581,7 +9723,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11
+        "intentions": 11.0,
+        "erreur_sup": 2.2,
+        "erreur_inf": -2.2
       },
       {
         "candidate_id": "FRo",
@@ -9593,7 +9737,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2
+        "intentions": 2.0,
+        "erreur_sup": 0.98,
+        "erreur_inf": -0.98
       },
       {
         "candidate_id": "RG",
@@ -9605,7 +9751,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 12
+        "intentions": 12.0,
+        "erreur_sup": 2.28,
+        "erreur_inf": -2.28
       },
       {
         "candidate_id": "MT",
@@ -9617,7 +9765,9 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4.5
+        "intentions": 4.5,
+        "erreur_sup": 1.45,
+        "erreur_inf": -1.45
       },
       {
         "candidate_id": "GA",
@@ -9629,7 +9779,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 10
+        "intentions": 10.0,
+        "erreur_sup": 2.11,
+        "erreur_inf": -2.11
       },
       {
         "candidate_id": "BR",
@@ -9641,7 +9793,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 12
+        "intentions": 12.0,
+        "erreur_sup": 2.28,
+        "erreur_inf": -2.28
       },
       {
         "candidate_id": "DV",
@@ -9653,7 +9807,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4.5
+        "intentions": 4.5,
+        "erreur_sup": 1.45,
+        "erreur_inf": -1.45
       },
       {
         "candidate_id": "NDA",
@@ -9665,7 +9821,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3
+        "intentions": 3.0,
+        "erreur_sup": 1.2,
+        "erreur_inf": -1.2
       },
       {
         "candidate_id": "MLP",
@@ -9677,7 +9835,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 35
+        "intentions": 35.0,
+        "erreur_sup": 3.35,
+        "erreur_inf": -3.35
       },
       {
         "candidate_id": "EZ",
@@ -9689,7 +9849,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4
+        "intentions": 4.0,
+        "erreur_sup": 1.38,
+        "erreur_inf": -1.38
       }
     ],
     "poll_id": "20260226_0227_if_D",
@@ -9717,7 +9879,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 1.5
+        "intentions": 1.5,
+        "erreur_sup": 0.86,
+        "erreur_inf": -0.86
       },
       {
         "candidate_id": "JLM",
@@ -9729,7 +9893,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 10
+        "intentions": 10.0,
+        "erreur_sup": 2.12,
+        "erreur_inf": -2.12
       },
       {
         "candidate_id": "FRo",
@@ -9741,7 +9907,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3
+        "intentions": 3.0,
+        "erreur_sup": 1.2,
+        "erreur_inf": -1.2
       },
       {
         "candidate_id": "RG",
@@ -9753,7 +9921,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 13
+        "intentions": 13.0,
+        "erreur_sup": 2.38,
+        "erreur_inf": -2.38
       },
       {
         "candidate_id": "MT",
@@ -9765,7 +9935,9 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4
+        "intentions": 4.0,
+        "erreur_sup": 1.38,
+        "erreur_inf": -1.38
       },
       {
         "candidate_id": "GD",
@@ -9777,7 +9949,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 8
+        "intentions": 8.0,
+        "erreur_sup": 1.92,
+        "erreur_inf": -1.92
       },
       {
         "candidate_id": "BR",
@@ -9789,7 +9963,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 13
+        "intentions": 13.0,
+        "erreur_sup": 2.38,
+        "erreur_inf": -2.38
       },
       {
         "candidate_id": "DV",
@@ -9801,7 +9977,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 5
+        "intentions": 5.0,
+        "erreur_sup": 1.54,
+        "erreur_inf": -1.54
       },
       {
         "candidate_id": "NDA",
@@ -9813,7 +9991,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2.5
+        "intentions": 2.5,
+        "erreur_sup": 1.1,
+        "erreur_inf": -1.1
       },
       {
         "candidate_id": "JB",
@@ -9825,7 +10005,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 37
+        "intentions": 37.0,
+        "erreur_sup": 3.41,
+        "erreur_inf": -3.41
       },
       {
         "candidate_id": "EZ",
@@ -9837,7 +10019,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3
+        "intentions": 3.0,
+        "erreur_sup": 1.2,
+        "erreur_inf": -1.2
       }
     ],
     "poll_id": "20260226_0227_if_E",
@@ -9865,7 +10049,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2
+        "intentions": 2.0,
+        "erreur_sup": 0.99,
+        "erreur_inf": -0.99
       },
       {
         "candidate_id": "JLM",
@@ -9877,7 +10063,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 10
+        "intentions": 10.0,
+        "erreur_sup": 2.12,
+        "erreur_inf": -2.12
       },
       {
         "candidate_id": "FRo",
@@ -9889,7 +10077,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3
+        "intentions": 3.0,
+        "erreur_sup": 1.2,
+        "erreur_inf": -1.2
       },
       {
         "candidate_id": "RG",
@@ -9901,7 +10091,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 13
+        "intentions": 13.0,
+        "erreur_sup": 2.37,
+        "erreur_inf": -2.37
       },
       {
         "candidate_id": "MT",
@@ -9913,7 +10105,9 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4.5
+        "intentions": 4.5,
+        "erreur_sup": 1.46,
+        "erreur_inf": -1.46
       },
       {
         "candidate_id": "SL",
@@ -9925,7 +10119,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 6
+        "intentions": 6.0,
+        "erreur_sup": 1.68,
+        "erreur_inf": -1.68
       },
       {
         "candidate_id": "BR",
@@ -9937,7 +10133,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 13
+        "intentions": 13.0,
+        "erreur_sup": 2.37,
+        "erreur_inf": -2.37
       },
       {
         "candidate_id": "DV",
@@ -9949,7 +10147,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 5
+        "intentions": 5.0,
+        "erreur_sup": 1.54,
+        "erreur_inf": -1.54
       },
       {
         "candidate_id": "NDA",
@@ -9961,7 +10161,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3
+        "intentions": 3.0,
+        "erreur_sup": 1.2,
+        "erreur_inf": -1.2
       },
       {
         "candidate_id": "JB",
@@ -9973,7 +10175,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 37
+        "intentions": 37.0,
+        "erreur_sup": 3.41,
+        "erreur_inf": -3.41
       },
       {
         "candidate_id": "EZ",
@@ -9985,7 +10189,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.5
+        "intentions": 3.5,
+        "erreur_sup": 1.3,
+        "erreur_inf": -1.3
       }
     ],
     "poll_id": "20260226_0227_if_F",
@@ -10013,7 +10219,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2
+        "intentions": 2.0,
+        "erreur_sup": 0.97,
+        "erreur_inf": -0.97
       },
       {
         "candidate_id": "JLM",
@@ -10025,7 +10233,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 12
+        "intentions": 12.0,
+        "erreur_sup": 2.26,
+        "erreur_inf": -2.26
       },
       {
         "candidate_id": "FRo",
@@ -10037,7 +10247,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2.5
+        "intentions": 2.5,
+        "erreur_sup": 1.08,
+        "erreur_inf": -1.08
       },
       {
         "candidate_id": "RG",
@@ -10049,7 +10261,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11
+        "intentions": 11.0,
+        "erreur_sup": 2.17,
+        "erreur_inf": -2.17
       },
       {
         "candidate_id": "MT",
@@ -10061,7 +10275,9 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4.5
+        "intentions": 4.5,
+        "erreur_sup": 1.44,
+        "erreur_inf": -1.44
       },
       {
         "candidate_id": "EP",
@@ -10073,7 +10289,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 23
+        "intentions": 23.0,
+        "erreur_sup": 2.92,
+        "erreur_inf": -2.92
       },
       {
         "candidate_id": "NDA",
@@ -10085,7 +10303,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3
+        "intentions": 3.0,
+        "erreur_sup": 1.18,
+        "erreur_inf": -1.18
       },
       {
         "candidate_id": "JB",
@@ -10097,7 +10317,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 37
+        "intentions": 37.0,
+        "erreur_sup": 3.35,
+        "erreur_inf": -3.35
       },
       {
         "candidate_id": "EZ",
@@ -10109,7 +10331,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 5
+        "intentions": 5.0,
+        "erreur_sup": 1.51,
+        "erreur_inf": -1.51
       }
     ],
     "poll_id": "20260226_0227_if_G",
@@ -10137,7 +10361,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2
+        "intentions": 2,
+        "erreur_sup": 1.0,
+        "erreur_inf": -1.0
       },
       {
         "candidate_id": "JLM",
@@ -10149,7 +10375,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 12
+        "intentions": 12,
+        "erreur_sup": 2.31,
+        "erreur_inf": -2.31
       },
       {
         "candidate_id": "FRo",
@@ -10161,7 +10389,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.21,
+        "erreur_inf": -1.21
       },
       {
         "candidate_id": "RG",
@@ -10173,7 +10403,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 16
+        "intentions": 16,
+        "erreur_sup": 2.61,
+        "erreur_inf": -2.61
       },
       {
         "candidate_id": "MT",
@@ -10185,7 +10417,9 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 1.55,
+        "erreur_inf": -1.55
       },
       {
         "candidate_id": "BR",
@@ -10197,7 +10431,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 17
+        "intentions": 17,
+        "erreur_sup": 2.67,
+        "erreur_inf": -2.67
       },
       {
         "candidate_id": "NDA",
@@ -10209,7 +10445,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.21,
+        "erreur_inf": -1.21
       },
       {
         "candidate_id": "JB",
@@ -10221,7 +10459,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 38
+        "intentions": 38,
+        "erreur_sup": 3.46,
+        "erreur_inf": -3.46
       },
       {
         "candidate_id": "EZ",
@@ -10233,7 +10473,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 1.4,
+        "erreur_inf": -1.4
       }
     ],
     "poll_id": "20260226_0227_if_H",
@@ -10261,7 +10503,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2
+        "intentions": 2,
+        "erreur_sup": 0.97,
+        "erreur_inf": -0.97
       },
       {
         "candidate_id": "JLM",
@@ -10273,7 +10517,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11
+        "intentions": 11,
+        "erreur_sup": 2.16,
+        "erreur_inf": -2.16
       },
       {
         "candidate_id": "FRo",
@@ -10285,7 +10531,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.18,
+        "erreur_inf": -1.18
       },
       {
         "candidate_id": "FH",
@@ -10297,7 +10545,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 8
+        "intentions": 8,
+        "erreur_sup": 1.87,
+        "erreur_inf": -1.87
       },
       {
         "candidate_id": "MT",
@@ -10309,7 +10559,9 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 1.5,
+        "erreur_inf": -1.5
       },
       {
         "candidate_id": "EP",
@@ -10321,7 +10573,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 18
+        "intentions": 18,
+        "erreur_sup": 2.65,
+        "erreur_inf": -2.65
       },
       {
         "candidate_id": "BR",
@@ -10333,7 +10587,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11
+        "intentions": 11,
+        "erreur_sup": 2.16,
+        "erreur_inf": -2.16
       },
       {
         "candidate_id": "NDA",
@@ -10345,7 +10601,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2
+        "intentions": 2,
+        "erreur_sup": 0.97,
+        "erreur_inf": -0.97
       },
       {
         "candidate_id": "JB",
@@ -10357,7 +10615,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 36
+        "intentions": 36,
+        "erreur_sup": 3.31,
+        "erreur_inf": -3.31
       },
       {
         "candidate_id": "EZ",
@@ -10369,7 +10629,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 1.35,
+        "erreur_inf": -1.35
       }
     ],
     "poll_id": "20260226_0227_if_I",
@@ -10397,7 +10659,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2
+        "intentions": 2.0,
+        "erreur_sup": 0.97,
+        "erreur_inf": -0.97
       },
       {
         "candidate_id": "JLM",
@@ -10409,7 +10673,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11
+        "intentions": 11.0,
+        "erreur_sup": 2.18,
+        "erreur_inf": -2.18
       },
       {
         "candidate_id": "FRo",
@@ -10421,7 +10687,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3
+        "intentions": 3.0,
+        "erreur_sup": 1.19,
+        "erreur_inf": -1.19
       },
       {
         "candidate_id": "OF",
@@ -10433,7 +10701,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 5
+        "intentions": 5.0,
+        "erreur_sup": 1.52,
+        "erreur_inf": -1.52
       },
       {
         "candidate_id": "MT",
@@ -10445,7 +10715,9 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 5
+        "intentions": 5.0,
+        "erreur_sup": 1.52,
+        "erreur_inf": -1.52
       },
       {
         "candidate_id": "EP",
@@ -10457,7 +10729,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 19
+        "intentions": 19.0,
+        "erreur_sup": 2.73,
+        "erreur_inf": -2.73
       },
       {
         "candidate_id": "BR",
@@ -10469,7 +10743,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11
+        "intentions": 11.0,
+        "erreur_sup": 2.18,
+        "erreur_inf": -2.18
       },
       {
         "candidate_id": "NDA",
@@ -10481,7 +10757,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.5
+        "intentions": 3.5,
+        "erreur_sup": 1.28,
+        "erreur_inf": -1.28
       },
       {
         "candidate_id": "JB",
@@ -10493,7 +10771,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 36
+        "intentions": 36.0,
+        "erreur_sup": 3.34,
+        "erreur_inf": -3.34
       },
       {
         "candidate_id": "EZ",
@@ -10505,7 +10785,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4.5
+        "intentions": 4.5,
+        "erreur_sup": 1.44,
+        "erreur_inf": -1.44
       }
     ],
     "poll_id": "20260226_0227_if_J",
@@ -10533,7 +10815,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.62,
+        "erreur_inf": -0.62
       },
       {
         "candidate_id": "FRo",
@@ -10545,7 +10829,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.06,
+        "erreur_inf": -1.06
       },
       {
         "candidate_id": "JLM",
@@ -10557,7 +10843,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11
+        "intentions": 11,
+        "erreur_sup": 1.94,
+        "erreur_inf": -1.94
       },
       {
         "candidate_id": "RG",
@@ -10569,7 +10857,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 14
+        "intentions": 14,
+        "erreur_sup": 2.15,
+        "erreur_inf": -2.15
       },
       {
         "candidate_id": "MT",
@@ -10581,7 +10871,9 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4
+        "intentions": 4,
+        "erreur_sup": 1.21,
+        "erreur_inf": -1.21
       },
       {
         "candidate_id": "EP",
@@ -10593,7 +10885,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 18
+        "intentions": 18,
+        "erreur_sup": 2.38,
+        "erreur_inf": -2.38
       },
       {
         "candidate_id": "BR",
@@ -10605,7 +10899,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 7
+        "intentions": 7,
+        "erreur_sup": 1.58,
+        "erreur_inf": -1.58
       },
       {
         "candidate_id": "NDA",
@@ -10617,7 +10913,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2
+        "intentions": 2,
+        "erreur_sup": 0.87,
+        "erreur_inf": -0.87
       },
       {
         "candidate_id": "JB",
@@ -10629,7 +10927,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 35
+        "intentions": 35,
+        "erreur_sup": 2.96,
+        "erreur_inf": -2.96
       },
       {
         "candidate_id": "EZ",
@@ -10641,7 +10941,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 1.35,
+        "erreur_inf": -1.35
       }
     ],
     "poll_id": "20260322_2203_hi_A",
@@ -10669,7 +10971,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 1
+        "intentions": 1,
+        "erreur_sup": 0.62,
+        "erreur_inf": -0.62
       },
       {
         "candidate_id": "FRo",
@@ -10681,7 +10985,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3
+        "intentions": 3,
+        "erreur_sup": 1.06,
+        "erreur_inf": -1.06
       },
       {
         "candidate_id": "JLM",
@@ -10693,7 +10999,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11
+        "intentions": 11,
+        "erreur_sup": 1.94,
+        "erreur_inf": -1.94
       },
       {
         "candidate_id": "RG",
@@ -10705,7 +11013,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 14
+        "intentions": 14,
+        "erreur_sup": 2.15,
+        "erreur_inf": -2.15
       },
       {
         "candidate_id": "MT",
@@ -10717,7 +11027,9 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 1.35,
+        "erreur_inf": -1.35
       },
       {
         "candidate_id": "GA",
@@ -10729,7 +11041,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 13
+        "intentions": 13,
+        "erreur_sup": 2.08,
+        "erreur_inf": -2.08
       },
       {
         "candidate_id": "BR",
@@ -10741,7 +11055,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 10
+        "intentions": 10,
+        "erreur_sup": 1.86,
+        "erreur_inf": -1.86
       },
       {
         "candidate_id": "NDA",
@@ -10753,7 +11069,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2
+        "intentions": 2,
+        "erreur_sup": 0.87,
+        "erreur_inf": -0.87
       },
       {
         "candidate_id": "JB",
@@ -10765,7 +11083,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 36
+        "intentions": 36,
+        "erreur_sup": 2.98,
+        "erreur_inf": -2.98
       },
       {
         "candidate_id": "EZ",
@@ -10777,7 +11097,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 5
+        "intentions": 5,
+        "erreur_sup": 1.35,
+        "erreur_inf": -1.35
       }
     ],
     "poll_id": "20260322_2203_hi_B",
