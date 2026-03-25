@@ -47,6 +47,9 @@ class Candidate:
     name: str
     surname: str
     parti: str
+    annonce_candidature: str = ""
+    retrait_candidature: str = ""
+    second_round: str = ""
 
     def keys(self) -> List[str]:
         keys = []
@@ -76,6 +79,9 @@ def load_candidates(path: Path) -> Tuple[Dict[str, Candidate], Dict[str, str]]:
                 name=(row.get("name") or "").strip(),
                 surname=(row.get("surname") or "").strip(),
                 parti=(row.get("parti") or "").strip(),
+                annonce_candidature=(row.get("annonce_candidature") or "").strip(),
+                retrait_candidature=(row.get("retrait_candidature") or "").strip(),
+                second_round=(row.get("second_round") or "").strip(),
             )
             if not c.candidate_id:
                 continue
@@ -201,6 +207,9 @@ def merge(repo_root: Path = ROOT) -> List[dict]:
                     "name": c.name,
                     "surname": c.surname,
                     "parti": c.parti,
+                    "annonce_candidature": c.annonce_candidature,
+                    "retrait_candidature": c.retrait_candidature,
+                    "second_round": c.second_round,
                     # results
                     "intentions": r.get("intentions", ""),
                     "erreur_sup": r.get("erreur_sup", ""),
@@ -233,6 +242,9 @@ def write_csv(rows: List[dict], out_path: Path) -> None:
             "name",
             "surname",
             "parti",
+            "annonce_candidature",
+            "retrait_candidature",
+            "second_round",
             "intentions",
             "erreur_sup",
             "erreur_inf",

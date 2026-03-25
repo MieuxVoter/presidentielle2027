@@ -100,6 +100,9 @@ def csv_to_json(csv_path: Path) -> List[Dict[str, Any]]:
             "name": row.get("name", ""),
             "surname": row.get("surname", ""),
             "parti": row.get("parti", ""),
+            "annonce_candidature": row.get("annonce_candidature", ""),
+            "retrait_candidature": row.get("retrait_candidature", ""),
+            "second_round": row.get("second_round", ""),
             "intentions": intentions,
         }
 
