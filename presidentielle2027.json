@@ -8569,9 +8569,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.0,
-        "erreur_sup": 1.2,
-        "erreur_inf": -1.2
+        "intentions": 3.0
       },
       {
         "candidate_id": "JLM",
@@ -8583,9 +8581,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 12.0,
-        "erreur_sup": 2.29,
-        "erreur_inf": -2.29
+        "intentions": 12.0
       },
       {
         "candidate_id": "MT",
@@ -8597,9 +8593,7 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 5.0,
-        "erreur_sup": 1.53,
-        "erreur_inf": -1.53
+        "intentions": 5.0
       },
       {
         "candidate_id": "RG",
@@ -8611,9 +8605,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 13.0,
-        "erreur_sup": 2.37,
-        "erreur_inf": -2.37
+        "intentions": 13.0
       },
       {
         "candidate_id": "EP",
@@ -8625,9 +8617,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 17.0,
-        "erreur_sup": 2.64,
-        "erreur_inf": -2.64
+        "intentions": 17.0
       },
       {
         "candidate_id": "BR",
@@ -8639,9 +8629,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 7.5,
-        "erreur_sup": 1.85,
-        "erreur_inf": -1.85
+        "intentions": 7.5
       },
       {
         "candidate_id": "NDA",
@@ -8653,9 +8641,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2.0,
-        "erreur_sup": 0.99,
-        "erreur_inf": -0.99
+        "intentions": 2.0
       },
       {
         "candidate_id": "JB",
@@ -8667,9 +8653,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 36.5,
-        "erreur_sup": 3.39,
-        "erreur_inf": -3.39
+        "intentions": 36.5
       },
       {
         "candidate_id": "EZ",
@@ -8681,9 +8665,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4.0,
-        "erreur_sup": 1.38,
-        "erreur_inf": -1.38
+        "intentions": 4.0
       }
     ],
     "poll_id": "20251118_1120_ve",
@@ -8711,9 +8693,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 47.0,
-        "erreur_sup": 3.45,
-        "erreur_inf": -3.45
+        "intentions": 47.0
       },
       {
         "candidate_id": "JB",
@@ -8725,9 +8705,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 53.0,
-        "erreur_sup": 3.45,
-        "erreur_inf": -3.45
+        "intentions": 53.0
       }
     ],
     "poll_id": "20251119_1120_od_2A",
@@ -8755,9 +8733,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 42.0,
-        "erreur_sup": 3.43,
-        "erreur_inf": -3.43
+        "intentions": 42.0
       },
       {
         "candidate_id": "JB",
@@ -8769,9 +8745,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 58.0,
-        "erreur_sup": 3.43,
-        "erreur_inf": -3.43
+        "intentions": 58.0
       }
     ],
     "poll_id": "20251119_1120_od_2B",
@@ -8799,9 +8773,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 26.0,
-        "erreur_sup": 3.28,
-        "erreur_inf": -3.28
+        "intentions": 26.0
       },
       {
         "candidate_id": "JB",
@@ -8813,9 +8785,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 74.0,
-        "erreur_sup": 3.28,
-        "erreur_inf": -3.28
+        "intentions": 74.0
       }
     ],
     "poll_id": "20251119_1120_od_2C",
@@ -8843,9 +8813,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 44.0,
-        "erreur_sup": 3.49,
-        "erreur_inf": -3.49
+        "intentions": 44.0
       },
       {
         "candidate_id": "JB",
@@ -8857,9 +8825,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 56.0,
-        "erreur_sup": 3.49,
-        "erreur_inf": -3.49
+        "intentions": 56.0
       }
     ],
     "poll_id": "20251119_1120_od_2D",
@@ -8887,9 +8853,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 1.0,
-        "erreur_sup": 0.66,
-        "erreur_inf": -0.66
+        "intentions": 1.0
       },
       {
         "candidate_id": "FRo",
@@ -8901,9 +8865,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.0,
-        "erreur_sup": 1.13,
-        "erreur_inf": -1.13
+        "intentions": 3.0
       },
       {
         "candidate_id": "JLM",
@@ -8915,9 +8877,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11.0,
-        "erreur_sup": 2.07,
-        "erreur_inf": -2.07
+        "intentions": 11.0
       },
       {
         "candidate_id": "MT",
@@ -8929,9 +8889,7 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 6.0,
-        "erreur_sup": 1.57,
-        "erreur_inf": -1.57
+        "intentions": 6.0
       },
       {
         "candidate_id": "RG",
@@ -8943,9 +8901,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 13.5,
-        "erreur_sup": 2.27,
-        "erreur_inf": -2.27
+        "intentions": 13.5
       },
       {
         "candidate_id": "EP",
@@ -8957,9 +8913,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 17.0,
-        "erreur_sup": 2.49,
-        "erreur_inf": -2.49
+        "intentions": 17.0
       },
       {
         "candidate_id": "BR",
@@ -8971,9 +8925,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 8.0,
-        "erreur_sup": 1.8,
-        "erreur_inf": -1.8
+        "intentions": 8.0
       },
       {
         "candidate_id": "NDA",
@@ -8985,9 +8937,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2.0,
-        "erreur_sup": 0.93,
-        "erreur_inf": -0.93
+        "intentions": 2.0
       },
       {
         "candidate_id": "JB",
@@ -8999,9 +8949,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 35.0,
-        "erreur_sup": 3.16,
-        "erreur_inf": -3.16
+        "intentions": 35.0
       },
       {
         "candidate_id": "EZ",
@@ -9013,9 +8961,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.5,
-        "erreur_sup": 1.22,
-        "erreur_inf": -1.22
+        "intentions": 3.5
       }
     ],
     "poll_id": "20251119_1120_od_A",
@@ -9043,9 +8989,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 1.0,
-        "erreur_sup": 0.66,
-        "erreur_inf": -0.66
+        "intentions": 1.0
       },
       {
         "candidate_id": "FRo",
@@ -9057,9 +9001,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.0,
-        "erreur_sup": 1.14,
-        "erreur_inf": -1.14
+        "intentions": 3.0
       },
       {
         "candidate_id": "JLM",
@@ -9071,9 +9013,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 12.0,
-        "erreur_sup": 2.17,
-        "erreur_inf": -2.17
+        "intentions": 12.0
       },
       {
         "candidate_id": "MT",
@@ -9085,9 +9025,7 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 6.5,
-        "erreur_sup": 1.64,
-        "erreur_inf": -1.64
+        "intentions": 6.5
       },
       {
         "candidate_id": "RG",
@@ -9099,9 +9037,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 14.5,
-        "erreur_sup": 2.35,
-        "erreur_inf": -2.35
+        "intentions": 14.5
       },
       {
         "candidate_id": "GA",
@@ -9113,9 +9049,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11.0,
-        "erreur_sup": 2.09,
-        "erreur_inf": -2.09
+        "intentions": 11.0
       },
       {
         "candidate_id": "BR",
@@ -9127,9 +9061,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 10.0,
-        "erreur_sup": 2.0,
-        "erreur_inf": -2.0
+        "intentions": 10.0
       },
       {
         "candidate_id": "NDA",
@@ -9141,9 +9073,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.0,
-        "erreur_sup": 1.14,
-        "erreur_inf": -1.14
+        "intentions": 3.0
       },
       {
         "candidate_id": "JB",
@@ -9155,9 +9085,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 36.0,
-        "erreur_sup": 3.2,
-        "erreur_inf": -3.2
+        "intentions": 36.0
       },
       {
         "candidate_id": "EZ",
@@ -9169,9 +9097,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.0,
-        "erreur_sup": 1.14,
-        "erreur_inf": -1.14
+        "intentions": 3.0
       }
     ],
     "poll_id": "20251119_1120_od_B",
@@ -9199,9 +9125,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 1.0,
-        "erreur_sup": 0.7,
-        "erreur_inf": -0.7
+        "intentions": 1
       },
       {
         "candidate_id": "JLM",
@@ -9213,9 +9137,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11.0,
-        "erreur_sup": 2.19,
-        "erreur_inf": -2.19
+        "intentions": 11
       },
       {
         "candidate_id": "FRo",
@@ -9227,9 +9149,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2.0,
-        "erreur_sup": 0.98,
-        "erreur_inf": -0.98
+        "intentions": 2
       },
       {
         "candidate_id": "RG",
@@ -9241,9 +9161,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 10.0,
-        "erreur_sup": 2.1,
-        "erreur_inf": -2.1
+        "intentions": 10
       },
       {
         "candidate_id": "MT",
@@ -9255,9 +9173,7 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4.0,
-        "erreur_sup": 1.37,
-        "erreur_inf": -1.37
+        "intentions": 4
       },
       {
         "candidate_id": "EP",
@@ -9269,9 +9185,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 16.0,
-        "erreur_sup": 2.57,
-        "erreur_inf": -2.57
+        "intentions": 16
       },
       {
         "candidate_id": "BR",
@@ -9283,9 +9197,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 10.0,
-        "erreur_sup": 2.1,
-        "erreur_inf": -2.1
+        "intentions": 10
       },
       {
         "candidate_id": "DV",
@@ -9297,9 +9209,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.5,
-        "erreur_sup": 1.29,
-        "erreur_inf": -1.29
+        "intentions": 3.5
       },
       {
         "candidate_id": "NDA",
@@ -9311,9 +9221,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2.5,
-        "erreur_sup": 1.09,
-        "erreur_inf": -1.09
+        "intentions": 2.5
       },
       {
         "candidate_id": "JB",
@@ -9325,9 +9233,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 36.0,
-        "erreur_sup": 3.36,
-        "erreur_inf": -3.36
+        "intentions": 36
       },
       {
         "candidate_id": "EZ",
@@ -9339,9 +9245,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4.0,
-        "erreur_sup": 1.37,
-        "erreur_inf": -1.37
+        "intentions": 4
       }
     ],
     "poll_id": "20260226_0227_if_A",
@@ -9369,9 +9273,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 1,
-        "erreur_sup": 0.69,
-        "erreur_inf": -0.69
+        "intentions": 1
       },
       {
         "candidate_id": "JLM",
@@ -9383,9 +9285,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 10,
-        "erreur_sup": 2.09,
-        "erreur_inf": -2.09
+        "intentions": 10
       },
       {
         "candidate_id": "FRo",
@@ -9397,9 +9297,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2,
-        "erreur_sup": 0.97,
-        "erreur_inf": -0.97
+        "intentions": 2
       },
       {
         "candidate_id": "RG",
@@ -9411,9 +9309,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11,
-        "erreur_sup": 2.18,
-        "erreur_inf": -2.18
+        "intentions": 11
       },
       {
         "candidate_id": "MT",
@@ -9425,9 +9321,7 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4,
-        "erreur_sup": 1.36,
-        "erreur_inf": -1.36
+        "intentions": 4
       },
       {
         "candidate_id": "EP",
@@ -9439,9 +9333,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 16,
-        "erreur_sup": 2.55,
-        "erreur_inf": -2.55
+        "intentions": 16
       },
       {
         "candidate_id": "BR",
@@ -9453,9 +9345,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11,
-        "erreur_sup": 2.18,
-        "erreur_inf": -2.18
+        "intentions": 11
       },
       {
         "candidate_id": "DV",
@@ -9467,9 +9357,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 5,
-        "erreur_sup": 1.52,
-        "erreur_inf": -1.52
+        "intentions": 5
       },
       {
         "candidate_id": "NDA",
@@ -9481,9 +9369,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2,
-        "erreur_sup": 0.97,
-        "erreur_inf": -0.97
+        "intentions": 2
       },
       {
         "candidate_id": "MLP",
@@ -9495,9 +9381,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 34,
-        "erreur_sup": 3.3,
-        "erreur_inf": -3.3
+        "intentions": 34
       },
       {
         "candidate_id": "EZ",
@@ -9509,9 +9393,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4,
-        "erreur_sup": 1.36,
-        "erreur_inf": -1.36
+        "intentions": 4
       }
     ],
     "poll_id": "20260226_0227_if_B",
@@ -9539,9 +9421,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2,
-        "erreur_sup": 0.97,
-        "erreur_inf": -0.97
+        "intentions": 2
       },
       {
         "candidate_id": "JLM",
@@ -9553,9 +9433,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 10,
-        "erreur_sup": 2.09,
-        "erreur_inf": -2.09
+        "intentions": 10
       },
       {
         "candidate_id": "FRo",
@@ -9567,9 +9445,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3,
-        "erreur_sup": 1.19,
-        "erreur_inf": -1.19
+        "intentions": 3
       },
       {
         "candidate_id": "RG",
@@ -9581,9 +9457,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 12,
-        "erreur_sup": 2.26,
-        "erreur_inf": -2.26
+        "intentions": 12
       },
       {
         "candidate_id": "MT",
@@ -9595,9 +9469,7 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4,
-        "erreur_sup": 1.36,
-        "erreur_inf": -1.36
+        "intentions": 4
       },
       {
         "candidate_id": "GA",
@@ -9609,9 +9481,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11,
-        "erreur_sup": 2.18,
-        "erreur_inf": -2.18
+        "intentions": 11
       },
       {
         "candidate_id": "BR",
@@ -9623,9 +9493,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 12,
-        "erreur_sup": 2.26,
-        "erreur_inf": -2.26
+        "intentions": 12
       },
       {
         "candidate_id": "DV",
@@ -9637,9 +9505,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4,
-        "erreur_sup": 1.36,
-        "erreur_inf": -1.36
+        "intentions": 4
       },
       {
         "candidate_id": "NDA",
@@ -9651,9 +9517,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2,
-        "erreur_sup": 0.97,
-        "erreur_inf": -0.97
+        "intentions": 2
       },
       {
         "candidate_id": "JB",
@@ -9665,9 +9529,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 36,
-        "erreur_sup": 3.34,
-        "erreur_inf": -3.34
+        "intentions": 36
       },
       {
         "candidate_id": "EZ",
@@ -9679,9 +9541,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4,
-        "erreur_sup": 1.36,
-        "erreur_inf": -1.36
+        "intentions": 4
       }
     ],
     "poll_id": "20260226_0227_if_C",
@@ -9709,9 +9569,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2.0,
-        "erreur_sup": 0.98,
-        "erreur_inf": -0.98
+        "intentions": 2
       },
       {
         "candidate_id": "JLM",
@@ -9723,9 +9581,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11.0,
-        "erreur_sup": 2.2,
-        "erreur_inf": -2.2
+        "intentions": 11
       },
       {
         "candidate_id": "FRo",
@@ -9737,9 +9593,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2.0,
-        "erreur_sup": 0.98,
-        "erreur_inf": -0.98
+        "intentions": 2
       },
       {
         "candidate_id": "RG",
@@ -9751,9 +9605,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 12.0,
-        "erreur_sup": 2.28,
-        "erreur_inf": -2.28
+        "intentions": 12
       },
       {
         "candidate_id": "MT",
@@ -9765,9 +9617,7 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4.5,
-        "erreur_sup": 1.45,
-        "erreur_inf": -1.45
+        "intentions": 4.5
       },
       {
         "candidate_id": "GA",
@@ -9779,9 +9629,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 10.0,
-        "erreur_sup": 2.11,
-        "erreur_inf": -2.11
+        "intentions": 10
       },
       {
         "candidate_id": "BR",
@@ -9793,9 +9641,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 12.0,
-        "erreur_sup": 2.28,
-        "erreur_inf": -2.28
+        "intentions": 12
       },
       {
         "candidate_id": "DV",
@@ -9807,9 +9653,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4.5,
-        "erreur_sup": 1.45,
-        "erreur_inf": -1.45
+        "intentions": 4.5
       },
       {
         "candidate_id": "NDA",
@@ -9821,9 +9665,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.0,
-        "erreur_sup": 1.2,
-        "erreur_inf": -1.2
+        "intentions": 3
       },
       {
         "candidate_id": "MLP",
@@ -9835,9 +9677,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 35.0,
-        "erreur_sup": 3.35,
-        "erreur_inf": -3.35
+        "intentions": 35
       },
       {
         "candidate_id": "EZ",
@@ -9849,9 +9689,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4.0,
-        "erreur_sup": 1.38,
-        "erreur_inf": -1.38
+        "intentions": 4
       }
     ],
     "poll_id": "20260226_0227_if_D",
@@ -9879,9 +9717,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 1.5,
-        "erreur_sup": 0.86,
-        "erreur_inf": -0.86
+        "intentions": 1.5
       },
       {
         "candidate_id": "JLM",
@@ -9893,9 +9729,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 10.0,
-        "erreur_sup": 2.12,
-        "erreur_inf": -2.12
+        "intentions": 10
       },
       {
         "candidate_id": "FRo",
@@ -9907,9 +9741,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.0,
-        "erreur_sup": 1.2,
-        "erreur_inf": -1.2
+        "intentions": 3
       },
       {
         "candidate_id": "RG",
@@ -9921,9 +9753,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 13.0,
-        "erreur_sup": 2.38,
-        "erreur_inf": -2.38
+        "intentions": 13
       },
       {
         "candidate_id": "MT",
@@ -9935,9 +9765,7 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4.0,
-        "erreur_sup": 1.38,
-        "erreur_inf": -1.38
+        "intentions": 4
       },
       {
         "candidate_id": "GD",
@@ -9949,9 +9777,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 8.0,
-        "erreur_sup": 1.92,
-        "erreur_inf": -1.92
+        "intentions": 8
       },
       {
         "candidate_id": "BR",
@@ -9963,9 +9789,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 13.0,
-        "erreur_sup": 2.38,
-        "erreur_inf": -2.38
+        "intentions": 13
       },
       {
         "candidate_id": "DV",
@@ -9977,9 +9801,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 5.0,
-        "erreur_sup": 1.54,
-        "erreur_inf": -1.54
+        "intentions": 5
       },
       {
         "candidate_id": "NDA",
@@ -9991,9 +9813,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2.5,
-        "erreur_sup": 1.1,
-        "erreur_inf": -1.1
+        "intentions": 2.5
       },
       {
         "candidate_id": "JB",
@@ -10005,9 +9825,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 37.0,
-        "erreur_sup": 3.41,
-        "erreur_inf": -3.41
+        "intentions": 37
       },
       {
         "candidate_id": "EZ",
@@ -10019,9 +9837,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.0,
-        "erreur_sup": 1.2,
-        "erreur_inf": -1.2
+        "intentions": 3
       }
     ],
     "poll_id": "20260226_0227_if_E",
@@ -10049,9 +9865,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2.0,
-        "erreur_sup": 0.99,
-        "erreur_inf": -0.99
+        "intentions": 2
       },
       {
         "candidate_id": "JLM",
@@ -10063,9 +9877,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 10.0,
-        "erreur_sup": 2.12,
-        "erreur_inf": -2.12
+        "intentions": 10
       },
       {
         "candidate_id": "FRo",
@@ -10077,9 +9889,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.0,
-        "erreur_sup": 1.2,
-        "erreur_inf": -1.2
+        "intentions": 3
       },
       {
         "candidate_id": "RG",
@@ -10091,9 +9901,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 13.0,
-        "erreur_sup": 2.37,
-        "erreur_inf": -2.37
+        "intentions": 13
       },
       {
         "candidate_id": "MT",
@@ -10105,9 +9913,7 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4.5,
-        "erreur_sup": 1.46,
-        "erreur_inf": -1.46
+        "intentions": 4.5
       },
       {
         "candidate_id": "SL",
@@ -10119,9 +9925,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 6.0,
-        "erreur_sup": 1.68,
-        "erreur_inf": -1.68
+        "intentions": 6
       },
       {
         "candidate_id": "BR",
@@ -10133,9 +9937,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 13.0,
-        "erreur_sup": 2.37,
-        "erreur_inf": -2.37
+        "intentions": 13
       },
       {
         "candidate_id": "DV",
@@ -10147,9 +9949,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 5.0,
-        "erreur_sup": 1.54,
-        "erreur_inf": -1.54
+        "intentions": 5
       },
       {
         "candidate_id": "NDA",
@@ -10161,9 +9961,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.0,
-        "erreur_sup": 1.2,
-        "erreur_inf": -1.2
+        "intentions": 3
       },
       {
         "candidate_id": "JB",
@@ -10175,9 +9973,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 37.0,
-        "erreur_sup": 3.41,
-        "erreur_inf": -3.41
+        "intentions": 37
       },
       {
         "candidate_id": "EZ",
@@ -10189,9 +9985,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.5,
-        "erreur_sup": 1.3,
-        "erreur_inf": -1.3
+        "intentions": 3.5
       }
     ],
     "poll_id": "20260226_0227_if_F",
@@ -10219,9 +10013,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2.0,
-        "erreur_sup": 0.97,
-        "erreur_inf": -0.97
+        "intentions": 2
       },
       {
         "candidate_id": "JLM",
@@ -10233,9 +10025,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 12.0,
-        "erreur_sup": 2.26,
-        "erreur_inf": -2.26
+        "intentions": 12
       },
       {
         "candidate_id": "FRo",
@@ -10247,9 +10037,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2.5,
-        "erreur_sup": 1.08,
-        "erreur_inf": -1.08
+        "intentions": 2.5
       },
       {
         "candidate_id": "RG",
@@ -10261,9 +10049,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11.0,
-        "erreur_sup": 2.17,
-        "erreur_inf": -2.17
+        "intentions": 11
       },
       {
         "candidate_id": "MT",
@@ -10275,9 +10061,7 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4.5,
-        "erreur_sup": 1.44,
-        "erreur_inf": -1.44
+        "intentions": 4.5
       },
       {
         "candidate_id": "EP",
@@ -10289,9 +10073,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 23.0,
-        "erreur_sup": 2.92,
-        "erreur_inf": -2.92
+        "intentions": 23
       },
       {
         "candidate_id": "NDA",
@@ -10303,9 +10085,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.0,
-        "erreur_sup": 1.18,
-        "erreur_inf": -1.18
+        "intentions": 3
       },
       {
         "candidate_id": "JB",
@@ -10317,9 +10097,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 37.0,
-        "erreur_sup": 3.35,
-        "erreur_inf": -3.35
+        "intentions": 37
       },
       {
         "candidate_id": "EZ",
@@ -10331,9 +10109,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 5.0,
-        "erreur_sup": 1.51,
-        "erreur_inf": -1.51
+        "intentions": 5
       }
     ],
     "poll_id": "20260226_0227_if_G",
@@ -10361,9 +10137,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2,
-        "erreur_sup": 1.0,
-        "erreur_inf": -1.0
+        "intentions": 2
       },
       {
         "candidate_id": "JLM",
@@ -10375,9 +10149,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 12,
-        "erreur_sup": 2.31,
-        "erreur_inf": -2.31
+        "intentions": 12
       },
       {
         "candidate_id": "FRo",
@@ -10389,9 +10161,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3,
-        "erreur_sup": 1.21,
-        "erreur_inf": -1.21
+        "intentions": 3
       },
       {
         "candidate_id": "RG",
@@ -10403,9 +10173,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 16,
-        "erreur_sup": 2.61,
-        "erreur_inf": -2.61
+        "intentions": 16
       },
       {
         "candidate_id": "MT",
@@ -10417,9 +10185,7 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 5,
-        "erreur_sup": 1.55,
-        "erreur_inf": -1.55
+        "intentions": 5
       },
       {
         "candidate_id": "BR",
@@ -10431,9 +10197,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 17,
-        "erreur_sup": 2.67,
-        "erreur_inf": -2.67
+        "intentions": 17
       },
       {
         "candidate_id": "NDA",
@@ -10445,9 +10209,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3,
-        "erreur_sup": 1.21,
-        "erreur_inf": -1.21
+        "intentions": 3
       },
       {
         "candidate_id": "JB",
@@ -10459,9 +10221,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 38,
-        "erreur_sup": 3.46,
-        "erreur_inf": -3.46
+        "intentions": 38
       },
       {
         "candidate_id": "EZ",
@@ -10473,9 +10233,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4,
-        "erreur_sup": 1.4,
-        "erreur_inf": -1.4
+        "intentions": 4
       }
     ],
     "poll_id": "20260226_0227_if_H",
@@ -10503,9 +10261,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2,
-        "erreur_sup": 0.97,
-        "erreur_inf": -0.97
+        "intentions": 2
       },
       {
         "candidate_id": "JLM",
@@ -10517,9 +10273,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11,
-        "erreur_sup": 2.16,
-        "erreur_inf": -2.16
+        "intentions": 11
       },
       {
         "candidate_id": "FRo",
@@ -10531,9 +10285,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3,
-        "erreur_sup": 1.18,
-        "erreur_inf": -1.18
+        "intentions": 3
       },
       {
         "candidate_id": "FH",
@@ -10545,9 +10297,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 8,
-        "erreur_sup": 1.87,
-        "erreur_inf": -1.87
+        "intentions": 8
       },
       {
         "candidate_id": "MT",
@@ -10559,9 +10309,7 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 5,
-        "erreur_sup": 1.5,
-        "erreur_inf": -1.5
+        "intentions": 5
       },
       {
         "candidate_id": "EP",
@@ -10573,9 +10321,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 18,
-        "erreur_sup": 2.65,
-        "erreur_inf": -2.65
+        "intentions": 18
       },
       {
         "candidate_id": "BR",
@@ -10587,9 +10333,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11,
-        "erreur_sup": 2.16,
-        "erreur_inf": -2.16
+        "intentions": 11
       },
       {
         "candidate_id": "NDA",
@@ -10601,9 +10345,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2,
-        "erreur_sup": 0.97,
-        "erreur_inf": -0.97
+        "intentions": 2
       },
       {
         "candidate_id": "JB",
@@ -10615,9 +10357,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 36,
-        "erreur_sup": 3.31,
-        "erreur_inf": -3.31
+        "intentions": 36
       },
       {
         "candidate_id": "EZ",
@@ -10629,9 +10369,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4,
-        "erreur_sup": 1.35,
-        "erreur_inf": -1.35
+        "intentions": 4
       }
     ],
     "poll_id": "20260226_0227_if_I",
@@ -10659,9 +10397,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2.0,
-        "erreur_sup": 0.97,
-        "erreur_inf": -0.97
+        "intentions": 2
       },
       {
         "candidate_id": "JLM",
@@ -10673,9 +10409,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11.0,
-        "erreur_sup": 2.18,
-        "erreur_inf": -2.18
+        "intentions": 11
       },
       {
         "candidate_id": "FRo",
@@ -10687,9 +10421,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.0,
-        "erreur_sup": 1.19,
-        "erreur_inf": -1.19
+        "intentions": 3
       },
       {
         "candidate_id": "OF",
@@ -10701,9 +10433,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 5.0,
-        "erreur_sup": 1.52,
-        "erreur_inf": -1.52
+        "intentions": 5
       },
       {
         "candidate_id": "MT",
@@ -10715,9 +10445,7 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 5.0,
-        "erreur_sup": 1.52,
-        "erreur_inf": -1.52
+        "intentions": 5
       },
       {
         "candidate_id": "EP",
@@ -10729,9 +10457,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 19.0,
-        "erreur_sup": 2.73,
-        "erreur_inf": -2.73
+        "intentions": 19
       },
       {
         "candidate_id": "BR",
@@ -10743,9 +10469,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11.0,
-        "erreur_sup": 2.18,
-        "erreur_inf": -2.18
+        "intentions": 11
       },
       {
         "candidate_id": "NDA",
@@ -10757,9 +10481,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.5,
-        "erreur_sup": 1.28,
-        "erreur_inf": -1.28
+        "intentions": 3.5
       },
       {
         "candidate_id": "JB",
@@ -10771,9 +10493,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 36.0,
-        "erreur_sup": 3.34,
-        "erreur_inf": -3.34
+        "intentions": 36
       },
       {
         "candidate_id": "EZ",
@@ -10785,9 +10505,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4.5,
-        "erreur_sup": 1.44,
-        "erreur_inf": -1.44
+        "intentions": 4.5
       }
     ],
     "poll_id": "20260226_0227_if_J",
@@ -10815,9 +10533,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 1,
-        "erreur_sup": 0.62,
-        "erreur_inf": -0.62
+        "intentions": 1
       },
       {
         "candidate_id": "FRo",
@@ -10829,9 +10545,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3,
-        "erreur_sup": 1.06,
-        "erreur_inf": -1.06
+        "intentions": 3
       },
       {
         "candidate_id": "JLM",
@@ -10843,9 +10557,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11,
-        "erreur_sup": 1.94,
-        "erreur_inf": -1.94
+        "intentions": 11
       },
       {
         "candidate_id": "RG",
@@ -10857,9 +10569,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 14,
-        "erreur_sup": 2.15,
-        "erreur_inf": -2.15
+        "intentions": 14
       },
       {
         "candidate_id": "MT",
@@ -10871,9 +10581,7 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4,
-        "erreur_sup": 1.21,
-        "erreur_inf": -1.21
+        "intentions": 4
       },
       {
         "candidate_id": "EP",
@@ -10885,9 +10593,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 18,
-        "erreur_sup": 2.38,
-        "erreur_inf": -2.38
+        "intentions": 18
       },
       {
         "candidate_id": "BR",
@@ -10899,9 +10605,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 7,
-        "erreur_sup": 1.58,
-        "erreur_inf": -1.58
+        "intentions": 7
       },
       {
         "candidate_id": "NDA",
@@ -10913,9 +10617,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2,
-        "erreur_sup": 0.87,
-        "erreur_inf": -0.87
+        "intentions": 2
       },
       {
         "candidate_id": "JB",
@@ -10927,9 +10629,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 35,
-        "erreur_sup": 2.96,
-        "erreur_inf": -2.96
+        "intentions": 35
       },
       {
         "candidate_id": "EZ",
@@ -10941,9 +10641,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 5,
-        "erreur_sup": 1.35,
-        "erreur_inf": -1.35
+        "intentions": 5
       }
     ],
     "poll_id": "20260322_2203_hi_A",
@@ -10971,9 +10669,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 1,
-        "erreur_sup": 0.62,
-        "erreur_inf": -0.62
+        "intentions": 1
       },
       {
         "candidate_id": "FRo",
@@ -10985,9 +10681,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3,
-        "erreur_sup": 1.06,
-        "erreur_inf": -1.06
+        "intentions": 3
       },
       {
         "candidate_id": "JLM",
@@ -10999,9 +10693,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 11,
-        "erreur_sup": 1.94,
-        "erreur_inf": -1.94
+        "intentions": 11
       },
       {
         "candidate_id": "RG",
@@ -11013,9 +10705,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 14,
-        "erreur_sup": 2.15,
-        "erreur_inf": -2.15
+        "intentions": 14
       },
       {
         "candidate_id": "MT",
@@ -11027,9 +10717,7 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 5,
-        "erreur_sup": 1.35,
-        "erreur_inf": -1.35
+        "intentions": 5
       },
       {
         "candidate_id": "GA",
@@ -11041,9 +10729,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 13,
-        "erreur_sup": 2.08,
-        "erreur_inf": -2.08
+        "intentions": 13
       },
       {
         "candidate_id": "BR",
@@ -11055,9 +10741,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 10,
-        "erreur_sup": 1.86,
-        "erreur_inf": -1.86
+        "intentions": 10
       },
       {
         "candidate_id": "NDA",
@@ -11069,9 +10753,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2,
-        "erreur_sup": 0.87,
-        "erreur_inf": -0.87
+        "intentions": 2
       },
       {
         "candidate_id": "JB",
@@ -11083,9 +10765,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 36,
-        "erreur_sup": 2.98,
-        "erreur_inf": -2.98
+        "intentions": 36
       },
       {
         "candidate_id": "EZ",
@@ -11097,9 +10777,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 5,
-        "erreur_sup": 1.35,
-        "erreur_inf": -1.35
+        "intentions": 5
       }
     ],
     "poll_id": "20260322_2203_hi_B",
@@ -11114,5 +10792,1121 @@
     "rolling": "",
     "media": "True",
     "filename": "10165-pres-toluna-harris-interactive-22-mars.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 28.5
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 71.5
+      }
+    ],
+    "poll_id": "20260325_0327_el_2A",
+    "institut": "ELABE",
+    "commanditaire": "BFMTV, La Tribune Dimanche",
+    "debut_enquete": "2026-03-25",
+    "fin_enquete": "2026-03-27",
+    "echantillon": 1504,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H2_5",
+    "tour": "2nd Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "10166-pres-elabe-28-mars.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 41.5
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 58.5
+      }
+    ],
+    "poll_id": "20260325_0327_el_2B",
+    "institut": "ELABE",
+    "commanditaire": "BFMTV, La Tribune Dimanche",
+    "debut_enquete": "2026-03-25",
+    "fin_enquete": "2026-03-27",
+    "echantillon": 1504,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H2_6",
+    "tour": "2nd Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "10166-pres-elabe-28-mars.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 51.5
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 48.5
+      }
+    ],
+    "poll_id": "20260325_0327_el_2C",
+    "institut": "ELABE",
+    "commanditaire": "BFMTV, La Tribune Dimanche",
+    "debut_enquete": "2026-03-25",
+    "fin_enquete": "2026-03-27",
+    "echantillon": 1504,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H2_1",
+    "tour": "2nd Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "10166-pres-elabe-28-mars.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 42
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 58
+      }
+    ],
+    "poll_id": "20260325_0327_el_2D",
+    "institut": "ELABE",
+    "commanditaire": "BFMTV, La Tribune Dimanche",
+    "debut_enquete": "2026-03-25",
+    "fin_enquete": "2026-03-27",
+    "echantillon": 1504,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H2_3",
+    "tour": "2nd Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "10166-pres-elabe-28-mars.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 53
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 47
+      }
+    ],
+    "poll_id": "20260325_0327_el_2E",
+    "institut": "ELABE",
+    "commanditaire": "BFMTV, La Tribune Dimanche",
+    "debut_enquete": "2026-03-25",
+    "fin_enquete": "2026-03-27",
+    "echantillon": 1504,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H2_2",
+    "tour": "2nd Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "10166-pres-elabe-28-mars.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "GA",
+        "candidat": "Gabriel Attal",
+        "complete_name": "Gabriel Attal",
+        "name": "Gabriel",
+        "surname": "Attal",
+        "parti": "La République En Marche",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 49
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 51
+      }
+    ],
+    "poll_id": "20260325_0327_el_2F",
+    "institut": "ELABE",
+    "commanditaire": "BFMTV, La Tribune Dimanche",
+    "debut_enquete": "2026-03-25",
+    "fin_enquete": "2026-03-27",
+    "echantillon": 1504,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H2_8",
+    "tour": "2nd Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "10166-pres-elabe-28-mars.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 0.5
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 10.5
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "annonce_candidature": "2025-10-22",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 4.5
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 10.5
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 20.5
+      },
+      {
+        "candidate_id": "DV",
+        "candidat": "Dominique de Villepin",
+        "complete_name": "Dominique de Villepin",
+        "name": "Dominique",
+        "surname": "de Villepin",
+        "parti": "",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 7
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 2.5
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 35
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 3
+      }
+    ],
+    "poll_id": "20260325_0327_el_A",
+    "institut": "ELABE",
+    "commanditaire": "BFMTV, La Tribune Dimanche",
+    "debut_enquete": "2026-03-25",
+    "fin_enquete": "2026-03-27",
+    "echantillon": 1504,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H45",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "10166-pres-elabe-28-mars.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 0.5
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 3.5
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 11.5
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "annonce_candidature": "2025-10-22",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 5
+      },
+      {
+        "candidate_id": "FH",
+        "candidat": "François Hollande",
+        "complete_name": "François Hollande",
+        "name": "François",
+        "surname": "Hollande",
+        "parti": "Parti Socialiste",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 8.5
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 22
+      },
+      {
+        "candidate_id": "DV",
+        "candidat": "Dominique de Villepin",
+        "complete_name": "Dominique de Villepin",
+        "name": "Dominique",
+        "surname": "de Villepin",
+        "parti": "",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 2.5
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 8.5
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 31.5
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 3.5
+      }
+    ],
+    "poll_id": "20260325_0327_el_B",
+    "institut": "ELABE",
+    "commanditaire": "BFMTV, La Tribune Dimanche",
+    "debut_enquete": "2026-03-25",
+    "fin_enquete": "2026-03-27",
+    "echantillon": 1504,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H58",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "10166-pres-elabe-28-mars.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 12
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "annonce_candidature": "2025-10-22",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 4.5
+      },
+      {
+        "candidate_id": "OF",
+        "candidat": "Olivier Faure",
+        "complete_name": "Olivier Faure",
+        "name": "Olivier",
+        "surname": "Faure",
+        "parti": "Parti Socialiste",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 4.5
+      },
+      {
+        "candidate_id": "EP",
+        "candidat": "Édouard Philippe",
+        "complete_name": "Edouard Philippe",
+        "name": "Edouard",
+        "surname": "Philippe",
+        "parti": "Horizon",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 25.5
+      },
+      {
+        "candidate_id": "DV",
+        "candidat": "Dominique de Villepin",
+        "complete_name": "Dominique de Villepin",
+        "name": "Dominique",
+        "surname": "de Villepin",
+        "parti": "",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 2.5
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 38
+      },
+      {
+        "candidate_id": "SK",
+        "candidat": "Sarah Knafo",
+        "complete_name": "Sarah Knafo",
+        "name": "Sarah",
+        "surname": "Knafo",
+        "parti": "",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 5
+      }
+    ],
+    "poll_id": "20260325_0327_el_C",
+    "institut": "ELABE",
+    "commanditaire": "BFMTV, La Tribune Dimanche",
+    "debut_enquete": "2026-03-25",
+    "fin_enquete": "2026-03-27",
+    "echantillon": 1504,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H59",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "10166-pres-elabe-28-mars.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 2.5
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 12
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "annonce_candidature": "2025-10-22",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 4
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 12.5
+      },
+      {
+        "candidate_id": "GA",
+        "candidat": "Gabriel Attal",
+        "complete_name": "Gabriel Attal",
+        "name": "Gabriel",
+        "surname": "Attal",
+        "parti": "La République En Marche",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 11.5
+      },
+      {
+        "candidate_id": "DV",
+        "candidat": "Dominique de Villepin",
+        "complete_name": "Dominique de Villepin",
+        "name": "Dominique",
+        "surname": "de Villepin",
+        "parti": "",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 6
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 10
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 2.5
+      },
+      {
+        "candidate_id": "MLP",
+        "candidat": "Marine Le Pen",
+        "complete_name": "Marine Le Pen",
+        "name": "Marine",
+        "surname": "Le Pen",
+        "parti": "Rassemblement National",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 34
+      },
+      {
+        "candidate_id": "SK",
+        "candidat": "Sarah Knafo",
+        "complete_name": "Sarah Knafo",
+        "name": "Sarah",
+        "surname": "Knafo",
+        "parti": "",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 4
+      }
+    ],
+    "poll_id": "20260325_0327_el_D",
+    "institut": "ELABE",
+    "commanditaire": "BFMTV, La Tribune Dimanche",
+    "debut_enquete": "2026-03-25",
+    "fin_enquete": "2026-03-27",
+    "echantillon": 1504,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H46",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "10166-pres-elabe-28-mars.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 0.5
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 13
+      },
+      {
+        "candidate_id": "MT",
+        "candidat": "Marine Tondelier",
+        "complete_name": "Marine Tondelier",
+        "name": "Marine",
+        "surname": "Tondelier",
+        "parti": "Europe Écologie Les Verts",
+        "annonce_candidature": "2025-10-22",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 5
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 12.5
+      },
+      {
+        "candidate_id": "GD",
+        "candidat": "Gérald Darmanin",
+        "complete_name": "Gérald Darmanin",
+        "name": "Gérald",
+        "surname": "Darmanin",
+        "parti": "",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 8
+      },
+      {
+        "candidate_id": "DV",
+        "candidat": "Dominique de Villepin",
+        "complete_name": "Dominique de Villepin",
+        "name": "Dominique",
+        "surname": "de Villepin",
+        "parti": "",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 5
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 8.5
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 2.5
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 38.5
+      },
+      {
+        "candidate_id": "SK",
+        "candidat": "Sarah Knafo",
+        "complete_name": "Sarah Knafo",
+        "name": "Sarah",
+        "surname": "Knafo",
+        "parti": "",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 3.5
+      }
+    ],
+    "poll_id": "20260325_0327_el_E",
+    "institut": "ELABE",
+    "commanditaire": "BFMTV, La Tribune Dimanche",
+    "debut_enquete": "2026-03-25",
+    "fin_enquete": "2026-03-27",
+    "echantillon": 1504,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H60",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "10166-pres-elabe-28-mars.pdf"
+  },
+  {
+    "candidats": [
+      {
+        "candidate_id": "NA",
+        "candidat": "Nathalie Arthaud",
+        "complete_name": "Nathalie Arthaud",
+        "name": "Nathalie",
+        "surname": "Arthaud",
+        "parti": "Lutte Ouvrière",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 1
+      },
+      {
+        "candidate_id": "FRo",
+        "candidat": "Fabien Roussel",
+        "complete_name": "Fabien Roussel",
+        "name": "Fabien",
+        "surname": "Roussel",
+        "parti": "Parti Communiste Français",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 3
+      },
+      {
+        "candidate_id": "JLM",
+        "candidat": "Jean-Luc Mélenchon",
+        "complete_name": "Jean-Luc Mélenchon",
+        "name": "Jean-Luc",
+        "surname": "Mélenchon",
+        "parti": "La France Insoumise",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 11
+      },
+      {
+        "candidate_id": "FR",
+        "candidat": "François Ruffin",
+        "complete_name": "François Ruffin",
+        "name": "François",
+        "surname": "Ruffin",
+        "parti": "La France Insoumise",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 8
+      },
+      {
+        "candidate_id": "RG",
+        "candidat": "Raphaël Glucksmann",
+        "complete_name": "Raphaël Glucksmann",
+        "name": "Raphaël",
+        "surname": "Glucksmann",
+        "parti": "Place Publique",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 12
+      },
+      {
+        "candidate_id": "SL",
+        "candidat": "Sébastien Lecornu",
+        "complete_name": "Sébastien Lecornu",
+        "name": "Sébastien",
+        "surname": "Lecornu",
+        "parti": "Les Républicains",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 6.5
+      },
+      {
+        "candidate_id": "DV",
+        "candidat": "Dominique de Villepin",
+        "complete_name": "Dominique de Villepin",
+        "name": "Dominique",
+        "surname": "de Villepin",
+        "parti": "",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 5.5
+      },
+      {
+        "candidate_id": "BR",
+        "candidat": "Bruno Retailleau",
+        "complete_name": "Bruno Retailleau",
+        "name": "Bruno",
+        "surname": "Retailleau",
+        "parti": "Les Républicains",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 9.5
+      },
+      {
+        "candidate_id": "NDA",
+        "candidat": "Nicolas Dupont-Aignan",
+        "complete_name": "Nicolas Dupont-Aignan",
+        "name": "Nicolas",
+        "surname": "Dupont-Aignan",
+        "parti": "",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 2.5
+      },
+      {
+        "candidate_id": "JB",
+        "candidat": "Jordan Bardella",
+        "complete_name": "Jordan Bardella",
+        "name": "Jordan",
+        "surname": "Bardella",
+        "parti": "Rassemblement National",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 37.5
+      },
+      {
+        "candidate_id": "EZ",
+        "candidat": "Éric Zemmour",
+        "complete_name": "Eric Zemmour",
+        "name": "Eric",
+        "surname": "Zemmour",
+        "parti": "Reconquête",
+        "annonce_candidature": "",
+        "retrait_candidature": "",
+        "second_round": "",
+        "intentions": 3.5
+      }
+    ],
+    "poll_id": "20260325_0327_el_F",
+    "institut": "ELABE",
+    "commanditaire": "BFMTV, La Tribune Dimanche",
+    "debut_enquete": "2026-03-25",
+    "fin_enquete": "2026-03-27",
+    "echantillon": 1504,
+    "population": "représentatif de la population française âgée de 18 ans et plus",
+    "hypothese": "H61",
+    "tour": "1er Tour",
+    "rolling": "",
+    "media": "True",
+    "filename": "10166-pres-elabe-28-mars.pdf"
   }
 ]
