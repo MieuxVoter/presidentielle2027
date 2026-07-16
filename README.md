@@ -1,5 +1,5 @@
 # presidentielle2027
-![Sondages agrégés](https://img.shields.io/badge/sondages_agrégés-168-blue)
+![Sondages agrégés](https://img.shields.io/badge/sondages_agrégés-172-blue)
 
 Compilation des sondages d'opinion produits à l'occasion des élections présidentielles 2027 en France.
 
@@ -11,7 +11,17 @@ Deux fichiers principaux contiennent l'ensemble des résultats de sondages conso
 
 ➡️ [Le flux JSON des sondages pour l'élection présidentielle 2027](presidentielle2027.json)
 
+## 🏆 TOP 3 des hypothèses les plus évaluées
 
+Classement des scénarios (hypothèses de candidatures) les plus fréquemment testés par les instituts de sondage. Mis à jour automatiquement.
+
+<!-- TOP_HYPOTHESES:START -->
+| Rang | Sondages | Candidats (ordre alphabétique) |
+|:----:|:--------:|--------------------------------|
+| 🥇 | 9 | Bruno Retailleau, Fabien Roussel, Jean-Luc Mélenchon, Jordan Bardella, Marine Tondelier, Nathalie Arthaud, Nicolas Dupont-Aignan, Raphaël Glucksmann, Édouard Philippe, Éric Zemmour |
+| 🥈 | 8 | Bruno Retailleau, Fabien Roussel, Gabriel Attal, Jean-Luc Mélenchon, Jordan Bardella, Marine Tondelier, Nathalie Arthaud, Nicolas Dupont-Aignan, Raphaël Glucksmann, Éric Zemmour |
+| 🥉 | 7 | Bruno Retailleau, Fabien Roussel, Jean-Luc Mélenchon, Marine Le Pen, Marine Tondelier, Nathalie Arthaud, Nicolas Dupont-Aignan, Raphaël Glucksmann, Édouard Philippe, Éric Zemmour |
+<!-- TOP_HYPOTHESES:END -->
 
 ### Structure du fichier
 
