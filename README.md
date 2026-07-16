@@ -16,11 +16,13 @@ Deux fichiers principaux contiennent l'ensemble des résultats de sondages conso
 Classement des scénarios (hypothèses de candidatures) les plus fréquemment testés par les instituts de sondage. Mis à jour automatiquement.
 
 <!-- TOP_HYPOTHESES:START -->
-| Rang | Sondages | Candidats (ordre alphabétique) |
-|:----:|:--------:|--------------------------------|
+| Rang | Sondages | Candidats (🥇) / Diff vs 🥇 (🥈🥉) |
+|:----:|:--------:|----------------------------------|
 | 🥇 | 9 | Bruno Retailleau, Fabien Roussel, Jean-Luc Mélenchon, Jordan Bardella, Marine Tondelier, Nathalie Arthaud, Nicolas Dupont-Aignan, Raphaël Glucksmann, Édouard Philippe, Éric Zemmour |
-| 🥈 | 8 | Bruno Retailleau, Fabien Roussel, Gabriel Attal, Jean-Luc Mélenchon, Jordan Bardella, Marine Tondelier, Nathalie Arthaud, Nicolas Dupont-Aignan, Raphaël Glucksmann, Éric Zemmour |
-| 🥉 | 7 | Bruno Retailleau, Fabien Roussel, Jean-Luc Mélenchon, Marine Le Pen, Marine Tondelier, Nathalie Arthaud, Nicolas Dupont-Aignan, Raphaël Glucksmann, Édouard Philippe, Éric Zemmour |
+| 🥈 | 8 | $\textcolor{green}{\text{+ Gabriel Attal}}$, $\textcolor{red}{\text{− Édouard Philippe}}$ |
+| 🥉 | 7 | $\textcolor{green}{\text{+ Marine Le Pen}}$, $\textcolor{red}{\text{− Jordan Bardella}}$ |
+
+> 🥇 liste complète des candidats (référence). 🥈🥉 diff vs 🥇 : $\textcolor{green}{\text{+ ajouté}}$ en vert, $\textcolor{red}{\text{− retiré}}$ en rouge.
 <!-- TOP_HYPOTHESES:END -->
 
 ### Structure du fichier
