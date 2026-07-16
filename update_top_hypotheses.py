@@ -34,9 +34,9 @@ def count_polls_per_hypothesis(polls_path: Path) -> Counter:
     return counter
 
 
-def load_hypothesis_labels(hypotheses_path: Path) -> dict[str, str]:
-    """Retourne un mapping id_hypothese -> candidats triés par ordre alphabétique."""
-    labels: dict[str, str] = {}
+def load_candidates_by_hypothesis(hypotheses_path: Path) -> dict[str, list[str]]:
+    """Retourne un mapping id_hypothese -> liste des candidats (triés alpha.)."""
+    candidates_by_id: dict[str, list[str]] = {}
     with hypotheses_path.open(newline="", encoding="utf-8") as f:
         for row in csv.DictReader(f):
             hyp_id = (row.get("id_hypothese") or "").strip()
@@ -47,23 +47,53 @@ def load_hypothesis_labels(hypotheses_path: Path) -> dict[str, str]:
                 for name in (row.get("hypothese_complete") or "").split(",")
                 if name.strip()
             ]
-            labels[hyp_id] = ", ".join(sorted(candidates, key=str.casefold))
-    return labels
+            candidates_by_id[hyp_id] = sorted(candidates, key=str.casefold)
+    return candidates_by_id
 
 
-def build_table(counter: Counter, labels: dict[str, str], top_n: int = TOP_N) -> str:
+def _colored(name: str, color: str) -> str:
+    """Nom coloré via la syntaxe mathématique GitHub (seule à rendre la couleur)."""
+    return f"$\\textcolor{{{color}}}{{\\text{{{name}}}}}$"
+
+
+def _diff_cell(reference: list[str], current: list[str]) -> str:
+    """Diff vs référence : ajouts en vert (+), retraits en rouge (−)."""
+    ref_set, cur_set = set(reference), set(current)
+    added = sorted(cur_set - ref_set, key=str.casefold)
+    removed = sorted(ref_set - cur_set, key=str.casefold)
+    parts = [_colored(f"+ {name}", "green") for name in added]
+    parts += [_colored(f"− {name}", "red") for name in removed]
+    return ", ".join(parts) if parts else "_(candidats identiques au 🥇)_"
+
+
+def build_table(
+    counter: Counter, candidates_by_id: dict[str, list[str]], top_n: int = TOP_N
+) -> str:
     """Construit le tableau markdown du TOP N des hypothèses les plus évaluées."""
     medals = ["🥇", "🥈", "🥉"]
     lines = [
-        "| Rang | Sondages | Candidats (ordre alphabétique) |",
-        "|:----:|:--------:|--------------------------------|",
+        "| Rang | Sondages | Candidats (🥇) / Diff vs 🥇 (🥈🥉) |",
+        "|:----:|:--------:|----------------------------------|",
     ]
     # Tri par nombre de sondages décroissant, puis par identifiant pour la stabilité.
     ranking = sorted(counter.items(), key=lambda kv: (-kv[1], kv[0]))[:top_n]
+    reference: list[str] = []
     for i, (hyp_id, count) in enumerate(ranking):
         rank = medals[i] if i < len(medals) else str(i + 1)
-        label = labels.get(hyp_id, "—") or "—"
-        lines.append(f"| {rank} | {count} | {label} |")
+        candidates = candidates_by_id.get(hyp_id, [])
+        if i == 0:
+            reference = candidates
+            cell = ", ".join(candidates) if candidates else "—"
+        else:
+            cell = _diff_cell(reference, candidates)
+        lines.append(f"| {rank} | {count} | {cell} |")
+    lines.append("")
+    lines.append(
+        "> 🥇 liste complète des candidats (référence). "
+        "🥈🥉 diff vs 🥇 : "
+        f"{_colored('+ ajouté', 'green')} en vert, "
+        f"{_colored('− retiré', 'red')} en rouge."
+    )
     return "\n".join(lines)
 
 
@@ -103,8 +133,8 @@ def main() -> int:
         print("❌ Aucune hypothèse trouvée dans polls.csv")
         return 1
 
-    labels = load_hypothesis_labels(hypotheses_path)
-    table = build_table(counter, labels)
+    candidates_by_id = load_candidates_by_hypothesis(hypotheses_path)
+    table = build_table(counter, candidates_by_id)
 
     modified = update_readme(readme_path, table)
 
