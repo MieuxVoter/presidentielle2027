@@ -112,6 +112,28 @@ def test_polls_csv_has_required_columns():
         assert required.issubset(fieldnames), f"polls.csv missing columns: {required - fieldnames}"
 
 
+def test_institut_names_have_consistent_casing():
+    """A given institute should always be written the same way in polls.csv.
+
+    csv_to_json.py copies nom_institut verbatim into the published JSON, so two
+    spellings of the same institute look like two institutes to any consumer
+    grouping by that field.
+    """
+    polls_csv = ROOT / "polls.csv"
+    spellings = {}
+
+    with polls_csv.open("r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            name = row.get("nom_institut", "").strip()
+            if not name:
+                continue
+            spellings.setdefault(name.casefold(), set()).add(name)
+
+    inconsistent = {key: sorted(names) for key, names in spellings.items() if len(names) > 1}
+    assert not inconsistent, f"Institute written several ways: {inconsistent}"
+
+
 def test_all_poll_files_referenced_in_metadata():
     """Every CSV file in polls/ should have metadata in polls.csv."""
     polls_csv = ROOT / "polls.csv"
