@@ -25,9 +25,6 @@ jobs:
         with:
           python-version: '3.13'
 
-      - name: install numpy & pandas
-        run: pip install numpy pandas
-
       - name: Compute Margin of errors
         run: python compute_confidence_intervals.py
 
@@ -46,13 +43,14 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          git diff --exit-code presidentielle2027.csv presidentielle2027.json README.md || echo "changed=true" >> $GITHUB_OUTPUT
+          git diff --exit-code presidentielle2027.csv presidentielle2027.json README.md polls || echo "changed=true" >> $GITHUB_OUTPUT
 
+      # [skip ci] keeps this push from re-triggering the workflow through the polls/ path filter.
       - name: Commit and push if changed
         if: steps.changes.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add presidentielle2027.csv presidentielle2027.json README.md
-          git commit -m "🤖 Auto-update presidentielle2027.csv, presidentielle2027.json, poll count badge and TOP 3 hypotheses"
+          git add presidentielle2027.csv presidentielle2027.json README.md polls
+          git commit -m "🤖 Auto-update presidentielle2027.csv, presidentielle2027.json, poll count badge and TOP 3 hypotheses [skip ci]"
           git push
