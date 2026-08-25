@@ -37,9 +37,11 @@ KNOWN_SUM_ANOMALIES = {
 }
 
 # poll_id encodes the end date as MMDD (e.g. 20250326_0327 = 26 -> 27 March).
-# These predate that convention and spell it DDMM instead. Renaming them would
-# break any consumer that pinned a poll_id, so they are grandfathered in.
-LEGACY_DDMM_POLL_IDS = {
+# These spell it DDMM instead. They are not old: they were added between May and
+# July 2026, alongside MMDD ones, back when COMMENT_AJOUTER_UN_SONDAGE.md still
+# documented the format as DDMM. The guide is fixed; renaming the ids is a
+# separate call, since they are the join key of the published dataset.
+DDMM_POLL_IDS = {
     "20260322_2203_hi_A",
     "20260322_2203_hi_B",
     "20260428_3004_hi_A",
@@ -168,8 +170,8 @@ def test_poll_id_describes_the_survey(row: dict):
         f"{poll_id} announces a start of {match.group('start')} but debut_enquete is {start}"
     )
 
-    if poll_id in LEGACY_DDMM_POLL_IDS:
-        pytest.skip(f"{poll_id} predates the MMDD convention")
+    if poll_id in DDMM_POLL_IDS:
+        pytest.skip(f"{poll_id} spells its end date DDMM")
 
     assert match.group("end") == f"{end[5:7]}{end[8:10]}", (
         f"{poll_id} announces an end of {match.group('end')} (MMDD) but fin_enquete is {end}"

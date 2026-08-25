@@ -128,10 +128,10 @@ Le format recommandé est : `YYYYMMDD_MMDD_ii_X`
 - Institut : IFOP
 - Hypothèse A
 
-> ⚠️ Quelques `poll_id` plus anciens écrivent la date de fin en `DDMM`. Ils sont
-> listés dans `LEGACY_DDMM_POLL_IDS` (`tests/test_poll_consistency.py`) et ne
-> sont pas renommés pour ne pas casser les consommateurs du jeu de données.
-> Les nouveaux sondages doivent utiliser `MMDD`.
+> ⚠️ Ce guide a longtemps documenté `DDMM` par erreur : 20 `poll_id` ajoutés
+> entre mai et juillet 2026 écrivent donc la date de fin dans cet ordre. Ils sont
+> listés dans `DDMM_POLL_IDS` (`tests/test_poll_consistency.py`), en attendant
+> de décider s'il faut les renommer. Les nouveaux sondages utilisent `MMDD`.
 
 ## Questions fréquentes
 
