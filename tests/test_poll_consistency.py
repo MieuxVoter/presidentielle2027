@@ -37,32 +37,10 @@ KNOWN_SUM_ANOMALIES = {
 }
 
 # poll_id encodes the end date as MMDD (e.g. 20250326_0327 = 26 -> 27 March).
-# These spell it DDMM instead. They are not old: they were added between May and
-# July 2026, alongside MMDD ones, back when COMMENT_AJOUTER_UN_SONDAGE.md still
-# documented the format as DDMM. The guide is fixed; renaming the ids is a
-# separate call, since they are the join key of the published dataset.
-DDMM_POLL_IDS = {
-    "20260322_2203_hi_A",
-    "20260322_2203_hi_B",
-    "20260428_3004_hi_A",
-    "20260428_3004_hi_B",
-    "20260428_3004_hi_C",
-    "20260428_3004_hi_D",
-    "20260610_1106_ow_A",
-    "20260610_1106_ow_B",
-    "20260610_1106_ow_C",
-    "20260610_1106_ow_D",
-    "20260610_1106_ow_E",
-    "20260610_1106_ow_F",
-    "20260622_2406_if_A",
-    "20260622_2406_if_B",
-    "20260622_2406_if_C",
-    "20260622_2406_if_D",
-    "20260622_2406_if_E",
-    "20260622_2406_if_F",
-    "20260622_2406_if_G",
-    "20260622_2406_if_H",
-}
+# Twenty ids spelled it DDMM, written between May and July 2026 while
+# COMMENT_AJOUTER_UN_SONDAGE.md still documented that order. They were renamed;
+# this set stays empty so a relapse fails instead of being absorbed.
+DDMM_POLL_IDS: set = set()
 
 # Source PDFs credited to two different surveys. One of the two poll groups
 # carries the wrong filename; the right notice still has to be identified.
