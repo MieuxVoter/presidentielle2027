@@ -19,7 +19,7 @@ Ajoutez une nouvelle ligne avec les informations suivantes :
 
 | Champ | Description | Exemple |
 |-------|-------------|---------|
-| `poll_id` | Identifiant unique au format YYYYMMDD_DDMM_ii_X | `20250326_0327_if_A` |
+| `poll_id` | Identifiant unique au format YYYYMMDD_MMDD_ii_X | `20250326_0327_if_A` |
 | `hypothese` | Identifiant du scénario (H1, H2, etc.) | `H1` |
 | `nom_institut` | Nom de l'institut de sondage | `IFOP` |
 | `commanditaire` | Commanditaire du sondage | `JDD` |
@@ -116,17 +116,22 @@ Une fois la PR mergée, les fichiers `presidentielle2027.csv` et `presidentielle
 
 ## Format de nommage des poll_id
 
-Le format recommandé est : `YYYYMMDD_DDMM_ii_X`
+Le format recommandé est : `YYYYMMDD_MMDD_ii_X`
 
 - `YYYYMMDD` : date de début de l'enquête
-- `DDMM` : date de fin (jour et mois)
+- `MMDD` : date de fin (mois et jour, dans cet ordre)
 - `ii` : initiales de l'institut (ex: `if` pour IFOP, `hi` pour Harris Interactive)
-- `X` : lettre pour différencier les hypothèses (A, B, C, D...)
+- `X` : lettre pour différencier les hypothèses (A, B, C, D...), préfixée par `2` pour un 2nd tour (`2A`, `2B`...)
 
 **Exemple :** `20250326_0327_if_A`
-- Sondage du 26-27 mars 2025
+- Sondage du 26 au 27 mars 2025 (`0327` = 27 mars)
 - Institut : IFOP
 - Hypothèse A
+
+> ⚠️ Quelques `poll_id` plus anciens écrivent la date de fin en `DDMM`. Ils sont
+> listés dans `LEGACY_DDMM_POLL_IDS` (`tests/test_poll_consistency.py`) et ne
+> sont pas renommés pour ne pas casser les consommateurs du jeu de données.
+> Les nouveaux sondages doivent utiliser `MMDD`.
 
 ## Questions fréquentes
 
