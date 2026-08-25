@@ -80,15 +80,14 @@ pip install pytest
 # Lancer les tests
 pytest tests/
 
-# Générer les fichiers consolidés (CSV et JSON)
+# Vérifier le merge en dry run (sans générer CSV/JSON)
 python merge.py
-python csv_to_json.py
 ```
 
 Si tout fonctionne, vous devriez voir :
 - ✅ Tous les tests passent
-- ✅ `presidentielle2027.csv` est créé/mis à jour
-- ✅ `presidentielle2027.json` est créé/mis à jour
+- ✅ Aucun fichier consolidé n'est modifié localement
+- ✅ Le merge passe sans erreur (validation des données)
 
 ### 5. Soumettre une Pull Request
 

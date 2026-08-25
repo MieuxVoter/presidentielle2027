@@ -22,7 +22,7 @@ jobs:
       - name: Run unit tests
         run: pytest -q
       - name: Build merged CSV
-        run: python merge.py
+        run: python merge.py --write
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:

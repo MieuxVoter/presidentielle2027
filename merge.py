@@ -18,6 +18,7 @@ from __future__ import annotations
 import csv
 import sys
 import unicodedata
+import argparse
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Iterable, List, Tuple
@@ -260,16 +261,26 @@ def write_csv(rows: List[dict], out_path: Path) -> None:
             wr.writerow(row)
 
 
-def main(argv: List[str], dry_run=False) -> int:
+def main(argv: List[str]) -> int:
+    parser = argparse.ArgumentParser(description="Merge poll metadata and results.")
+    parser.add_argument(
+        "--write",
+        action="store_true",
+        help="Write presidentielle2027.csv (default is dry run validation only).",
+    )
+    args = parser.parse_args(argv)
+
     root = ROOT
     out = root / "presidentielle2027.csv"
     rows = merge(root)
-    if dry_run:
+    if not args.write:
         print("Dry run, not writing anything. No CSV, No JSON")
-        write_csv(rows, out)
+        return 0
+
+    write_csv(rows, out)
     print(f"Wrote {len(rows)} rows to {out.relative_to(root)}")
     return 0
 
 
 if __name__ == "__main__":
-    raise SystemExit(main(sys.argv[1:], dry_run=True))
+    raise SystemExit(main(sys.argv[1:]))
