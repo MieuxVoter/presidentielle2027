@@ -80,14 +80,14 @@ pip install pytest
 # Lancer les tests
 pytest tests/
 
-# Vérifier le merge en dry run (sans générer CSV/JSON)
+# Lancer le merge en vérification locale (dry run)
 python merge.py
 ```
 
 Si tout fonctionne, vous devriez voir :
 - ✅ Tous les tests passent
-- ✅ Aucun fichier consolidé n'est modifié localement
-- ✅ Le merge passe sans erreur (validation des données)
+- ✅ `merge.py` passe sans erreur (validation des données)
+- ✅ Si `presidentielle2027.csv` est régénéré localement, ne pas l'ajouter à la PR
 
 ### 5. Soumettre une Pull Request
 

@@ -59,7 +59,7 @@ En résumé :
 1. Ajoutez une ligne dans `polls.csv` avec les métadonnées
 2. Créez `polls/<poll_id>.csv` avec les résultats
 3. Vérifiez que les candidats existent dans `candidats.csv`
-4. Testez localement avec `pytest` et `python merge.py` (dry run, sans générer les fichiers consolidés)
+4. Testez localement avec `pytest` et `python merge.py` (vérification locale avant PR)
 5. Soumettez une Pull Request
 
 ### Validation automatique
