@@ -19,7 +19,7 @@ Ajoutez une nouvelle ligne avec les informations suivantes :
 
 | Champ | Description | Exemple |
 |-------|-------------|---------|
-| `poll_id` | Identifiant unique au format YYYYMMDD_DDMM_ii_X | `20250326_0327_if_A` |
+| `poll_id` | Identifiant unique au format YYYYMMDD_MMDD_ii_X | `20250326_0327_if_A` |
 | `hypothese` | Identifiant du scénario (H1, H2, etc.) | `H1` |
 | `nom_institut` | Nom de l'institut de sondage | `IFOP` |
 | `commanditaire` | Commanditaire du sondage | `JDD` |
@@ -115,17 +115,21 @@ Une fois la PR mergée, les fichiers `presidentielle2027.csv` et `presidentielle
 
 ## Format de nommage des poll_id
 
-Le format recommandé est : `YYYYMMDD_DDMM_ii_X`
+Le format recommandé est : `YYYYMMDD_MMDD_ii_X`
 
 - `YYYYMMDD` : date de début de l'enquête
-- `DDMM` : date de fin (jour et mois)
+- `MMDD` : date de fin (mois et jour, dans cet ordre)
 - `ii` : initiales de l'institut (ex: `if` pour IFOP, `hi` pour Harris Interactive)
-- `X` : lettre pour différencier les hypothèses (A, B, C, D...)
+- `X` : lettre pour différencier les hypothèses (A, B, C, D...), préfixée par `2` pour un 2nd tour (`2A`, `2B`...)
 
 **Exemple :** `20250326_0327_if_A`
-- Sondage du 26-27 mars 2025
+- Sondage du 26 au 27 mars 2025 (`0327` = 27 mars)
 - Institut : IFOP
 - Hypothèse A
+
+> ⚠️ Ce guide a longtemps documenté `DDMM` par erreur. Les 20 `poll_id` écrits
+> dans cet ordre entre mai et juillet 2026 ont été renommés ; le test
+> `test_poll_id_describes_the_survey` empêche la rechute.
 
 ## Questions fréquentes
 
