@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Quick verification script to check repository health."""
+
 import sys
 from pathlib import Path
 

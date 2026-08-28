@@ -2,12 +2,12 @@
 """
 Test the CSV to JSON conversion script.
 """
+
 import json
 from pathlib import Path
 from csv_to_json import csv_to_json, convert_to_int_or_float
 
 import pytest
-
 
 ROOT = Path(__file__).resolve().parent.parent
 

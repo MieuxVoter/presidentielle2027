@@ -13,6 +13,7 @@ Output:
 
 This script purposefully avoids external deps (pandas) to run in CI easily.
 """
+
 from __future__ import annotations
 
 import csv
@@ -21,7 +22,6 @@ import unicodedata
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Iterable, List, Tuple
-
 
 ROOT = Path(__file__).resolve().parent
 

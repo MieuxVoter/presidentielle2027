@@ -10,6 +10,7 @@ Output: presidentielle2027.json
 
 This script purposefully avoids external deps (pandas) to run in CI easily.
 """
+
 from __future__ import annotations
 
 import csv
@@ -18,7 +19,6 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 from typing import Any, Dict, List
-
 
 ROOT = Path(__file__).resolve().parent
 
