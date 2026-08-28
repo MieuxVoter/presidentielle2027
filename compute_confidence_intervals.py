@@ -3,7 +3,6 @@ import os
 import numpy as np
 import pandas as pd
 
-
 FOLDER = "polls"
 POLL_CSV = "polls.csv"
 SAMPLE_COLS = ["sous_echantillon3", "sous_echantillon2", "sous_echantillon1"]

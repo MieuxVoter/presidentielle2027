@@ -3,6 +3,7 @@
 Script to check for new presidential polls from the sondages-commission-index catalog.
 Can be run locally to preview what issues would be created.
 """
+
 import csv
 import json
 import sys

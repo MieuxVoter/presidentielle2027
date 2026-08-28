@@ -151,6 +151,18 @@ Toute nouvelle dépendance doit avoir une justification claire.
 
 Une IA ne doit pas ajouter automatiquement une bibliothèque lorsqu’une solution raisonnable existe déjà dans le projet ou dans la bibliothèque standard.
 
+## 🎨 Formatage du code
+
+Le code Python de ce dépôt est formaté avec [black](https://github.com/psf/black), longueur de ligne 120.
+
+Avant d’ouvrir une Pull Request avec du code Python :
+
+```bash
+pip install black
+black . -l120 
+```
+
+
 ## 🗂️ Fichiers générés
 
 Si un fichier est généré automatiquement, modifier en priorité sa source plutôt que le fichier généré.
