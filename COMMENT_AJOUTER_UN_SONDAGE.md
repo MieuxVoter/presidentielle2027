@@ -54,8 +54,11 @@ Marine Le Pen,36,,
 **Colonnes obligatoires :**
 - `candidat` : nom complet du candidat (doit correspondre à `candidats.csv` ou `hypotheses.csv`)
 - `intentions` : pourcentage d'intentions de vote (numérique ou vide)
-- `erreur_sup` : erreur supérieure (optionnel)
-- `erreur_inf` : erreur inférieure (optionnel)
+- `erreur_sup` : erreur supérieure (optionnel) , elle peut être laisser vide
+- `erreur_inf` : erreur inférieure (optionnel), elle peut être laisser vide
+
+les colonnes `erreur_sup` et `erreur_inf̀̀` sont automatiquement remplies, lorsqu'une PR avec un nouveau sondage est ajouté. 
+(voir CI post-merge.yml python compute_confidence_intervals.py)
 
 ### 3. Vérifier les candidats
 
@@ -80,7 +83,7 @@ pip install pytest
 # Lancer les tests
 pytest tests/
 
-# Lancer le merge en vérification locale (dry run)
+# Lancer le merge en vérification locale (dry_run=True)
 python merge.py
 ```
 
@@ -118,7 +121,7 @@ Une fois la PR mergée, les fichiers `presidentielle2027.csv` et `presidentielle
 Le format recommandé est : `YYYYMMDD_DDMM_ii_X`
 
 - `YYYYMMDD` : date de début de l'enquête
-- `DDMM` : date de fin (jour et mois)
+- `MMDD` : date de fin (jour et mois)
 - `ii` : initiales de l'institut (ex: `if` pour IFOP, `hi` pour Harris Interactive)
 - `X` : lettre pour différencier les hypothèses (A, B, C, D...)
 
@@ -133,7 +136,7 @@ Le format recommandé est : `YYYYMMDD_DDMM_ii_X`
 R: Le script normalise automatiquement les accents. Utilisez le nom avec accents dans le fichier de résultats.
 
 **Q: Puis-je laisser des cellules vides ?**  
-R: Oui, les colonnes `erreur_sup` et `erreur_inf` peuvent être vides.
+R: Oui, les colonnes `erreur_sup` et `erreur_inf` peuvent être vides. Elle sont rempli, par la CI post-merge.yml à l'aide du script compute_confidence_interval.py
 
 **Q: Comment gérer plusieurs hypothèses du même sondage ?**  
 R: Créez plusieurs fichiers avec des suffixes différents (A, B, C...) et des `poll_id` distincts.
