@@ -208,3 +208,11 @@ Une contribution petite, ciblée, vérifiable et correctement décrite est préf
 Pour transformer des fichiers PDF en CSV, privilégier une extraction reproductible et vérifiable.
 
 Dans ce dépôt, `pdfplumber` est recommandé pour extraire le contenu avant mise en forme en `.csv`.
+
+Le dossier `sandbox/` (ignoré par git) sert d'espace de travail pour cette étape :
+
+- déposer le PDF source du sondage dans `sandbox/` (jamais ailleurs dans le dépôt) ;
+- la librarie `pdfplumber` est **très recommandé** pour exporter un fichier intermédiaire (texte brut, tableau extrait, JSON de debug…), l'écrire aussi dans `sandbox/`, pour ensuite être donné à un LLM;
+- ces fichiers ne doivent jamais être ajoutés à la Pull Request : seuls `polls.csv`, `polls/<poll_id>.csv` et, si nécessaire, `candidats.csv`/`hypotheses.csv` en sont issus et doivent être committés.
+
+Le nom du PDF source doit être reporté tel quel dans la colonne `filename` de `polls.csv`, afin de garder une source vérifiable même si le fichier lui-même n'est pas versionné.
