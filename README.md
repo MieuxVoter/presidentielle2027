@@ -9,7 +9,7 @@ Deux fichiers principaux contiennent l'ensemble des résultats de sondages conso
 
 ➡️ [Le fichier CSV des sondages pour l'élection présidentielle 2027](presidentielle2027.csv)
 
-➡️ [Le flux JSON des sondages pour l'élection présidentielle 2027](presidentielle2027.json)
+➡️ [Le flux JSON des sondages pour l'élection présidentielle 2027](https://raw.githubusercontent.com/MieuxVoter/presidentielle2027/refs/heads/main/presidentielle2027.json)
 
 ## 🏆 TOP 3 des hypothèses les plus évaluées
 
