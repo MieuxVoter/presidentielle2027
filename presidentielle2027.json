@@ -3103,9 +3103,9 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2.0,
-        "erreur_sup": 0.29,
-        "erreur_inf": -0.29
+        "intentions": 4.0,
+        "erreur_sup": 0.4,
+        "erreur_inf": -0.4
       }
     ],
     "poll_id": "20250411_0418_if_A",
