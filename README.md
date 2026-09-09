@@ -25,13 +25,18 @@ Classement des scénarios (hypothèses de candidatures) les plus fréquemment te
 > 🥇 liste complète des candidats (référence). 🥈🥉 diff vs 🥇 : $\textcolor{green}{\text{+ ajouté}}$ en vert, $\textcolor{red}{\text{− retiré}}$ en rouge.
 <!-- TOP_HYPOTHESES:END -->
 
-### Structure du fichier
+## 🗳️ Marre des sondages qui vous demandent de choisir un seul candidat ?
 
-Chaque ligne représente un candidat dans un sondage spécifique :
+Les sondages actuels reposent principalement sur le **scrutin uninominal** : un candidat choisi, tous les autres écartés.
 
-- **Métadonnées du sondage** : institut, commanditaire, dates, échantillon, hypothèse
-- **Informations du candidat** : nom, parti, identifiant
-- **Résultats** : intentions de vote, marges d'erreur
+**MieuxVoter soutient le développement du Jugement majoritaire**, une méthode qui permet d'**exprimer avec nuance son opinion sur tous les candidats**.
+
+> 🗳️ **[👉 Je soutiens MieuxVoter](https://www.paypal.com/donate/?hosted_button_id=QD6U4D323WV4S)**
+
+*Chaque soutien contribue au développement du **Jugement majoritaire** et à l'émergence d'une autre façon de mesurer l'opinion.*
+
+**Pourquoi on fait ça ?** Car on souhaite comparer les sondages classiques avec des sondages au jugement majoritaire.
+
 
 ## 🗂️ Structure du projet
 
@@ -110,3 +115,7 @@ Une fois mergé, `presidentielle2027.csv` est mis à jour automatiquement.
 ## 📜 Licence
 
 Ce projet est sous licence [MIT](LICENSE).
+
+<a href="https://www.paypal.com/donate/?hosted_button_id=QD6U4D323WV4S" target="_blank">
+  <img width="2056" height="765" alt="Soutenir MieuxVoter" src="https://github.com/user-attachments/assets/33925f13-4fdf-4346-9d7b-973216073332" />
+</a>
