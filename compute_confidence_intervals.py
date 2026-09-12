@@ -46,8 +46,11 @@ def confidence_margin(intentions: float, sample: float, z: float = Z_95) -> Tupl
     margin_of_error = z * (proportion * (1 - proportion) / sample) ** 0.5
 
     # Un candidat ne peut pas perdre plus que son propre score: la borne basse
-    # est bridée quand la marge dépasse le score.
-    lower = round(-margin_of_error * 100, 2) if proportion > margin_of_error else proportion
+    # est bridée à -score quand la marge dépasse le score.
+    if proportion > margin_of_error:
+        lower = round(-margin_of_error * 100, 2)
+    else:
+        lower = round(-proportion * 100, 2)
     return lower, round(margin_of_error * 100, 2)
 
 
