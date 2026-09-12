@@ -1,24 +1,35 @@
 """Tests du calcul des marges d'erreur (compute_confidence_intervals.py)."""
 
-from pathlib import Path
-
 import pytest
 
 from compute_confidence_intervals import (
     ECHANTILLON_COL,
+    FOLDER,
     POLL_CSV,
     SAMPLE_COLS,
     confidence_margin,
     resolve_sample,
 )
-from merge import iter_polls_meta
-
-ROOT = Path(__file__).resolve().parents[1]
+from merge import iter_polls_meta, read_poll_results
 
 
 def get_poll_meta():
     """Retourne les métadonnées de tous les sondages déclarés dans polls.csv."""
     return list(iter_polls_meta(POLL_CSV))
+
+
+def get_committed_polls():
+    """Retourne (métadonnées, résultats commités) de chaque sondage ayant un fichier."""
+    pairs = []
+    for meta_row in get_poll_meta():
+        poll_path = FOLDER / f"{meta_row['poll_id']}.csv"
+        if poll_path.exists():
+            pairs.append((meta_row, read_poll_results(poll_path)))
+    return pairs
+
+
+COMMITTED_POLLS = get_committed_polls()
+COMMITTED_POLL_IDS = [meta_row["poll_id"] for meta_row, _ in COMMITTED_POLLS]
 
 
 def declared_samples(meta_row: dict) -> set:
@@ -115,3 +126,54 @@ def test_resolved_sample_belongs_to_the_poll_itself(meta_row: dict):
 
     assert declared, f"{meta_row['poll_id']} ne déclare aucune taille d'échantillon"
     assert sample in declared, f"{meta_row['poll_id']} calculé sur {sample}, non déclaré parmi {sorted(declared)}"
+
+
+@pytest.mark.parametrize("meta_row, rows", COMMITTED_POLLS, ids=COMMITTED_POLL_IDS)
+def test_committed_margins_describe_a_valid_interval(meta_row: dict, rows: list):
+    """erreur_sup est positive, erreur_inf négative, et les deux sont cohérentes.
+
+    Les deux bornes sont symétriques, sauf quand la borne basse est bridée au
+    score du candidat — auquel cas elle vaut exactement -score.
+    """
+    poll_id = meta_row["poll_id"]
+    for row in rows:
+        sup, inf = (row.get("erreur_sup") or "").strip(), (row.get("erreur_inf") or "").strip()
+        if not sup or not inf:
+            # La CI post-merge les renseigne : une PR de contributeur les laisse vides.
+            continue
+
+        sup, inf = float(sup), float(inf)
+        intentions = float(row["intentions"])
+        label = f"{poll_id} / {row['candidat']}"
+
+        assert sup >= 0, f"{label}: erreur_sup négative ({sup})"
+        assert inf <= 0, f"{label}: erreur_inf positive ({inf})"
+        assert intentions + inf >= 0, f"{label}: la borne basse passe sous zéro"
+
+        if sup <= intentions:
+            assert inf == pytest.approx(-sup), f"{label}: bornes non symétriques ({inf} vs {-sup})"
+        else:
+            assert inf == pytest.approx(-intentions), f"{label}: borne basse non bridée au score"
+
+
+@pytest.mark.parametrize("meta_row, rows", COMMITTED_POLLS, ids=COMMITTED_POLL_IDS)
+def test_committed_margins_match_the_declared_sample(meta_row: dict, rows: list):
+    """Chaque marge commitée est recalculable depuis l'échantillon de polls.csv.
+
+    C'est ce test qui attrape une marge calculée sur la mauvaise base — par
+    exemple héritée du sondage précédent.
+    """
+    poll_id = meta_row["poll_id"]
+    sample = resolve_sample(meta_row)
+    assert sample, f"{poll_id} ne déclare aucune taille d'échantillon"
+
+    for row in rows:
+        sup, inf = (row.get("erreur_sup") or "").strip(), (row.get("erreur_inf") or "").strip()
+        if not sup or not inf:
+            continue
+
+        expected_inf, expected_sup = confidence_margin(float(row["intentions"]), sample)
+        label = f"{poll_id} / {row['candidat']} (base {sample:g})"
+
+        assert float(sup) == pytest.approx(expected_sup), f"{label}: erreur_sup {sup} attendue {expected_sup}"
+        assert float(inf) == pytest.approx(expected_inf), f"{label}: erreur_inf {inf} attendue {expected_inf}"
