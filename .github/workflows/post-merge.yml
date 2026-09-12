@@ -43,13 +43,14 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          git diff --exit-code presidentielle2027.csv presidentielle2027.json README.md || echo "changed=true" >> $GITHUB_OUTPUT
+          git diff --exit-code polls/ presidentielle2027.csv presidentielle2027.json README.md || echo "changed=true" >> $GITHUB_OUTPUT
 
       - name: Commit and push if changed
         if: steps.changes.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add presidentielle2027.csv presidentielle2027.json README.md
-          git commit -m "🤖 Auto-update presidentielle2027.csv, presidentielle2027.json, poll count badge and TOP 3 hypotheses"
+          git add polls/ presidentielle2027.csv presidentielle2027.json README.md
+          # [skip ci] indispensable : ce commit touche polls/*.csv, qui déclenche ce workflow.
+          git commit -m "🤖 Auto-update polls margins, presidentielle2027.csv, presidentielle2027.json, poll count badge and TOP 3 hypotheses [skip ci]"
           git push
