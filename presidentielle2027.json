@@ -13607,7 +13607,7 @@
         "second_round": "",
         "intentions": 0.5,
         "erreur_sup": 0.53,
-        "erreur_inf": 0.005
+        "erreur_inf": -0.5
       },
       {
         "candidate_id": "FRo",
@@ -21027,7 +21027,7 @@
         "second_round": "",
         "intentions": 0.5,
         "erreur_sup": 0.55,
-        "erreur_inf": 0.005
+        "erreur_inf": -0.5
       },
       {
         "candidate_id": "JLM",
@@ -21183,7 +21183,7 @@
         "second_round": "",
         "intentions": 0.5,
         "erreur_sup": 0.55,
-        "erreur_inf": 0.005
+        "erreur_inf": -0.5
       },
       {
         "candidate_id": "JLM",
@@ -21537,7 +21537,7 @@
         "second_round": "",
         "intentions": 0.5,
         "erreur_sup": 0.52,
-        "erreur_inf": 0.005
+        "erreur_inf": -0.5
       },
       {
         "candidate_id": "JLM",
@@ -29331,7 +29331,7 @@
         "second_round": "",
         "intentions": 0.5,
         "erreur_sup": 0.52,
-        "erreur_inf": 0.005
+        "erreur_inf": -0.5
       },
       {
         "candidate_id": "JLM",
@@ -30297,7 +30297,7 @@
         "second_round": "",
         "intentions": 0.5,
         "erreur_sup": 0.53,
-        "erreur_inf": 0.005
+        "erreur_inf": -0.5
       },
       {
         "candidate_id": "JLM",
@@ -30367,7 +30367,7 @@
         "second_round": "",
         "intentions": 0.5,
         "erreur_sup": 0.53,
-        "erreur_inf": 0.005
+        "erreur_inf": -0.5
       },
       {
         "candidate_id": "GA",
