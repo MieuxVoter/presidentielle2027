@@ -8570,8 +8570,8 @@
         "retrait_candidature": "",
         "second_round": "",
         "intentions": 3.0,
-        "erreur_sup": 1.2,
-        "erreur_inf": -1.2
+        "erreur_sup": 1.06,
+        "erreur_inf": -1.06
       },
       {
         "candidate_id": "JLM",
@@ -8584,8 +8584,8 @@
         "retrait_candidature": "",
         "second_round": "",
         "intentions": 12.0,
-        "erreur_sup": 2.29,
-        "erreur_inf": -2.29
+        "erreur_sup": 2.01,
+        "erreur_inf": -2.01
       },
       {
         "candidate_id": "MT",
@@ -8598,8 +8598,8 @@
         "retrait_candidature": "",
         "second_round": "",
         "intentions": 5.0,
-        "erreur_sup": 1.53,
-        "erreur_inf": -1.53
+        "erreur_sup": 1.35,
+        "erreur_inf": -1.35
       },
       {
         "candidate_id": "RG",
@@ -8612,8 +8612,8 @@
         "retrait_candidature": "",
         "second_round": "",
         "intentions": 13.0,
-        "erreur_sup": 2.37,
-        "erreur_inf": -2.37
+        "erreur_sup": 2.08,
+        "erreur_inf": -2.08
       },
       {
         "candidate_id": "EP",
@@ -8626,8 +8626,8 @@
         "retrait_candidature": "",
         "second_round": "",
         "intentions": 17.0,
-        "erreur_sup": 2.64,
-        "erreur_inf": -2.64
+        "erreur_sup": 2.33,
+        "erreur_inf": -2.33
       },
       {
         "candidate_id": "BR",
@@ -8640,8 +8640,8 @@
         "retrait_candidature": "",
         "second_round": "",
         "intentions": 7.5,
-        "erreur_sup": 1.85,
-        "erreur_inf": -1.85
+        "erreur_sup": 1.63,
+        "erreur_inf": -1.63
       },
       {
         "candidate_id": "NDA",
@@ -8654,8 +8654,8 @@
         "retrait_candidature": "",
         "second_round": "",
         "intentions": 2.0,
-        "erreur_sup": 0.99,
-        "erreur_inf": -0.99
+        "erreur_sup": 0.87,
+        "erreur_inf": -0.87
       },
       {
         "candidate_id": "JB",
@@ -8668,8 +8668,8 @@
         "retrait_candidature": "2026-07-07",
         "second_round": "",
         "intentions": 36.5,
-        "erreur_sup": 3.39,
-        "erreur_inf": -3.39
+        "erreur_sup": 2.98,
+        "erreur_inf": -2.98
       },
       {
         "candidate_id": "EZ",
@@ -8682,8 +8682,8 @@
         "retrait_candidature": "",
         "second_round": "",
         "intentions": 4.0,
-        "erreur_sup": 1.38,
-        "erreur_inf": -1.38
+        "erreur_sup": 1.21,
+        "erreur_inf": -1.21
       }
     ],
     "poll_id": "20251118_1120_ve",
@@ -27395,7 +27395,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 30.0,
+        "intentions": 30,
         "erreur_sup": 2.65,
         "erreur_inf": -2.65
       },
@@ -27537,7 +27537,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4.0,
+        "intentions": 4,
         "erreur_sup": 1.14,
         "erreur_inf": -1.14
       },
@@ -27579,7 +27579,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4.0,
+        "intentions": 4,
         "erreur_sup": 1.14,
         "erreur_inf": -1.14
       }
@@ -27807,7 +27807,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 15.0,
+        "intentions": 15,
         "erreur_sup": 2.19,
         "erreur_inf": -2.19
       },
@@ -27891,7 +27891,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 6.0,
+        "intentions": 6,
         "erreur_sup": 1.46,
         "erreur_inf": -1.46
       },
@@ -27905,7 +27905,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2.0,
+        "intentions": 2,
         "erreur_sup": 0.86,
         "erreur_inf": -0.86
       },
@@ -27919,7 +27919,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 34.0,
+        "intentions": 34,
         "erreur_sup": 2.91,
         "erreur_inf": -2.91
       },
@@ -27933,7 +27933,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.0,
+        "intentions": 3,
         "erreur_sup": 1.05,
         "erreur_inf": -1.05
       }
@@ -27977,7 +27977,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 15.0,
+        "intentions": 15,
         "erreur_sup": 2.21,
         "erreur_inf": -2.21
       },
@@ -28005,7 +28005,7 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4.0,
+        "intentions": 4,
         "erreur_sup": 1.21,
         "erreur_inf": -1.21
       },
@@ -28019,7 +28019,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 12.0,
+        "intentions": 12,
         "erreur_sup": 2.01,
         "erreur_inf": -2.01
       },
@@ -28033,7 +28033,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 19.0,
+        "intentions": 19,
         "erreur_sup": 2.43,
         "erreur_inf": -2.43
       },
@@ -28061,7 +28061,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2.0,
+        "intentions": 2,
         "erreur_sup": 0.87,
         "erreur_inf": -0.87
       },
@@ -28089,7 +28089,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.0,
+        "intentions": 3,
         "erreur_sup": 1.05,
         "erreur_inf": -1.05
       }
@@ -28133,7 +28133,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 15.0,
+        "intentions": 15,
         "erreur_sup": 2.21,
         "erreur_inf": -2.21
       },
@@ -28161,7 +28161,7 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4.0,
+        "intentions": 4,
         "erreur_sup": 1.22,
         "erreur_inf": -1.22
       },
@@ -28175,7 +28175,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 14.0,
+        "intentions": 14,
         "erreur_sup": 2.15,
         "erreur_inf": -2.15
       },
@@ -28189,7 +28189,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 14.0,
+        "intentions": 14,
         "erreur_sup": 2.15,
         "erreur_inf": -2.15
       },
@@ -28231,7 +28231,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 35.0,
+        "intentions": 35,
         "erreur_sup": 2.96,
         "erreur_inf": -2.96
       },
@@ -28245,7 +28245,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.0,
+        "intentions": 3,
         "erreur_sup": 1.06,
         "erreur_inf": -1.06
       }
@@ -28275,7 +28275,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 1.0,
+        "intentions": 1,
         "erreur_sup": 0.62,
         "erreur_inf": -0.62
       },
@@ -28289,7 +28289,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 16.0,
+        "intentions": 16,
         "erreur_sup": 2.27,
         "erreur_inf": -2.27
       },
@@ -28303,7 +28303,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.0,
+        "intentions": 3,
         "erreur_sup": 1.06,
         "erreur_inf": -1.06
       },
@@ -28317,7 +28317,7 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 5.0,
+        "intentions": 5,
         "erreur_sup": 1.35,
         "erreur_inf": -1.35
       },
@@ -28373,7 +28373,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 6.0,
+        "intentions": 6,
         "erreur_sup": 1.47,
         "erreur_inf": -1.47
       },
@@ -28387,7 +28387,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2.0,
+        "intentions": 2,
         "erreur_sup": 0.87,
         "erreur_inf": -0.87
       },
@@ -28415,7 +28415,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.0,
+        "intentions": 3,
         "erreur_sup": 1.06,
         "erreur_inf": -1.06
       }
@@ -28445,7 +28445,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 1.0,
+        "intentions": 1,
         "erreur_sup": 0.62,
         "erreur_inf": -0.62
       },
@@ -28487,7 +28487,7 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 5.0,
+        "intentions": 5,
         "erreur_sup": 1.36,
         "erreur_inf": -1.36
       },
@@ -28543,7 +28543,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2.0,
+        "intentions": 2,
         "erreur_sup": 0.87,
         "erreur_inf": -0.87
       },
@@ -28571,7 +28571,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.0,
+        "intentions": 3,
         "erreur_sup": 1.06,
         "erreur_inf": -1.06
       }
@@ -28601,7 +28601,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 1.0,
+        "intentions": 1,
         "erreur_sup": 0.62,
         "erreur_inf": -0.62
       },
@@ -28615,7 +28615,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 17.0,
+        "intentions": 17,
         "erreur_sup": 2.35,
         "erreur_inf": -2.35
       },
@@ -28685,7 +28685,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 10.0,
+        "intentions": 10,
         "erreur_sup": 1.88,
         "erreur_inf": -1.88
       },
@@ -28713,7 +28713,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 36.0,
+        "intentions": 36,
         "erreur_sup": 3.01,
         "erreur_inf": -3.01
       },
@@ -29343,7 +29343,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 15.0,
+        "intentions": 15,
         "erreur_sup": 2.65,
         "erreur_inf": -2.65
       },
@@ -29357,7 +29357,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2.0,
+        "intentions": 2,
         "erreur_sup": 1.04,
         "erreur_inf": -1.04
       },
@@ -29371,7 +29371,7 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.0,
+        "intentions": 3,
         "erreur_sup": 1.26,
         "erreur_inf": -1.26
       },
@@ -29385,7 +29385,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 9.0,
+        "intentions": 9,
         "erreur_sup": 2.12,
         "erreur_inf": -2.12
       },
@@ -29399,7 +29399,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 8.0,
+        "intentions": 8,
         "erreur_sup": 2.01,
         "erreur_inf": -2.01
       },
@@ -29413,7 +29413,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 15.0,
+        "intentions": 15,
         "erreur_sup": 2.65,
         "erreur_inf": -2.65
       },
@@ -29427,7 +29427,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 8.0,
+        "intentions": 8,
         "erreur_sup": 2.01,
         "erreur_inf": -2.01
       },
@@ -29441,7 +29441,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2.0,
+        "intentions": 2,
         "erreur_sup": 1.04,
         "erreur_inf": -1.04
       },
@@ -29455,7 +29455,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 34.0,
+        "intentions": 34,
         "erreur_sup": 3.51,
         "erreur_inf": -3.51
       },
@@ -29469,7 +29469,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 4.0,
+        "intentions": 4,
         "erreur_sup": 1.45,
         "erreur_inf": -1.45
       }
@@ -30309,7 +30309,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 17.0,
+        "intentions": 17,
         "erreur_sup": 2.8,
         "erreur_inf": -2.8
       },
@@ -30323,7 +30323,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2.0,
+        "intentions": 2,
         "erreur_sup": 1.04,
         "erreur_inf": -1.04
       },
@@ -30337,7 +30337,7 @@
         "annonce_candidature": "2025-10-22",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 3.0,
+        "intentions": 3,
         "erreur_sup": 1.27,
         "erreur_inf": -1.27
       },
@@ -30351,7 +30351,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 9.0,
+        "intentions": 9,
         "erreur_sup": 2.14,
         "erreur_inf": -2.14
       },
@@ -30379,7 +30379,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 7.0,
+        "intentions": 7,
         "erreur_sup": 1.9,
         "erreur_inf": -1.9
       },
@@ -30393,7 +30393,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 15.0,
+        "intentions": 15,
         "erreur_sup": 2.66,
         "erreur_inf": -2.66
       },
@@ -30407,7 +30407,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 7.0,
+        "intentions": 7,
         "erreur_sup": 1.9,
         "erreur_inf": -1.9
       },
@@ -30421,7 +30421,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2.0,
+        "intentions": 2,
         "erreur_sup": 1.04,
         "erreur_inf": -1.04
       },
@@ -30435,7 +30435,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2.0,
+        "intentions": 2,
         "erreur_sup": 1.04,
         "erreur_inf": -1.04
       },
@@ -30449,7 +30449,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 2.0,
+        "intentions": 2,
         "erreur_sup": 1.04,
         "erreur_inf": -1.04
       },
@@ -30463,7 +30463,7 @@
         "annonce_candidature": "",
         "retrait_candidature": "",
         "second_round": "",
-        "intentions": 34.0,
+        "intentions": 34,
         "erreur_sup": 3.53,
         "erreur_inf": -3.53
       }
