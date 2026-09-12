@@ -26,6 +26,7 @@ FOLDER = ROOT / "polls"
 POLL_CSV = ROOT / "polls.csv"
 
 SAMPLE_COLS = ["sous_echantillon3", "sous_echantillon2", "sous_echantillon1"]
+ECHANTILLON_COL = "echantillon"
 OUTPUT_COLS = ["candidat", "intentions", "erreur_sup", "erreur_inf"]
 Z_95 = 1.96
 
@@ -50,16 +51,18 @@ def confidence_margin(intentions: float, sample: float, z: float = Z_95) -> Tupl
     return lower, round(margin_of_error * 100, 2)
 
 
-def resolve_sample(meta_row: dict, previous: Optional[float] = None) -> Optional[float]:
-    """Retourne la base de calcul d'un sondage: sa première sous-population déclarée.
+def resolve_sample(meta_row: dict) -> Optional[float]:
+    """Retourne la base de calcul d'un sondage.
 
-    `previous` est renvoyé quand le sondage n'en déclare aucune.
+    Sa première sous-population déclarée, ou son échantillon total quand il n'en
+    déclare aucune. La valeur provient toujours de la ligne passée en argument:
+    aucune base n'est héritée d'un autre sondage.
     """
-    for col in SAMPLE_COLS:
+    for col in SAMPLE_COLS + [ECHANTILLON_COL]:
         value = (meta_row.get(col) or "").strip()
         if value:
             return float(value)
-    return previous
+    return None
 
 
 def format_number(value: float) -> str:
@@ -79,16 +82,15 @@ def write_poll_results(path: Path, rows: List[dict]) -> None:
 
 
 def main() -> int:
-    sample: Optional[float] = None
-
     for meta_row in iter_polls_meta(POLL_CSV):
         poll_id = (meta_row.get("poll_id") or "").strip()
         poll_path = FOLDER / f"{poll_id}.csv"
         if not poll_path.exists():
             continue
 
-        sample = resolve_sample(meta_row, sample)
+        sample = resolve_sample(meta_row)
         if sample is None:
+            print(f"Aucune taille d'échantillon pour le sondage {poll_id}, ignoré")
             continue
 
         try:
