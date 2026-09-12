@@ -181,10 +181,8 @@ def get_existing_issues(repo, token):
     page = 1
 
     while True:
-        url = (
-            f"https://api.github.com/repos/{repo}/issues"
-            f"?state=open&labels=new-poll&per_page=100&page={page}"
-        )
+        query = f"state=open&labels=new-poll&per_page=100&page={page}"
+        url = f"https://api.github.com/repos/{repo}/issues?{query}"
         issues = _github_request(url, token)
         if not issues:
             break
@@ -274,8 +272,7 @@ def run_create_issues(repo, token, limit):
     polls_to_create = [
         poll
         for poll in new_polls
-        if (poll.get("filename") or "").strip()
-        and (poll.get("filename") or "").strip() not in existing_issue_filenames
+        if (filename := (poll.get("filename") or "").strip()) and filename not in existing_issue_filenames
     ]
     print(f"📝 Will create {len(polls_to_create[:limit])} new issue(s)")
 
