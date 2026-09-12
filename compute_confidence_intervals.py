@@ -1,89 +1,114 @@
-import os
+"""
+Calcule la marge d'erreur (intervalle de confiance à 95 %) de chaque sondage
+et la réécrit dans polls/<poll_id>.csv.
 
-import numpy as np
-import pandas as pd
+Entrées:
+- polls.csv: métadonnées des sondages, dont les tailles d'échantillon
+- polls/<poll_id>.csv: colonnes candidat,intentions,erreur_sup,erreur_inf
 
-FOLDER = "polls"
-POLL_CSV = "polls.csv"
+Sortie: polls/<poll_id>.csv réécrit avec erreur_sup et erreur_inf renseignées.
+
+La base de calcul retenue est la première sous-population déclarée, dans l'ordre
+sous_echantillon3, sous_echantillon2, sous_echantillon1.
+"""
+
+from __future__ import annotations
+
+import csv
+import sys
+from pathlib import Path
+from typing import List, Optional, Tuple
+
+from merge import iter_polls_meta, read_poll_results
+
+ROOT = Path(__file__).resolve().parent
+FOLDER = ROOT / "polls"
+POLL_CSV = ROOT / "polls.csv"
+
 SAMPLE_COLS = ["sous_echantillon3", "sous_echantillon2", "sous_echantillon1"]
+OUTPUT_COLS = ["candidat", "intentions", "erreur_sup", "erreur_inf"]
+Z_95 = 1.96
 
 
-def compute_confidence_intervals(intentions, sample, z=1.96):
-    """
-    Calcule l'intervalle de confiance pour une Series de comptes bruts.
+def confidence_margin(intentions: float, sample: float, z: float = Z_95) -> Tuple[float, float]:
+    """Retourne (borne basse, borne haute) de l'intervalle de confiance.
 
     Args:
-        intentions (int): Comptes bruts d'intentions.
-        sample (int): Taille totale de l'échantillon.
-        z (float): Valeur critique pour le niveau de confiance.
+        intentions: score du candidat, en pourcentage.
+        sample: taille de la base de calcul.
+        z: valeur critique pour le niveau de confiance.
 
     Returns:
-        tuple: (lower_bound, upper_bound) comme pd.Series.
+        tuple: (erreur_inf, erreur_sup).
     """
-
     proportion = intentions / 100
-    se = (proportion * (1 - proportion) / sample) ** 0.5
-    margin_of_error = z * se
-    # lower_bound = proportion - margin_of_error
-    # upper_bound = proportion + margin_of_error
-    # return round(lower_bound.values[0] * 100, 2), round(upper_bound.values[0] * 100, 2)
-    return (np.round(-margin_of_error * 100, 2) if proportion > margin_of_error else proportion), np.round(
-        margin_of_error * 100, 2
-    )
+    margin_of_error = z * (proportion * (1 - proportion) / sample) ** 0.5
+
+    # Un candidat ne peut pas perdre plus que son propre score: la borne basse
+    # est bridée quand la marge dépasse le score.
+    lower = round(-margin_of_error * 100, 2) if proportion > margin_of_error else proportion
+    return lower, round(margin_of_error * 100, 2)
 
 
-def get_poll_ids():
-    """Get all ids within the poll Folder"""
-    poll_ids = []
-    for file in os.listdir(FOLDER):
-        if file.endswith(".csv"):
-            id = file[:-4]
-            poll_ids.append(id)
+def resolve_sample(meta_row: dict, previous: Optional[float] = None) -> Optional[float]:
+    """Retourne la base de calcul d'un sondage: sa première sous-population déclarée.
 
-    return poll_ids
+    `previous` est renvoyé quand le sondage n'en déclare aucune.
+    """
+    for col in SAMPLE_COLS:
+        value = (meta_row.get(col) or "").strip()
+        if value:
+            return float(value)
+    return previous
 
 
-polls_df = pd.read_csv(POLL_CSV)
-poll_ids = polls_df["poll_id"].tolist()
+def format_number(value: float) -> str:
+    """Formate une marge pour le CSV, en laissant la cellule vide si elle est indéfinie."""
+    if value is None or value != value:  # NaN
+        return ""
+    return str(value)
 
-for id in poll_ids:
-    sub_df = polls_df[polls_df["poll_id"] == id]
-    try:
-        poll_df = pd.read_csv(f"{FOLDER}/{id}.csv")
-        intentions = poll_df["intentions"]
-    except FileNotFoundError:
-        continue
 
-    try:
-        for col in SAMPLE_COLS:
+def write_poll_results(path: Path, rows: List[dict]) -> None:
+    """Réécrit un fichier de résultats avec les colonnes dans l'ordre attendu."""
+    with path.open("w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=OUTPUT_COLS, lineterminator="\n")
+        writer.writeheader()
+        for row in rows:
+            writer.writerow({col: row.get(col, "") for col in OUTPUT_COLS})
 
-            has_no_empty_col = not sub_df[col].empty
-            has_no_nan_everywhere = not sub_df[col].isna().all()
-            if has_no_empty_col and has_no_nan_everywhere:
-                sample = sub_df[col].values[0]
-                break
-            else:
-                continue
-    except KeyError:
-        continue
 
-    try:
-        erreur_inf = []
-        erreur_sup = []
-        for intention in intentions:
-            lower_bound, upper_bound = compute_confidence_intervals(intention, sample)
-            erreur_inf.append(lower_bound)
-            erreur_sup.append(upper_bound)
+def main() -> int:
+    sample: Optional[float] = None
 
-        # Créer un nouveau DataFrame avec toutes les colonnes d'origine
-        result_df = poll_df.copy()
-        result_df["erreur_inf"] = erreur_inf
-        result_df["erreur_sup"] = erreur_sup
+    for meta_row in iter_polls_meta(POLL_CSV):
+        poll_id = (meta_row.get("poll_id") or "").strip()
+        poll_path = FOLDER / f"{poll_id}.csv"
+        if not poll_path.exists():
+            continue
 
-        # Réorganiser les colonnes dans le bon ordre
-        cols = ["candidat", "intentions", "erreur_sup", "erreur_inf"]
-        result_df = result_df[cols]
+        sample = resolve_sample(meta_row, sample)
+        if sample is None:
+            continue
 
-        result_df.to_csv(f"{FOLDER}/{id}.csv", index=False)
-    except Exception as e:
-        print(f"Erreur pour le sondage {id} : {e}")
+        try:
+            rows = read_poll_results(poll_path)
+            for row in rows:
+                intentions = (row.get("intentions") or "").strip()
+                if not intentions:
+                    row["erreur_inf"] = ""
+                    row["erreur_sup"] = ""
+                    continue
+                lower, upper = confidence_margin(float(intentions), sample)
+                row["erreur_inf"] = format_number(lower)
+                row["erreur_sup"] = format_number(upper)
+
+            write_poll_results(poll_path, rows)
+        except Exception as e:
+            print(f"Erreur pour le sondage {poll_id} : {e}")
+
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
