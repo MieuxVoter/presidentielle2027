@@ -70,8 +70,21 @@ export OPENROUTER_API_KEY=...
 
 python mine_poll.py --issue 42          # aperçu : affiche le commentaire, ne publie rien
 python mine_poll.py --txt notice.txt    # depuis un texte déjà téléchargé
-python mine_poll.py --pdf notice.pdf    # depuis un PDF (nécessite pdfplumber)
+python mine_poll.py --pdf notice.pdf    # depuis un PDF (voir dépendances ci-dessous)
 ```
+
+### Dépendances
+
+Le chemin nominal — `--issue` et `--txt` — n'utilise que la bibliothèque standard : **rien à installer**.
+
+`--pdf` est la seule exception. Il extrait le texte d'un PDF local quand le dépôt amont n'a pas encore publié
+sa version texte, et demande `pdfplumber`, déclaré à part comme dépendance optionnelle :
+
+```bash
+pip install -r requirements_mining.txt
+```
+
+La CI ne l'installe pas : le workflow passe toujours par le texte amont.
 
 La publication (`--post`) demande en plus `GITHUB_TOKEN` ; elle est normalement faite par le workflow.
 

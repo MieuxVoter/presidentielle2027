@@ -1,0 +1,4 @@
+# Dépendance optionnelle du data-mining : uniquement pour `mine_poll.py --pdf`,
+# qui extrait le texte d'un PDF local quand le dépôt amont n'a pas encore publié
+# sa version texte. Ni la CI ni le chemin nominal n'en ont besoin.
+pdfplumber==0.11.9

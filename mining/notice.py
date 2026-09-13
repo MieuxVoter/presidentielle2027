@@ -81,10 +81,17 @@ def fetch_text(url):
 def extract_pdf_text(pdf_path):
     """Repli : extraire le texte d'un PDF local, comme le fait le dépôt amont.
 
-    pdfplumber n'est importé qu'ici : le chemin nominal passe par le TXT amont et
-    ne doit rien avoir à installer.
+    pdfplumber n'est importé qu'ici, et reste une dépendance optionnelle : le
+    chemin nominal passe par le TXT amont et n'a rien à installer.
     """
-    import pdfplumber
+    try:
+        import pdfplumber
+    except ImportError as exc:
+        raise SystemExit(
+            "❌ --pdf a besoin de pdfplumber, qui est une dépendance optionnelle :\n"
+            "     pip install -r requirements_mining.txt\n"
+            "   Elle n'est pas nécessaire pour traiter une issue : le texte vient alors du dépôt amont."
+        ) from exc
 
     parts = []
     with pdfplumber.open(pdf_path) as document:
