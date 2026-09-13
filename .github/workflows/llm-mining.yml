@@ -1,0 +1,58 @@
+name: LLM mining - triage
+
+# Lot 1 : à l'ouverture d'une issue « nouveau sondage », dire s'il y a des
+# intentions de vote et poser le label correspondant. Aucune donnée chiffrée
+# n'est produite ici, le dépouillement reste manuel (voir docs/ISSUE_llm_mining.md).
+on:
+  issues:
+    types: [opened]
+  workflow_dispatch:
+    inputs:
+      issue:
+        description: "Numéro de l'issue à (re)traiter"
+        required: true
+        type: string
+
+permissions:
+  issues: write
+  contents: read
+
+concurrency:
+  group: llm-mining-${{ github.event.issue.number || inputs.issue }}
+  cancel-in-progress: false
+
+jobs:
+  triage:
+    # Les issues de sondage sont créées avec le label new-poll par check_new_polls.py.
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.issue.labels.*.name, 'new-poll')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      # Sans clé d'API, on sort en silence plutôt que de faire échouer l'issue.
+      - name: Vérifier la présence d'une clé
+        id: guard
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          if [ -z "$OPENROUTER_API_KEY$MISTRAL_API_KEY$GEMINI_API_KEY" ]; then
+            echo "::warning::Aucune clé LLM configurée, triage ignoré."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Triage de la notice
+        if: steps.guard.outputs.skip != 'true'
+        env:
+          ISSUE: ${{ github.event.issue.number || inputs.issue }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python mine_poll.py --issue "$ISSUE" --post

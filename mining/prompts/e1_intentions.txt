@@ -1,0 +1,59 @@
+Voici le texte intégral d'une notice de sondage publiée par la commission des sondages française.
+Chaque page est introduite par une ligne de la forme « --- page N --- ».
+
+QUESTION
+Ce document contient-il des intentions de vote pour des candidats à l'élection présidentielle 2027
+en France, pour une ou plusieurs hypothèses, pour le premier ou pour le second tour de l'élection ?
+Si oui, sur quels numéros de page se trouvent ces intentions de vote ?
+
+COMPTE COMME INTENTION DE VOTE
+Un tableau qui associe des noms de personnalités à des pourcentages, en réponse à une question posée
+aux personnes interrogées sur leur vote à venir, quelle que soit la formulation.
+
+Voici quelques formulations réellement relevées dans les notices déjà dépouillées. Chaque institut a la
+sienne, et elle existe aussi en version « second tour » / « 2nd tour » :
+- IFOP : « Si dimanche prochain se déroulait le premier tour de l'élection présidentielle, pour lequel
+  des candidats suivants y aurait-il le plus de chances que vous votiez ? »
+- OpinionWay : « Si le premier tour de l'élection présidentielle avait lieu dimanche prochain, pour
+  lequel des candidats suivants y aurait-il le plus de chances que vous votiez ? »
+- ELABE : « Si le 1er tour de l'élection présidentielle avait lieu dimanche prochain, pour lequel des
+  candidats suivants voteriez-vous ? »
+- Harris Interactive : « Parmi les candidats suivants, pour lequel y aurait-il le plus de chances que
+  vous votiez si le premier tour de l'élection présidentielle avait lieu dimanche prochain ? »
+- Ipsos BVA : « Si le 1er tour de l'élection présidentielle avait lieu dimanche prochain et si vous
+  aviez le choix entre les candidats suivants, quel est celui pour lequel il y aurait le plus de
+  chances que vous votiez au 1er tour ? »
+- Verian : « Si le premier tour de l'élection présidentielle avait lieu dimanche prochain et que vous
+  aviez le choix entre les candidats suivants, pour qui y aurait-il le plus de chances que vous
+  votiez ? »
+
+NE COMPTE PAS COMME INTENTION DE VOTE
+- La popularité, la cote de confiance, l'image, la notoriété, l'adhésion aux idées d'une personnalité.
+- Le RAPPEL DE VOTE à une élection passée, par exemple le vote au premier tour de l'élection
+  présidentielle de 2022 ou aux législatives de 2024. Ce sont des résultats déjà connus, utilisés pour
+  redresser l'échantillon : ce ne sont pas des intentions de vote, même si ce sont des noms de
+  candidats avec des pourcentages.
+- Les tableaux de redressement de l'échantillon (sexe, âge, profession, région, taille d'agglomération).
+- La CERTITUDE D'ALLER VOTER, par exemple « seriez-vous tout à fait certain(e), plutôt certain(e),
+  plutôt pas certain(e) ou pas du tout certain(e) d'aller voter ? ». C'est une question sur la
+  participation, pas sur le choix d'un candidat.
+- Les notes de méthodologie, les marges d'erreur, les sommaires.
+
+REMARQUES
+- Les pourcentages peuvent être écrits sans le signe %, par exemple « Nathalie ARTHAUD 1,5 ».
+- Les questions peuvent être coupées sur plusieurs lignes et les espaces sont irréguliers :
+  l'extraction du PDF ne préserve pas la mise en page.
+- Une même notice peut contenir plusieurs hypothèses, donc plusieurs tableaux sur plusieurs pages.
+
+FORMAT DE RÉPONSE
+Tu peux réfléchir brièvement, mais ta réponse doit se terminer par ces lignes exactes.
+Si le document contient des intentions de vote :
+OUI
+PAGES: 12, 13, 14
+
+Si le document n'en contient pas :
+NON
+
+--- DÉBUT DU DOCUMENT ---
+$document
+--- FIN DU DOCUMENT ---
