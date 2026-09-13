@@ -129,3 +129,11 @@ def test_labels_to_remove(courants, garde, attendu):
 def test_labels_to_remove_ne_touche_pas_aux_labels_du_depot():
     courants = ["new-poll", "automated", "bug", "avec-intentions-de-vote"]
     assert render.labels_to_remove(courants, "avec-intentions-de-vote") == []
+
+
+def test_une_analyse_impossible_ne_passe_pas_pour_une_absence_d_intentions():
+    # Le piège : « aucune page ne présente d'intentions » alors que rien n'a été lu.
+    body = render.comment(Triage(failed="le texte n'est pas encore publié en amont."), "un-modele")
+    assert "Aucune page ne présente" not in body
+    assert "pas encore publié" in body
+    assert render.label(Triage(failed="peu importe")) == "intentions-a-verifier"

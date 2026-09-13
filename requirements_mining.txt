@@ -1,0 +1,5 @@
+# Dépendance du data-mining, installée par .github/workflows/llm-mining.yml.
+# Sert au repli PDF : le dépôt amont ne publie de version texte que depuis peu et
+# ne l'a pas fait rétroactivement, donc la plupart des notices doivent encore être
+# extraites ici, avec la même commande pdfplumber que l'amont.
+pdfplumber==0.11.9

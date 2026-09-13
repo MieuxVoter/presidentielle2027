@@ -1,5 +1,6 @@
 """Découpage du texte d'une notice. Aucun accès réseau."""
 
+import sys
 from pathlib import Path
 
 import pytest
@@ -66,3 +67,17 @@ def test_blob_to_raw(url, attendu):
     blob = "https://github.com/o/r/blob/main/"
     raw = "https://raw.githubusercontent.com/o/r/main/"
     assert notice.blob_to_raw(url, blob, raw) == attendu
+
+
+def test_pdfplumber_absent_donne_un_message_exploitable(monkeypatch):
+    # pdfplumber est optionnel : son absence doit expliquer quoi faire,
+    # pas remonter une ModuleNotFoundError brute.
+    monkeypatch.setitem(sys.modules, "pdfplumber", None)
+    with pytest.raises(SystemExit) as erreur:
+        notice.extract_pdf_text("peu-importe.pdf")
+    assert "requirements_mining.txt" in str(erreur.value)
+
+
+def test_la_dependance_optionnelle_est_declaree():
+    fichier = Path(__file__).parent.parent / "requirements_mining.txt"
+    assert "pdfplumber" in fichier.read_text(encoding="utf-8")

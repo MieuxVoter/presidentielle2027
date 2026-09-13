@@ -10,6 +10,7 @@ Stdlib uniquement, sauf le repli PDF qui importe pdfplumber à la demande.
 
 import re
 from dataclasses import dataclass
+from io import BytesIO
 from urllib.request import urlopen
 
 PAGE_RE = re.compile(r"^--- page (\d+) ---\s*$")
@@ -78,16 +79,29 @@ def fetch_text(url):
         return response.read().decode("utf-8")
 
 
-def extract_pdf_text(pdf_path):
+def pdf_text_from_url(url):
+    """Le texte d'un PDF distant, sans écrire de fichier temporaire."""
+    with urlopen(url, timeout=TIMEOUT) as response:
+        return extract_pdf_text(BytesIO(response.read()))
+
+
+def extract_pdf_text(pdf_source):
     """Repli : extraire le texte d'un PDF local, comme le fait le dépôt amont.
 
-    pdfplumber n'est importé qu'ici : le chemin nominal passe par le TXT amont et
-    ne doit rien avoir à installer.
+    pdfplumber n'est importé qu'ici, et reste une dépendance optionnelle : le
+    chemin nominal passe par le TXT amont et n'a rien à installer.
     """
-    import pdfplumber
+    try:
+        import pdfplumber
+    except ImportError as exc:
+        raise SystemExit(
+            "❌ --pdf a besoin de pdfplumber, qui est une dépendance optionnelle :\n"
+            "     pip install -r requirements_mining.txt\n"
+            "   Elle n'est pas nécessaire pour traiter une issue : le texte vient alors du dépôt amont."
+        ) from exc
 
     parts = []
-    with pdfplumber.open(pdf_path) as document:
+    with pdfplumber.open(pdf_source) as document:
         for number, page in enumerate(document.pages, 1):
             parts.append(f"--- page {number} ---\n" + (page.extract_text(layout=True) or ""))
     return "\n".join(parts)

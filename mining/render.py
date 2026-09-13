@@ -67,12 +67,14 @@ def details(triage):
     lines = []
     if triage.pages_with_intentions:
         lines.append(f"- Pages contenant des intentions de vote : **{_pages(triage.pages_with_intentions)}**")
-    else:
+    elif not triage.failed:
+        # Ne l'affirmer que si la notice a réellement été analysée : sinon on
+        # ferait passer une analyse impossible pour une absence d'intentions.
         lines.append("- Aucune page ne présente de tableau d'intentions de vote.")
     if triage.invalid_pages:
         lines.append(f"- Numéros de page cités par le modèle mais absents du document : {_pages(triage.invalid_pages)}")
     if triage.failed:
-        lines.append(f"- ⚠️ Analyse interrompue : {triage.failed}")
+        lines.append(f"- ⚠️ {triage.failed}")
     return "\n".join(lines)
 
 
