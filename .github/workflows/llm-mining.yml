@@ -47,6 +47,11 @@ jobs:
         with:
           python-version: "3.13"
 
+      # Nécessaire au repli PDF : l'amont ne publie de version texte que depuis
+      # peu, et pas rétroactivement.
+      - name: Installer pdfplumber
+        run: pip install -r requirements_mining.txt
+
       # Sans clé d'API, on sort en silence plutôt que de faire échouer l'issue.
       - name: Vérifier la présence d'une clé
         id: guard

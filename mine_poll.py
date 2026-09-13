@@ -14,41 +14,99 @@ Stdlib uniquement, sauf --pdf qui importe pdfplumber à la demande.
 """
 
 import argparse
+import json
 import os
 import sys
 from pathlib import Path
+from urllib.error import HTTPError, URLError
 from urllib.parse import quote
+from urllib.request import Request, urlopen
 
 # Réutilise le catalogue et le client HTTP GitHub déjà écrits pour les issues.
-from check_new_polls import BLOB_BASE, MARKER_RE, RAW_BASE, _github_request, get_catalog_polls, notice_links
+from check_new_polls import (
+    BLOB_BASE,
+    LEGACY_MARKER_RE,
+    MARKER_RE,
+    RAW_BASE,
+    _github_request,
+    _mirror_url,
+    get_catalog_polls,
+    notice_links,
+)
 from mining import client as llm
 from mining import notice, render, steps
 
 DEFAULT_MAX_CALLS = 40
 
 
+class NoticeUnavailable(Exception):
+    """La notice n'est pas analysable : à dire sous l'issue, pas à faire échouer le job."""
+
+
+def github_get(url, token):
+    """GET sur l'API GitHub, anonyme quand aucun jeton n'est disponible.
+
+    Lire une issue publique ne demande pas de jeton : l'aperçu doit donc marcher
+    en local sans en configurer un, seule la publication en exige un.
+    """
+    if token:
+        return _github_request(url, token)
+    request = Request(url, headers={"Accept": "application/vnd.github.v3+json", "User-Agent": "presidentielle2027"})
+    with urlopen(request, timeout=30) as response:
+        return json.loads(response.read().decode("utf-8"))
+
+
+def poll_filename_from_body(body):
+    """Le nom de fichier de notice porté par une issue, ou None.
+
+    Deux formats coexistent : le marqueur HTML des issues récentes, et l'ancien
+    « Fichier PDF à vérifier » des issues plus anciennes. check_new_polls
+    reconnaît déjà les deux pour son dédoublonnage, il faut en faire autant.
+    """
+    match = MARKER_RE.search(body or "") or LEGACY_MARKER_RE.search(body or "")
+    return match.group(1).strip() if match else None
+
+
 def issue_poll_filename(repo, number, token):
-    """Le nom de fichier de la notice, lu dans le marqueur du corps de l'issue."""
-    issue = _github_request(f"https://api.github.com/repos/{repo}/issues/{number}", token)
-    match = MARKER_RE.search(issue.get("body") or "")
-    if not match:
-        raise SystemExit(f"❌ Issue #{number} : marqueur <!-- poll-file: … --> absent")
-    return match.group(1).strip()
+    """Le nom de fichier de la notice, lu dans le corps de l'issue."""
+    url = f"https://api.github.com/repos/{repo}/issues/{number}"
+    try:
+        issue = github_get(url, token)
+    except HTTPError as exc:
+        raise SystemExit(f"❌ Issue #{number} : l'API GitHub répond {exc.code}. Dépôt ou numéro d'issue correct ?")
+    except (URLError, TimeoutError, OSError) as exc:
+        raise SystemExit(f"❌ Issue #{number} : l'API GitHub est injoignable ({exc})")
+    filename = poll_filename_from_body(issue.get("body"))
+    if not filename:
+        raise NoticeUnavailable("le corps de l'issue n'indique aucun fichier de notice.")
+    return filename
 
 
 def notice_text_for(filename):
-    """Le texte de la notice : TXT amont si disponible, sinon échec explicite."""
+    """Le texte de la notice : le TXT amont s'il existe, sinon le PDF extrait ici.
+
+    L'amont ne publie de version texte que depuis peu, et ne l'a pas fait
+    rétroactivement : sans ce repli, l'outil serait inutilisable sur la quasi-
+    totalité des issues déjà ouvertes. L'extraction reprend la même commande
+    pdfplumber que l'amont, pour obtenir le même texte.
+    """
     rows = [r for r in get_catalog_polls() if (r.get("filename") or "").strip() == filename]
     if not rows:
-        raise SystemExit(f"❌ {filename} : introuvable dans le catalogue amont")
+        raise NoticeUnavailable(f"`{filename}` est introuvable dans le catalogue amont.")
+
     txt_url, _pdf_url, _source = notice_links(rows[0])
-    if not txt_url:
-        raise SystemExit(
-            f"❌ {filename} : pas encore de texte extrait en amont.\n"
-            "   Le dépôt sondages-commission-index le génère au fil de l'eau ; en attendant,\n"
-            "   télécharger le PDF et utiliser --pdf."
-        )
-    return notice.fetch_text(notice.blob_to_raw(txt_url, BLOB_BASE, RAW_BASE))
+    if txt_url:
+        return notice.fetch_text(notice.blob_to_raw(txt_url, BLOB_BASE, RAW_BASE))
+
+    pdf_path = (rows[0].get("pdf_path") or "").strip()
+    if not pdf_path:
+        raise NoticeUnavailable(f"`{filename}` n'a ni texte extrait ni PDF dans le catalogue amont.")
+
+    print(f"📄 Pas de texte en amont pour {filename} : extraction du PDF")
+    try:
+        return notice.pdf_text_from_url(_mirror_url(RAW_BASE, pdf_path))
+    except (HTTPError, URLError, TimeoutError, OSError) as exc:
+        raise NoticeUnavailable(f"le PDF de `{filename}` n'a pas pu être téléchargé ({exc}).") from exc
 
 
 def resolve_text(args, repo, token):
@@ -130,13 +188,19 @@ def main(argv=None):
         )
     print(f"🤖 Fournisseurs actifs : {', '.join(p.name for p in providers)}")
 
-    pages = notice.strip_empty(notice.split_pages(resolve_text(args, repo, token)))
-    if not pages:
-        raise SystemExit("❌ Notice vide ou sans séparateurs de page")
-    print(f"📄 {len(pages)} page(s) à examiner")
-
     conversation = llm.Client(providers=providers, max_calls=args.max_calls)
-    result = steps.triage(conversation, pages)
+    try:
+        pages = notice.strip_empty(notice.split_pages(resolve_text(args, repo, token)))
+        if not pages:
+            raise NoticeUnavailable("le texte de la notice est vide ou ne comporte aucun séparateur de page.")
+        print(f"📄 {len(pages)} page(s) à examiner")
+        result = steps.triage(conversation, pages)
+    except NoticeUnavailable as exc:
+        # Une notice illisible est une information utile sous l'issue : on la
+        # publie au lieu de faire échouer le job, qui ne dirait rien à personne.
+        print(f"⚠️  Notice non analysable : {exc}")
+        result = steps.Triage(failed=str(exc))
+
     model = conversation.log[-1]["model"] if conversation.log else ""
     body = render.comment(result, model)
     label = render.label(result)

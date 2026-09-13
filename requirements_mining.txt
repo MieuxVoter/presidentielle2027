@@ -1,4 +1,5 @@
-# Dépendance optionnelle du data-mining : uniquement pour `mine_poll.py --pdf`,
-# qui extrait le texte d'un PDF local quand le dépôt amont n'a pas encore publié
-# sa version texte. Ni la CI ni le chemin nominal n'en ont besoin.
+# Dépendance du data-mining, installée par .github/workflows/llm-mining.yml.
+# Sert au repli PDF : le dépôt amont ne publie de version texte que depuis peu et
+# ne l'a pas fait rétroactivement, donc la plupart des notices doivent encore être
+# extraites ici, avec la même commande pdfplumber que l'amont.
 pdfplumber==0.11.9

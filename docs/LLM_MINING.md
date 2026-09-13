@@ -75,16 +75,16 @@ python mine_poll.py --pdf notice.pdf    # depuis un PDF (voir dépendances ci-de
 
 ### Dépendances
 
-Le chemin nominal — `--issue` et `--txt` — n'utilise que la bibliothèque standard : **rien à installer**.
-
-`--pdf` est la seule exception. Il extrait le texte d'un PDF local quand le dépôt amont n'a pas encore publié
-sa version texte, et demande `pdfplumber`, déclaré à part comme dépendance optionnelle :
-
 ```bash
-pip install -r requirements_mining.txt
+pip install -r requirements_mining.txt   # pdfplumber
 ```
 
-La CI ne l'installe pas : le workflow passe toujours par le texte amont.
+Le texte de la notice vient du dépôt amont quand il existe, et le code n'a alors besoin que de la
+bibliothèque standard. Mais l'amont ne publie de version texte que **depuis peu, et pas rétroactivement** :
+la plupart des notices doivent encore être extraites de leur PDF, ce que `pdfplumber` permet de faire à la
+volée, sans téléchargement manuel. Le workflow l'installe pour cette raison.
+
+`--txt` reste utilisable sans rien installer.
 
 La publication (`--post`) demande en plus `GITHUB_TOKEN` ; elle est normalement faite par le workflow.
 
