@@ -6,12 +6,18 @@ importante et pour toute contribution dépassant 400 lignes : c'est celle-ci.
 -->
 # Data-mining des notices par un modèle de langage
 
+> **État au 13 septembre 2026** — le lot 1 (triage) est livré et tourne en production. Les lots 2 à 5 restent
+> à faire. Ce qui a été mesuré en conditions réelles est consigné plus bas.
+
 ## Le problème
 
-Depuis peu, chaque issue « nouveau sondage » porte un lien vers la **version texte** de la notice, générée en
-amont par `pdfplumber` dans `MieuxVoter/sondages-commission-index/archives_txt/`. Le texte est là ; le
-dépouillement, lui, reste entièrement manuel : ouvrir le PDF, relever les hypothèses, saisir une ligne dans
-`polls.csv` et un fichier `polls/<poll_id>.csv` par hypothèse, ouvrir la PR.
+Le dépôt amont `MieuxVoter/sondages-commission-index` publie depuis peu une **version texte** des notices,
+générée par `pdfplumber` sous `archives_txt/`. Le texte est donc exploitable par une machine, ce que le PDF
+n'était pas — même si, pour l'instant, la génération n'est pas rétroactive et ne couvre qu'une poignée de
+notices récentes.
+
+Le dépouillement, lui, reste entièrement manuel : ouvrir le PDF, relever les hypothèses, saisir une ligne
+dans `polls.csv` et un fichier `polls/<poll_id>.csv` par hypothèse, ouvrir la PR.
 
 Deux besoins ressortent de la discussion :
 
@@ -28,7 +34,7 @@ Sur un échantillon de 6 notices seulement, on trouve déjà **4 mises en page i
 
 Python ne cherche donc jamais à comprendre un tableau. Il fait trois choses, toutes indépendantes du format :
 
-1. **découper** le texte en pages et fournir les lignes numérotées au modèle ;
+1. **découper** le texte en pages, et les fournir au modèle en les délimitant ;
 2. **vérifier** chaque réponse — c'est le cœur du dispositif :
    - le modèle renvoie, avec chaque valeur, **la ligne source recopiée mot pour mot** ; on contrôle que cette
      ligne existe réellement dans la page et que la valeur y figure ;
@@ -51,11 +57,12 @@ Le consensus de la discussion est conservé tel quel :
   aucune donnée : elle pose un label ;
 - **toute PR est relue par un humain avant merge.** Jamais d'auto-merge, sur aucun chemin.
 
-## Ce qu'on a appris en testant sur 6 notices réelles
+## Les pièges que réservent les notices
 
-Les 6 PDF disponibles ont été extraits avec `pdfplumber layout=True` et comparés aux **32 sondages** déjà
-présents dans le dépôt pour ces notices. L'objectif n'était pas d'écrire un parseur mais de découvrir les
-pièges — et il y en a, dont plusieurs qu'aucun modèle ne devinerait s'il n'en est pas averti :
+Étude préalable, utile surtout aux lots 3 et 4 : 6 PDF ont été extraits avec `pdfplumber layout=True` et
+comparés aux **32 sondages** déjà présents dans le dépôt pour ces notices. L'objectif n'était pas d'écrire un
+parseur mais de découvrir les pièges — et il y en a, dont plusieurs qu'aucun modèle ne devinerait s'il n'en
+est pas averti :
 
 | Observation | Conséquence |
 |---|---|
@@ -96,7 +103,7 @@ mergé. `CONTRIBUTING.md` plafonne une PR à 400 lignes, ce qui est respecté lo
 
 | Lot | Ce qu'on voit | Contenu |
 |---|---|---|
-| **1 — Le triage** | À l'ouverture d'une issue `new-poll` : un commentaire « Oui / Non, il y a des intentions de vote » et un label `avec-intentions-de-vote` / `sans-intentions-de-vote` | Téléchargement du TXT (+ repli PDF), client LLM, la question de tri, le job automatique |
+| **1 — Le triage** ✅ *livré* | À l'ouverture d'une issue `new-poll` : un commentaire « Oui / Non, il y a des intentions de vote » et le label correspondant. Relançable par `/triage` | Téléchargement du TXT (+ repli PDF), client LLM, la question de tri, le job automatique |
 | **2 — Le décompte** | Le commentaire devient « Oui : 3 hypothèses pour le 1er tour et 2 pour le second tour » | Question « quel tour ? », question « libellé de l'hypothèse », vérification des citations |
 | **3 — La fiche détaillée** | `/llm-mining` produit une fiche : candidats, pourcentages, candidats absents de `candidats.csv`, échantillons, populations — chacun avec sa citation source | Lecture des tableaux, méthodologie, contrôles arithmétiques |
 | **4 — La PR automatique** | `/llm-mining --pr` ouvre une PR relisible avec `polls.csv` et `polls/<poll_id>.csv` remplis | Rattachement d'hypothèse, `poll_id`, écriture, barrière `pytest` + `merge.py` avant d'ouvrir la PR |
@@ -135,16 +142,39 @@ enregistre 15.
 À trancher : soit on rétablit la formulation dans le prompt, soit on assume que ces baromètres ne sont pas
 des intentions de vote — et il faut alors revoir les 15 sondages concernés.
 
-## Ce qui reste à valider
+## Ce que le lot 1 a appris en production
 
-Aucune étape LLM n'a encore été exécutée — le travail ci-dessus est une étude des notices, pas une mesure de
-performance des modèles. La première chose à faire après le lot 1 est de faire tourner le jeu d'évaluation
-sur plusieurs modèles gratuits, en priorité sur la question de tri, puisque c'est la seule dont dépend
-l'exactitude du commentaire automatique.
+Le triage tourne. Quatre constats, dont trois ont changé le code après coup :
 
-## Questions ouvertes
+**Poser la question sur le document entier, pas page par page.** La version page par page produisait un faux
+positif sur le rappel de vote 2022 de la notice CSA : hors contexte, un tableau de noms avec des pourcentages
+ressemble à des intentions de vote. Sur le document entier, le modèle voit qu'il s'agit d'un sondage de
+popularité et répond correctement. Bénéfice secondaire : **une requête par notice au lieu de dix-sept**.
 
-1. Le commentaire automatique de tri : sur **toutes** les nouvelles issues, ou seulement sur demande ?
-2. Faut-il ajouter les labels `avec-intentions-de-vote` / `sans-intentions-de-vote` au dépôt, ou en réutiliser
-   d'existants ?
-3. Qui prend quel lot ?
+**Les modèles gratuits raisonnent à voix haute.** Exiger une réponse d'un seul mot les met tous en échec —
+leur réflexion est tronquée avant la conclusion. Le contrat est donc : réfléchis si tu veux, mais termine par
+une ligne contenant uniquement `OUI` ou `NON`.
+
+**Le repli PDF n'est pas un confort, c'est l'essentiel.** Seules 3 notices sur 365 ont une version texte en
+amont. Sans extraction du PDF à la volée, l'outil serait inutilisable sur la quasi-totalité des issues
+ouvertes.
+
+**Les issues anciennes ont un autre format.** Elles portent `**Fichier PDF à vérifier:**` au lieu du marqueur
+HTML. `check_new_polls.py` reconnaissait déjà les deux ; le premier passage en production a échoué faute de
+l'avoir repris.
+
+### Résultats mesurés
+
+| Notice | Attendu | Obtenu |
+|---|---|---|
+| OpinionWay ×3 (dont issues #162 et #163) | oui | **oui**, pages exactes |
+| IFOP, 13 hypothèses | oui | **oui**, 13 pages exactes |
+| ELABE | oui | **oui**, pages exactes |
+| CSA popularité | non | **non** |
+| Cluster17 | oui | dépend du prompt|
+
+Sur l'issue #162, le modèle a écarté la page 1 — pourtant intitulée « Les intentions de vote », c'est la
+couverture — ainsi que les quatre pages de redressement, et n'a retenu que les quatre vrais tableaux.
+
+Ce qui **n'a pas** encore été mesuré : la capacité des modèles gratuits à relever les chiffres eux-mêmes.
+C'est l'objet des lots 3 et 4, et le jeu d'évaluation des 32 sondages est là pour ça.
