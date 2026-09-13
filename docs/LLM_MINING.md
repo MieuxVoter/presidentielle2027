@@ -1,40 +1,55 @@
 # Triage des notices par un modèle de langage
 
-À l'ouverture d'une issue « nouveau sondage », un workflow demande à un modèle si la notice contient des
-**intentions de vote**, publie la réponse en commentaire et pose un label. Aucun chiffre de sondage n'est
-produit : le dépouillement reste manuel.
+À l'ouverture d'une issue « nouveau sondage », un workflow pose **une seule question** à un modèle de langage
+sur le texte entier de la notice : contient-elle des intentions de vote pour la présidentielle 2027, et sur
+quelles pages ? La réponse est publiée en commentaire sous l'issue, et un label est posé.
 
-## Relancer le triage à la main
-
-Commenter sous l'issue :
-
-```
-/triage
-```
-
-Réservé aux personnes ayant les droits d'écriture sur le dépôt — sinon n'importe qui pourrait vider le quota
-d'API en commentant. Le commentaire existant est **réécrit**, jamais doublé, et le label est mis à jour si le
-verdict change.
-
-On peut aussi passer par *Actions → LLM mining - triage → Run workflow* en donnant un numéro d'issue, ce qui
-a le même effet.
+Aucun chiffre de sondage n'est produit : le triage sert à savoir quelles notices méritent d'être dépouillées.
+Le dépouillement lui-même reste manuel.
 
 Conception d'ensemble et suite prévue : [ISSUE_llm_mining.md](ISSUE_llm_mining.md).
+
+## Déclencheurs
+
+| Quand | Condition | Si un commentaire existe déjà |
+|---|---|---|
+| Ouverture d'une issue | label `new-poll` | il est laissé tel quel |
+| Commentaire `/triage` | droits d'écriture sur le dépôt | il est **réécrit** |
+| *Actions → LLM mining - triage → Run workflow* | numéro d'issue | il est **réécrit** |
+
+La commande est réservée aux personnes ayant les droits d'écriture : sur un dépôt public, n'importe qui
+pourrait sinon vider le quota d'API en commentant en boucle.
+
+`/triage` fonctionne sur n'importe quelle issue, pas seulement celles étiquetées `new-poll`. En revanche
+l'issue doit indiquer de quelle notice il s'agit, dans l'un des deux formats produits par
+`check_new_polls.py` — le marqueur `<!-- poll-file: … -->` des issues récentes, ou le
+`**Fichier PDF à vérifier:**` des plus anciennes.
 
 ## Labels posés
 
 | Label | Signification |
 |---|---|
 | `avec-intentions-de-vote` | au moins une page présente un tableau d'intentions de vote |
-| `sans-intentions-de-vote` | aucune page n'en présente (popularité, cote de confiance, opinion…) |
-| `intentions-a-verifier` | le modèle n'a pas répondu de façon exploitable, ou l'analyse s'est interrompue |
+| `sans-intentions-de-vote` | aucune n'en présente (popularité, cote de confiance, opinion…) |
+| `intentions-a-verifier` | le modèle n'a pas répondu de façon exploitable, ou la notice n'a pas pu être lue |
 
-Ces trois labels sont à créer dans le dépôt avant d'activer le workflow.
+**Ces trois labels sont à créer dans le dépôt** avant d'activer le workflow, sinon la pose échoue. Un seul
+est posé à la fois : si un second passage change le verdict, l'ancien est retiré.
+
+## D'où vient le texte de la notice
+
+Le dépôt amont `sondages-commission-index` publie une extraction `pdfplumber` sous `archives_txt/`. Cette
+génération est récente et n'a pas été faite rétroactivement : la grande majorité des notices n'en ont pas
+encore. Dans ce cas le PDF amont est téléchargé et extrait à la volée, avec la même commande `pdfplumber`,
+pour obtenir le même texte.
+
+Si ni l'un ni l'autre n'est disponible, un commentaire l'explique sous l'issue et le label
+`intentions-a-verifier` est posé — le workflow n'échoue pas, un job rouge n'informerait personne.
 
 ## Configuration
 
-Une seule clé suffit, à déclarer en secret de dépôt. Le client essaie les fournisseurs dans l'ordre et passe
-au suivant en cas de quota épuisé ou de panne.
+Une seule clé suffit, en secret de dépôt (*Settings → Secrets and variables → **Actions***). Le client essaie
+les fournisseurs dans l'ordre et passe au suivant en cas de quota épuisé ou de panne.
 
 | Secret | Fournisseur | Remarque |
 |---|---|---|
@@ -47,11 +62,10 @@ Sans aucune clé, le workflow s'arrête avec un avertissement au lieu d'échouer
 Réglages facultatifs (variables d'environnement) :
 
 - `LLM_PROVIDERS` — impose l'ordre, par exemple `mistral,openrouter` ;
-- `OPENROUTER_MODELS`, `MISTRAL_MODELS`, `GEMINI_MODELS` — la liste des modèles à essayer, séparés par des
-  virgules. **Les catalogues gratuits changent souvent** : ce sont les premières valeurs à ajuster si le
-  triage se met à échouer.
+- `OPENROUTER_MODELS`, `MISTRAL_MODELS`, `GEMINI_MODELS` — les modèles à essayer, séparés par des virgules.
 
-Si un appel échoue en `HTTP 404`, c'est que l'identifiant de modèle n'existe plus. Lister ceux du jour :
+**Les catalogues gratuits changent souvent.** Si un appel échoue en `HTTP 404`, c'est que l'identifiant de
+modèle n'existe plus. Lister ceux du jour :
 
 ```bash
 python - <<'EOF'
@@ -68,9 +82,17 @@ EOF
 ```bash
 export OPENROUTER_API_KEY=...
 
-python mine_poll.py --issue 42          # aperçu : affiche le commentaire, ne publie rien
-python mine_poll.py --txt notice.txt    # depuis un texte déjà téléchargé
-python mine_poll.py --pdf notice.pdf    # depuis un PDF (voir dépendances ci-dessous)
+python mine_poll.py --issue 163           # aperçu : affiche le commentaire, ne publie rien
+python mine_poll.py --txt notice.txt      # depuis un texte déjà extrait
+python mine_poll.py --pdf notice.pdf      # depuis un PDF local
+```
+
+L'aperçu ne demande pas de `GITHUB_TOKEN` : lire une issue publique n'en a pas besoin. Seule la publication
+en exige un, et elle est normalement faite par le workflow :
+
+```bash
+python mine_poll.py --issue 163 --post           # ne fait rien si l'issue est déjà commentée
+python mine_poll.py --issue 163 --post --force   # réécrit le commentaire existant
 ```
 
 ### Dépendances
@@ -79,32 +101,44 @@ python mine_poll.py --pdf notice.pdf    # depuis un PDF (voir dépendances ci-de
 pip install -r requirements_mining.txt   # pdfplumber
 ```
 
-Le texte de la notice vient du dépôt amont quand il existe, et le code n'a alors besoin que de la
-bibliothèque standard. Mais l'amont ne publie de version texte que **depuis peu, et pas rétroactivement** :
-la plupart des notices doivent encore être extraites de leur PDF, ce que `pdfplumber` permet de faire à la
-volée, sans téléchargement manuel. Le workflow l'installe pour cette raison.
-
+Nécessaire à l'extraction des PDF, donc à la plupart des notices ; le workflow l'installe pour cette raison.
 `--txt` reste utilisable sans rien installer.
-
-La publication (`--post`) demande en plus `GITHUB_TOKEN` ; elle est normalement faite par le workflow.
-
-Le texte de la notice vient du dépôt `sondages-commission-index` (`archives_txt/`). Cette génération est
-récente : pour une notice ancienne qui n'en a pas encore, télécharger le PDF et passer par `--pdf`.
 
 ## Modifier les questions ou la formulation
 
 Aucun code à toucher :
 
-- les questions posées au modèle sont dans [`mining/prompts/`](../mining/prompts/) ;
+- la question posée au modèle est dans [`mining/prompts/`](../mining/prompts/) ;
 - le texte du commentaire est dans [comment_template_mining.md](comment_template_mining.md).
+
+Le prompt liste les formulations réellement relevées dans les notices, institut par institut. Ce détail
+compte : retirer l'une d'elles suffit à faire manquer les notices de l'institut correspondant.
 
 Prévisualiser le résultat : `python mine_poll.py --txt une_notice.txt`.
 
 ## Garde-fous
 
-- Un marqueur invisible en fin de commentaire évite d'en publier deux sur la même issue.
-- Le nombre d'appels par exécution est plafonné (`--max-calls`, 40 par défaut) : un quota ne peut pas être
-  vidé par une notice anormalement longue.
-- Le commentaire affiche les numéros de page qui justifient la réponse, et le modèle qui a répondu.
-- Une réponse qui n'est pas exactement `OUI` ou `NON` est redemandée une fois, puis abandonnée — jamais
-  réinterprétée.
+Le modèle lit, Python vérifie. Concrètement :
+
+- un numéro de page cité par le modèle mais absent du document est **écarté**, jamais corrigé ; un `OUI` sans
+  aucune page vérifiable est refusé et devient `intentions-a-verifier` ;
+- le commentaire affiche les pages qui justifient la réponse et le modèle qui a répondu, pour qu'un humain
+  puisse vérifier en quelques secondes ;
+- le texte produit par le modèle est échappé avant publication : une notice piégée ne peut pas injecter de
+  HTML ni fabriquer le marqueur ;
+- un marqueur invisible en fin de commentaire garantit qu'il n'y en a jamais deux sur une même issue ;
+- le nombre d'appels par exécution est plafonné (`--max-calls`, 40 par défaut).
+
+Le modèle peut réfléchir à voix haute — beaucoup de modèles gratuits le font — mais sa réponse doit se
+terminer par une ligne contenant uniquement `OUI` ou `NON`. Une réponse hors format est redemandée une fois,
+puis abandonnée ; elle n'est jamais réinterprétée. Quand le modèle a réfléchi, sa réflexion est reproduite
+dans le commentaire, dans un bloc dépliable.
+
+## État
+
+Validé en conditions réelles sur les issues #162 et #163, et sur six notices couvrant OpinionWay, IFOP,
+ELABE, Cluster17 et CSA : une requête par notice, numéros de page exacts, et la notice de popularité CSA
+correctement classée « sans intentions de vote ».
+
+Limite connue, documentée dans [ISSUE_llm_mining.md](ISSUE_llm_mining.md) : la formulation de Cluster17 est
+absente du prompt, ses baromètres sont donc classés `sans-intentions-de-vote`.
