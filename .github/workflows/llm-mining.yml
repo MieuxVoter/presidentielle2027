@@ -1,0 +1,77 @@
+name: LLM mining - triage
+
+# Lot 1 : dire si une notice contient des intentions de vote, et poser le label
+# correspondant. Aucune donnée chiffrée n'est produite, le dépouillement reste
+# manuel (voir docs/ISSUE_llm_mining.md).
+#
+# Trois déclencheurs :
+#   - ouverture d'une issue « nouveau sondage » (automatique) ;
+#   - commentaire « /triage » sous une issue (manuel) ;
+#   - Actions → Run workflow, en donnant un numéro d'issue.
+on:
+  issues:
+    types: [opened]
+  issue_comment:
+    types: [created]
+  workflow_dispatch:
+    inputs:
+      issue:
+        description: "Numéro de l'issue à (re)traiter"
+        required: true
+        type: string
+
+permissions:
+  issues: write
+  contents: read
+
+concurrency:
+  group: llm-mining-${{ github.event.issue.number || inputs.issue }}
+  cancel-in-progress: false
+
+jobs:
+  triage:
+    # La commande est réservée aux personnes ayant les droits d'écriture : sinon
+    # n'importe qui peut vider le quota d'API en commentant.
+    if: >-
+      (github.event_name == 'issues' && contains(github.event.issue.labels.*.name, 'new-poll')) ||
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'issue_comment' &&
+       !github.event.issue.pull_request &&
+       startsWith(github.event.comment.body, '/triage') &&
+       contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association))
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      # Sans clé d'API, on sort en silence plutôt que de faire échouer l'issue.
+      - name: Vérifier la présence d'une clé
+        id: guard
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          if [ -z "$OPENROUTER_API_KEY$MISTRAL_API_KEY$GEMINI_API_KEY" ]; then
+            echo "::warning::Aucune clé LLM configurée, triage ignoré."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Triage de la notice
+        if: steps.guard.outputs.skip != 'true'
+        # Le corps du commentaire n'est jamais interpolé ici : seul le numéro
+        # d'issue circule, et il passe par l'environnement (injection de script).
+        env:
+          ISSUE: ${{ github.event.issue.number || inputs.issue }}
+          # Un déclenchement manuel doit rafraîchir un commentaire existant,
+          # sinon la commande semble sans effet.
+          FORCE: ${{ github.event_name != 'issues' && '--force' || '' }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python mine_poll.py --issue "$ISSUE" --post $FORCE
