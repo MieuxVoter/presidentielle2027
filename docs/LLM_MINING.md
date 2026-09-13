@@ -4,6 +4,21 @@
 **intentions de vote**, publie la réponse en commentaire et pose un label. Aucun chiffre de sondage n'est
 produit : le dépouillement reste manuel.
 
+## Relancer le triage à la main
+
+Commenter sous l'issue :
+
+```
+/triage
+```
+
+Réservé aux personnes ayant les droits d'écriture sur le dépôt — sinon n'importe qui pourrait vider le quota
+d'API en commentant. Le commentaire existant est **réécrit**, jamais doublé, et le label est mis à jour si le
+verdict change.
+
+On peut aussi passer par *Actions → LLM mining - triage → Run workflow* en donnant un numéro d'issue, ce qui
+a le même effet.
+
 Conception d'ensemble et suite prévue : [ISSUE_llm_mining.md](ISSUE_llm_mining.md).
 
 ## Labels posés

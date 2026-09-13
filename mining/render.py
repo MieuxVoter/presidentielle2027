@@ -96,5 +96,31 @@ def label(triage):
 
 
 def already_commented(comments):
-    """True si le marqueur est déjà présent, pour ne pas commenter deux fois."""
+    """True si le marqueur est déjà présent, pour ne pas commenter deux fois.
+
+    Volontairement indépendant de find_marker_comment : « déjà traité » et
+    « identifiant connu » sont deux questions distinctes.
+    """
     return any(MARKER in (c.get("body") or "") for c in comments)
+
+
+def find_marker_comment(comments):
+    """L'identifiant du commentaire de triage déjà publié, ou None.
+
+    Permet de réécrire ce commentaire au lieu d'en empiler un second quand le
+    triage est relancé à la main.
+    """
+    for comment in comments:
+        if MARKER in (comment.get("body") or ""):
+            return comment.get("id")
+    return None
+
+
+def labels_to_remove(current, keep):
+    """Les labels de triage à retirer de l'issue pour n'en garder qu'un.
+
+    Un second passage peut changer le verdict : laisser l'ancien label en place
+    rendrait la liste d'issues trompeuse.
+    """
+    mine = set(LABELS.values())
+    return sorted({name for name in current if name in mine and name != keep})

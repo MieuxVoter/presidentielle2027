@@ -97,3 +97,35 @@ def test_le_texte_du_modele_ne_peut_pas_injecter_de_html():
 def test_une_reflexion_tres_longue_est_tronquee():
     body = render.comment(Triage(answered_no=True, final="NON", reasoning="a" * 5000), "un-modele")
     assert "réponse tronquée" in body
+
+
+def test_find_marker_comment_renvoie_l_identifiant():
+    comments = [{"id": 1, "body": "humain"}, {"id": 2, "body": f"triage\n{render.MARKER}"}]
+    assert render.find_marker_comment(comments) == 2
+
+
+def test_find_marker_comment_absent():
+    assert render.find_marker_comment([{"id": 1, "body": "humain"}]) is None
+
+
+@pytest.mark.parametrize(
+    "courants,garde,attendu",
+    [
+        (["new-poll", "avec-intentions-de-vote"], "sans-intentions-de-vote", ["avec-intentions-de-vote"]),
+        (["new-poll", "sans-intentions-de-vote"], "sans-intentions-de-vote", []),
+        (["new-poll", "automated"], "avec-intentions-de-vote", []),
+        # Un verdict qui change ne doit pas laisser l'ancien label derrière lui.
+        (
+            ["avec-intentions-de-vote", "intentions-a-verifier"],
+            "sans-intentions-de-vote",
+            ["avec-intentions-de-vote", "intentions-a-verifier"],
+        ),
+    ],
+)
+def test_labels_to_remove(courants, garde, attendu):
+    assert render.labels_to_remove(courants, garde) == attendu
+
+
+def test_labels_to_remove_ne_touche_pas_aux_labels_du_depot():
+    courants = ["new-poll", "automated", "bug", "avec-intentions-de-vote"]
+    assert render.labels_to_remove(courants, "avec-intentions-de-vote") == []

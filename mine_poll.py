@@ -17,6 +17,7 @@ import argparse
 import os
 import sys
 from pathlib import Path
+from urllib.parse import quote
 
 # Réutilise le catalogue et le client HTTP GitHub déjà écrits pour les issues.
 from check_new_polls import BLOB_BASE, MARKER_RE, RAW_BASE, _github_request, get_catalog_polls, notice_links
@@ -58,15 +59,42 @@ def resolve_text(args, repo, token):
     return notice_text_for(issue_poll_filename(repo, args.issue, token))
 
 
-def publish(repo, number, token, body, label):
-    """Publie le commentaire et pose le label, sauf si déjà fait."""
+def set_label(repo, number, token, issue, label):
+    """Pose le label du verdict et retire les autres labels de triage."""
+    current = [entry.get("name", "") for entry in issue.get("labels", [])]
+    for stale in render.labels_to_remove(current, label):
+        _github_request(f"https://api.github.com/repos/{repo}/issues/{number}/labels/{quote(stale)}", token, "DELETE")
+    if label not in current:
+        _github_request(
+            f"https://api.github.com/repos/{repo}/issues/{number}/labels", token, "POST", {"labels": [label]}
+        )
+
+
+def publish(repo, number, token, body, label, force=False):
+    """Publie le commentaire et pose le label. Il n'y a jamais qu'un commentaire.
+
+    Sans --force on ne repasse pas sur une issue déjà traitée ; avec, le
+    commentaire existant est réécrit plutôt que doublé.
+    """
+    issue = _github_request(f"https://api.github.com/repos/{repo}/issues/{number}", token)
     comments = _github_request(f"https://api.github.com/repos/{repo}/issues/{number}/comments?per_page=100", token)
-    if render.already_commented(comments):
-        print(f"⏭️  Issue #{number} : commentaire de triage déjà présent")
+    existing = render.find_marker_comment(comments)
+
+    if render.already_commented(comments) and not force:
+        print(f"⏭️  Issue #{number} : commentaire de triage déjà présent (--force pour le refaire)")
         return
-    _github_request(f"https://api.github.com/repos/{repo}/issues/{number}/comments", token, "POST", {"body": body})
-    _github_request(f"https://api.github.com/repos/{repo}/issues/{number}/labels", token, "POST", {"labels": [label]})
-    print(f"✅ Issue #{number} : commentaire publié, label « {label} » posé")
+
+    if existing:
+        _github_request(
+            f"https://api.github.com/repos/{repo}/issues/comments/{existing}", token, "PATCH", {"body": body}
+        )
+        action = "commentaire mis à jour"
+    else:
+        _github_request(f"https://api.github.com/repos/{repo}/issues/{number}/comments", token, "POST", {"body": body})
+        action = "commentaire publié"
+
+    set_label(repo, number, token, issue, label)
+    print(f"✅ Issue #{number} : {action}, label « {label} » posé")
 
 
 def main(argv=None):
@@ -77,6 +105,9 @@ def main(argv=None):
     source.add_argument("--pdf", help="PDF local, extrait avec pdfplumber")
     parser.add_argument(
         "--post", action="store_true", help="publier le commentaire et le label (nécessite GITHUB_TOKEN)"
+    )
+    parser.add_argument(
+        "--force", action="store_true", help="refaire le triage d'une issue déjà traitée, en réécrivant le commentaire"
     )
     parser.add_argument(
         "--max-calls", type=int, default=DEFAULT_MAX_CALLS, help=f"plafond d'appels (défaut: {DEFAULT_MAX_CALLS})"
@@ -111,7 +142,7 @@ def main(argv=None):
     label = render.label(result)
 
     if args.post:
-        publish(repo, args.issue, token, body, label)
+        publish(repo, args.issue, token, body, label, force=args.force)
         return 0
 
     print(f"\n{'-' * 70}\nlabel : {label}\n{'-' * 70}\n{body}{'-' * 70}")
