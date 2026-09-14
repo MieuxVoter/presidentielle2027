@@ -18,6 +18,8 @@ class FakeClient:
         self.answers = list(answers)
         self.calls = 0
         self.log = []
+        self.prompts = []
+        self.budgets = []
 
     def ask(self, system, prompt, **kwargs):
         if not self.answers:
@@ -26,8 +28,11 @@ class FakeClient:
         if isinstance(item, Exception):
             raise item
         self.calls += 1
-        self.log.append({"provider": "fake", "model": "fake-model", "prompt": prompt, "answer": item})
-        return Answer(item, "fake", "fake-model")
+        self.prompts.append(prompt)
+        self.budgets.append(kwargs.get("max_tokens"))
+        answer = item if isinstance(item, Answer) else Answer(item, "fake", "fake-model")
+        self.log.append({"provider": "fake", "model": answer.model, "prompt": prompt, "answer": answer.text})
+        return answer
 
 
 @pytest.mark.parametrize(
@@ -124,3 +129,35 @@ def test_le_prompt_exclut_le_rappel_de_vote_passe():
     # Le faux positif observé en conditions réelles : le rappel de vote 2022.
     texte = (steps.PROMPTS_DIR / "e1_intentions.txt").read_text(encoding="utf-8")
     assert "RAPPEL DE VOTE" in texte and "2022" in texte
+
+
+def test_reponse_tronquee_relancee_avec_plus_de_place_et_consigne_de_brievete():
+    # Cas réel, issue #194 : notice de 72 pages, réflexion coupée page 36.
+    coupee = Answer("Page 33 : un tableau. Page 34 : un autre. Page 35", "fake", "m", truncated=True)
+    client = FakeClient([coupee, "OUI\nPAGES: 2"])
+    result = steps.triage(client, PAGES)
+    assert result.verdict == "oui"
+    assert client.budgets == [steps.ANSWER_TOKENS, steps.ANSWER_TOKENS_RETRY]
+    assert steps.BREF in client.prompts[1] and steps.RAPPEL not in client.prompts[1]
+
+
+def test_reponse_hors_format_non_tronquee_garde_le_rappel_de_format():
+    client = FakeClient(["je ne sais pas", "OUI\nPAGES: 2"])
+    steps.triage(client, PAGES)
+    assert client.budgets == [steps.ANSWER_TOKENS, steps.ANSWER_TOKENS]
+    assert steps.RAPPEL in client.prompts[1]
+
+
+def test_deux_troncatures_donnent_un_message_exact():
+    # « pas répondu dans le format demandé » était faux : le modèle avait manqué
+    # de place, il n'avait pas ignoré la consigne.
+    coupee = Answer("Page 33 : un tableau…", "fake", "m", truncated=True)
+    result = steps.triage(FakeClient([coupee, coupee]), PAGES)
+    assert result.verdict == "incertain"
+    assert "coupée par la limite" in result.failed
+    assert "format demandé" not in result.failed
+
+
+def test_le_prompt_demande_de_ne_pas_passer_les_pages_en_revue():
+    texte = (steps.PROMPTS_DIR / "e1_intentions.txt").read_text(encoding="utf-8")
+    assert "une par une" in texte

@@ -46,7 +46,8 @@ REMARQUES
 - Une même notice peut contenir plusieurs hypothèses, donc plusieurs tableaux sur plusieurs pages.
 
 FORMAT DE RÉPONSE
-Tu peux réfléchir brièvement, mais ta réponse doit se terminer par ces lignes exactes.
+Une notice peut compter des dizaines de pages : ne les passe pas en revue une par une et ne recopie
+pas le document. Réfléchis en quelques phrases au plus, puis termine ta réponse par ces lignes exactes.
 Si le document contient des intentions de vote :
 OUI
 PAGES: 12, 13, 14

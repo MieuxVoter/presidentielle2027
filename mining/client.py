@@ -62,6 +62,7 @@ class Answer:
     text: str
     provider: str
     model: str
+    truncated: bool = False
 
 
 @dataclass
@@ -117,11 +118,16 @@ class Client:
             self.calls += 1
             self.tokens += (body.get("usage") or {}).get("total_tokens", 0)
             choices = body.get("choices") or []
-            text = (choices[0].get("message", {}).get("content") if choices else "") or ""
-            if not text.strip():
+            choice = choices[0] if choices else {}
+            text = (choice.get("message") or {}).get("content") or ""
+            # "length" : la sortie a été coupée par max_tokens. C'est une réponse
+            # incomplète, pas un refus du format, et rejouer au même budget donnerait
+            # la même coupure : on la rend telle quelle, à l'étape de décider.
+            truncated = choice.get("finish_reason") == "length"
+            if not text.strip() and not truncated:
                 last = "réponse vide"
                 continue
-            return Answer(text.strip(), provider.name, body.get("model") or provider.models[0])
+            return Answer(text.strip(), provider.name, body.get("model") or provider.models[0], truncated)
         raise LLMError(last)
 
     def _post(self, provider, payload):

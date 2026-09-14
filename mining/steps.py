@@ -22,11 +22,18 @@ YES = {"oui", "yes", "o"}
 NO = {"non", "no", "n"}
 PAGES_RE = re.compile(r"^\s*pages?\s*[:=]\s*(.*)$", re.IGNORECASE)
 # Les modèles à raisonnement des catalogues gratuits pensent à voix haute avant
-# de conclure : il leur faut de la place, sinon la conclusion est tronquée.
-ANSWER_TOKENS = 1200
+# de conclure : il leur faut de la place, sinon la conclusion est tronquée. Une
+# notice Harris Interactive de 72 pages a épuisé 1200 tokens avant d'y parvenir.
+ANSWER_TOKENS = 4000
+# Budget du second essai, quand le premier a été coupé par la limite.
+ANSWER_TOKENS_RETRY = 12000
 RAPPEL = (
     "\n\nRappel : termine ta réponse par une ligne contenant uniquement NON, "
     "ou bien par une ligne OUI suivie d'une ligne « PAGES: » listant les numéros de page."
+)
+BREF = (
+    "\n\nSois bref : ne passe pas les pages en revue une par une et ne recopie pas le document. "
+    "Repère les tableaux d'intentions de vote, puis termine directement par les lignes du format demandé."
 )
 
 
@@ -124,11 +131,17 @@ def triage(client, pages):
     result = Triage()
 
     try:
-        raw = client.ask(system, question, max_tokens=ANSWER_TOKENS).text
-        verdict, cited = read_answer(raw)
+        answer = client.ask(system, question, max_tokens=ANSWER_TOKENS)
+        verdict, cited = read_answer(answer.text)
         if verdict is None:
-            raw = client.ask(system, question + RAPPEL, max_tokens=ANSWER_TOKENS).text
-            verdict, cited = read_answer(raw)
+            # Une réponse coupée par la limite n'a pas ignoré la consigne : elle a
+            # manqué de place. On lui en donne davantage en lui demandant d'aller
+            # droit au but, plutôt que de lui rappeler un format qu'elle suivait.
+            if answer.truncated:
+                answer = client.ask(system, question + BREF, max_tokens=ANSWER_TOKENS_RETRY)
+            else:
+                answer = client.ask(system, question + RAPPEL, max_tokens=ANSWER_TOKENS)
+            verdict, cited = read_answer(answer.text)
     except BudgetExceeded as exc:
         result.failed = f"budget épuisé ({exc})"
         return result
@@ -136,13 +149,16 @@ def triage(client, pages):
         result.failed = f"aucun fournisseur disponible ({exc})"
         return result
 
-    result.reasoning, result.final = split_answer(raw)
+    result.reasoning, result.final = split_answer(answer.text)
 
     if verdict is False:
         result.answered_no = True
         return result
     if verdict is None:
-        result.failed = "le modèle n'a pas répondu dans le format demandé"
+        if answer.truncated:
+            result.failed = "la réponse du modèle a été coupée par la limite de longueur avant sa conclusion"
+        else:
+            result.failed = "le modèle n'a pas répondu dans le format demandé"
         return result
 
     # Vérification : un numéro de page absent du document est écarté, pas corrigé.

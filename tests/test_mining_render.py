@@ -137,3 +137,24 @@ def test_une_analyse_impossible_ne_passe_pas_pour_une_absence_d_intentions():
     assert "Aucune page ne présente" not in body
     assert "pas encore publié" in body
     assert render.label(Triage(failed="peu importe")) == "intentions-a-verifier"
+
+
+def test_label_changes_un_vrai_verdict_remplace_les_autres():
+    courants = ["new-poll", "intentions-a-verifier"]
+    attendu = (["avec-intentions-de-vote"], ["intentions-a-verifier"])
+    assert render.label_changes(courants, Triage(pages_with_intentions=[3])) == attendu
+
+
+def test_label_changes_un_echec_ne_retire_jamais_la_correction_humaine():
+    # Cas réel, issue #194 : « avec » posé à la main après un échec du modèle.
+    # Un nouvel échec ne doit pas l'effacer.
+    courants = ["new-poll", "automated", "avec-intentions-de-vote"]
+    assert render.label_changes(courants, Triage(failed="réponse coupée")) == ([], [])
+
+
+def test_label_changes_un_echec_signale_une_issue_encore_vierge():
+    assert render.label_changes(["new-poll"], Triage(failed="réponse coupée")) == (["intentions-a-verifier"], [])
+
+
+def test_label_changes_rien_a_faire_si_deja_en_place():
+    assert render.label_changes(["sans-intentions-de-vote"], Triage(answered_no=True)) == ([], [])

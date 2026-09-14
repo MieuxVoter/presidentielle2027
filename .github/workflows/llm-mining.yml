@@ -6,7 +6,7 @@ name: LLM mining - triage
 #
 # Trois déclencheurs :
 #   - ouverture d'une issue « nouveau sondage » (automatique) ;
-#   - commentaire « /triage » sous une issue (manuel) ;
+#   - « /triage » en début de ligne dans un commentaire (manuel) ;
 #   - Actions → Run workflow, en donnant un numéro d'issue.
 on:
   issues:
@@ -30,31 +30,51 @@ concurrency:
 
 jobs:
   triage:
-    # La commande est réservée aux personnes ayant les droits d'écriture : sinon
-    # n'importe qui peut vider le quota d'API en commentant.
+    # Filtre grossier : la commande est réservée aux personnes ayant les droits
+    # d'écriture, sinon n'importe qui peut vider le quota d'API en commentant.
+    # Le test précis de la commande est fait par la première étape.
     if: >-
       (github.event_name == 'issues' && contains(github.event.issue.labels.*.name, 'new-poll')) ||
       github.event_name == 'workflow_dispatch' ||
       (github.event_name == 'issue_comment' &&
        !github.event.issue.pull_request &&
-       startsWith(github.event.comment.body, '/triage') &&
+       contains(github.event.comment.body, '/triage') &&
        contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association))
     runs-on: ubuntu-latest
     steps:
+      # « /triage » doit ouvrir une ligne, mais peut suivre du texte :
+      # « J'essaie à nouveau.⏎/triage » compte ; une mention au fil d'une phrase
+      # ne compte pas. Le corps passe par l'environnement, jamais par le script
+      # lui-même (injection de script).
+      - name: Vérifier la commande
+        id: command
+        if: github.event_name == 'issue_comment'
+        env:
+          BODY: ${{ github.event.comment.body }}
+        run: |
+          if ! printf '%s\n' "$BODY" | grep -qiE '^[[:space:]]*/triage([[:space:]]|$)'; then
+            echo "Pas de /triage en début de ligne, rien à faire."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/checkout@v4
+        if: steps.command.outputs.skip != 'true'
 
       - uses: actions/setup-python@v5
+        if: steps.command.outputs.skip != 'true'
         with:
           python-version: "3.13"
 
       # Nécessaire au repli PDF : l'amont ne publie de version texte que depuis
       # peu, et pas rétroactivement.
       - name: Installer pdfplumber
+        if: steps.command.outputs.skip != 'true'
         run: pip install -r requirements_mining.txt
 
       # Sans clé d'API, on sort en silence plutôt que de faire échouer l'issue.
       - name: Vérifier la présence d'une clé
         id: guard
+        if: steps.command.outputs.skip != 'true'
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
@@ -66,9 +86,8 @@ jobs:
           fi
 
       - name: Triage de la notice
-        if: steps.guard.outputs.skip != 'true'
-        # Le corps du commentaire n'est jamais interpolé ici : seul le numéro
-        # d'issue circule, et il passe par l'environnement (injection de script).
+        if: steps.command.outputs.skip != 'true' && steps.guard.outputs.skip != 'true'
+        # Seul le numéro d'issue circule, par l'environnement.
         env:
           ISSUE: ${{ github.event.issue.number || inputs.issue }}
           # Un déclenchement manuel doit rafraîchir un commentaire existant,

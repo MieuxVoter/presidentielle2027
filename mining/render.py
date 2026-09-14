@@ -126,3 +126,18 @@ def labels_to_remove(current, keep):
     """
     mine = set(LABELS.values())
     return sorted({name for name in current if name in mine and name != keep})
+
+
+def label_changes(current, triage):
+    """(labels à poser, labels à retirer) pour accorder l'issue au résultat.
+
+    Un vrai verdict remplace les autres labels de triage. Un échec, lui, n'apporte
+    aucune information : il ne retire jamais rien — pas même un label corrigé à la
+    main après un échec précédent — et ne signale l'issue que si elle ne porte
+    encore aucun label de triage.
+    """
+    wanted = label(triage)
+    if triage.verdict == "incertain":
+        already_labelled = any(name in LABELS.values() for name in current)
+        return ([] if already_labelled else [wanted]), []
+    return ([] if wanted in current else [wanted]), labels_to_remove(current, wanted)
