@@ -1,13 +1,8 @@
-name: LLM mining - triage
+name: LLM mining
 
-# Lot 1 : dire si une notice contient des intentions de vote, et poser le label
-# correspondant. Aucune donnée chiffrée n'est produite, le dépouillement reste
-# manuel (voir docs/ISSUE_llm_mining.md).
-#
-# Trois déclencheurs :
-#   - ouverture d'une issue « nouveau sondage » (automatique) ;
-#   - « /triage » en début de ligne dans un commentaire (manuel) ;
-#   - Actions → Run workflow, en donnant un numéro d'issue.
+# Une issue new-poll est dépouillée automatiquement en PR brouillon ; /triage
+# conserve le tri léger, et /mining-pr permet de relancer le dépouillement.
+# Une personne doit toujours relire la PR avant de la rendre prête à fusionner.
 on:
   issues:
     types: [opened]
@@ -19,17 +14,26 @@ on:
         description: "Numéro de l'issue à (re)traiter"
         required: true
         type: string
+      mode:
+        description: "Action à exécuter"
+        required: true
+        default: mining-pr
+        type: choice
+        options:
+          - mining-pr
+          - triage
 
 permissions:
   issues: write
-  contents: read
+  contents: write
+  pull-requests: write
 
 concurrency:
   group: llm-mining-${{ github.event.issue.number || inputs.issue }}
   cancel-in-progress: false
 
 jobs:
-  triage:
+  mining:
     # Filtre grossier : la commande est réservée aux personnes ayant les droits
     # d'écriture, sinon n'importe qui peut vider le quota d'API en commentant.
     # Le test précis de la commande est fait par la première étape.
@@ -38,27 +42,40 @@ jobs:
       github.event_name == 'workflow_dispatch' ||
       (github.event_name == 'issue_comment' &&
        !github.event.issue.pull_request &&
-       contains(github.event.comment.body, '/triage') &&
+       (contains(github.event.comment.body, '/triage') || contains(github.event.comment.body, '/mining-pr')) &&
        contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association))
     runs-on: ubuntu-latest
     steps:
-      # « /triage » doit ouvrir une ligne, mais peut suivre du texte :
-      # « J'essaie à nouveau.⏎/triage » compte ; une mention au fil d'une phrase
-      # ne compte pas. Le corps passe par l'environnement, jamais par le script
-      # lui-même (injection de script).
+      # Choisit le mode pour tous les déclencheurs : sans cette étape, une issue
+      # ouverte n'aurait pas de mode et ne recevrait jamais de PR.
+      # Les commandes doivent ouvrir une ligne. Le corps passe par
+      # l'environnement, jamais dans le script (injection de shell).
       - name: Vérifier la commande
         id: command
-        if: github.event_name == 'issue_comment'
         env:
+          EVENT: ${{ github.event_name }}
           BODY: ${{ github.event.comment.body }}
+          DISPATCH_MODE: ${{ inputs.mode }}
         run: |
-          if ! printf '%s\n' "$BODY" | grep -qiE '^[[:space:]]*/triage([[:space:]]|$)'; then
-            echo "Pas de /triage en début de ligne, rien à faire."
-            echo "skip=true" >> "$GITHUB_OUTPUT"
+          if [ "$EVENT" = "issue_comment" ]; then
+            if printf '%s\n' "$BODY" | grep -qiE '^[[:space:]]*/mining-pr([[:space:]]|$)'; then
+              echo "mode=mining-pr" >> "$GITHUB_OUTPUT"
+            elif printf '%s\n' "$BODY" | grep -qiE '^[[:space:]]*/triage([[:space:]]|$)'; then
+              echo "mode=triage" >> "$GITHUB_OUTPUT"
+            else
+              echo "Pas de commande reconnue en début de ligne, rien à faire."
+              echo "skip=true" >> "$GITHUB_OUTPUT"
+            fi
+          elif [ "$EVENT" = "workflow_dispatch" ]; then
+            echo "mode=$DISPATCH_MODE" >> "$GITHUB_OUTPUT"
+          else
+            echo "mode=mining-pr" >> "$GITHUB_OUTPUT"
           fi
 
       - uses: actions/checkout@v4
         if: steps.command.outputs.skip != 'true'
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         if: steps.command.outputs.skip != 'true'
@@ -67,9 +84,9 @@ jobs:
 
       # Nécessaire au repli PDF : l'amont ne publie de version texte que depuis
       # peu, et pas rétroactivement.
-      - name: Installer pdfplumber
+      - name: Installer les dépendances de mining et de vérification
         if: steps.command.outputs.skip != 'true'
-        run: pip install -r requirements_mining.txt
+        run: pip install -r requirements_mining.txt -r requirements_pytests.txt
 
       # Sans clé d'API, on sort en silence plutôt que de faire échouer l'issue.
       - name: Vérifier la présence d'une clé
@@ -81,21 +98,23 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           if [ -z "$OPENROUTER_API_KEY$MISTRAL_API_KEY$GEMINI_API_KEY" ]; then
-            echo "::warning::Aucune clé LLM configurée, triage ignoré."
+            echo "::warning::Aucune clé LLM configurée, mining ignoré."
             echo "skip=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Triage de la notice
+      - name: Miner la notice et créer la PR brouillon
         if: steps.command.outputs.skip != 'true' && steps.guard.outputs.skip != 'true'
-        # Seul le numéro d'issue circule, par l'environnement.
         env:
           ISSUE: ${{ github.event.issue.number || inputs.issue }}
-          # Un déclenchement manuel doit rafraîchir un commentaire existant,
-          # sinon la commande semble sans effet.
-          FORCE: ${{ github.event_name != 'issues' && '--force' || '' }}
+          MODE: ${{ steps.command.outputs.mode }}
+          FORCE: ${{ github.event_name != 'issues' }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python mine_poll.py --issue "$ISSUE" --post $FORCE
+        run: |
+          args=(--issue "$ISSUE" --post)
+          if [ "$FORCE" = "true" ]; then args+=(--force); fi
+          if [ "$MODE" = "mining-pr" ]; then args+=(--pr); fi
+          python mine_poll.py "${args[@]}"

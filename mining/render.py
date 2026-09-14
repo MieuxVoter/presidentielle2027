@@ -78,7 +78,12 @@ def details(triage):
     return "\n".join(lines)
 
 
-def comment(triage, model, template=None):
+def pr_block(pr):
+    """Le statut de la PR, produit par Python et échappé avant publication."""
+    return _safe(pr, 2000) if pr else ""
+
+
+def comment(triage, model, pr="", template=None):
     """Le corps du commentaire, marqueur d'idempotence inclus."""
     template = template or load_template()
     body = template.safe_substitute(
@@ -87,6 +92,7 @@ def comment(triage, model, template=None):
         reasoning=reasoning_block(triage),
         details=details(triage),
         model=model or "inconnu",
+        pr=pr_block(pr),
     )
     # Les blocs vides laissent des lignes blanches en trop.
     body = re.sub(r"\n{3,}", "\n\n", body)

@@ -38,19 +38,20 @@ class FakeClient:
 @pytest.mark.parametrize(
     "brut,attendu",
     [
-        ("NON", (False, [])),
-        ("non\n", (False, [])),
-        ("OUI\nPAGES: 2", (True, [2])),
-        ("OUI\nPAGES: 1, 2, 3", (True, [1, 2, 3])),
-        ("oui\npages : 3,2", (True, [3, 2])),  # casse et séparateurs indifférents
-        ("OUI\nPAGES: 2, 2, 2", (True, [2])),  # doublons écartés
+        ("NON", (False, [], [])),
+        ("non\n", (False, [], [])),
+        ("OUI\nPAGES: 2", (True, [2], [])),
+        ("OUI\nPAGES: 1, 2, 3", (True, [1, 2, 3], [])),
+        ("oui\npages : 3,2", (True, [3, 2], [])),  # casse et séparateurs indifférents
+        ("OUI\nPAGES: 2, 2, 2", (True, [2], [])),  # doublons écartés
+        ("OUI\nPAGES: 2\nMETHODO: 1, 1", (True, [2], [1])),
         # Un modèle à raisonnement déroule sa réflexion avant de conclure.
-        ("Le document présente un tableau d'intentions.\n\nOUI\nPAGES: 2\n", (True, [2])),
+        ("Le document présente un tableau d'intentions.\n\nOUI\nPAGES: 2\n", (True, [2], [])),
         # Conclusion finale prioritaire sur une hésitation antérieure.
-        ("OUI peut-être\nNON", (False, [])),
-        ("", (None, [])),
-        ("Je ne sais pas trop", (None, [])),
-        ("OUI", (True, [])),  # le parsing n'invalide pas : c'est triage() qui vérifie
+        ("OUI peut-être\nNON", (False, [], [])),
+        ("", (None, [], [])),
+        ("Je ne sais pas trop", (None, [], [])),
+        ("OUI", (True, [], [])),  # le parsing n'invalide pas : c'est triage() qui vérifie
     ],
 )
 def test_read_answer(brut, attendu):
@@ -87,6 +88,12 @@ def test_triage_ne_consomme_qu_un_appel():
     assert client.calls == 1
     assert result.pages_with_intentions == [2]
     assert result.verdict == "oui"
+
+
+def test_triage_conserve_les_pages_de_methodologie_verifiees():
+    result = steps.triage(FakeClient(["OUI\nPAGES: 2\nMETHODO: 1, 42"]), PAGES)
+    assert result.methodo_pages == [1]
+    assert result.invalid_methodo_pages == [42]
 
 
 def test_triage_sans_intentions_donne_non():

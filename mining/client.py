@@ -34,7 +34,10 @@ FALLBACK_MODELS = {
     # à rien si les trois partagent le même quota. Les modèles spécialisés
     # (code, finance, santé, sûreté) sont volontairement écartés.
     "openrouter": (
-        "google/gemma-4-31b-it:free," "nvidia/nemotron-3-super-120b-a12b:free," "thinkingmachines/inkling:free"
+        "google/gemma-4-31b-it:free,"
+        "nvidia/nemotron-3-ultra-550b-a55b:free,"
+        "nvidia/nemotron-3-super-120b-a12b:free," 
+        "thinkingmachines/inkling:free"
     ),
     "mistral": "mistral-small-latest",
     "gemini": "gemini-2.0-flash",

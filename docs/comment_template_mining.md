@@ -12,6 +12,7 @@ Placeholders disponibles (syntaxe $nom) :
   $reasoning  la réflexion du modèle dans un bloc dépliant, vide s'il n'a pas réfléchi à voix haute
   $details    les pages retenues, et le cas échéant les anomalies
   $model      le modèle qui a répondu
+  $pr         le lien de la PR brouillon, ou la raison de son absence
 
 Un placeholder mal orthographié n'échoue pas : il ressort tel quel.
 Le marqueur d'idempotence est ajouté automatiquement en fin de corps.
@@ -21,6 +22,8 @@ $phrase
 $final
 
 $reasoning
+
+$pr
 
 <details>
 <summary>Comment cette réponse a été obtenue</summary>
@@ -32,5 +35,6 @@ Modèle : $model
 
 </details>
 
-> 🤖 Réponse générée automatiquement, **à vérifier**. Elle ne remplace pas la lecture de la notice, et ne
-> contient aucun chiffre de sondage : elle sert uniquement à trier les issues.
+> 🤖 Réponse générée automatiquement, **à vérifier**. Elle ne remplace pas la lecture de la notice.
+> Si une PR brouillon est indiquée ci-dessus, ses chiffres doivent être comparés au PDF par un humain avant
+> fusion.
