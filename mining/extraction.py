@@ -47,6 +47,16 @@ class ValidationError(ValueError):
     """La réponse du modèle n'est pas assez étayée pour devenir une donnée."""
 
 
+def _silent(*_args):
+    """Journal par défaut : les tests n'impriment rien, mine_poll.py passe print."""
+
+
+def tail(text, limit=400):
+    """La fin d'une réponse : là où le modèle conclut, ou là où il a été coupé."""
+    text = (text or "").strip()
+    return "…" + text[-limit:] if len(text) > limit else text
+
+
 @dataclass(frozen=True)
 class Methodology:
     institute: str
@@ -365,7 +375,7 @@ def _render_pages(pages):
     return "\n".join(f"--- page {page.number} ---\n{page.text}" for page in pages)
 
 
-def _ask_methodology(client, pages, institutes, populations, notice_date):
+def _ask_methodology(client, pages, institutes, populations, notice_date, log=_silent):
     prompt = steps.load_prompt("e2_methodologie").safe_substitute(
         pages=_render_pages(pages),
         instituts="\n".join(f"- {name}" for name in institutes),
@@ -378,11 +388,13 @@ def _ask_methodology(client, pages, institutes, populations, notice_date):
             return parse_methodology(answer.text, pages, institutes, populations, notice_date)
         except ValidationError as exc:
             last = exc
+            cut = " (réponse tronquée)" if getattr(answer, "truncated", False) else ""
+            log(f"   ✗ E2 essai {attempt + 1} rejeté{cut} : {exc}\n   fin de la réponse : {tail(answer.text)}")
             prompt += "\nRappel : réponds uniquement avec toutes les lignes imposées et des citations présentes dans ces pages."
     raise ValidationError(f"E2 rejetée après relance : {last}")
 
 
-def extract(client, pages, triage, candidates_path, polls_path, notice_date=None):
+def extract(client, pages, triage, candidates_path, polls_path, notice_date=None, log=_silent):
     """Exécute E2 puis E3 sur les seules pages proposées par le triage.
 
     La page méthodologique est repliée vers les trois premières pages si E1 ne
@@ -392,6 +404,8 @@ def extract(client, pages, triage, candidates_path, polls_path, notice_date=None
     method_numbers = triage.methodo_pages or [page.number for page in pages[:3]]
     method_pages = [selected[number] for number in method_numbers if number in selected]
     result = Extraction()
+    origin = "citées par E1" if triage.methodo_pages else "repli sur les 3 premières"
+    log(f"🔎 E2 méthodologie : pages {[page.number for page in method_pages]} ({origin})")
     if not method_pages:
         result.failures.append("aucune page de méthodologie disponible")
         return result
@@ -402,6 +416,7 @@ def extract(client, pages, triage, candidates_path, polls_path, notice_date=None
             institutions_from_polls(polls_path),
             populations_from_polls(polls_path),
             notice_date,
+            log,
         )
     except ValidationError as exc:
         result.failures.append(str(exc))
@@ -412,6 +427,12 @@ def extract(client, pages, triage, candidates_path, polls_path, notice_date=None
         result.failures.append(f"appel E2 impossible ({exc})")
         return result
 
+    method = result.methodology
+    log(
+        f"✅ E2 : {method.institute} · {method.commissioner} · {method.start} → {method.end} · "
+        f"échantillon {method.sample} · inscrits {method.registered or '-'}"
+    )
+
     known = candidate_names(candidates_path)
     seen_sets = set()
     for number in triage.pages_with_intentions:
@@ -419,6 +440,7 @@ def extract(client, pages, triage, candidates_path, polls_path, notice_date=None
         if not page:
             result.failures.append(f"page de tableau {number} absente")
             continue
+        log(f"🔎 E3 page {number}")
         prompt = steps.load_prompt("e3_tableaux").safe_substitute(
             candidats="\n".join(f"- {name}" for name in known), number=page.number, page=page.text
         )
@@ -445,6 +467,13 @@ def extract(client, pages, triage, candidates_path, polls_path, notice_date=None
                     failures.extend(retry_failures)
             except LLMError as exc:
                 failures.append(f"page {number} : relance E3 impossible ({exc})")
+        summary = ", ".join(f"{table.tour} ({len(table.values)} candidats)" for table in tables) or "aucun"
+        log(f"   page {number} : tableau(x) valide(s) : {summary}")
+        for failure in failures:
+            log(f"   ✗ {failure}")
+        if not tables:
+            cut = " (réponse tronquée)" if getattr(answer, "truncated", False) else ""
+            log(f"   fin de la réponse{cut} : {tail(answer.text)}")
         result.failures.extend(failures)
         for table in tables:
             key = frozenset(_norm(item.name) for item in table.values)

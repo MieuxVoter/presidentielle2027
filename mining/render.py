@@ -79,8 +79,17 @@ def details(triage):
 
 
 def pr_block(pr):
-    """Le statut de la PR, produit par Python et échappé avant publication."""
-    return _safe(pr, 2000) if pr else ""
+    """Le statut de la PR, échappé avant publication.
+
+    Le préfixe de citation Markdown « > » est posé par Python : il est conservé,
+    sinon il s'affiche en « &gt; ». Le reste peut contenir un nom lu par le
+    modèle (tableau écarté) et reste échappé.
+    """
+    if not pr:
+        return ""
+    if pr.startswith("> "):
+        return "> " + _safe(pr[2:], 2000)
+    return _safe(pr, 2000)
 
 
 def comment(triage, model, pr="", template=None):

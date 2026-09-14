@@ -107,6 +107,8 @@ jobs:
         env:
           ISSUE: ${{ github.event.issue.number || inputs.issue }}
           MODE: ${{ steps.command.outputs.mode }}
+          # Logs dans l'ordre, sans tampon : c'est la seule trace quand la publication échoue.
+          PYTHONUNBUFFERED: "1"
           FORCE: ${{ github.event_name != 'issues' }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}

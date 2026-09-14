@@ -63,13 +63,15 @@ def read_answer(text):
     """
     lines = [line for line in (text or "").splitlines() if line.strip()]
 
+    # Une ligne sans numéro (« PAGES: list », gabarit recopié pendant la
+    # réflexion) n'efface pas des pages déjà lues.
     pages, methodo_pages = [], []
     for line in lines:
         match = PAGES_RE.match(line)
-        if match:
+        if match and re.search(r"\d", match.group(1)):
             pages = [int(n) for n in re.findall(r"\d+", match.group(1))]
         match = METHODO_RE.match(line)
-        if match:
+        if match and re.search(r"\d", match.group(1)):
             methodo_pages = [int(n) for n in re.findall(r"\d+", match.group(1))]
 
     verdict = None
@@ -139,7 +141,10 @@ def triage(client, pages):
     try:
         answer = client.ask(system, question, max_tokens=ANSWER_TOKENS)
         verdict, cited, methodo_cited = read_answer(answer.text)
-        if verdict is None:
+        # Une réponse coupée n'a pas atteint sa conclusion : un « OUI » ou un
+        # « PAGES: » lus dedans viennent de la réflexion, où le modèle recopie
+        # souvent le format demandé (cas réel, issue #194). Elle est rejouée.
+        if verdict is None or answer.truncated:
             # Une réponse coupée par la limite n'a pas ignoré la consigne : elle a
             # manqué de place. On lui en donne davantage en lui demandant d'aller
             # droit au but, plutôt que de lui rappeler un format qu'elle suivait.
@@ -157,14 +162,14 @@ def triage(client, pages):
 
     result.reasoning, result.final = split_answer(answer.text)
 
+    if answer.truncated:
+        result.failed = "la réponse du modèle a été coupée par la limite de longueur avant sa conclusion"
+        return result
     if verdict is False:
         result.answered_no = True
         return result
     if verdict is None:
-        if answer.truncated:
-            result.failed = "la réponse du modèle a été coupée par la limite de longueur avant sa conclusion"
-        else:
-            result.failed = "le modèle n'a pas répondu dans le format demandé"
+        result.failed = "le modèle n'a pas répondu dans le format demandé"
         return result
 
     # Vérification : un numéro de page absent du document est écarté, pas corrigé.

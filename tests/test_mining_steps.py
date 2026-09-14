@@ -45,6 +45,8 @@ class FakeClient:
         ("oui\npages : 3,2", (True, [3, 2], [])),  # casse et séparateurs indifférents
         ("OUI\nPAGES: 2, 2, 2", (True, [2], [])),  # doublons écartés
         ("OUI\nPAGES: 2\nMETHODO: 1, 1", (True, [2], [1])),
+        # Un gabarit recopié (« PAGES: list ») n'efface pas les pages déjà lues.
+        ("OUI\nPAGES: 34, 37\nMETHODO: 3\nPAGES: list\nMETHODO: list", (True, [34, 37], [3])),
         # Un modèle à raisonnement déroule sa réflexion avant de conclure.
         ("Le document présente un tableau d'intentions.\n\nOUI\nPAGES: 2\n", (True, [2], [])),
         # Conclusion finale prioritaire sur une hésitation antérieure.
@@ -168,3 +170,29 @@ def test_deux_troncatures_donnent_un_message_exact():
 def test_le_prompt_demande_de_ne_pas_passer_les_pages_en_revue():
     texte = (steps.PROMPTS_DIR / "e1_intentions.txt").read_text(encoding="utf-8")
     assert "une par une" in texte
+
+
+# Cas réel, issue #194 : Nemotron recopie le gabarit en réfléchissant, trouve les
+# pages, puis est coupé avant de conclure. Le « OUI » recopié ne vaut pas verdict.
+GABARIT_RECOPIE = Answer(
+    "OUI\nPAGES: list\nMETHODO: list\n\nWe have identified pages: 34, 37, 40.\nThus: PAGES: 34, 37, 40\n\nNow we",
+    "fake",
+    "m",
+    truncated=True,
+)
+
+
+def test_reponse_tronquee_avec_gabarit_recopie_est_relancee():
+    client = FakeClient([GABARIT_RECOPIE, "OUI\nPAGES: 2\nMETHODO: 1"])
+    result = steps.triage(client, PAGES)
+    assert client.calls == 2
+    assert client.budgets == [steps.ANSWER_TOKENS, steps.ANSWER_TOKENS_RETRY]
+    assert steps.BREF in client.prompts[1]
+    assert result.verdict == "oui" and result.pages_with_intentions == [2] and result.methodo_pages == [1]
+
+
+def test_deux_reponses_tronquees_avec_oui_recopie_ne_valent_pas_verdict():
+    result = steps.triage(FakeClient([GABARIT_RECOPIE, GABARIT_RECOPIE]), PAGES)
+    assert result.verdict == "incertain"
+    assert "coupée par la limite" in result.failed
+    assert "sans citer de page" not in result.failed

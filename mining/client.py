@@ -94,7 +94,15 @@ class Client:
             except LLMError as exc:
                 errors.append(f"{provider.name}: {exc}")
                 continue
-            self.log.append({"provider": provider.name, "model": answer.model, "prompt": prompt, "answer": answer.text})
+            self.log.append(
+                {
+                    "provider": provider.name,
+                    "model": answer.model,
+                    "prompt": prompt,
+                    "answer": answer.text,
+                    "truncated": answer.truncated,
+                }
+            )
             return answer
         raise LLMError("aucun fournisseur n'a répondu — " + " | ".join(errors))
 

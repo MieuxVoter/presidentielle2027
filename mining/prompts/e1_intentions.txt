@@ -46,8 +46,14 @@ REMARQUES
 - Une même notice peut contenir plusieurs hypothèses, donc plusieurs tableaux sur plusieurs pages.
 
 FORMAT DE RÉPONSE
+PAGES ne contient que les pages portant le tableau détaillé d'une ou plusieurs hypothèses de la vague
+actuelle. Ne liste ni une page « Récapitulatif » ou de synthèse, ni une page « Évolutions » (vagues
+précédentes), ni une page « Reports de voix ». METHODO contient les pages qui donnent les dates de terrain
+et la taille de l'échantillon ; si tu ne les trouves pas, écris « METHODO: » vide.
+
 Une notice peut compter des dizaines de pages : ne les passe pas en revue une par une et ne recopie
-pas le document. Réfléchis en quelques phrases au plus, puis termine ta réponse par ces lignes exactes.
+pas le document. Réfléchis en quelques phrases au plus, sans recopier les lignes ci-dessous, puis termine
+ta réponse par ces lignes exactes, avec les numéros de page du document.
 Si le document contient des intentions de vote :
 OUI
 PAGES: 12, 13, 14
@@ -55,12 +61,6 @@ METHODO: 2, 3
 
 Si le document n'en contient pas :
 NON
-
-PAGES ne contient que les pages portant le tableau détaillé d'une ou plusieurs
-hypothèses de la vague actuelle. Ne liste ni une page « Récapitulatif » ou de
-synthèse, ni une page « Évolutions » (vagues précédentes), ni une page « Reports
-de voix ». METHODO contient les pages qui donnent les dates de terrain et la
-taille de l'échantillon ; si tu ne les trouves pas, écris « METHODO: » vide.
 
 --- DÉBUT DU DOCUMENT ---
 $document

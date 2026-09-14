@@ -111,11 +111,22 @@ def test_extract_remplit_toutes_les_variables_des_prompts():
     # recevrait « $candidats » au lieu de la liste des noms autorisés.
     client = RecordingClient([E2, E3])
     triage = steps.Triage(pages_with_intentions=[2], methodo_pages=[1])
+    journal = []
     result = extraction.extract(
-        client, [METHOD_PAGE, TABLE_PAGE], triage, ROOT / "candidats.csv", ROOT / "polls.csv", dt.date(2026, 9, 11)
+        client,
+        [METHOD_PAGE, TABLE_PAGE],
+        triage,
+        ROOT / "candidats.csv",
+        ROOT / "polls.csv",
+        dt.date(2026, 9, 11),
+        log=journal.append,
     )
     assert not result.failures
     assert len(client.prompts) == 2
+    # Les logs du job disent quelles pages ont été lues et ce qui en est sorti.
+    assert any("E2 méthodologie : pages [1]" in line for line in journal)
+    assert any("E3 page 2" in line for line in journal)
+    assert any("1er Tour (5 candidats)" in line for line in journal)
     for prompt in client.prompts:
         assert not re.search(r"\$[A-Za-z_{]", prompt)
     assert "- Édouard Philippe" in client.prompts[1]

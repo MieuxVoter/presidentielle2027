@@ -136,6 +136,28 @@ def notice_date(text):
         return None
 
 
+def log_triage(result, conversation):
+    """Ce que le modèle a répondu et ce que Python en a retenu, dans les logs du job.
+
+    Sans cette trace, un échec sous l'issue ne se comprend qu'en lisant le
+    commentaire publié, et pas du tout quand la publication échoue.
+    """
+    for index, entry in enumerate(conversation.log, 1):
+        cut = " — TRONQUÉE par max_tokens" if entry.get("truncated") else ""
+        print(
+            f"   appel {index} : {entry.get('provider')} / {entry.get('model')} — {len(entry.get('answer') or '')} car.{cut}"
+        )
+        print(f"   fin de la réponse : {extraction.tail(entry.get('answer'), 600)}")
+    print(
+        f"🔎 Triage : {result.verdict} · pages {result.pages_with_intentions or '-'} · "
+        f"méthodo {result.methodo_pages or '-'} · {conversation.calls} appel(s)"
+    )
+    if result.invalid_pages or result.invalid_methodo_pages:
+        print(f"   pages absentes du document : {result.invalid_pages} / méthodo {result.invalid_methodo_pages}")
+    if result.failed:
+        print(f"⚠️  {result.failed}")
+
+
 def preview_proposal(proposal, failures):
     """Aperçu compact et copiable de la proposition."""
     print("\n" + "-" * 70)
@@ -250,10 +272,13 @@ def main(argv=None):
         print(f"⚠️  Notice non analysable : {exc}")
         result = steps.Triage(failed=str(exc))
 
+    log_triage(result, conversation)
+
     pr_status = ""
     if args.pr:
         if result.verdict != "oui":
-            message = "Aucune PR : le triage n'a pas confirmé d'intentions de vote."
+            reason = result.failed or "le triage n'a pas trouvé d'intentions de vote"
+            message = f"Aucune PR : {reason}."
             print("\n" + message)
             pr_status = f"> ⚠️ {message}"
         else:
@@ -264,7 +289,9 @@ def main(argv=None):
                 Path(__file__).resolve().parent / "candidats.csv",
                 Path(__file__).resolve().parent / "polls.csv",
                 notice_date(text),
+                log=print,
             )
+            print(f"   {conversation.calls} appel(s) consommé(s) au total")
             if not mined.methodology:
                 message = "Aucune PR : les métadonnées E2 ont été rejetées. " + "; ".join(mined.failures)
                 print("\n" + message)
@@ -278,8 +305,7 @@ def main(argv=None):
                         Path(__file__).resolve().parent,
                     )
                     proposal.failures.extend(mined.failures)
-                    if not args.post:
-                        preview_proposal(proposal, mined.failures)
+                    preview_proposal(proposal, mined.failures)
                     if args.proposal and not args.post:
                         Path(args.proposal).write_text(
                             json.dumps(proposal.to_dict(), ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
