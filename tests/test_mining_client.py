@@ -61,3 +61,42 @@ def test_sans_fournisseur_on_leve_llm_error():
     conversation = llm.Client(providers=())
     with pytest.raises(llm.LLMError):
         conversation.ask("sys", "question")
+
+
+def _corps(contenu, finish_reason="stop"):
+    return {
+        "model": "m",
+        "usage": {"total_tokens": 10},
+        "choices": [{"message": {"content": contenu}, "finish_reason": finish_reason}],
+    }
+
+
+def _client_factice(monkeypatch, post):
+    conversation = llm.Client(providers=(llm.Provider("fake", "https://x.test", "k", ("m",)),))
+    monkeypatch.setattr(conversation, "_post", post)
+    return conversation
+
+
+def test_finish_reason_length_marque_la_reponse_tronquee(monkeypatch):
+    conversation = _client_factice(monkeypatch, lambda provider, payload: _corps("Page 33…", "length"))
+    answer = conversation.ask("sys", "q")
+    assert answer.truncated is True
+    assert answer.text == "Page 33…"
+
+
+def test_reponse_complete_non_tronquee(monkeypatch):
+    conversation = _client_factice(monkeypatch, lambda provider, payload: _corps("OUI\nPAGES: 3"))
+    assert conversation.ask("sys", "q").truncated is False
+
+
+def test_reponse_tronquee_vide_rendue_sans_rejouer(monkeypatch):
+    # Rejouer au même budget redonnerait la même coupure : c'est à l'étape de décider.
+    appels = []
+
+    def post(provider, payload):
+        appels.append(payload)
+        return _corps("", "length")
+
+    answer = _client_factice(monkeypatch, post).ask("sys", "q")
+    assert answer.truncated is True
+    assert len(appels) == 1

@@ -17,6 +17,9 @@ Conception d'ensemble et suite prévue : [ISSUE_llm_mining.md](ISSUE_llm_mining.
 | Commentaire `/triage` | droits d'écriture sur le dépôt | il est **réécrit** |
 | *Actions → LLM mining - triage → Run workflow* | numéro d'issue | il est **réécrit** |
 
+`/triage` doit **ouvrir une ligne** du commentaire, mais peut suivre du texte : « J'essaie à nouveau. » puis
+`/triage` à la ligne suivante déclenche bien le triage. Une simple mention au fil d'une phrase, non.
+
 La commande est réservée aux personnes ayant les droits d'écriture : sur un dépôt public, n'importe qui
 pourrait sinon vider le quota d'API en commentant en boucle.
 
@@ -33,8 +36,11 @@ l'issue doit indiquer de quelle notice il s'agit, dans l'un des deux formats pro
 | `sans-intentions-de-vote` | aucune n'en présente (popularité, cote de confiance, opinion…) |
 | `intentions-a-verifier` | le modèle n'a pas répondu de façon exploitable, ou la notice n'a pas pu être lue |
 
-**Ces trois labels sont à créer dans le dépôt** avant d'activer le workflow, sinon la pose échoue. Un seul
-est posé à la fois : si un second passage change le verdict, l'ancien est retiré.
+**Ces trois labels sont à créer dans le dépôt** avant d'activer le workflow, sinon la pose échoue.
+
+Un vrai verdict (`avec` ou `sans`) remplace les autres labels de triage. Un échec, lui, n'apporte aucune
+information : il ne retire **jamais** un label — pas même celui qu'un humain a corrigé à la main — et ne
+pose `intentions-a-verifier` que sur une issue qui ne porte encore aucun label de triage.
 
 ## D'où vient le texte de la notice
 
@@ -130,8 +136,11 @@ Le modèle lit, Python vérifie. Concrètement :
 - le nombre d'appels par exécution est plafonné (`--max-calls`, 40 par défaut).
 
 Le modèle peut réfléchir à voix haute — beaucoup de modèles gratuits le font — mais sa réponse doit se
-terminer par une ligne contenant uniquement `OUI` ou `NON`. Une réponse hors format est redemandée une fois,
-puis abandonnée ; elle n'est jamais réinterprétée. Quand le modèle a réfléchi, sa réflexion est reproduite
+terminer par une ligne contenant uniquement `OUI` ou `NON`. Une réponse hors format est redemandée une fois
+avec un rappel du format. Une réponse **coupée par la limite de longueur** — cas des longues notices, où le
+modèle passe les pages en revue — est redemandée avec trois fois plus de place et la consigne d'aller droit
+au but. Dans les deux cas un second échec est abandonné, jamais réinterprété, et le commentaire dit laquelle
+des deux situations s'est produite. Quand le modèle a réfléchi, sa réflexion est reproduite
 dans le commentaire, dans un bloc dépliable.
 
 ## État

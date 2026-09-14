@@ -117,18 +117,20 @@ def resolve_text(args, repo, token):
     return notice_text_for(issue_poll_filename(repo, args.issue, token))
 
 
-def set_label(repo, number, token, issue, label):
-    """Pose le label du verdict et retire les autres labels de triage."""
+def set_label(repo, number, token, issue, triage):
+    """Accorde les labels de triage de l'issue au résultat, sans écraser un humain sur un échec."""
     current = [entry.get("name", "") for entry in issue.get("labels", [])]
-    for stale in render.labels_to_remove(current, label):
+    to_add, to_remove = render.label_changes(current, triage)
+    for stale in to_remove:
         _github_request(f"https://api.github.com/repos/{repo}/issues/{number}/labels/{quote(stale)}", token, "DELETE")
-    if label not in current:
+    if to_add:
         _github_request(
-            f"https://api.github.com/repos/{repo}/issues/{number}/labels", token, "POST", {"labels": [label]}
+            f"https://api.github.com/repos/{repo}/issues/{number}/labels", token, "POST", {"labels": to_add}
         )
+    return to_add, to_remove
 
 
-def publish(repo, number, token, body, label, force=False):
+def publish(repo, number, token, body, triage, force=False):
     """Publie le commentaire et pose le label. Il n'y a jamais qu'un commentaire.
 
     Sans --force on ne repasse pas sur une issue déjà traitée ; avec, le
@@ -151,8 +153,9 @@ def publish(repo, number, token, body, label, force=False):
         _github_request(f"https://api.github.com/repos/{repo}/issues/{number}/comments", token, "POST", {"body": body})
         action = "commentaire publié"
 
-    set_label(repo, number, token, issue, label)
-    print(f"✅ Issue #{number} : {action}, label « {label} » posé")
+    added, removed = set_label(repo, number, token, issue, triage)
+    changes = ", ".join([f"+{name}" for name in added] + [f"-{name}" for name in removed]) or "labels inchangés"
+    print(f"✅ Issue #{number} : {action} ({changes})")
 
 
 def main(argv=None):
@@ -206,7 +209,7 @@ def main(argv=None):
     label = render.label(result)
 
     if args.post:
-        publish(repo, args.issue, token, body, label, force=args.force)
+        publish(repo, args.issue, token, body, result, force=args.force)
         return 0
 
     print(f"\n{'-' * 70}\nlabel : {label}\n{'-' * 70}\n{body}{'-' * 70}")
