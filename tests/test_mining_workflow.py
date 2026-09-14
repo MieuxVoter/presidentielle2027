@@ -24,9 +24,7 @@ def _step(name):
     start = next(i for i, line in enumerate(lines) if line.strip() == f"- name: {name}")
     indent = len(lines[start]) - len(lines[start].lstrip())
     end = start + 1
-    while end < len(lines) and not (
-        lines[end].strip() and len(lines[end]) - len(lines[end].lstrip()) <= indent
-    ):
+    while end < len(lines) and not (lines[end].strip() and len(lines[end]) - len(lines[end].lstrip()) <= indent):
         end += 1
     return lines[start:end]
 

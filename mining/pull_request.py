@@ -12,6 +12,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
+
 class PullRequestError(RuntimeError):
     """Une branche ou une PR n'a pas pu être créée ; la cause est publiable."""
 
@@ -159,7 +160,9 @@ def _existing_pr(repo, branch, root):
 
 
 def _available_labels(repo, root):
-    completed = _run(["gh", "label", "list", "--repo", repo, "--limit", "100", "--json", "name"], root, allow_failure=True)
+    completed = _run(
+        ["gh", "label", "list", "--repo", repo, "--limit", "100", "--json", "name"], root, allow_failure=True
+    )
     if completed.returncode:
         return set()
     try:
@@ -174,7 +177,10 @@ def _apply_labels(repo, number, root):
     if "needs-human-review" not in available and "need-screening !" in available:
         wanted.append("need-screening !")
     if wanted:
-        _run(["gh", "pr", "edit", str(number), "--repo", repo, *sum((["--add-label", label] for label in wanted), [])], root)
+        _run(
+            ["gh", "pr", "edit", str(number), "--repo", repo, *sum((["--add-label", label] for label in wanted), [])],
+            root,
+        )
     missing = {"automated", "needs-human-review"} - available
     if "needs-human-review" in missing and "need-screening !" in available:
         missing.remove("needs-human-review")
