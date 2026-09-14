@@ -96,3 +96,15 @@ def test_creation_de_pr_est_un_brouillon_et_applique_les_labels(monkeypatch, tmp
     assert "--draft" in create and "--head" in create and "mining/issue-42" in create
     labels = next(command for command in commands if command[:3] == ["gh", "pr", "edit"])
     assert "--add-label" in labels and "needs-human-review" in labels
+
+
+@pytest.mark.parametrize("state,reused", [("OPEN", True), ("CLOSED", False), ("MERGED", False)])
+def test_seule_une_pr_ouverte_est_reutilisee(monkeypatch, tmp_path, state, reused):
+    def fake_run(command, root, **kwargs):
+        return SimpleNamespace(
+            returncode=0, stdout=f'{{"number": 7, "url": "https://example.test/pr/7", "state": "{state}"}}', stderr=""
+        )
+
+    monkeypatch.setattr(pull_request, "_run", fake_run)
+    found = pull_request._existing_pr("MieuxVoter/presidentielle2027", "mining/issue-42", tmp_path)
+    assert (found is not None) == reused
