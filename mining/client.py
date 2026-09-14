@@ -20,6 +20,7 @@ from urllib.request import Request, urlopen
 
 TIMEOUT = 90
 RETRY_STATUSES = {408, 409, 429, 500, 502, 503, 504}
+OPENROUTER_MAX_MODELS = 3
 
 # Les catalogues gratuits changent souvent — les identifiants ci-dessous ont été
 # relevés le 2026-09-13 et se périment. Ils sont surchargeables par variable
@@ -104,9 +105,11 @@ class Client:
             "temperature": 0,
             "max_tokens": max_tokens,
         }
-        # Bascule interne d'OpenRouter entre plusieurs modèles gratuits.
+        # Bascule interne d'OpenRouter entre plusieurs modèles gratuits. Au-delà de
+        # trois, OpenRouter refuse toute la requête en HTTP 400 (« 'models' array
+        # must have 3 items or fewer ») : les suivants sont ignorés.
         if provider.name == "openrouter" and len(provider.models) > 1:
-            payload["models"] = list(provider.models)
+            payload["models"] = list(provider.models[:OPENROUTER_MAX_MODELS])
 
         last = "aucune tentative"
         for attempt in range(2):

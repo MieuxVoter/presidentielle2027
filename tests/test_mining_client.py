@@ -100,3 +100,20 @@ def test_reponse_tronquee_vide_rendue_sans_rejouer(monkeypatch):
     answer = _client_factice(monkeypatch, post).ask("sys", "q")
     assert answer.truncated is True
     assert len(appels) == 1
+
+
+def test_openrouter_recoit_au_plus_trois_modeles(monkeypatch):
+    # Au-delà, OpenRouter refuse toute la requête : HTTP 400, « 'models' array
+    # must have 3 items or fewer ». Constaté sous l'issue #194.
+    modeles = ("a:free", "b:free", "c:free", "d:free", "e:free")
+    conversation = llm.Client(providers=(llm.Provider("openrouter", "https://x.test", "k", modeles),))
+    envoyes = []
+
+    def post(provider, payload):
+        envoyes.append(payload)
+        return _corps("OUI\nPAGES: 3")
+
+    monkeypatch.setattr(conversation, "_post", post)
+    conversation.ask("sys", "q")
+    assert envoyes[0]["models"] == ["a:free", "b:free", "c:free"]
+    assert envoyes[0]["model"] == "a:free"
