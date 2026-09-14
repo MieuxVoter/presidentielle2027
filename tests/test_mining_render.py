@@ -55,6 +55,16 @@ def test_le_commentaire_porte_le_marqueur_d_idempotence():
     assert render.MARKER in render.comment(Triage(), "un-modele")
 
 
+def test_le_commentaire_affiche_le_statut_de_la_pr_sans_html_injecte():
+    body = render.comment(
+        Triage(pages_with_intentions=[12]),
+        "un-modele",
+        pr="> ✅ PR brouillon : [#42](https://example.test/42) <script>",
+    )
+    assert "PR brouillon" in body and "[#42](https://example.test/42)" in body
+    assert "<script>" not in body
+
+
 def test_le_mode_d_emploi_du_gabarit_ne_fuit_pas():
     body = render.comment(Triage(), "un-modele")
     assert "Placeholders disponibles" not in body

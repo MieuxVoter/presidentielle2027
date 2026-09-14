@@ -4,21 +4,29 @@
 sur le texte entier de la notice : contient-elle des intentions de vote pour la présidentielle 2027, et sur
 quelles pages ? La réponse est publiée en commentaire sous l'issue, et un label est posé.
 
-Aucun chiffre de sondage n'est produit : le triage sert à savoir quelles notices méritent d'être dépouillées.
-Le dépouillement lui-même reste manuel.
+Quand la réponse est oui, le même run relève la méthodologie et les tableaux, vérifie chaque chiffre contre
+sa ligne source, puis ouvre une **PR en brouillon** avec les lignes de `polls.csv` et les `polls/<poll_id>.csv`.
+Rien n'est fusionné sans relecture : GitHub interdit de fusionner un brouillon tant qu'un humain ne l'a pas
+marqué prêt.
 
 Conception d'ensemble et suite prévue : [ISSUE_llm_mining.md](ISSUE_llm_mining.md).
 
 ## Déclencheurs
 
-| Quand | Condition | Si un commentaire existe déjà |
-|---|---|---|
-| Ouverture d'une issue | label `new-poll` | il est laissé tel quel |
-| Commentaire `/triage` | droits d'écriture sur le dépôt | il est **réécrit** |
-| *Actions → LLM mining - triage → Run workflow* | numéro d'issue | il est **réécrit** |
+| Quand | Condition | Ce qui tourne | Si un commentaire existe déjà |
+|---|---|---|---|
+| Ouverture d'une issue | label `new-poll` | triage, puis PR brouillon si oui | il est laissé tel quel |
+| Commentaire `/mining-pr` | droits d'écriture sur le dépôt | triage, puis PR brouillon si oui | il est **réécrit** |
+| Commentaire `/triage` | droits d'écriture sur le dépôt | triage seul | il est **réécrit** |
+| *Actions → LLM mining → Run workflow* | numéro d'issue et mode | au choix | il est **réécrit** |
 
-`/triage` doit **ouvrir une ligne** du commentaire, mais peut suivre du texte : « J'essaie à nouveau. » puis
-`/triage` à la ligne suivante déclenche bien le triage. Une simple mention au fil d'une phrase, non.
+Les commandes doivent **ouvrir une ligne** du commentaire, mais peuvent suivre du texte : « J'essaie à
+nouveau. » puis `/mining-pr` à la ligne suivante déclenche bien le dépouillement. Une simple mention au fil
+d'une phrase, non.
+
+Une relance met à jour la PR ouverte de l'issue (branche `mining/issue-<n>`, réécrite par force-push) : des
+corrections poussées à la main sur cette branche seraient perdues. Si la PR précédente a été fermée, une
+nouvelle est ouverte.
 
 La commande est réservée aux personnes ayant les droits d'écriture : sur un dépôt public, n'importe qui
 pourrait sinon vider le quota d'API en commentant en boucle.
@@ -65,6 +73,20 @@ les fournisseurs dans l'ordre et passe au suivant en cas de quota épuisé ou de
 
 Sans aucune clé, le workflow s'arrête avec un avertissement au lieu d'échouer.
 
+Une notice IFOP de 13 hypothèses consomme une quinzaine de requêtes, le double avec les relances : les
+50 requêtes par jour du palier gratuit d'OpenRouter s'épuisent vite. Ajouter `MISTRAL_API_KEY` en relais.
+
+**Réglages du dépôt pour la PR automatique**, à faire une fois à la main :
+
+- *Settings → Actions → General → Workflow permissions* : cocher « Allow GitHub Actions to create and approve
+  pull requests », sinon la création de PR répond 403 ;
+- créer les labels `automated` et `needs-human-review`. En l'absence de `needs-human-review`, le label
+  existant `need-screening !` est posé ; un label manquant est signalé dans le commentaire, sans bloquer.
+
+Une PR ouverte avec `GITHUB_TOKEN` ne déclenche pas `validate-polls.yml` (protection anti-récursion de
+GitHub). La validation tourne donc dans le job avant l'ouverture, puis `validate-polls.yml` repart quand un
+humain passe la PR en « prête » (`ready_for_review`).
+
 Réglages facultatifs (variables d'environnement) :
 
 - `LLM_PROVIDERS` — impose l'ordre, par exemple `mistral,openrouter` ;
@@ -93,13 +115,42 @@ python mine_poll.py --txt notice.txt      # depuis un texte déjà extrait
 python mine_poll.py --pdf notice.pdf      # depuis un PDF local
 ```
 
+### Préparer une proposition de données locale
+
+Le triage ne produit aucun chiffre par défaut. Pour demander ensuite la
+méthodologie et les tableaux des pages retenues, ajoutez `--pr` : le nom signifie
+« proposition pour une PR », il **n'ouvre pas** de PR et ne modifie rien sans
+`--apply`.
+
+```bash
+# Aperçu des métadonnées, hypothèses et résultats proposés ; aucun fichier modifié
+python mine_poll.py --txt notice.txt --pr --proposal /tmp/proposition.json
+
+# Vérifier la proposition JSON de manière indépendante
+python add_poll.py /tmp/proposition.json --dry-run
+
+# Ajouter les lignes à la fin des CSV et créer les polls/<poll_id>.csv
+python mine_poll.py --txt notice.txt --pr --apply
+```
+
+Chaque valeur est acceptée seulement si la ligne que le modèle cite est retrouvée
+dans la page source (espaces normalisés). Python vérifie aussi les dates,
+effectifs, candidats, sommes à 100 ± 1,5 et les hypothèses. Une table rejetée est
+signalée dans l'aperçu et n'est jamais corrigée silencieusement. Après `--apply`,
+exécutez `pytest -q` et `python merge.py` avant d'ouvrir une PR humaine.
+
 L'aperçu ne demande pas de `GITHUB_TOKEN` : lire une issue publique n'en a pas besoin. Seule la publication
 en exige un, et elle est normalement faite par le workflow :
 
 ```bash
-python mine_poll.py --issue 163 --post           # ne fait rien si l'issue est déjà commentée
-python mine_poll.py --issue 163 --post --force   # réécrit le commentaire existant
+python mine_poll.py --issue 163 --post             # ne fait rien si l'issue est déjà commentée
+python mine_poll.py --issue 163 --post --force     # réécrit le commentaire existant
+python mine_poll.py --issue 163 --post --pr        # CI : branche mining/issue-163 et PR brouillon
 ```
+
+`--post --pr` exige un arbre Git propre et `gh` authentifié : il bascule sur la branche de l'issue, ajoute les
+lignes, lance `pytest -q` et `python merge.py`, puis pousse. Un échec à n'importe quelle étape n'ouvre pas de
+PR et sa raison est écrite dans le commentaire de l'issue.
 
 ### Dépendances
 
@@ -133,7 +184,9 @@ Le modèle lit, Python vérifie. Concrètement :
 - le texte produit par le modèle est échappé avant publication : une notice piégée ne peut pas injecter de
   HTML ni fabriquer le marqueur ;
 - un marqueur invisible en fin de commentaire garantit qu'il n'y en a jamais deux sur une même issue ;
-- le nombre d'appels par exécution est plafonné (`--max-calls`, 40 par défaut).
+- le nombre d'appels par exécution est plafonné (`--max-calls`, 80 par défaut) ;
+- la PR est un brouillon, jamais fusionnée automatiquement ; un candidat absent de `candidats.csv` est
+  ajouté et signalé en tête de PR.
 
 Le modèle peut réfléchir à voix haute — beaucoup de modèles gratuits le font — mais sa réponse doit se
 terminer par une ligne contenant uniquement `OUI` ou `NON`. Une réponse hors format est redemandée une fois

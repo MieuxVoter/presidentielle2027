@@ -19,7 +19,7 @@ Ajoutez une nouvelle ligne avec les informations suivantes :
 
 | Champ | Description | Exemple |
 |-------|-------------|---------|
-| `poll_id` | Identifiant unique au format YYYYMMDD_DDMM_ii_X | `20250326_0327_if_A` |
+| `poll_id` | Identifiant unique au format YYYYMMDD_MMDD_ii_X | `20250326_0327_if_A` |
 | `hypothese` | Identifiant du scénario (H1, H2, etc.) | `H1` |
 | `nom_institut` | Nom de l'institut de sondage | `IFOP` |
 | `commanditaire` | Commanditaire du sondage | `JDD` |
@@ -118,7 +118,7 @@ Une fois la PR mergée, les fichiers `presidentielle2027.csv` et `presidentielle
 
 ## Format de nommage des poll_id
 
-Le format recommandé est : `YYYYMMDD_DDMM_ii_X`
+Le format recommandé est : `YYYYMMDD_MMDD_ii_X`
 
 - `YYYYMMDD` : date de début de l'enquête
 - `MMDD` : date de fin (jour et mois)

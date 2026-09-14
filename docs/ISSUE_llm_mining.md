@@ -6,8 +6,10 @@ importante et pour toute contribution dépassant 400 lignes : c'est celle-ci.
 -->
 # Data-mining des notices par un modèle de langage
 
-> **État au 13 septembre 2026** — le lot 1 (triage) est livré et tourne en production. Les lots 2 à 5 restent
-> à faire. Ce qui a été mesuré en conditions réelles est consigné plus bas.
+> **État au 14 septembre 2026** — le lot 1 (triage) tourne en production. Les lots 2 à 4 sont écrits :
+> extraction locale avec `mine_poll.py --pr`, et PR brouillon automatique à l'ouverture d'une issue
+> `new-poll` ou par `/mining-pr`. Ils n'ont pas encore été mesurés avec un vrai modèle. Ce qui a été mesuré
+> en conditions réelles est consigné plus bas.
 
 ## Le problème
 
@@ -50,11 +52,12 @@ traduction technique de la règle « ne jamais inventer » de `CONTRIBUTING.md`.
 
 ## Ce qui reste manuel, et pourquoi
 
-Le consensus de la discussion est conservé tel quel :
+La discussion demandait que **le dépouillement se déclenche à la main** — « a little friction forces me to
+review the output ». Ce point a été revu : la PR s'ouvre seule quand le triage répond oui. La friction est
+déplacée sur la relecture, qui reste obligatoire :
 
-- **le dépouillement se déclenche à la main** — « a little friction forces me to review the output ». Seule
-  la question de tri (« y a-t-il des intentions de vote ? ») est automatique, parce qu'elle ne produit
-  aucune donnée : elle pose un label ;
+- la PR est ouverte **en brouillon** : GitHub refuse de la fusionner tant qu'un humain ne l'a pas marquée
+  prête, et elle porte une case « comparé au PDF » ;
 - **toute PR est relue par un humain avant merge.** Jamais d'auto-merge, sur aucun chemin.
 
 ## Les pièges que réservent les notices
@@ -104,14 +107,28 @@ mergé. `CONTRIBUTING.md` plafonne une PR à 400 lignes, ce qui est respecté lo
 | Lot | Ce qu'on voit | Contenu |
 |---|---|---|
 | **1 — Le triage** ✅ *livré* | À l'ouverture d'une issue `new-poll` : un commentaire « Oui / Non, il y a des intentions de vote » et le label correspondant. Relançable par `/triage` | Téléchargement du TXT (+ repli PDF), client LLM, la question de tri, le job automatique |
-| **2 — Le décompte** | Le commentaire devient « Oui : 3 hypothèses pour le 1er tour et 2 pour le second tour » | Question « quel tour ? », question « libellé de l'hypothèse », vérification des citations |
-| **3 — La fiche détaillée** | `/llm-mining` produit une fiche : candidats, pourcentages, candidats absents de `candidats.csv`, échantillons, populations — chacun avec sa citation source | Lecture des tableaux, méthodologie, contrôles arithmétiques |
-| **4 — La PR automatique** | `/llm-mining --pr` ouvre une PR relisible avec `polls.csv` et `polls/<poll_id>.csv` remplis | Rattachement d'hypothèse, `poll_id`, écriture, barrière `pytest` + `merge.py` avant d'ouvrir la PR |
+| **2 — Le décompte** | **Livré en local** avec `mine_poll.py --pr` : tour et hypothèse de chaque tableau validé | Question « quel tour ? », citations et jeux de candidats |
+| **3 — La fiche détaillée** | **Livrée en local** : méthodologie, candidats, pourcentages, effectifs et populations forment une proposition CSV | Lecture des tableaux, méthodologie, contrôles arithmétiques |
+| **4 — La PR automatique** | **Écrit** : à l'ouverture d'une issue `new-poll` ou par `/mining-pr`, une PR brouillon relisible avec `polls.csv` et `polls/<poll_id>.csv` remplis | Workflow, branche, PR brouillon, barrière `pytest` + `merge.py` |
 | **5 — La relecture côte à côte** | Une page qui affiche la page de notice à gauche, les lignes proposées à droite | C'est ce qui rend la relecture rapide, donc ce qui rend l'automatisation acceptable |
 
 Le lot 1 a de la valeur même si rien d'autre n'est fait : il rend la liste d'issues filtrable et évite
 d'ouvrir des notices sans intentions de vote. Les lots sont indépendants et peuvent être pris par des
 personnes différentes.
+
+### Extraction locale livrée après le lot 1
+
+`mine_poll.py --txt notice.txt --pr` enchaîne E2 (méthodologie) puis E3 (une requête
+par page de tableau listée par E1), construit les lignes qui seraient ajoutées et les
+affiche sans écrire. `--apply` les ajoute exclusivement en fin de CSV ; `--proposal
+fichier.json` permet de vérifier ou rejouer l'écriture avec `add_poll.py`.
+
+Les garde-fous ne sont pas déclaratifs : E2 refuse une date, un effectif ou une
+population non justifiés par une citation de la page, E3 refuse une valeur hors de
+sa ligne source, une somme différente de 100 ± 1,5, un second tour qui n'a pas deux
+candidats, et les jeux de candidats dupliqués. Les candidats inconnus et les
+hypothèses inédites sont proposés explicitement, jamais ajoutés à l'insu du lecteur.
+Le lot 4 branche cette extraction sur le workflow : voir [LLM_MINING.md](LLM_MINING.md).
 
 ## Garde-fous
 

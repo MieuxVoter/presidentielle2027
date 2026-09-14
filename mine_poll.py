@@ -14,6 +14,7 @@ Stdlib uniquement, sauf --pdf qui importe pdfplumber à la demande.
 """
 
 import argparse
+import datetime as dt
 import json
 import os
 import sys
@@ -34,9 +35,10 @@ from check_new_polls import (
     notice_links,
 )
 from mining import client as llm
-from mining import notice, render, steps
+from mining import csvio, extraction, notice, pull_request, render, steps
+from mining.proposal import ProposalError, build as build_proposal
 
-DEFAULT_MAX_CALLS = 40
+DEFAULT_MAX_CALLS = 80
 
 
 class NoticeUnavailable(Exception):
@@ -117,6 +119,38 @@ def resolve_text(args, repo, token):
     return notice_text_for(issue_poll_filename(repo, args.issue, token))
 
 
+def source_filename(args, repo, token, text):
+    """Le PDF de référence, nécessaire pour écrire une proposition traçable."""
+    if args.issue:
+        return issue_poll_filename(repo, args.issue, token)
+    header = notice.parse_header(text)
+    return Path(header.get("source_pdf") or args.pdf or args.txt).name
+
+
+def notice_date(text):
+    """La date de création de la notice amont borne la date de terrain E2."""
+    raw = notice.parse_header(text).get("pdf_creation-date", "")[:10]
+    try:
+        return dt.date.fromisoformat(raw) if raw else None
+    except ValueError:
+        return None
+
+
+def preview_proposal(proposal, failures):
+    """Aperçu compact et copiable de la proposition."""
+    print("\n" + "-" * 70)
+    print("Proposition de données (à vérifier avant toute PR)")
+    for poll in proposal.polls:
+        print(f"- {poll['poll_id']} — {poll['tour']} — {poll['hypothese']}")
+    if proposal.candidates:
+        print("Candidats nouveaux : " + ", ".join(row["complete_name"] for row in proposal.candidates))
+    if proposal.hypotheses:
+        print("Hypothèses nouvelles : " + ", ".join(row["id_hypothese"] for row in proposal.hypotheses))
+    if failures:
+        print("Tableaux écartés :\n- " + "\n- ".join(failures))
+    print("-" * 70)
+
+
 def set_label(repo, number, token, issue, triage):
     """Accorde les labels de triage de l'issue au résultat, sans écraser un humain sur un échec."""
     current = [entry.get("name", "") for entry in issue.get("labels", [])]
@@ -173,8 +207,19 @@ def main(argv=None):
     parser.add_argument(
         "--max-calls", type=int, default=DEFAULT_MAX_CALLS, help=f"plafond d'appels (défaut: {DEFAULT_MAX_CALLS})"
     )
+    parser.add_argument(
+        "--pr",
+        action="store_true",
+        help="extraire E2/E3 ; avec --post, créer ou mettre à jour une PR brouillon",
+    )
+    parser.add_argument("--apply", action="store_true", help="avec --pr, ajouter la proposition dans l'arbre local")
+    parser.add_argument("--proposal", help="avec --pr, écrire aussi la proposition JSON à ce chemin")
     args = parser.parse_args(argv)
 
+    if args.apply and not args.pr:
+        parser.error("--apply exige --pr")
+    if args.proposal and not args.pr:
+        parser.error("--proposal exige --pr")
     repo = os.environ.get("GITHUB_REPOSITORY", "MieuxVoter/presidentielle2027")
     token = os.environ.get("GITHUB_TOKEN")
     if args.post:
@@ -193,7 +238,8 @@ def main(argv=None):
 
     conversation = llm.Client(providers=providers, max_calls=args.max_calls)
     try:
-        pages = notice.strip_empty(notice.split_pages(resolve_text(args, repo, token)))
+        text = resolve_text(args, repo, token)
+        pages = notice.strip_empty(notice.split_pages(text))
         if not pages:
             raise NoticeUnavailable("le texte de la notice est vide ou ne comporte aucun séparateur de page.")
         print(f"📄 {len(pages)} page(s) à examiner")
@@ -204,8 +250,63 @@ def main(argv=None):
         print(f"⚠️  Notice non analysable : {exc}")
         result = steps.Triage(failed=str(exc))
 
-    model = conversation.log[-1]["model"] if conversation.log else ""
-    body = render.comment(result, model)
+    pr_status = ""
+    if args.pr:
+        if result.verdict != "oui":
+            message = "Aucune PR : le triage n'a pas confirmé d'intentions de vote."
+            print("\n" + message)
+            pr_status = f"> ⚠️ {message}"
+        else:
+            mined = extraction.extract(
+                conversation,
+                pages,
+                result,
+                Path(__file__).resolve().parent / "candidats.csv",
+                Path(__file__).resolve().parent / "polls.csv",
+                notice_date(text),
+            )
+            if not mined.methodology:
+                message = "Aucune PR : les métadonnées E2 ont été rejetées. " + "; ".join(mined.failures)
+                print("\n" + message)
+                pr_status = f"> ⚠️ {message}"
+            else:
+                try:
+                    proposal = build_proposal(
+                        source_filename(args, repo, token, text),
+                        mined.methodology,
+                        mined.tables,
+                        Path(__file__).resolve().parent,
+                    )
+                    proposal.failures.extend(mined.failures)
+                    if not args.post:
+                        preview_proposal(proposal, mined.failures)
+                    if args.proposal and not args.post:
+                        Path(args.proposal).write_text(
+                            json.dumps(proposal.to_dict(), ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+                        )
+                        print(f"Proposition JSON écrite : {args.proposal}")
+                    root = Path(__file__).resolve().parent
+                    if args.post:
+                        branch = pull_request.prepare_branch(args.issue, root)
+                        csvio.apply(proposal, root)
+                        models = [entry["model"] for entry in conversation.log if entry.get("model")]
+                        created = pull_request.create_or_update(
+                            args.issue, repo, proposal, root, models=models, calls=conversation.calls
+                        )
+                        pr_status = f"> ✅ PR brouillon créée ou mise à jour : [#{created.number}]({created.url})."
+                        if created.labels_warning:
+                            pr_status += f" {created.labels_warning}."
+                        print(f"✅ {branch} → {created.url}")
+                    elif args.apply:
+                        csvio.apply(proposal, Path(__file__).resolve().parent)
+                        print("Proposition ajoutée localement. Lancez pytest puis python merge.py avant la PR.")
+                except (ProposalError, pull_request.PullRequestError) as exc:
+                    message = f"Aucune PR : {exc}"
+                    print("\n" + message)
+                    pr_status = f"> ⚠️ {message}"
+
+    model = conversation.log[0]["model"] if conversation.log else ""
+    body = render.comment(result, model, pr=pr_status)
     label = render.label(result)
 
     if args.post:

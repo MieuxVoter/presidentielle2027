@@ -1,0 +1,35 @@
+Voici une page d'une notice de sondage, contenant éventuellement un ou plusieurs
+tableaux d'intentions de vote. Pour CHAQUE tableau, relève le tour, les effectifs
+indiqués sur la page et chaque candidat.
+
+NOMS AUTORISÉS
+Écris un candidat exactement comme dans cette liste. S'il n'y figure pas, écris
+son nom exactement comme dans la page, afin qu'il soit signalé :
+$candidats
+
+RÈGLES
+1. S'il y a plusieurs colonnes, prends « Publié » ; à défaut « Redressé » ; à
+   défaut la première. Ne calcule jamais de valeur.
+2. « <1% » s'écrit 0.5 ; « 1,5 » s'écrit 1.5 ; les chiffres peuvent ne pas avoir
+   le signe %.
+3. Exclue « N'expriment pas d'intention de vote », « Abstention, vote blanc ou
+   nul », et toute ligne sans candidat.
+4. Les effectifs sont seulement ceux de la page du tableau, jamais ceux de la
+   note sur les marges d'erreur.
+5. Recopie après chaque valeur la ligne source entière, telle qu'elle apparaît
+   dans la page. Si un chiffre est illisible, n'écris pas ce tableau.
+
+FORMAT DE RÉPONSE — un bloc par tableau, dans l'ordre de la page :
+TABLEAU
+TOUR: 1er Tour
+EFFECTIFS: exprimé une intention de vote = 1188 | certains d'aller voter = 930
+Nathalie Arthaud | 0.5 | Nathalie Arthaud <1% 1% 1% 1%
+Jean-Luc Mélenchon | 16 | Jean-Luc Mélenchon 16% 13% 13% 16%
+FIN
+
+Le séparateur est | et non une virgule. Si la page ne contient aucun tableau
+d'intentions de vote : AUCUN TABLEAU.
+
+--- DÉBUT DE LA PAGE $number ---
+$page
+--- FIN DE LA PAGE $number ---

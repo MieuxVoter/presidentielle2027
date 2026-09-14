@@ -21,6 +21,7 @@ PROMPTS_DIR = Path(__file__).resolve().parent / "prompts"
 YES = {"oui", "yes", "o"}
 NO = {"non", "no", "n"}
 PAGES_RE = re.compile(r"^\s*pages?\s*[:=]\s*(.*)$", re.IGNORECASE)
+METHODO_RE = re.compile(r"^\s*meth?odo(?:logie)?\s*[:=]\s*(.*)$", re.IGNORECASE)
 # Les modèles à raisonnement des catalogues gratuits pensent à voix haute avant
 # de conclure : il leur faut de la place, sinon la conclusion est tronquée. Une
 # notice Harris Interactive de 72 pages a épuisé 1200 tokens avant d'y parvenir.
@@ -54,7 +55,7 @@ def _single_word(line):
 
 
 def read_answer(text):
-    """(verdict, pages citées) — lecture brute de la réponse, sans vérification.
+    """(verdict, pages citées, pages de méthodologie), sans vérification.
 
     verdict vaut True, False, ou None quand la réponse est inexploitable. La
     dernière conclusion l'emporte : un modèle qui hésite puis tranche est suivi
@@ -62,11 +63,14 @@ def read_answer(text):
     """
     lines = [line for line in (text or "").splitlines() if line.strip()]
 
-    pages = []
+    pages, methodo_pages = [], []
     for line in lines:
         match = PAGES_RE.match(line)
         if match:
             pages = [int(n) for n in re.findall(r"\d+", match.group(1))]
+        match = METHODO_RE.match(line)
+        if match:
+            methodo_pages = [int(n) for n in re.findall(r"\d+", match.group(1))]
 
     verdict = None
     for line in lines:
@@ -76,7 +80,7 @@ def read_answer(text):
         elif word in NO:
             verdict = False
 
-    return verdict, list(dict.fromkeys(pages))
+    return verdict, list(dict.fromkeys(pages)), list(dict.fromkeys(methodo_pages))
 
 
 def split_answer(text):
@@ -102,6 +106,8 @@ class Triage:
 
     pages_with_intentions: list = field(default_factory=list)
     invalid_pages: list = field(default_factory=list)
+    methodo_pages: list = field(default_factory=list)
+    invalid_methodo_pages: list = field(default_factory=list)
     failed: str = ""
     answered_no: bool = False
     reasoning: str = ""
@@ -132,7 +138,7 @@ def triage(client, pages):
 
     try:
         answer = client.ask(system, question, max_tokens=ANSWER_TOKENS)
-        verdict, cited = read_answer(answer.text)
+        verdict, cited, methodo_cited = read_answer(answer.text)
         if verdict is None:
             # Une réponse coupée par la limite n'a pas ignoré la consigne : elle a
             # manqué de place. On lui en donne davantage en lui demandant d'aller
@@ -141,7 +147,7 @@ def triage(client, pages):
                 answer = client.ask(system, question + BREF, max_tokens=ANSWER_TOKENS_RETRY)
             else:
                 answer = client.ask(system, question + RAPPEL, max_tokens=ANSWER_TOKENS)
-            verdict, cited = read_answer(answer.text)
+            verdict, cited, methodo_cited = read_answer(answer.text)
     except BudgetExceeded as exc:
         result.failed = f"budget épuisé ({exc})"
         return result
@@ -164,6 +170,8 @@ def triage(client, pages):
     # Vérification : un numéro de page absent du document est écarté, pas corrigé.
     result.pages_with_intentions = sorted(n for n in cited if n in valid)
     result.invalid_pages = sorted(n for n in cited if n not in valid)
+    result.methodo_pages = sorted(n for n in methodo_cited if n in valid)
+    result.invalid_methodo_pages = sorted(n for n in methodo_cited if n not in valid)
     if not result.pages_with_intentions:
         # Un OUI sans page vérifiable ne dit pas où regarder, et rien ne garantit
         # que le modèle a lu le document plutôt que deviné.
