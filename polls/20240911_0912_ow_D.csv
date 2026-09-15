@@ -1,9 +1,9 @@
 candidat,intentions,erreur_sup,erreur_inf
-Nathalie Arthaud,1,,
-Philippe Poutou,2,,
-Jean-Luc Mélenchon,14,,
-Gabriel Attal,10,,
-Édouard Philippe,25,,
-Laurent Wauquiez,6,,
-Éric Zemmour,4,,
-Marine Le Pen,38,,
+Nathalie Arthaud,1,0.78,-0.78
+Philippe Poutou,2,1.1,-1.1
+Jean-Luc Mélenchon,14,2.73,-2.73
+Gabriel Attal,10,2.36,-2.36
+Édouard Philippe,25,3.41,-3.41
+Laurent Wauquiez,6,1.87,-1.87
+Éric Zemmour,4,1.54,-1.54
+Marine Le Pen,38,3.82,-3.82
