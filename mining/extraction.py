@@ -16,10 +16,22 @@ from pathlib import Path
 
 from merge import _norm
 from mining import steps
-from mining.client import LLMError
+from mining.client import BudgetExceeded, LLMError, QuotaExhausted
 
-METHOD_TOKENS = 2500
-TABLE_TOKENS = 4000
+# Les modèles gratuits réfléchissent avant d'écrire les lignes imposées : à 2500
+# tokens, E2 a été coupée sur la notice Ipsos BVA de l'issue #193.
+METHOD_TOKENS = 4000
+METHOD_TOKENS_RETRY = 10000
+# Le raisonnement compte dans max_tokens : ~3000 tokens pour une page Harris.
+TABLE_TOKENS = 6000
+TABLE_TOKENS_RETRY = 12000
+# pdfplumber (layout=True) met les colonnes côte à côte : une phrase de
+# méthodologie est entrecoupée des mots de la colonne voisine. Cas réel, issue
+# #194 : 10 mots entre « du 08 au 10 » et « septembre 2026 ».
+CITATION_MAX_GAP = 25
+NUMBER_RE = re.compile(r"\d+(?:[.,]\d+)?")
+# Erreurs après lesquelles interroger les pages suivantes échouerait de même.
+STOPPING_ERRORS = (BudgetExceeded, QuotaExhausted)
 FRENCH_MONTHS = {
     "janvier": 1,
     "fevrier": 2,
@@ -95,6 +107,9 @@ class Extraction:
     methodology: Methodology | None = None
     tables: list = field(default_factory=list)
     failures: list = field(default_factory=list)
+    # Appels au modèle impossibles (quota, réseau) : la proposition serait
+    # incomplète, avec des lettres de poll_id décalées. Aucune PR dans ce cas.
+    api_failures: list = field(default_factory=list)
 
 
 def normalized_text(text):
@@ -104,10 +119,44 @@ def normalized_text(text):
     return " ".join(text.split())
 
 
-def citation_in_page(citation, page):
-    """La citation est-elle vraiment dans la page, après espaces équivalents ?"""
+_WORD_EDGES = ".,;:!?()[]«»\"'"
+
+
+def _words(text):
+    words = (word.strip(_WORD_EDGES).casefold() for word in normalized_text(text).split())
+    return [word for word in words if word]
+
+
+def citation_in_page(citation, page, max_gap=0):
+    """La citation est-elle vraiment dans la page, après espaces équivalents ?
+
+    max_gap=0 : d'un seul tenant. C'est le cas des lignes de tableau E3, où
+    tolérer des mots intercalés laisserait passer un chiffre de la colonne voisine.
+
+    max_gap>0 : tous les mots de la citation, dans l'ordre, avec au plus max_gap
+    mots intercalés entre deux mots consécutifs — ceux des colonnes que
+    pdfplumber pose sur la même ligne. Un mot absent ou déplacé reste refusé.
+    """
     wanted = normalized_text(citation)
-    return bool(wanted) and wanted in normalized_text(page.text)
+    if not wanted:
+        return False
+    if wanted in normalized_text(page.text):
+        return True
+    words, text = _words(citation), _words(page.text)
+    if not max_gap or not words:
+        return False
+    for start, word in enumerate(text):
+        if word != words[0]:
+            continue
+        position = start
+        for following in words[1:]:
+            window = text[position + 1 : position + 2 + max_gap]
+            if following not in window:
+                break
+            position += 1 + window.index(following)
+        else:
+            return True
+    return False
 
 
 def _numbers(text):
@@ -146,7 +195,8 @@ def _source_has_date(source, value):
     for name, month in FRENCH_MONTHS.items():
         if month != date.month:
             continue
-        pattern = rf"(?<!\d){date.day}(?:er)?(?:\s+(?:au|a|à|et|-)\s+\d+(?:er)?)?\s+{name}\s+{date.year}(?!\d)"
+        # « du 08 au 10 septembre » : le jour peut porter un zéro en tête (#194).
+        pattern = rf"(?<!\d)0?{date.day}(?:er)?(?:\s+(?:au|a|à|et|-)\s+\d+(?:er)?)?\s+{name}\s+{date.year}(?!\d)"
         if re.search(pattern, compact):
             return True
     return False
@@ -224,9 +274,9 @@ def parse_methodology(answer, pages, institutes, populations, notice_date=None):
     page_text = "\n".join(page.text for page in pages)
     page_proxy = type("MethodologyPages", (), {"text": page_text})()
     for field in ("SOURCE_DATES", "SOURCE_ECHANTILLON"):
-        if not citation_in_page(data[field], page_proxy):
+        if not citation_in_page(data[field], page_proxy, CITATION_MAX_GAP):
             raise ValidationError(f"{field} est introuvable dans les pages de méthodologie")
-    if data["SOURCE_INSCRITS"] and not citation_in_page(data["SOURCE_INSCRITS"], page_proxy):
+    if data["SOURCE_INSCRITS"] and not citation_in_page(data["SOURCE_INSCRITS"], page_proxy, CITATION_MAX_GAP):
         raise ValidationError("SOURCE_INSCRITS est introuvable dans les pages de méthodologie")
     if not _source_has_date(data["SOURCE_DATES"], data["DEBUT"]) or not _source_has_date(
         data["SOURCE_DATES"], data["FIN"]
@@ -256,16 +306,34 @@ def _parse_samples(value):
         return ()
     parsed = []
     for item in value.split("|"):
-        match = re.match(r"^\s*(.*?)\s*=\s*([\d\s\u202f]+)\s*$", item)
+        if not re.search(r"\d", item):
+            # « certains d'aller voter = » sans nombre : rien à relever. Cette
+            # entrée vide faisait planter tout le run (int("")), issue #194.
+            continue
+        match = re.match(r"^\s*(.*?)\s*=\s*(\d[\d\s\u202f]+)\s*$", item)
         if not match:
             raise ValidationError("EFFECTIFS doit contenir « libellé = nombre »")
-        label = SAMPLE_LABELS.get(_norm(match.group(1)))
+        key = _norm(match.group(1))
+        # Chaque institut formule la base à sa façon ; Harris Interactive écrit
+        # « certains d'aller voter et ayant exprimé une intention de vote ».
+        label = SAMPLE_LABELS.get(key) or (
+            "certains d'aller voter"
+            if "certain" in key
+            else "exprimé une intention de vote" if "exprim" in key else None
+        )
         if not label:
             raise ValidationError(f"libellé d'effectif inconnu : {match.group(1).strip()}")
         count = int(match.group(2).replace(" ", "").replace("\u202f", ""))
         if count <= 0:
             raise ValidationError("un effectif doit être positif")
         parsed.append((label, count))
+    # Une seule base écrite sous deux libellés (Harris : « exprimé = 1339 |
+    # certains = 1339 ») remplirait deux sous-échantillons identiques : on ne
+    # garde que la base la plus étroite.
+    counts = [count for _, count in parsed]
+    parsed = [
+        (label, count) for label, count in parsed if counts.count(count) == 1 or label == "certains d'aller voter"
+    ]
     labels = [label for label, _ in parsed]
     if len(labels) != len(set(labels)):
         raise ValidationError("un effectif est présent deux fois")
@@ -298,10 +366,17 @@ def _parse_table(lines, page, known):
         if field:
             fields[field.group(1).upper()] = field.group(2)
             continue
-        pieces = [piece.strip() for piece in line.split("|", 2)]
-        if len(pieces) != 3 or not all(pieces):
+        pieces = [piece.strip() for piece in line.split("|")]
+        # Le candidat précède le premier champ numérique. Cela accepte aussi la
+        # ligne source recopiée en tête, « ligne | candidat | valeur | ligne »
+        # (cas réel, issue #194 page 37), sans exiger qu'une ligne source soit
+        # dépourvue de « | ».
+        index = next((i for i in range(1, len(pieces) - 1) if NUMBER_RE.fullmatch(pieces[i])), None)
+        if index is None:
             raise ValidationError("ligne de tableau attendue : candidat | valeur | ligne source")
-        name, number, source = pieces
+        name, number, source = pieces[index - 1], pieces[index], "|".join(pieces[index + 1 :]).strip()
+        if not name or not source:
+            raise ValidationError("ligne de tableau attendue : candidat | valeur | ligne source")
         canonical = {_norm(candidate): candidate for candidate in known}.get(_norm(name), name)
         value = _decimal(number)
         if not citation_in_page(source, page):
@@ -366,7 +441,16 @@ def parse_tables(answer, page, known_candidates):
             tables.append(_parse_table(block, page, known_candidates))
         except ValidationError as exc:
             failures.append(f"page {page.number}, tableau {index} : {exc}")
-    if not blocks and not no_table:
+        except ValueError as exc:
+            # Une conversion imprévue sur une réponse de modèle ne rejette que ce
+            # tableau : elle ne doit pas arrêter le run ni priver l'issue de commentaire.
+            failures.append(f"page {page.number}, tableau {index} : réponse illisible ({exc})")
+    if not blocks and no_table:
+        # E3 n'est interrogée que sur les pages où le triage a vu un tableau : un
+        # « AUCUN TABLEAU » y est un oubli à relancer, pas une réponse (cas réel,
+        # issue #194 page 43, tableau Hollande-Philippe bien présent).
+        failures.append(f"page {page.number} : le modèle répond AUCUN TABLEAU sur une page retenue par le triage")
+    elif not blocks:
         failures.append(f"page {page.number} : aucun bloc TABLEAU exploitable")
     return tables, failures
 
@@ -382,15 +466,25 @@ def _ask_methodology(client, pages, institutes, populations, notice_date, log=_s
         populations="\n".join(f"- {name}" for name in populations),
     )
     last = None
+    budget = METHOD_TOKENS
     for attempt in range(2):
-        answer = client.ask(steps.system_prompt(), prompt, max_tokens=METHOD_TOKENS)
+        answer = client.ask(steps.system_prompt(), prompt, max_tokens=budget)
         try:
             return parse_methodology(answer.text, pages, institutes, populations, notice_date)
         except ValidationError as exc:
             last = exc
-            cut = " (réponse tronquée)" if getattr(answer, "truncated", False) else ""
+            truncated = getattr(answer, "truncated", False)
+            cut = " (réponse tronquée)" if truncated else ""
             log(f"   ✗ E2 essai {attempt + 1} rejeté{cut} : {exc}\n   fin de la réponse : {tail(answer.text)}")
-            prompt += "\nRappel : réponds uniquement avec toutes les lignes imposées et des citations présentes dans ces pages."
+            if truncated:
+                # Coupée avant les lignes imposées : plus de place, et droit au but.
+                budget = METHOD_TOKENS_RETRY
+                prompt += "\nSois bref : ne détaille pas ton raisonnement, écris directement les lignes imposées."
+            else:
+                prompt += (
+                    "\nRappel : réponds uniquement avec toutes les lignes imposées et des citations présentes dans"
+                    " ces pages."
+                )
     raise ValidationError(f"E2 rejetée après relance : {last}")
 
 
@@ -425,6 +519,7 @@ def extract(client, pages, triage, candidates_path, polls_path, notice_date=None
         # Budget épuisé ou fournisseurs muets : l'appelant doit pouvoir publier
         # la raison sous l'issue au lieu de faire échouer le job.
         result.failures.append(f"appel E2 impossible ({exc})")
+        result.api_failures.append(f"E2 : {exc}")
         return result
 
     method = result.methodology
@@ -435,6 +530,7 @@ def extract(client, pages, triage, candidates_path, polls_path, notice_date=None
 
     known = candidate_names(candidates_path)
     seen_sets = set()
+    stop = False
     for number in triage.pages_with_intentions:
         page = selected.get(number)
         if not page:
@@ -448,6 +544,13 @@ def extract(client, pages, triage, candidates_path, polls_path, notice_date=None
             answer = client.ask(steps.system_prompt(), prompt, max_tokens=TABLE_TOKENS)
         except LLMError as exc:  # BudgetExceeded compris ; un bug de code doit rester visible
             result.failures.append(f"page {number} : appel E3 impossible ({exc})")
+            result.api_failures.append(f"page {number} : {exc}")
+            log(f"   ✗ page {number} : appel E3 impossible ({exc})")
+            if isinstance(exc, STOPPING_ERRORS):
+                log("   ⏹ arrêt : quota ou plafond atteint, pages suivantes non interrogées")
+                break
+            # Réponse vide, réseau : la page suivante peut réussir, les tableaux
+            # obtenus restent utiles même si la proposition est incomplète.
             continue
         tables, failures = parse_tables(answer.text, page, known)
         # Une page annoncée par E1 devrait normalement donner un tableau. Une
@@ -457,8 +560,11 @@ def extract(client, pages, triage, candidates_path, polls_path, notice_date=None
             try:
                 retry = client.ask(
                     steps.system_prompt(),
-                    prompt + "\nRappel : utilise exactement des blocs TABLEAU…FIN et des citations de cette page.",
-                    max_tokens=TABLE_TOKENS,
+                    prompt
+                    + "\nRappel : le triage a repéré au moins un tableau d'intentions de vote sur cette page. Relis-la et"
+                    " utilise exactement des blocs TABLEAU…FIN et des citations de cette page.",
+                    # Coupée faute de place : lui en redonner, sinon même coupure.
+                    max_tokens=TABLE_TOKENS_RETRY if getattr(answer, "truncated", False) else TABLE_TOKENS,
                 )
                 retry_tables, retry_failures = parse_tables(retry.text, page, known)
                 if retry_tables:
@@ -467,6 +573,8 @@ def extract(client, pages, triage, candidates_path, polls_path, notice_date=None
                     failures.extend(retry_failures)
             except LLMError as exc:
                 failures.append(f"page {number} : relance E3 impossible ({exc})")
+                result.api_failures.append(f"page {number} : {exc}")
+                stop = isinstance(exc, STOPPING_ERRORS)
         summary = ", ".join(f"{table.tour} ({len(table.values)} candidats)" for table in tables) or "aucun"
         log(f"   page {number} : tableau(x) valide(s) : {summary}")
         for failure in failures:
@@ -482,4 +590,7 @@ def extract(client, pages, triage, candidates_path, polls_path, notice_date=None
                 continue
             seen_sets.add(key)
             result.tables.append(table)
+        if stop:
+            log("   ⏹ arrêt : quota ou plafond atteint, pages suivantes non interrogées")
+            break
     return result

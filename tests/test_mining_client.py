@@ -117,3 +117,87 @@ def test_openrouter_recoit_au_plus_trois_modeles(monkeypatch):
     conversation.ask("sys", "q")
     assert envoyes[0]["models"] == ["a:free", "b:free", "c:free"]
     assert envoyes[0]["model"] == "a:free"
+
+
+def test_contenu_vide_avec_raisonnement_vaut_troncature(monkeypatch):
+    # Cas réel, E3 sur l'issue #194 : le raisonnement épuise max_tokens, le contenu
+    # revient vide avec finish_reason « stop ». Ce n'est pas une « réponse vide » à
+    # rejouer au même budget, mais un manque de place à signaler.
+    appels = []
+
+    def post(provider, payload):
+        appels.append(payload)
+        return {
+            "model": "m",
+            "usage": {"total_tokens": 4000},
+            "choices": [{"message": {"content": "", "reasoning": "Line11: ..."}, "finish_reason": "stop"}],
+        }
+
+    answer = _client_factice(monkeypatch, post).ask("sys", "q")
+    assert answer.truncated is True and answer.text == ""
+    assert len(appels) == 1
+
+
+def test_contenu_vide_sans_raisonnement_reste_une_reponse_vide(monkeypatch):
+    monkeypatch.setattr(llm.time, "sleep", lambda seconds: None)
+    appels = []
+
+    def post(provider, payload):
+        appels.append(payload)
+        return _corps("")
+
+    conversation = _client_factice(monkeypatch, post)
+    # Le diagnostic doit dire quel modèle a rendu le vide, pour les logs du job.
+    with pytest.raises(llm.LLMError, match=r"réponse vide \(modèle m, finish_reason stop, sans raisonnement\)"):
+        conversation.ask("sys", "q")
+    assert len(appels) == llm.ATTEMPTS
+
+
+def test_reponse_vide_retentee_avec_un_autre_modele_de_tete(monkeypatch):
+    # Cas réel, issue #194 : réponses vides intermittentes d'OpenRouter.
+    monkeypatch.setattr(llm.time, "sleep", lambda seconds: None)
+    modeles = ("a:free", "b:free", "c:free")
+    conversation = llm.Client(providers=(llm.Provider("openrouter", "https://x.test", "k", modeles),))
+    envoyes = []
+
+    def post(provider, payload):
+        envoyes.append(payload)
+        return _corps("" if len(envoyes) == 1 else "OUI\nPAGES: 3")
+
+    monkeypatch.setattr(conversation, "_post", post)
+    assert conversation.ask("sys", "q").text == "OUI\nPAGES: 3"
+    assert [p["model"] for p in envoyes] == ["a:free", "b:free"]
+    assert envoyes[1]["models"] == ["b:free", "c:free", "a:free"]
+
+
+def _http_429(headers):
+    from urllib.error import HTTPError
+
+    def fake_urlopen(request, timeout=None):
+        fake_urlopen.calls += 1
+        raise HTTPError(request.full_url, 429, "Too Many Requests", headers, None)
+
+    fake_urlopen.calls = 0
+    return fake_urlopen
+
+
+def test_quota_journalier_epuise_n_est_pas_retente(monkeypatch):
+    # Cas réel, issue #194 : « free-models-per-day », 50 requêtes par jour.
+    monkeypatch.setattr(llm.time, "sleep", lambda seconds: None)
+    fake = _http_429({"X-RateLimit-Remaining": "0", "X-RateLimit-Reset": "1789430400000"})
+    monkeypatch.setattr(llm, "urlopen", fake)
+    conversation = llm.Client(providers=(llm.Provider("openrouter", "https://x.test", "k", ("m",)),))
+    # Tous les fournisseurs à court de quota : QuotaExhausted, pour arrêter les pages suivantes.
+    with pytest.raises(llm.QuotaExhausted, match=r"quota épuisé chez openrouter \(remise à zéro 00:00 UTC\)"):
+        conversation.ask("sys", "q")
+    assert fake.calls == 1
+
+
+def test_un_429_passager_reste_retente(monkeypatch):
+    monkeypatch.setattr(llm.time, "sleep", lambda seconds: None)
+    fake = _http_429({"X-RateLimit-Remaining": "3"})
+    monkeypatch.setattr(llm, "urlopen", fake)
+    conversation = llm.Client(providers=(llm.Provider("openrouter", "https://x.test", "k", ("m",)),))
+    with pytest.raises(llm.LLMError, match="HTTP 429"):
+        conversation.ask("sys", "q")
+    assert fake.calls == llm.ATTEMPTS

@@ -74,7 +74,16 @@ les fournisseurs dans l'ordre et passe au suivant en cas de quota épuisé ou de
 Sans aucune clé, le workflow s'arrête avec un avertissement au lieu d'échouer.
 
 Une notice IFOP de 13 hypothèses consomme une quinzaine de requêtes, le double avec les relances : les
-50 requêtes par jour du palier gratuit d'OpenRouter s'épuisent vite. Ajouter `MISTRAL_API_KEY` en relais.
+50 requêtes par jour du palier gratuit d'OpenRouter s'épuisent vite : la limite vaut pour **tout le compte**,
+changer de clé n'y fait rien, et elle se remet à zéro à 00:00 UTC. Deux remèdes : ajouter `MISTRAL_API_KEY` en
+relais, ou créditer le compte OpenRouter de 10 crédits, ce qui porte la limite à 1000 requêtes gratuites par jour.
+
+Si un appel au modèle est impossible en cours de dépouillement, les tableaux déjà vérifiés ne sont **pas perdus** :
+la PR brouillon est ouverte avec eux, marquée « incomplète », et liste les pages manquantes. Une réponse vide ou
+une coupure réseau n'empêche pas d'interroger les pages suivantes ; un quota épuisé, si. Relancer `/mining-pr`
+complète le dépouillement, avant comme après la fusion : les hypothèses déjà enregistrées pour la notice ne sont
+pas reproposées, et les nouvelles prennent les lettres de `poll_id` encore libres — l'ordre des lettres peut alors
+ne plus suivre celui des pages.
 
 **Réglages du dépôt pour la PR automatique**, à faire une fois à la main :
 
@@ -134,7 +143,10 @@ python mine_poll.py --txt notice.txt --pr --apply
 ```
 
 Chaque valeur est acceptée seulement si la ligne que le modèle cite est retrouvée
-dans la page source (espaces normalisés). Python vérifie aussi les dates,
+dans la page source (espaces normalisés). Pour la méthodologie (E2), les mots de
+la citation doivent figurer dans l'ordre, mais peuvent être entrecoupés de ceux
+d'une colonne voisine, que `pdfplumber` place sur la même ligne ; les lignes de
+tableau (E3), elles, doivent être retrouvées d'un seul tenant. Python vérifie aussi les dates,
 effectifs, candidats, sommes à 100 ± 1,5 et les hypothèses. Une table rejetée est
 signalée dans l'aperçu et n'est jamais corrigée silencieusement. Après `--apply`,
 exécutez `pytest -q` et `python merge.py` avant d'ouvrir une PR humaine.

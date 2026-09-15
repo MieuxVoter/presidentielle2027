@@ -108,3 +108,15 @@ def test_seule_une_pr_ouverte_est_reutilisee(monkeypatch, tmp_path, state, reuse
     monkeypatch.setattr(pull_request, "_run", fake_run)
     found = pull_request._existing_pr("MieuxVoter/presidentielle2027", "mining/issue-42", tmp_path)
     assert (found is not None) == reused
+
+
+def test_une_pr_incomplete_le_dit_en_tete():
+    proposal = _proposal()
+    proposal.missing = ["page 40 : quota épuisé chez openrouter (remise à zéro 00:00 UTC)"]
+    body = pull_request.body(42, proposal, ["model:free"], 5)
+    assert "Dépouillement incomplet" in body and "page 40 : quota épuisé" in body
+    assert body.index("Dépouillement incomplet") < body.index("Tableaux proposés")
+
+
+def test_une_pr_complete_ne_parle_pas_d_incomplet():
+    assert "Dépouillement incomplet" not in pull_request.body(42, _proposal(), ["model:free"], 5)

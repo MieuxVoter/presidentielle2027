@@ -85,6 +85,19 @@ def body(issue, proposal, models, calls):
         "- [ ] J'ai comparé chaque tableau et la méthodologie au PDF source.",
         "",
     ]
+    if proposal.missing:
+        lines.extend(
+            [
+                "## ⚠️ Dépouillement incomplet",
+                "",
+                "Ces pages n'ont pas pu être interrogées (quota ou réseau). Les tableaux ci-dessous sont vérifiés et"
+                " peuvent être fusionnés tels quels ; relancer `/mining-pr` sous l'issue pour compléter, avant ou après"
+                " la fusion : les hypothèses déjà enregistrées ne sont pas reproposées.",
+                "",
+            ]
+        )
+        lines.extend(f"- {_safe(item)}" for item in proposal.missing)
+        lines.append("")
     if proposal.candidates:
         lines.extend(["## Candidats à ajouter", ""])
         lines.extend(f"- `{row['candidate_id']}` — {_safe(row['complete_name'])}" for row in proposal.candidates)

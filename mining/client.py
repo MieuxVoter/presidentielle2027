@@ -21,6 +21,9 @@ from urllib.request import Request, urlopen
 TIMEOUT = 90
 RETRY_STATUSES = {408, 409, 429, 500, 502, 503, 504}
 OPENROUTER_MAX_MODELS = 3
+# Les catalogues gratuits rendent parfois une réponse vide, sans contenu ni
+# raisonnement (constaté sous l'issue #194, non reproductible à la demande).
+ATTEMPTS = 3
 
 # Les catalogues gratuits changent souvent — les identifiants ci-dessous ont été
 # relevés le 2026-09-13 et se périment. Ils sont surchargeables par variable
@@ -51,6 +54,10 @@ class LLMError(RuntimeError):
 
 class BudgetExceeded(LLMError):
     """Plafond d'appels ou de tokens atteint : on s'arrête au lieu de brûler un quota."""
+
+
+class QuotaExhausted(LLMError):
+    """Quota du fournisseur épuisé : réessayer avant sa remise à zéro ne sert à rien."""
 
 
 @dataclass(frozen=True)
@@ -88,11 +95,13 @@ class Client:
             raise BudgetExceeded(f"plafond de {self.max_tokens} tokens atteint")
 
         errors = []
+        exhausted = []
         for provider in self.providers:
             try:
                 answer = self._call(provider, system, prompt, max_tokens)
             except LLMError as exc:
                 errors.append(f"{provider.name}: {exc}")
+                exhausted.append(isinstance(exc, QuotaExhausted))
                 continue
             self.log.append(
                 {
@@ -104,7 +113,9 @@ class Client:
                 }
             )
             return answer
-        raise LLMError("aucun fournisseur n'a répondu — " + " | ".join(errors))
+        # Tous à court de quota : l'appelant arrête d'interroger les pages suivantes.
+        error = QuotaExhausted if exhausted and all(exhausted) else LLMError
+        raise error("aucun fournisseur n'a répondu — " + " | ".join(errors))
 
     def _call(self, provider, system, prompt, max_tokens):
         payload = {
@@ -120,7 +131,7 @@ class Client:
             payload["models"] = list(provider.models[:OPENROUTER_MAX_MODELS])
 
         last = "aucune tentative"
-        for attempt in range(2):
+        for attempt in range(ATTEMPTS):
             try:
                 body = self._post(provider, payload)
             except _Retryable as exc:
@@ -133,13 +144,26 @@ class Client:
             self.tokens += (body.get("usage") or {}).get("total_tokens", 0)
             choices = body.get("choices") or []
             choice = choices[0] if choices else {}
-            text = (choice.get("message") or {}).get("content") or ""
+            message = choice.get("message") or {}
+            text = message.get("content") or ""
             # "length" : la sortie a été coupée par max_tokens. C'est une réponse
             # incomplète, pas un refus du format, et rejouer au même budget donnerait
             # la même coupure : on la rend telle quelle, à l'étape de décider.
-            truncated = choice.get("finish_reason") == "length"
+            # Un modèle à raisonnement peut aussi épuiser max_tokens dans son champ
+            # « reasoning » et rendre un contenu vide avec finish_reason « stop »
+            # (cas réel, E3 sur l'issue #194 : 2918 tokens de raisonnement sur 3056).
+            truncated = choice.get("finish_reason") == "length" or (not text.strip() and bool(message.get("reasoning")))
             if not text.strip() and not truncated:
-                last = "réponse vide"
+                last = (
+                    f"réponse vide (modèle {body.get('model') or payload['model']}, "
+                    f"finish_reason {choice.get('finish_reason')}, sans raisonnement)"
+                )
+                # Incident en amont : OpenRouter ne bascule que sur une erreur, et
+                # redonnerait le même modèle. On change de modèle de tête.
+                if payload.get("models"):
+                    rotated = payload["models"][1:] + payload["models"][:1]
+                    payload = {**payload, "model": rotated[0], "models": rotated}
+                time.sleep(2 * (attempt + 1))
                 continue
             return Answer(text.strip(), provider.name, body.get("model") or provider.models[0], truncated)
         raise LLMError(last)
@@ -159,6 +183,13 @@ class Client:
             with urlopen(request, timeout=TIMEOUT) as response:
                 return json.loads(response.read().decode("utf-8"))
         except HTTPError as exc:
+            headers = exc.headers or {}
+            if exc.code == 429 and headers.get("X-RateLimit-Remaining") == "0":
+                # Cas réel, issue #194 : « free-models-per-day », 50 requêtes par jour
+                # sur tout le compte. Les retenter brûlait du temps sur chaque page.
+                reset = str(headers.get("X-RateLimit-Reset") or "")
+                when = time.strftime("%H:%M UTC", time.gmtime(int(reset) / 1000)) if reset.isdigit() else "inconnue"
+                raise QuotaExhausted(f"quota épuisé chez {provider.name} (remise à zéro {when})") from exc
             if exc.code in RETRY_STATUSES:
                 raise _Retryable(f"HTTP {exc.code}") from exc
             raise LLMError(f"HTTP {exc.code}") from exc

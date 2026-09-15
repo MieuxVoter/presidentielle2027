@@ -25,6 +25,11 @@ class Proposal:
     hypotheses: list = field(default_factory=list)
     candidates: list = field(default_factory=list)
     failures: list = field(default_factory=list)
+    # Pages non dépouillées faute d'appel au modèle (quota, réseau) : la PR reste
+    # utile avec les tableaux obtenus, et une relance complétera.
+    missing: list = field(default_factory=list)
+    # Tableaux écartés parce que leur hypothèse est déjà enregistrée pour ce PDF.
+    already_present: list = field(default_factory=list)
 
     def to_dict(self):
         return asdict(self)
@@ -120,12 +125,21 @@ def _samples_for_metadata(methodology, table):
     return fields
 
 
-def build(filename, methodology, tables, root):
-    """Construit une proposition sans écrire un seul octet dans le dépôt."""
+def build(filename, methodology, tables, root, missing=()):
+    """Construit une proposition sans écrire un seul octet dans le dépôt.
+
+    Une notice déjà (partiellement) dépouillée n'est pas refusée : seules les
+    hypothèses qu'elle n'a pas encore enregistrées sont proposées, avec les
+    lettres de poll_id encore libres. C'est ce qui permet de compléter plus tard
+    un dépouillement interrompu par un quota.
+    """
     root = Path(root)
     polls = _read_rows(root / "polls.csv")
-    if any(row.get("filename", "").strip() == filename for row in polls):
-        raise ProposalError(f"{filename} est déjà présent dans polls.csv")
+    recorded = {
+        (row.get("tour", "").strip(), row.get("hypothese", "").strip())
+        for row in polls
+        if row.get("filename", "").strip() == filename
+    }
     codes = _institute_codes(polls)
     code = codes.get(methodology.institute)
     if not code:
@@ -140,7 +154,7 @@ def build(filename, methodology, tables, root):
         for identifier, names in hypotheses.items()
     }
     all_hypotheses = set(hypotheses)
-    proposal = Proposal(filename, asdict(methodology))
+    proposal = Proposal(filename, asdict(methodology), missing=list(missing))
     used_ids = {row["poll_id"] for row in polls}
     counters = {}
 
@@ -162,6 +176,9 @@ def build(filename, methodology, tables, root):
             proposal.hypotheses.append(
                 {"id_hypothese": hypothesis, "hypothese_complete": ",".join(names), "commentaire": ""}
             )
+        if (table.tour, hypothesis) in recorded:
+            proposal.already_present.append(f"page {table.page} : {hypothesis} déjà enregistrée pour {filename}")
+            continue
         poll_id = _next_poll_id(methodology.start, methodology.end, code, table.tour, used_ids, counters)
         metadata = {
             "poll_id": poll_id,
@@ -192,5 +209,7 @@ def build(filename, methodology, tables, root):
             ],
         }
     if not proposal.polls:
+        if proposal.already_present:
+            raise ProposalError(f"tous les tableaux extraits sont déjà enregistrés pour {filename}")
         raise ProposalError("aucun tableau validé : aucune proposition à écrire")
     return proposal

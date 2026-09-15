@@ -168,6 +168,10 @@ def preview_proposal(proposal, failures):
         print("Candidats nouveaux : " + ", ".join(row["complete_name"] for row in proposal.candidates))
     if proposal.hypotheses:
         print("Hypothèses nouvelles : " + ", ".join(row["id_hypothese"] for row in proposal.hypotheses))
+    if proposal.missing:
+        print("⚠️  INCOMPLET — pages non dépouillées (relancer pour compléter) :\n- " + "\n- ".join(proposal.missing))
+    if proposal.already_present:
+        print("Déjà enregistrés, non reproposés :\n- " + "\n- ".join(proposal.already_present))
     if failures:
         print("Tableaux écartés :\n- " + "\n- ".join(failures))
     print("-" * 70)
@@ -303,6 +307,9 @@ def main(argv=None):
                         mined.methodology,
                         mined.tables,
                         Path(__file__).resolve().parent,
+                        # Un dépouillement incomplet reste proposé : les tableaux
+                        # obtenus sont vérifiés, une relance complétera.
+                        missing=mined.api_failures,
                     )
                     proposal.failures.extend(mined.failures)
                     preview_proposal(proposal, mined.failures)
@@ -319,7 +326,14 @@ def main(argv=None):
                         created = pull_request.create_or_update(
                             args.issue, repo, proposal, root, models=models, calls=conversation.calls
                         )
-                        pr_status = f"> ✅ PR brouillon créée ou mise à jour : [#{created.number}]({created.url})."
+                        if proposal.missing:
+                            pr_status = (
+                                f"> ⚠️ PR brouillon **incomplète** créée ou mise à jour : [#{created.number}]({created.url})"
+                                f" — {len(proposal.polls)} tableau(x), {len(proposal.missing)} page(s) non dépouillée(s)."
+                                " Relancer /mining-pr pour compléter."
+                            )
+                        else:
+                            pr_status = f"> ✅ PR brouillon créée ou mise à jour : [#{created.number}]({created.url})."
                         if created.labels_warning:
                             pr_status += f" {created.labels_warning}."
                         print(f"✅ {branch} → {created.url}")
