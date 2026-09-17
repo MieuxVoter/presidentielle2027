@@ -205,6 +205,17 @@ def create_issue(poll_data, repo, token, template=None):
     return _github_request(f"https://api.github.com/repos/{repo}/issues", token, "POST", payload)
 
 
+def trigger_llm_triage(repo, token, issue_number, ref):
+    """Dispatch llm-mining.yml in triage mode for a newly created issue"""
+    payload = {"ref": ref, "inputs": {"issue": str(issue_number), "mode": "triage"}}
+    _github_request(
+        f"https://api.github.com/repos/{repo}/actions/workflows/llm-mining.yml/dispatches",
+        token,
+        "POST",
+        payload,
+    )
+
+
 def find_new_polls(limit):
     """Return (catalog_polls, new_polls) or (polls, []) when nothing is new"""
     last_count = get_last_poll_count()
@@ -277,6 +288,7 @@ def run_create_issues(repo, token, limit):
     print(f"📝 Will create {len(polls_to_create[:limit])} new issue(s)")
 
     template = load_template()
+    ref = os.environ.get("GITHUB_REF_NAME", "main")
     created_count = 0
     for poll in polls_to_create[:limit]:
         try:
@@ -285,6 +297,12 @@ def run_create_issues(repo, token, limit):
             created_count += 1
         except Exception as e:  # noqa: BLE001 - on veut continuer sur les autres sondages
             print(f"❌ Failed to create issue for {poll.get('filename')}: {e}")
+            continue
+        try:
+            trigger_llm_triage(repo, token, issue["number"], ref)
+            print(f"🤖 Triggered triage workflow for issue #{issue['number']}")
+        except Exception as e:  # noqa: BLE001 - l'issue existe déjà, on ne revient pas en arrière
+            print(f"⚠️  Issue #{issue['number']} créée, mais triage non déclenché: {e}")
 
     if created_count > 0:
         save_poll_count(len(catalog_polls))
