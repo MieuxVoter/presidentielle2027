@@ -6,6 +6,11 @@ on:
     - cron: '0 9 * * *'
   workflow_dispatch: # Allow manual trigger
 
+permissions:
+  contents: write
+  issues: write
+  actions: write
+
 jobs:
   check-polls:
     runs-on: ubuntu-latest
