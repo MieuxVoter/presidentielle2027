@@ -23,6 +23,56 @@ from typing import Any, Dict, List
 ROOT = Path(__file__).resolve().parent
 
 
+SOURCE_METADATA = {
+    "name": "Mieux Voter",
+    "repository": "https://github.com/MieuxVoter/presidentielle2027",
+    "csv": "https://raw.githubusercontent.com/MieuxVoter/presidentielle2027/refs/heads/main/presidentielle2027.csv",
+    "traceability": "Chaque ligne du jeu de données est traçable jusqu’à la notice PDF d’origine publiée par la Commission des sondages.",
+}
+
+
+USAGE_GUIDELINES = [
+    {
+        "id": "source",
+        "title": "Citer la source sur chaque graphique",
+        "instruction": "La source du dépôt de Mieux Voter doit apparaître directement sur chaque graphique afin de rester visible en cas de capture ou de réutilisation.",
+        "recommended_text": "Données : Mieux Voter — github.com/MieuxVoter/presidentielle2027",
+        "additional_requirement": "Le dépôt Mieux Voter doit également être cité dans la page ou section méthodologique, et pas uniquement la Commission des sondages.",
+    },
+    {
+        "id": "uncertainty",
+        "title": "Afficher les points et l'incertitude",
+        "instruction": "Ne pas présenter uniquement une courbe moyenne ou lissée. Afficher les points correspondant aux sondages et, lorsque cela est possible, un intervalle ou un couloir d'incertitude.",
+        "interpretation": "Lorsque les intervalles d'incertitude de deux candidats se chevauchent, éviter de présenter leur classement comme certain.",
+    },
+    {
+        "id": "smoothing",
+        "title": "Documenter le lissage",
+        "instruction": "Toute méthode de lissage utilisée doit être explicitement documentée.",
+    },
+    {
+        "id": "population",
+        "title": "Tenir compte de la population interrogée",
+        "instruction": "Vérifier la population couverte par chaque sondage avant de l'intégrer à une série nationale.",
+        "warning": "Certains sondages portent sur des populations spécifiques, par exemple un échantillon LGBTQIA+, et ne doivent pas être assimilés à des sondages représentatifs de la population nationale.",
+        "action": "Filtrer ces sondages des agrégations nationales ou les identifier explicitement comme relevant d'une population spécifique.",
+    },
+    {
+        "id": "hypotheses",
+        "title": "Distinguer les différentes hypothèses d'un même sondage",
+        "instruction": "Un même sondage peut contenir plusieurs hypothèses correspondant à différentes candidatures ou configurations de second tour.",
+        "warning": "Ne pas confondre le dernier sondage publié avec la dernière hypothèse disponible dans ce sondage.",
+        "action": "Identifier explicitement l'hypothèse utilisée avant toute agrégation ou comparaison temporelle.",
+    },
+]
+
+
+CONTRIBUTION_METADATA = {
+    "welcome": True,
+    "repository": "https://github.com/MieuxVoter/presidentielle2027",
+}
+
+
 def load_csv(csv_path: Path) -> List[Dict[str, str]]:
     """Load the presidentielle2027.csv file."""
     rows = []
@@ -31,6 +81,27 @@ def load_csv(csv_path: Path) -> List[Dict[str, str]]:
         for row in reader:
             rows.append(row)
     return rows
+
+
+def load_hypotheses(hypotheses_path: Path) -> List[Dict[str, Any]]:
+    """Load hypotheses.csv and return JSON-friendly hypothesis metadata."""
+    hypotheses: List[Dict[str, Any]] = []
+    with hypotheses_path.open("r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            hypothesis_id = row.get("id_hypothese", "").strip()
+            if not hypothesis_id:
+                continue
+            candidates = [c.strip() for c in row.get("hypothese_complete", "").split(",") if c.strip()]
+            hypothesis = {
+                "id": hypothesis_id,
+                "candidates": candidates,
+            }
+            commentaire = row.get("commentaire", "").strip()
+            if commentaire:
+                hypothesis["comment"] = commentaire
+            hypotheses.append(hypothesis)
+    return hypotheses
 
 
 def convert_to_int_or_float(value: str) -> int | float | None:
@@ -120,24 +191,40 @@ def csv_to_json(csv_path: Path) -> List[Dict[str, Any]]:
     return polls_list
 
 
+def build_json_payload(csv_path: Path, hypotheses_path: Path) -> Dict[str, Any]:
+    """Build the published JSON payload with data and usage guidance."""
+    return {
+        "source": SOURCE_METADATA,
+        "usage_guidelines": USAGE_GUIDELINES,
+        "hypotheses": load_hypotheses(hypotheses_path),
+        "polls": csv_to_json(csv_path),
+        "contribution": CONTRIBUTION_METADATA,
+    }
+
+
 def main() -> int:
     """Main entry point."""
     csv_path = ROOT / "presidentielle2027.csv"
+    hypotheses_path = ROOT / "hypotheses.csv"
     json_path = ROOT / "presidentielle2027.json"
 
     if not csv_path.exists():
         print(f"Error: {csv_path} not found", file=sys.stderr)
         return 1
+    if not hypotheses_path.exists():
+        print(f"Error: {hypotheses_path} not found", file=sys.stderr)
+        return 1
 
     try:
-        data = csv_to_json(csv_path)
+        data = build_json_payload(csv_path, hypotheses_path)
 
         # Write JSON with nice formatting
         with json_path.open("w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
 
         print(f"Successfully converted {csv_path} to {json_path}")
-        print(f"Total polls: {len(data)}")
+        print(f"Total polls: {len(data['polls'])}")
+        print(f"Total hypotheses: {len(data['hypotheses'])}")
         return 0
 
     except Exception as e:
