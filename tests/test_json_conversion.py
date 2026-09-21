@@ -38,11 +38,16 @@ def test_json_structure_valid():
     with json_path.open("r", encoding="utf-8") as f:
         data = json.load(f)
 
-    assert isinstance(data, list), "JSON should be a list of polls"
+    assert isinstance(data, dict), "JSON should be an object"
+    required_top_level = {"source", "usage_guidelines", "hypotheses", "polls", "contribution"}
+    assert required_top_level.issubset(data.keys()), f"JSON missing keys: {required_top_level - set(data.keys())}"
+    assert isinstance(data["polls"], list), "polls should be a list"
+    assert isinstance(data["usage_guidelines"], list), "usage_guidelines should be a list"
+    assert isinstance(data["hypotheses"], list), "hypotheses should be a list"
 
     # Check first poll structure
-    if len(data) > 0:
-        poll = data[0]
+    if len(data["polls"]) > 0:
+        poll = data["polls"][0]
         required_keys = {
             "poll_id",
             "institut",
@@ -88,7 +93,9 @@ def test_json_poll_count_matches_csv():
     with json_path.open("r", encoding="utf-8") as f:
         data = json.load(f)
 
-    assert len(data) == len(poll_ids), f"JSON has {len(data)} polls but CSV has {len(poll_ids)} unique poll_ids"
+    assert len(data["polls"]) == len(
+        poll_ids
+    ), f"JSON has {len(data['polls'])} polls but CSV has {len(poll_ids)} unique poll_ids"
 
 
 def test_convert_to_int_or_float():
@@ -109,7 +116,7 @@ def test_json_intentions_are_numeric():
     with json_path.open("r", encoding="utf-8") as f:
         data = json.load(f)
 
-    for poll in data:
+    for poll in data["polls"]:
         for candidat in poll["candidats"]:
             intentions = candidat.get("intentions")
             assert intentions is None or isinstance(
@@ -126,7 +133,7 @@ def test_json_echantillon_is_numeric():
     with json_path.open("r", encoding="utf-8") as f:
         data = json.load(f)
 
-    for poll in data:
+    for poll in data["polls"]:
         echantillon = poll.get("echantillon")
         assert echantillon is None or isinstance(
             echantillon, (int, float)
