@@ -1,5 +1,5 @@
 # presidentielle2027
-![Sondages agrégés](https://img.shields.io/badge/sondages_agrégés-259-blue)
+![Sondages agrégés](https://img.shields.io/badge/sondages_agrégés-263-blue)
 
 Compilation des sondages d'intention de vote à l'occasion des élections présidentielles 2027 en France.
 
