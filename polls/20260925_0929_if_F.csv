@@ -1,11 +1,11 @@
 candidat,intentions,erreur_sup,erreur_inf
-Nathalie Arthaud,0.5,,
-Jean-Luc Mélenchon,15,,
-Fabien Roussel,3,,
-Marine Tondelier,6,,
-Ségolène Royal,3,,
-Édouard Philippe,24,,
-Bruno Retailleau,8,,
-Nicolas Dupont-Aignan,1.5,,
-Marine Le Pen,35,,
-Éric Zemmour,4,,
+Nathalie Arthaud,0.5,0.49,-0.49
+Jean-Luc Mélenchon,15,2.48,-2.48
+Fabien Roussel,3,1.19,-1.19
+Marine Tondelier,6,1.65,-1.65
+Ségolène Royal,3,1.19,-1.19
+Édouard Philippe,24,2.97,-2.97
+Bruno Retailleau,8,1.88,-1.88
+Nicolas Dupont-Aignan,1.5,0.84,-0.84
+Marine Le Pen,35,3.31,-3.31
+Éric Zemmour,4,1.36,-1.36
