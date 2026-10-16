@@ -1,5 +1,5 @@
 # presidentielle2027
-![Sondages agrégés](https://img.shields.io/badge/sondages_agrégés-300-blue)
+![Sondages agrégés](https://img.shields.io/badge/sondages_agrégés-304-blue)
 
 Compilation des sondages d'intention de vote à l'occasion des élections présidentielles 2027 en France.
 
@@ -18,8 +18,8 @@ Classement des scénarios (hypothèses de candidatures) les plus fréquemment te
 <!-- TOP_HYPOTHESES:START -->
 | Rang | Sondages | Candidats (🥇) / Diff vs 🥇 (🥈🥉) |
 |:----:|:--------:|----------------------------------|
-| 🥇 | 18 | Bruno Retailleau, Fabien Roussel, Gabriel Attal, Jean-Luc Mélenchon, Marine Le Pen, Marine Tondelier, Nathalie Arthaud, Nicolas Dupont-Aignan, Raphaël Glucksmann, Éric Zemmour |
-| 🥈 | 17 | $\textcolor{green}{\text{+ Édouard Philippe}}$, $\textcolor{red}{\text{− Gabriel Attal}}$ |
+| 🥇 | 19 | Bruno Retailleau, Fabien Roussel, Gabriel Attal, Jean-Luc Mélenchon, Marine Le Pen, Marine Tondelier, Nathalie Arthaud, Nicolas Dupont-Aignan, Raphaël Glucksmann, Éric Zemmour |
+| 🥈 | 18 | $\textcolor{green}{\text{+ Édouard Philippe}}$, $\textcolor{red}{\text{− Gabriel Attal}}$ |
 | 🥉 | 14 | $\textcolor{green}{\text{+ Édouard Philippe}}$ |
 
 > 🥇 liste complète des candidats (référence). 🥈🥉 diff vs 🥇 : $\textcolor{green}{\text{+ ajouté}}$ en vert, $\textcolor{red}{\text{− retiré}}$ en rouge.
