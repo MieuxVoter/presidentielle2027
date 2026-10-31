@@ -68,7 +68,16 @@ DDMM_POLL_IDS = {
 # carries the wrong filename; the right notice still has to be identified.
 KNOWN_FILENAME_CONFLICTS = {
     "9916-pres-elabe-bfmtv-tribune-dimanche-5-avril.pdf",
+}
+
+# Documents containing multiple polls.
+MULTIPLE_POLL_FILENAMES = {
     "9930-pres-ifop-hexagone-5-mai.pdf",
+}
+
+IGNORED_FILENAMES = {
+    *KNOWN_FILENAME_CONFLICTS,
+    *MULTIPLE_POLL_FILENAMES,
 }
 
 POLL_ID_RE = re.compile(r"^(?P<start>\d{8})_(?P<end>\d{4})_(?P<institute>[a-z]{2})(?:_(?P<variant>\d?[A-Z]))?$")
@@ -226,11 +235,11 @@ def test_source_file_metadata_is_stated_consistently():
         by_filename[filename].add(tuple(_clean(row, field) for field in fields))
 
     conflicts = {name: sorted(values) for name, values in by_filename.items() if len(values) > 1}
-    unexpected = {name: values for name, values in conflicts.items() if name not in KNOWN_FILENAME_CONFLICTS}
+    unexpected = {name: values for name, values in conflicts.items() if name not in IGNORED_FILENAMES}
     assert not unexpected, f"Source notices credited to different surveys: {unexpected}"
 
-    stale = KNOWN_FILENAME_CONFLICTS - set(conflicts)
-    assert not stale, f"These filenames no longer conflict, remove them from KNOWN_FILENAME_CONFLICTS: {sorted(stale)}"
+    stale = IGNORED_FILENAMES - set(conflicts)
+    assert not stale, f"These filenames no longer conflict, remove them from IGNORED_FILENAMES: {sorted(stale)}"
 
 
 @pytest.mark.parametrize("row", POLLS_METADATA, ids=poll_ids())
