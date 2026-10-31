@@ -121,14 +121,19 @@ Une fois la PR mergée, les fichiers `presidentielle2027.csv` et `presidentielle
 Le format recommandé est : `YYYYMMDD_MMDD_ii_X`
 
 - `YYYYMMDD` : date de début de l'enquête
-- `MMDD` : date de fin (jour et mois)
+- `MMDD` : date de fin (mois et jour, dans cet ordre)
 - `ii` : initiales de l'institut (ex: `if` pour IFOP, `hi` pour Harris Interactive)
-- `X` : lettre pour différencier les hypothèses (A, B, C, D...)
+- `X` : lettre pour différencier les hypothèses (A, B, C, D...), préfixée par `2` pour un 2nd tour (`2A`, `2B`...)
 
 **Exemple :** `20250326_0327_if_A`
-- Sondage du 26-27 mars 2025
+- Sondage du 26 au 27 mars 2025 (`0327` = 27 mars)
 - Institut : IFOP
 - Hypothèse A
+
+> ⚠️ Ce guide a longtemps documenté `DDMM` par erreur : 20 `poll_id` ajoutés
+> entre mai et juillet 2026 écrivent donc la date de fin dans cet ordre. Ils sont
+> listés dans `DDMM_POLL_IDS` (`tests/test_poll_consistency.py`), en attendant
+> de décider s'il faut les renommer. Les nouveaux sondages utilisent `MMDD`.
 
 ## Questions fréquentes
 
