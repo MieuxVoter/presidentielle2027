@@ -1,0 +1,30 @@
+# Page 3 de 10263-pres-iv-toluna-harris-interactive-rtl-14-septembre.pdf (issue #194), pdfplumber layout=True.
+# Trois colonnes côte à côte : la phrase des dates est coupée par la colonne « Échantillon ».
+--- page 3 ---
+
+Méthodologie        d’enquête
+
+                      Terrain                               Échantillon                                Quotas
+
+        Enquête réalisée en ligne du 08 au 10    Échantillon de 2 052 personnes         Méthode   des quotas  et redressement
+        septembre  2026.                         inscrites sur les listes électorales, issu appliqués aux variables suivantes : sexe,
+
+                                                 d’un échantillon de 2 358 personnes,   âge,   catégorie   socioprofessionnelle,
+                                                 représentatif de la population         région de résidence de l’interviewé(e) et
+                                                 française âgée de 18 ans et plus.      comportement   électoral aux  élections
+                                                                                        antérieures.
+
+                   Aide à la lecture des résultats détaillés :
+                   • Les rappels sont issus des précédentes vagues du baromètre « Intentions de vote à l’élection présidentielle » réalisées pour M6 et RTL en ligne
+                    enavril,maietjuillet2026 danslesmêmesconditions méthodologiques.
+                   • Leschiffresprésentéssontexprimésen pourcentage.
+                   • Les intentions de vote mesurent un rapport de force à un moment donné. Elles ne peuvent en aucun cas être considérées comme étant
+                    prédictivesdesrésultatsduscrutin.
+                   • Pour rappel, tout sondage est affecté de marges d’erreur. La marge d’erreur des résultats d’ensemble s’établit, selon le score visé, entre plus
+                    ou moins 1,4 et 3,1 points. Aucune reprise de ce sondage ne peut être faite sans que soit reprise également la mention relative aux marges
+                    d’erreur.
+                   • Une noticepourcetteétudeestconsultablesurlesitedela Commissiondessondages:https://www.commission-des-sondages.fr/
+                   • Lorsdesreprisesdecesondage,mercidementionner lenom del’institutetducommanditaire«TolunaHarris InteractivepourM6 etRTL »
+
+                                                                                                                                 3
+

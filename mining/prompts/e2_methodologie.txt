@@ -1,0 +1,40 @@
+Voici des pages de méthodologie d'une notice de sondage. Relève, uniquement à partir
+de ce texte, les métadonnées demandées. Ne devine rien et ne prends jamais les
+effectifs de la note sur les marges d'erreur.
+
+INSTITUT doit être écrit exactement comme dans cette liste :
+$instituts
+
+POPULATION doit être l'une de ces formulations exactes :
+$populations
+
+RÈGLES
+- COMMANDITAIRE : le ou les commanditaires, séparés par une virgule.
+- DEBUT et FIN : dates de réalisation au format AAAA-MM-JJ.
+- ECHANTILLON : l'effectif total, en chiffres sans espace.
+- INSCRITS : l'effectif des inscrits sur les listes électorales ; laisse vide s'il
+  n'est pas indiqué.
+- SOURCE_DATES et SOURCE_ECHANTILLON : recopie le passage du texte qui justifie la
+  valeur, mot pour mot. SOURCE_INSCRITS peut être vide si INSCRITS est vide.
+
+EXEMPLES
+« Les interviews ont été réalisées du 9 au 10 septembre 2026. »
+donne DEBUT: 2026-09-09 et FIN: 2026-09-10.
+« Echantillon de 935 personnes inscrites sur les listes électorales, issu d'un
+échantillon de 1 001 personnes » donne ECHANTILLON: 1001 et INSCRITS: 935.
+
+FORMAT DE RÉPONSE — termine par exactement ces lignes :
+INSTITUT: …
+COMMANDITAIRE: …
+DEBUT: …
+FIN: …
+ECHANTILLON: …
+INSCRITS: …
+POPULATION: …
+SOURCE_DATES: …
+SOURCE_ECHANTILLON: …
+SOURCE_INSCRITS: …
+
+--- DÉBUT DES PAGES DE MÉTHODOLOGIE ---
+$pages
+--- FIN DES PAGES DE MÉTHODOLOGIE ---
