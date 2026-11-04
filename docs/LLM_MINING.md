@@ -216,3 +216,78 @@ correctement classée « sans intentions de vote ».
 
 Limite connue, documentée dans [ISSUE_llm_mining.md](ISSUE_llm_mining.md) : la formulation de Cluster17 est
 absente du prompt, ses baromètres sont donc classés `sans-intentions-de-vote`.
+
+## Signaler une erreur de notice à la Commission des sondages
+
+Quand la vérification d'une notice révèle une erreur dans le PDF lui-même (titres de scénarios intervertis,
+valeurs inversées entre deux candidats, coquille dans un tableau), on peut la signaler au secrétariat de la
+Commission des sondages, qui la transmet à l'institut. Toute correction appliquée aux données du dépôt est
+expliquée dans la PR, et le signalement se fait en parallèle.
+
+La consigne ci-dessous sert à faire rédiger ce mail par un modèle de langage. Remplir les champs entre
+accolades, puis relire le mail, en particulier les chiffres, avant de l'envoyer.
+
+```
+Tu rédiges un mail en français destiné au secrétariat de la Commission des sondages
+(secretariat@commission-des-sondages.fr) pour signaler une erreur ou une incohérence
+dans une notice de sondage publiée sur son site. L'expéditeur est Pierre Puchaud,
+membre de l'association Mieux Voter, qui contribue à un projet ouvert recensant et
+annotant les sondages d'intention de vote pour la présidentielle 2027.
+
+## Informations fournies (à utiliser telles quelles, ne rien inventer)
+- Numéro de la notice : {numero}
+- Intitulé de l'étude : {intitule}
+- Institut et commanditaire(s) : {institut} pour {commanditaires}
+- Dates de terrain : {dates_terrain}
+- Date de la notice : {date_notice}
+- Page(s) concernée(s) : {pages}
+- Description de l'anomalie : {anomalie}
+- Éléments qui la rendent probable (autres scénarios, totaux, autres pages, vague
+  précédente…) : {indices}
+- Ce qui semble correct dans le reste du document : {perimetre}
+
+S'il manque une information indispensable (numéro de notice, page, nature précise
+de l'anomalie), pose la question au lieu de la deviner. Ne cite aucun chiffre qui
+ne figure pas dans les informations fournies.
+
+## Contenu du mail
+1. Objet : « Signalement d'une [coquille / probable inversion / incohérence] dans la
+   notice n°{numero} ({institut} – {intitule court}, {mois année}) ».
+2. Identification complète de la notice en une phrase (numéro, intitulé, institut,
+   commanditaires, terrain, date de la notice).
+3. Constat factuel et localisé : page, tableau ou scénario, colonne si pertinent
+   (ex. « Publié »), valeurs ou libellés exacts tels qu'ils apparaissent.
+4. Pourquoi c'est probablement une erreur : indices concrets et vérifiables, en
+   liste courte si besoin.
+5. Périmètre : préciser ce qui paraît correct, pour circonscrire le problème.
+6. Prudence : distinguer le constat (ce qui est écrit) de l'hypothèse (ce qui
+   devrait être écrit). Ne jamais affirmer que l'institut s'est trompé ; parler
+   d'incohérence « semblant » ou « paraissant » résulter d'une inversion, coquille…
+   Expliquer en une phrase le risque pour le lecteur.
+7. Contexte en une phrase : l'association Mieux Voter et le projet de recensement
+   ouvert des sondages pour 2027.
+8. Demande : transmettre le signalement à l'institut afin que la notice soit
+   vérifiée et, le cas échéant, corrigée.
+9. Formule de disponibilité, « Bien cordialement, », puis la signature :
+   PUCHAUD Pierre
+   Membre de l'association Mieux Voter
+
+## Style
+- Vouvoiement, formule d'appel « Madame, Monsieur, ».
+- Ton courtois, neutre, factuel, sans jugement sur l'institut ni commentaire politique.
+- Court : 150 à 250 mots hors signature.
+- Pas de remerciements appuyés, pas de superlatifs, pas de jargon technique du dépôt
+  (CSV, hypothèses H.., pdfplumber, etc.).
+- Noms des candidats avec leurs accents (Édouard Philippe, Éric Zemmour…).
+- Pourcentages au format français : « 35 % » avec une espace insécable.
+
+## Sortie
+Renvoie uniquement l'objet puis le corps du mail, prêts à copier-coller.
+```
+
+Exemples de signalements :
+
+- notice n°10284 (IFOP, septembre 2026) : titres des scénarios Attal et Philippe intervertis pages 12 et 13 ;
+  l'IFOP a transmis une notice corrigée ;
+- notice n°10318 (OpinionWay PrésiTrack, octobre 2026) : scores de Marine Le Pen et d'Éric Zemmour
+  vraisemblablement inversés page 13 (issue #271).
