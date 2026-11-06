@@ -79,7 +79,9 @@ def test_filtre_texte_garde_une_notice_d_intentions_de_vote(monkeypatch):
 
 
 def test_filtre_texte_ecarte_une_notice_sans_intentions_de_vote(monkeypatch):
-    _with_text(monkeypatch, "Le pouvoir d'achat des Français. Vote au 1er tour de l'élection présidentielle 2022" + FILLER)
+    _with_text(
+        monkeypatch, "Le pouvoir d'achat des Français. Vote au 1er tour de l'élection présidentielle 2022" + FILLER
+    )
     assert not check_new_polls.has_vote_intentions(POLL)
 
 
