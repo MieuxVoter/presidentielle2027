@@ -42,6 +42,13 @@ MARKER_RE = re.compile(r"<!-- poll-file: ([^>]+?) -->")
 TEMPLATE_HEADER_RE = re.compile(r"\A\s*<!--.*?-->\s*", re.DOTALL)
 # Ancien format d'issue, encore présent dans les issues ouvertes avant ce changement.
 LEGACY_MARKER_RE = re.compile(r"\*\*Fichier PDF à vérifier:\*\* `([^`]+)`")
+# Filtre sur le texte de la notice (pas de LLM) : une notice d'intentions de vote
+# présidentielles contient ces deux mentions. Testé sur les 469 notices publiées depuis
+# juillet 2024 : aucun sondage du dépôt écarté.
+VOTE_INTENTION_RE = re.compile(r"intentions?\s+de\s+vote", re.I)
+PRESIDENTIAL_ROUND_RE = re.compile(
+    r"(premier|second|1er|2nd|2e|1 er)\s+tour\s+de\s+l.{0,3}\s*[ée]lection\s+pr[ée]sidentielle", re.I
+)
 
 
 def get_last_poll_count():
@@ -108,6 +115,25 @@ def notice_links(poll_data):
     pdf_url = _mirror_url(BLOB_BASE, pdf_path) if pdf_path else source_url
 
     return txt_url, pdf_url, source_url
+
+
+def has_vote_intentions(poll_data):
+    """False seulement si le texte de la notice est lisible et sans intentions de vote.
+
+    Texte absent (pas encore extrait, notice scannée) : on garde la notice, comme avant.
+    """
+    pdf_path = (poll_data.get("pdf_path") or "").strip()
+    if not pdf_path.startswith("archives/") or not pdf_path.endswith(".pdf"):
+        return True
+    txt_path = "archives_txt/" + pdf_path[len("archives/") : -len(".pdf")] + ".txt"
+    try:
+        with urlopen(_mirror_url(RAW_BASE, txt_path), timeout=TIMEOUT) as response:
+            text = re.sub(r"\s+", " ", response.read().decode("utf-8", errors="ignore"))
+    except (HTTPError, URLError, TimeoutError, OSError):
+        return True
+    if len(text) < 200:
+        return True
+    return bool(VOTE_INTENTION_RE.search(text) and PRESIDENTIAL_ROUND_RE.search(text))
 
 
 def load_template():
@@ -235,6 +261,10 @@ def find_new_polls(limit):
 
     print(f"✨ Detected {new_poll_count} new poll(s)")
     new_polls = catalog_polls[-new_poll_count:]
+    skipped = [poll for poll in new_polls if not has_vote_intentions(poll)]
+    for poll in skipped:
+        print(f"⏭️  Sans intentions de vote dans le texte, pas d'issue: {poll.get('filename')}")
+    new_polls = [poll for poll in new_polls if poll not in skipped]
     if len(new_polls) > limit:
         print(f"⚠️  Limiting to the {limit} most recent poll(s)")
 
@@ -275,6 +305,9 @@ def run_create_issues(repo, token, limit):
         return 1
 
     if not new_polls:
+        if len(catalog_polls) > get_last_poll_count():
+            # Nouvelles notices, toutes écartées par le filtre texte : on avance le compteur.
+            save_poll_count(len(catalog_polls))
         return 0
 
     existing_issue_filenames = get_existing_issues(repo, token)

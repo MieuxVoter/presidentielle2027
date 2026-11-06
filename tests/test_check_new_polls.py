@@ -49,3 +49,56 @@ def test_run_create_issues_declenche_triage_pour_chaque_issue(monkeypatch):
     assert check_new_polls.run_create_issues("MieuxVoter/presidentielle2027", "token-test", 10) == 0
     assert dispatched == [(101, "main"), (102, "main")]
     assert saved == [len(catalog)]
+
+
+class _FakeResponse:
+    def __init__(self, text):
+        self._data = text.encode("utf-8")
+
+    def read(self):
+        return self._data
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        return False
+
+
+def _with_text(monkeypatch, text):
+    monkeypatch.setattr(check_new_polls, "urlopen", lambda _url, timeout=None: _FakeResponse(text))
+
+
+POLL = {"filename": "x.pdf", "pdf_path": "archives/2026/octobre/x.pdf"}
+FILLER = " Méthodologie de l'enquête." * 20
+
+
+def test_filtre_texte_garde_une_notice_d_intentions_de_vote(monkeypatch):
+    _with_text(monkeypatch, "Intentions de vote au premier tour de l’élection présidentielle" + FILLER)
+    assert check_new_polls.has_vote_intentions(POLL)
+
+
+def test_filtre_texte_ecarte_une_notice_sans_intentions_de_vote(monkeypatch):
+    _with_text(monkeypatch, "Le pouvoir d'achat des Français. Vote au 1er tour de l'élection présidentielle 2022" + FILLER)
+    assert not check_new_polls.has_vote_intentions(POLL)
+
+
+def test_filtre_texte_garde_la_notice_si_le_texte_manque(monkeypatch):
+    def missing(_url, timeout=None):
+        raise check_new_polls.URLError("404")
+
+    monkeypatch.setattr(check_new_polls, "urlopen", missing)
+    assert check_new_polls.has_vote_intentions(POLL)
+    _with_text(monkeypatch, "scan")  # notice scannée : texte vide
+    assert check_new_polls.has_vote_intentions(POLL)
+
+
+def test_compteur_avance_si_toutes_les_nouvelles_notices_sont_ecartees(monkeypatch):
+    catalog = [{"filename": "old.pdf"}, {"filename": "new.pdf"}]
+    monkeypatch.setattr(check_new_polls, "find_new_polls", lambda _limit: (catalog, []))
+    monkeypatch.setattr(check_new_polls, "get_last_poll_count", lambda: 1)
+    saved = []
+    monkeypatch.setattr(check_new_polls, "save_poll_count", lambda count: saved.append(count))
+
+    assert check_new_polls.run_create_issues("MieuxVoter/presidentielle2027", "token-test", 10) == 0
+    assert saved == [2]
