@@ -36,34 +36,6 @@ KNOWN_SUM_ANOMALIES = {
     "20250411_0418_if_A": 98.0,
 }
 
-# poll_id encodes the end date as MMDD (e.g. 20250326_0327 = 26 -> 27 March).
-# These spell it DDMM instead. They are not old: they were added between May and
-# July 2026, alongside MMDD ones, back when COMMENT_AJOUTER_UN_SONDAGE.md still
-# documented the format as DDMM. The guide is fixed; renaming the ids is a
-# separate call, since they are the join key of the published dataset.
-DDMM_POLL_IDS = {
-    "20260322_2203_hi_A",
-    "20260322_2203_hi_B",
-    "20260428_3004_hi_A",
-    "20260428_3004_hi_B",
-    "20260428_3004_hi_C",
-    "20260428_3004_hi_D",
-    "20260610_1106_ow_A",
-    "20260610_1106_ow_B",
-    "20260610_1106_ow_C",
-    "20260610_1106_ow_D",
-    "20260610_1106_ow_E",
-    "20260610_1106_ow_F",
-    "20260622_2406_if_A",
-    "20260622_2406_if_B",
-    "20260622_2406_if_C",
-    "20260622_2406_if_D",
-    "20260622_2406_if_E",
-    "20260622_2406_if_F",
-    "20260622_2406_if_G",
-    "20260622_2406_if_H",
-}
-
 # Source PDFs credited to two different surveys. One of the two poll groups
 # carries the wrong filename; the right notice still has to be identified.
 KNOWN_FILENAME_CONFLICTS = {
@@ -178,9 +150,6 @@ def test_poll_id_describes_the_survey(row: dict):
     assert match.group("start") == start.replace("-", ""), (
         f"{poll_id} announces a start of {match.group('start')} but debut_enquete is {start}"
     )
-
-    if poll_id in DDMM_POLL_IDS:
-        pytest.skip(f"{poll_id} spells its end date DDMM")
 
     assert match.group("end") == f"{end[5:7]}{end[8:10]}", (
         f"{poll_id} announces an end of {match.group('end')} (MMDD) but fin_enquete is {end}"
