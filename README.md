@@ -99,6 +99,10 @@ Une fois mergé, `presidentielle2027.csv` est mis à jour automatiquement.
 | `erreur_sup` | Marge erreur supérieure (optionnel) |
 | `erreur_inf` | Marge erreur inférieure (optionnel) |
 
+## 🔗 Projets qui utilisent ces données
+
+- **[Ballottage](https://ballottage.com)** : un jeu gratuit de pronos sur la présidentielle 2027, entre potes et sans argent. Il lit ces sondages via [rolling-2027](https://github.com/EnzoSim/rolling-2027), un fork de ce dépôt.
+
 ## 📜 Licence
 
 Ce projet est sous licence [MIT](LICENSE).
