@@ -46,9 +46,13 @@ LEGACY_MARKER_RE = re.compile(r"\*\*Fichier PDF à vérifier:\*\* `([^`]+)`")
 # présidentielles contient ces deux mentions. Testé sur les 469 notices publiées depuis
 # juillet 2024 : aucun sondage du dépôt écarté.
 VOTE_INTENTION_RE = re.compile(r"intentions?\s+de\s+vote", re.I)
-PRESIDENTIAL_ROUND_RE = re.compile(
-    r"(premier|second|1er|2nd|2e|1 er)\s+tour\s+de\s+l.{0,3}\s*[ée]lection\s+pr[ée]sidentielle", re.I
+_ORDINAL = r"(?:premier|1\s*(?:er|re|ère|ᵉʳ|ʳᵉ)|second|2\s*(?:nd|e|ème|nde|ᵉ)|deuxième)"
+_PRESIDENTIAL_ELECTION = (
+    r"(?:de\s+l.{0,3}\s*[ée]lection\s+(?:pr[ée]sidentielle|du\s+pr[ée]sident)"  # de l'élection présidentielle
+    r"|du\s+scrutin\s+pr[ée]sidentiel"  # du scrutin présidentiel
+    r"|de\s+la\s+(?:prochaine\s+)?pr[ée]sidentielle)"  # de la présidentielle
 )
+PRESIDENTIAL_ROUND_RE = re.compile(rf"{_ORDINAL}\s+tour\s+{_PRESIDENTIAL_ELECTION}", re.I)
 
 
 def get_last_poll_count():

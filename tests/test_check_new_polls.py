@@ -1,5 +1,7 @@
 """Garde-fous du déclenchement automatique de triage après création d'issue."""
 
+import pytest
+
 import check_new_polls
 
 
@@ -76,6 +78,31 @@ FILLER = " Méthodologie de l'enquête." * 20
 def test_filtre_texte_garde_une_notice_d_intentions_de_vote(monkeypatch):
     _with_text(monkeypatch, "Intentions de vote au premier tour de l’élection présidentielle" + FILLER)
     assert check_new_polls.has_vote_intentions(POLL)
+
+
+@pytest.mark.parametrize(
+    "phrase",
+    [
+        "premier tour du scrutin présidentiel",
+        "Premier tour de la présidentielle (2027)",
+        "second tour de l'élection du Président de la République",
+        "1 er tour de l’élection présidentielle",
+        "1ᵉʳ tour de l'élection présidentielle",
+        "1re tour de la présidentielle",
+        "2nd tour de l' élection présidentielle",
+        "2ème tour de l'élection présidentielle",
+        "2e tour du scrutin présidentiel",
+        "deuxième tour de l’élection présidentielle",
+    ],
+)
+def test_filtre_texte_garde_les_formulations_voisines_du_tour_de_scrutin(monkeypatch, phrase):
+    _with_text(monkeypatch, f"Intentions de vote au {phrase}" + FILLER)
+    assert check_new_polls.has_vote_intentions(POLL)
+
+
+def test_filtre_texte_ecarte_un_tour_d_une_autre_election(monkeypatch):
+    _with_text(monkeypatch, "Intentions de vote au premier tour de l'élection municipale" + FILLER)
+    assert not check_new_polls.has_vote_intentions(POLL)
 
 
 def test_filtre_texte_ecarte_une_notice_sans_intentions_de_vote(monkeypatch):
