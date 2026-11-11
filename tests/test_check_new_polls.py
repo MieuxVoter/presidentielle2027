@@ -100,6 +100,33 @@ def test_filtre_texte_garde_les_formulations_voisines_du_tour_de_scrutin(monkeyp
     assert check_new_polls.has_vote_intentions(POLL)
 
 
+@pytest.mark.parametrize(
+    "question",
+    [
+        # YouGov / Datapraxis, avril 2022 (notice 9553)
+        "Si demain avait lieu le premier tour de l’élection présidentielle, pour quel(le) candidat(e) "
+        "y aurait-il le plus de chance que vous votiez ?",
+        # Harris Interactive / Atlantico, 2017 (notice 8269)
+        "Si le premier tour de l’élection présidentielle avait lieu dimanche prochain, parmi les candidats "
+        "suivants, pour lequel y aurait-il le plus de chances que vous votiez ?",
+    ],
+)
+def test_filtre_texte_garde_une_question_d_intention_de_vote_sans_l_expression(monkeypatch, question):
+    _with_text(monkeypatch, question + FILLER)
+    assert check_new_polls.has_vote_intentions(POLL)
+
+
+def test_notices_ecartees_listees_dans_le_resume_du_run(monkeypatch, tmp_path, capsys):
+    summary = tmp_path / "summary.md"
+    monkeypatch.setenv("GITHUB_STEP_SUMMARY", str(summary))
+    check_new_polls.report_skipped([{"filename": "x.pdf", "pdf_path": "archives/2026/octobre/x.pdf"}])
+
+    assert "x.pdf" in capsys.readouterr().out
+    content = summary.read_text(encoding="utf-8")
+    assert "1 notice(s) écartée(s)" in content
+    assert f"[x.pdf]({check_new_polls.BLOB_BASE}archives/2026/octobre/x.pdf)" in content
+
+
 def test_filtre_texte_ecarte_un_tour_d_une_autre_election(monkeypatch):
     _with_text(monkeypatch, "Intentions de vote au premier tour de l'élection municipale" + FILLER)
     assert not check_new_polls.has_vote_intentions(POLL)
