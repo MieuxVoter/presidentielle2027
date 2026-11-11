@@ -1,5 +1,5 @@
 # presidentielle2027
-![Sondages agrégés](https://img.shields.io/badge/sondages_agrégés-369-blue)
+![Sondages agrégés](https://img.shields.io/badge/sondages_agrégés-384-blue)
 
 Compilation des sondages d'intention de vote à l'occasion des élections présidentielles 2027 en France.
 
@@ -18,9 +18,9 @@ Classement des scénarios (hypothèses de candidatures) les plus fréquemment te
 <!-- TOP_HYPOTHESES:START -->
 | Rang | Sondages | Candidats (🥇) / Diff vs 🥇 (🥈🥉) |
 |:----:|:--------:|----------------------------------|
-| 🥇 | 24 | Bruno Retailleau, Fabien Roussel, Jean-Luc Mélenchon, Marine Le Pen, Marine Tondelier, Nathalie Arthaud, Nicolas Dupont-Aignan, Raphaël Glucksmann, Édouard Philippe, Éric Zemmour |
-| 🥈 | 24 | $\textcolor{green}{\text{+ Gabriel Attal}}$, $\textcolor{red}{\text{− Édouard Philippe}}$ |
-| 🥉 | 20 | $\textcolor{green}{\text{+ Gabriel Attal}}$ |
+| 🥇 | 26 | Bruno Retailleau, Fabien Roussel, Jean-Luc Mélenchon, Marine Le Pen, Marine Tondelier, Nathalie Arthaud, Nicolas Dupont-Aignan, Raphaël Glucksmann, Édouard Philippe, Éric Zemmour |
+| 🥈 | 26 | $\textcolor{green}{\text{+ Gabriel Attal}}$, $\textcolor{red}{\text{− Édouard Philippe}}$ |
+| 🥉 | 21 | $\textcolor{green}{\text{+ Gabriel Attal}}$ |
 
 > 🥇 liste complète des candidats (référence). 🥈🥉 diff vs 🥇 : $\textcolor{green}{\text{+ ajouté}}$ en vert, $\textcolor{red}{\text{− retiré}}$ en rouge.
 <!-- TOP_HYPOTHESES:END -->
@@ -98,6 +98,10 @@ Une fois mergé, `presidentielle2027.csv` est mis à jour automatiquement.
 | `intentions` | % intentions de vote |
 | `erreur_sup` | Marge erreur supérieure (optionnel) |
 | `erreur_inf` | Marge erreur inférieure (optionnel) |
+
+## 🔗 Projets qui utilisent ces données
+
+- **[Ballottage](https://ballottage.com)** : un jeu gratuit de pronos sur la présidentielle 2027, entre potes et sans argent. Il lit ces sondages via [rolling-2027](https://github.com/EnzoSim/rolling-2027), un fork de ce dépôt.
 
 ## 📜 Licence
 
