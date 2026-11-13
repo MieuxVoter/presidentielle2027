@@ -42,11 +42,7 @@ def load_candidates_by_hypothesis(hypotheses_path: Path) -> dict[str, list[str]]
             hyp_id = (row.get("id_hypothese") or "").strip()
             if not hyp_id:
                 continue
-            candidates = [
-                name.strip()
-                for name in (row.get("hypothese_complete") or "").split(",")
-                if name.strip()
-            ]
+            candidates = [name.strip() for name in (row.get("hypothese_complete") or "").split(",") if name.strip()]
             candidates_by_id[hyp_id] = sorted(candidates, key=str.casefold)
     return candidates_by_id
 
@@ -66,9 +62,7 @@ def _diff_cell(reference: list[str], current: list[str]) -> str:
     return ", ".join(parts) if parts else "_(candidats identiques au 🥇)_"
 
 
-def build_table(
-    counter: Counter, candidates_by_id: dict[str, list[str]], top_n: int = TOP_N
-) -> str:
+def build_table(counter: Counter, candidates_by_id: dict[str, list[str]], top_n: int = TOP_N) -> str:
     """Construit le tableau markdown du TOP N des hypothèses les plus évaluées."""
     medals = ["🥇", "🥈", "🥉"]
     lines = [
@@ -102,9 +96,7 @@ def update_readme(readme_path: Path, table: str) -> bool:
     content = readme_path.read_text(encoding="utf-8")
 
     if START_MARKER not in content or END_MARKER not in content:
-        raise ValueError(
-            f"Marqueurs {START_MARKER} / {END_MARKER} introuvables dans README.md"
-        )
+        raise ValueError(f"Marqueurs {START_MARKER} / {END_MARKER} introuvables dans README.md")
 
     before, rest = content.split(START_MARKER, 1)
     _, after = rest.split(END_MARKER, 1)

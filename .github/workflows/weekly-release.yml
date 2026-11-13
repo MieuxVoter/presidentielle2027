@@ -1,0 +1,157 @@
+name: "Weekly Release - Sondages"
+
+on:
+  # Run every Sunday at 9:00 AM UTC
+  schedule:
+    - cron: "0 9 * * 0"
+
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: "Checkout repository"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Get full history to diff polls.csv over the last week
+
+      - name: "Set up Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: "Install dependencies"
+        run: pip install pandas
+
+      - name: "Generate changelog"
+        id: changelog
+        run: |
+          python << 'EOF'
+          import os
+          import subprocess
+          from datetime import datetime, timedelta
+
+          import pandas as pd
+
+          EMPTY_TREE = "4b825dc642cb6eb9a060e54bf8d69288fbee4904"
+          today = datetime.utcnow()
+          week_ago = today - timedelta(days=7)
+
+          def sh(*args):
+              return subprocess.run(args, capture_output=True, text=True, check=True).stdout
+
+          # Find the oldest commit touching polls.csv in the last 7 days, diff from its parent to HEAD.
+          # This captures exactly the poll rows added/changed during the window, regardless of how
+          # many commits or PRs contributed to it.
+          first_commits = sh(
+              "git", "log", "--since=7 days ago", "--format=%H", "--reverse", "--", "polls.csv"
+          ).strip().splitlines()
+
+          if first_commits:
+              try:
+                  base_commit = sh("git", "rev-parse", f"{first_commits[0]}^").strip()
+              except subprocess.CalledProcessError:
+                  base_commit = EMPTY_TREE
+              diff = sh("git", "diff", "--unified=0", base_commit, "HEAD", "--", "polls.csv")
+          else:
+              diff = ""
+
+          added_ids = []
+          for line in diff.splitlines():
+              if line.startswith("+") and not line.startswith("+++"):
+                  poll_id = line[1:].split(",", 1)[0].strip()
+                  if poll_id and poll_id != "poll_id":
+                      added_ids.append(poll_id)
+
+          polls = pd.read_csv("polls.csv", dtype=str).fillna("")
+          new_polls = polls[polls["poll_id"].isin(added_ids)].drop_duplicates(subset="poll_id")
+
+          hypotheses = pd.read_csv("hypotheses.csv", dtype=str).fillna("")
+          comment_by_hyp = dict(zip(hypotheses["id_hypothese"], hypotheses["commentaire"]))
+
+          changelog = [
+              f"# 📊 Sondages ajoutés - Semaine du {week_ago.strftime('%d/%m/%Y')}",
+              "",
+              f"**{len(new_polls)} nouveau(x) sondage(s)** cette semaine.",
+              "",
+          ]
+
+          if len(new_polls) > 0:
+              for institut, group in new_polls.groupby("nom_institut"):
+                  changelog.append(f"## 🏛️ {institut} ({len(group)})")
+                  changelog.append("")
+                  for _, row in group.sort_values("poll_id").iterrows():
+                      debut, fin = row.get("debut_enquete", ""), row.get("fin_enquete", "")
+                      dates = debut if debut == fin else f"{debut} → {fin}"
+                      tour = row.get("tour", "")
+                      commanditaire = row.get("commanditaire", "")
+                      line = f"- **{row['poll_id']}** · {tour} · {dates}"
+                      if commanditaire:
+                          line += f" · commandité par {commanditaire}"
+                      changelog.append(line)
+                      comment = comment_by_hyp.get(row.get("hypothese", ""), "")
+                      if comment:
+                          changelog.append(f"  - Hypothèse `{row['hypothese']}` : {comment}")
+                  changelog.append("")
+          else:
+              changelog.append("_Aucun nouveau sondage cette semaine._")
+              changelog.append("")
+
+          changelog_text = "\n".join(changelog)
+          with open("CHANGELOG_WEEK.md", "w", encoding="utf-8") as f:
+              f.write(changelog_text)
+
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write(f"count={len(new_polls)}\n")
+              f.write(f"week_start={week_ago.strftime('%Y-%m-%d')}\n")
+
+          print(f"Generated changelog with {len(new_polls)} new poll(s)")
+          EOF
+
+      - name: "Create release tag"
+        id: create_tag
+        if: steps.changelog.outputs.count > 0
+        run: |
+          WEEK_START="${{ steps.changelog.outputs.week_start }}"
+          TAG_NAME="semaine-${WEEK_START}"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag -a "${TAG_NAME}" -m "Sondages de la semaine du ${WEEK_START}"
+          git push origin "${TAG_NAME}"
+
+          echo "tag_name=${TAG_NAME}" >> "$GITHUB_OUTPUT"
+
+      - name: "Create GitHub Release"
+        uses: softprops/action-gh-release@v2
+        if: steps.changelog.outputs.count > 0
+        with:
+          tag_name: ${{ steps.create_tag.outputs.tag_name }}
+          name: "📊 Sondages Présidentielle 2027 - Semaine du ${{ steps.changelog.outputs.week_start }}"
+          body_path: CHANGELOG_WEEK.md
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: "Summary"
+        run: |
+          {
+            echo "## 📊 Weekly Release"
+            echo ""
+            if [ "${{ steps.changelog.outputs.count }}" -gt 0 ]; then
+              echo "- **Tag**: ${{ steps.create_tag.outputs.tag_name }}"
+            else
+              echo "- Aucun sondage ajouté cette semaine, aucune release créée."
+            fi
+            echo "- **New polls**: ${{ steps.changelog.outputs.count }}"
+            echo "- **Week**: ${{ steps.changelog.outputs.week_start }}"
+            echo ""
+            cat CHANGELOG_WEEK.md
+          } >> "$GITHUB_STEP_SUMMARY"

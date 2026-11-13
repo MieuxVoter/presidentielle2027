@@ -1,0 +1,47 @@
+# notice commission des sondages
+# source_pdf: archives/2026/septembre/mini-pres-fixture.pdf
+# name: Mini notice de test
+# categorie: Pres
+# year: 2026
+# extraction: pdfplumber (layout=True)
+
+--- page 1 ---
+
+                        NOTE SUR LES MARGES D'ERREUR
+
+     Pour un échantillon de 1000 personnes interrogées, les marges d'erreur sont
+     les suivantes avec un niveau de confiance de 95 % :
+                           Pour un pourcentage de :        La marge d'erreur est de :
+                                        5                            +/- 1,4
+                                       10                            +/- 1,9
+
+--- page 2 ---
+
+     L'intention de vote au premier tour de l'élection présidentielle
+
+             Hypothèse 1 : François Hollande candidat socialiste
+
+             Q. Si le premier tour de l'élection présidentielle avait lieu dimanche
+             prochain, pour lequel des candidats suivants y aurait-il le plus de
+             chances que vous votiez ?
+
+                                   Publié     Brut    Socio-Démo
+                    Nathalie Arthaud <1%       1%         1%
+                 Jean-Luc Mélenchon  16%      13%        13%
+                    François Hollande 7%       7%         6%
+                     Édouard Philippe 16%     16%        16%
+                       Marine Le Pen  32%     31%        33%
+         N'expriment pas d'intention de vote 14%  14%    14%
+
+--- page 3 ---
+
+     Indices de popularité de l'exécutif
+
+     Q. Avez-vous une bonne ou une mauvaise opinion des personnalités suivantes ?
+
+                                         Bonne opinion   Mauvaise opinion
+                    Édouard Philippe          38%              54%
+                       Marine Le Pen          35%              61%
+
+--- page 4 ---
+

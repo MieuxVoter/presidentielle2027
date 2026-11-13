@@ -1,7 +1,7 @@
 # presidentielle2027
-![Sondages agrégés](https://img.shields.io/badge/sondages_agrégés-180-blue)
+![Sondages agrégés](https://img.shields.io/badge/sondages_agrégés-388-blue)
 
-Compilation des sondages d'opinion produits à l'occasion des élections présidentielles 2027 en France.
+Compilation des sondages d'intention de vote à l'occasion des élections présidentielles 2027 en France.
 
 ## 📊 Données consolidées
 
@@ -9,7 +9,7 @@ Deux fichiers principaux contiennent l'ensemble des résultats de sondages conso
 
 ➡️ [Le fichier CSV des sondages pour l'élection présidentielle 2027](presidentielle2027.csv)
 
-➡️ [Le flux JSON des sondages pour l'élection présidentielle 2027](presidentielle2027.json)
+➡️ [Le flux JSON des sondages pour l'élection présidentielle 2027](https://raw.githubusercontent.com/MieuxVoter/presidentielle2027/refs/heads/main/presidentielle2027.json)
 
 ## 🏆 TOP 3 des hypothèses les plus évaluées
 
@@ -18,20 +18,12 @@ Classement des scénarios (hypothèses de candidatures) les plus fréquemment te
 <!-- TOP_HYPOTHESES:START -->
 | Rang | Sondages | Candidats (🥇) / Diff vs 🥇 (🥈🥉) |
 |:----:|:--------:|----------------------------------|
-| 🥇 | 9 | Bruno Retailleau, Fabien Roussel, Jean-Luc Mélenchon, Jordan Bardella, Marine Tondelier, Nathalie Arthaud, Nicolas Dupont-Aignan, Raphaël Glucksmann, Édouard Philippe, Éric Zemmour |
-| 🥈 | 8 | $\textcolor{green}{\text{+ Marine Le Pen}}$, $\textcolor{red}{\text{− Jordan Bardella}}$ |
-| 🥉 | 8 | $\textcolor{green}{\text{+ Gabriel Attal}}$, $\textcolor{red}{\text{− Édouard Philippe}}$ |
+| 🥇 | 27 | Bruno Retailleau, Fabien Roussel, Jean-Luc Mélenchon, Marine Le Pen, Marine Tondelier, Nathalie Arthaud, Nicolas Dupont-Aignan, Raphaël Glucksmann, Édouard Philippe, Éric Zemmour |
+| 🥈 | 27 | $\textcolor{green}{\text{+ Gabriel Attal}}$, $\textcolor{red}{\text{− Édouard Philippe}}$ |
+| 🥉 | 21 | $\textcolor{green}{\text{+ Gabriel Attal}}$ |
 
 > 🥇 liste complète des candidats (référence). 🥈🥉 diff vs 🥇 : $\textcolor{green}{\text{+ ajouté}}$ en vert, $\textcolor{red}{\text{− retiré}}$ en rouge.
 <!-- TOP_HYPOTHESES:END -->
-
-### Structure du fichier
-
-Chaque ligne représente un candidat dans un sondage spécifique :
-
-- **Métadonnées du sondage** : institut, commanditaire, dates, échantillon, hypothèse
-- **Informations du candidat** : nom, parti, identifiant
-- **Résultats** : intentions de vote, marges d'erreur
 
 ## 🗂️ Structure du projet
 
@@ -59,7 +51,7 @@ En résumé :
 1. Ajoutez une ligne dans `polls.csv` avec les métadonnées
 2. Créez `polls/<poll_id>.csv` avec les résultats
 3. Vérifiez que les candidats existent dans `candidats.csv`
-4. Testez localement avec `pytest` et `python merge.py`
+4. Testez localement avec `pytest` et `python merge.py` (vérification locale avant PR)
 5. Soumettez une Pull Request
 
 ### Validation automatique
@@ -107,6 +99,26 @@ Une fois mergé, `presidentielle2027.csv` est mis à jour automatiquement.
 | `erreur_sup` | Marge erreur supérieure (optionnel) |
 | `erreur_inf` | Marge erreur inférieure (optionnel) |
 
+## 🔗 Projets qui utilisent ces données
+
+- **[Ballottage](https://ballottage.com)** : un jeu gratuit de pronos sur la présidentielle 2027, entre potes et sans argent. Il lit ces sondages via [rolling-2027](https://github.com/EnzoSim/rolling-2027), un fork de ce dépôt.
+
 ## 📜 Licence
 
 Ce projet est sous licence [MIT](LICENSE).
+
+## 🗳️ Marre des sondages qui demandent de choisir un seul candidat ?
+
+Les sondages actuels reposent principalement sur le **scrutin uninominal** : un candidat choisi, tous les autres écartés.
+
+**MieuxVoter soutient le développement du Jugement majoritaire**, une méthode qui permet d'**exprimer avec nuance son opinion sur tous les candidats**.
+
+> 🗳️ **[👉 Je soutiens MieuxVoter](https://www.paypal.com/donate/?hosted_button_id=QD6U4D323WV4S)**
+
+*Chaque soutien contribue au développement du **Jugement majoritaire** et à l'émergence d'une autre façon de mesurer l'opinion.*
+
+**Pourquoi on fait ça ?** Car on souhaite comparer les sondages classiques avec des sondages au jugement majoritaire.
+
+<a href="https://www.paypal.com/donate/?hosted_button_id=QD6U4D323WV4S" target="_blank">
+  <img width="2056" height="765" alt="Soutenir MieuxVoter" src="https://github.com/user-attachments/assets/33925f13-4fdf-4346-9d7b-973216073332" />
+</a>
