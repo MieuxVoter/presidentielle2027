@@ -17,7 +17,6 @@ from pathlib import Path
 
 import pytest
 
-
 ROOT = Path(__file__).resolve().parents[1]
 POLLS_CSV = ROOT / "polls.csv"
 POLLS_DIR = ROOT / "polls"
