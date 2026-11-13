@@ -123,10 +123,10 @@ Le format recommandé est : `YYYYMMDD_MMDD_ii_X`
 - `YYYYMMDD` : date de début de l'enquête
 - `MMDD` : date de fin (jour et mois)
 - `ii` : initiales de l'institut (ex: `if` pour IFOP, `hi` pour Harris Interactive)
-- `X` : lettre pour différencier les hypothèses (A, B, C, D...)
+- `X` : lettre pour différencier les hypothèses (A, B, C, D...), préfixée par `2` pour un 2nd tour (`2A`, `2B`...)
 
 **Exemple :** `20250326_0327_if_A`
-- Sondage du 26-27 mars 2025
+- Sondage du 26 au 27 mars 2025 (`0327` = 27 mars)
 - Institut : IFOP
 - Hypothèse A
 
