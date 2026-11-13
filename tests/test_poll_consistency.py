@@ -31,8 +31,7 @@ SUM_TOLERANCE = 0.5
 # Polls whose published shares do not add up. Both are missing points rather
 # than being off by rounding, so a candidate line is probably missing or wrong.
 # TODO: re-read the source notices and either fix or document the gap.
-KNOWN_SUM_ANOMALIES = {
-}
+KNOWN_SUM_ANOMALIES = {}
 
 # Sum anomalies that have been checked.
 CHECKED_SUM_ANOMALIES = {
@@ -58,8 +57,7 @@ IGNORED_SUM_ANOMALIES = {
 
 # Source PDFs credited to two different surveys. One of the two poll groups
 # carries the wrong filename; the right notice still has to be identified.
-KNOWN_FILENAME_CONFLICTS = {
-}
+KNOWN_FILENAME_CONFLICTS = {}
 
 # Documents containing multiple polls.
 MULTIPLE_POLL_FILENAMES = {
@@ -151,9 +149,9 @@ def test_survey_dates_are_iso_and_ordered(row: dict):
         except ValueError:
             pytest.fail(f"{poll_id} has {field}='{raw}', expected an ISO date (YYYY-MM-DD)")
 
-    assert parsed["debut_enquete"] <= parsed["fin_enquete"], (
-        f"{poll_id} starts on {parsed['debut_enquete']} and ends on {parsed['fin_enquete']}"
-    )
+    assert (
+        parsed["debut_enquete"] <= parsed["fin_enquete"]
+    ), f"{poll_id} starts on {parsed['debut_enquete']} and ends on {parsed['fin_enquete']}"
 
 
 @pytest.mark.parametrize("row", POLLS_METADATA, ids=poll_ids())
@@ -166,13 +164,13 @@ def test_poll_id_describes_the_survey(row: dict):
     start = _clean(row, "debut_enquete")
     end = _clean(row, "fin_enquete")
 
-    assert match.group("start") == start.replace("-", ""), (
-        f"{poll_id} announces a start of {match.group('start')} but debut_enquete is {start}"
-    )
+    assert match.group("start") == start.replace(
+        "-", ""
+    ), f"{poll_id} announces a start of {match.group('start')} but debut_enquete is {start}"
 
-    assert match.group("end") == f"{end[5:7]}{end[8:10]}", (
-        f"{poll_id} announces an end of {match.group('end')} (MMDD) but fin_enquete is {end}"
-    )
+    assert (
+        match.group("end") == f"{end[5:7]}{end[8:10]}"
+    ), f"{poll_id} announces an end of {match.group('end')} (MMDD) but fin_enquete is {end}"
 
 
 @pytest.mark.parametrize("row", POLLS_METADATA, ids=poll_ids())

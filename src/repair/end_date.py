@@ -16,12 +16,14 @@ PROJECT_DIR = SCRIPT_DIR.parent.parent
 POLLS_PATH = PROJECT_DIR / "polls.csv"
 POLLS_DIR = PROJECT_DIR / "polls"
 
-REGEX = re.compile(r"^SKIPPED.+tests/test_poll_consistency\.py.+(([0-9]{8}_)([0-9]{2})([0-9]{2})(_[a-z]+_2?[A-Z])) spells its end date DDMM$")
+REGEX = re.compile(
+    r"^SKIPPED.+tests/test_poll_consistency\.py.+(([0-9]{8}_)([0-9]{2})([0-9]{2})(_[a-z]+_2?[A-Z])) spells its end date DDMM$"
+)
+
 
 def git_mv(source, dest):
-    subprocess.check_output([
-        "git", "mv", source, dest
-    ])
+    subprocess.check_output(["git", "mv", source, dest])
+
 
 with POLLS_PATH.open("r+") as polls_file:
     polls_content = polls_file.read()
