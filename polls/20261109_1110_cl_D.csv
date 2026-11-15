@@ -1,19 +1,19 @@
 candidat,intentions,erreur_sup,erreur_inf
-Nathalie Arthaud,0.5,
-Jean-Luc Mélenchon,19.0,
-François Ruffin,1.5,
-Fabien Roussel,1.5,
-Marine Tondelier,1.0,
-Raphaël Glucksmann,8.0,
-Dominique de Villepin,1.0,
-Édouard Philippe,8.0,
-Gabriel Attal,2.0,
-Christine Lagarde,8.0,
-Natacha Polony,2.5,
-Teddy Riner,2.0,
-David Lisnard,8.0,
-Bruno Retailleau,5.0,
-François Asselineau,1.0,
-Nicolas Dupont-Aignan,2.0,
-Marine Le Pen,27.0,
-Éric Zemmour,2.0,
+Nathalie Arthaud,0.5,0.41,-0.41
+Jean-Luc Mélenchon,19.0,2.28,-2.28
+François Ruffin,1.5,0.7,-0.7
+Fabien Roussel,1.5,0.7,-0.7
+Marine Tondelier,1.0,0.58,-0.58
+Raphaël Glucksmann,8.0,1.57,-1.57
+Dominique de Villepin,1.0,0.58,-0.58
+Édouard Philippe,8.0,1.57,-1.57
+Gabriel Attal,2.0,0.81,-0.81
+Christine Lagarde,8.0,1.57,-1.57
+Natacha Polony,2.5,0.91,-0.91
+Teddy Riner,2.0,0.81,-0.81
+David Lisnard,8.0,1.57,-1.57
+Bruno Retailleau,5.0,1.26,-1.26
+François Asselineau,1.0,0.58,-0.58
+Nicolas Dupont-Aignan,2.0,0.81,-0.81
+Marine Le Pen,27.0,2.57,-2.57
+Éric Zemmour,2.0,0.81,-0.81
