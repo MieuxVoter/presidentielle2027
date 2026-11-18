@@ -2335,6 +2335,21 @@
         "Éric Zemmour"
       ],
       "comment": "Glucksmann Polony Riner Philippe Attal Retailleau Lisnard MLP"
+    },
+    {
+      "id": "H136",
+      "candidates": [
+        "Fabien Roussel",
+        "Jean-Luc Mélenchon",
+        "Marine Tondelier",
+        "Raphaël Glucksmann",
+        "Édouard Philippe",
+        "Bruno Retailleau",
+        "Nicolas Dupont-Aignan",
+        "Jordan Bardella",
+        "Éric Zemmour"
+      ],
+      "comment": "Verian Glucksmann Philippe Retailleau Bardella sans Arthaud"
     }
   ],
   "polls": [
@@ -12991,8 +13006,8 @@
           "retrait_candidature": "",
           "second_round": "",
           "intentions": 3.0,
-          "erreur_sup": 1.06,
-          "erreur_inf": -1.06
+          "erreur_sup": 1.09,
+          "erreur_inf": -1.09
         },
         {
           "candidate_id": "JLM",
@@ -13005,8 +13020,8 @@
           "retrait_candidature": "",
           "second_round": "",
           "intentions": 12.0,
-          "erreur_sup": 2.01,
-          "erreur_inf": -2.01
+          "erreur_sup": 2.08,
+          "erreur_inf": -2.08
         },
         {
           "candidate_id": "MT",
@@ -13019,8 +13034,8 @@
           "retrait_candidature": "",
           "second_round": "",
           "intentions": 5.0,
-          "erreur_sup": 1.35,
-          "erreur_inf": -1.35
+          "erreur_sup": 1.39,
+          "erreur_inf": -1.39
         },
         {
           "candidate_id": "RG",
@@ -13033,8 +13048,8 @@
           "retrait_candidature": "",
           "second_round": "",
           "intentions": 13.0,
-          "erreur_sup": 2.08,
-          "erreur_inf": -2.08
+          "erreur_sup": 2.15,
+          "erreur_inf": -2.15
         },
         {
           "candidate_id": "EP",
@@ -13047,8 +13062,8 @@
           "retrait_candidature": "",
           "second_round": "",
           "intentions": 17.0,
-          "erreur_sup": 2.33,
-          "erreur_inf": -2.33
+          "erreur_sup": 2.4,
+          "erreur_inf": -2.4
         },
         {
           "candidate_id": "BR",
@@ -13061,8 +13076,8 @@
           "retrait_candidature": "",
           "second_round": "",
           "intentions": 7.5,
-          "erreur_sup": 1.63,
-          "erreur_inf": -1.63
+          "erreur_sup": 1.69,
+          "erreur_inf": -1.69
         },
         {
           "candidate_id": "NDA",
@@ -13075,8 +13090,8 @@
           "retrait_candidature": "",
           "second_round": "",
           "intentions": 2.0,
-          "erreur_sup": 0.87,
-          "erreur_inf": -0.87
+          "erreur_sup": 0.9,
+          "erreur_inf": -0.9
         },
         {
           "candidate_id": "JB",
@@ -13089,8 +13104,8 @@
           "retrait_candidature": "2026-07-07",
           "second_round": "",
           "intentions": 36.5,
-          "erreur_sup": 2.98,
-          "erreur_inf": -2.98
+          "erreur_sup": 3.08,
+          "erreur_inf": -3.08
         },
         {
           "candidate_id": "EZ",
@@ -13103,8 +13118,8 @@
           "retrait_candidature": "",
           "second_round": "",
           "intentions": 4.0,
-          "erreur_sup": 1.21,
-          "erreur_inf": -1.21
+          "erreur_sup": 1.25,
+          "erreur_inf": -1.25
         }
       ],
       "poll_id": "20251118_1120_ve",
@@ -13114,7 +13129,7 @@
       "fin_enquete": "2025-11-20",
       "echantillon": 1000,
       "population": "représentatif de la population française âgée de 18 ans et plus",
-      "hypothese": "",
+      "hypothese": "H136",
       "tour": "1er Tour",
       "rolling": "",
       "media": "True",
