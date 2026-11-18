@@ -199,6 +199,20 @@ def test_hypothesis_references_in_polls_are_valid():
                 assert hyp in valid_hypotheses, f"Poll {row.get('poll_id')} references unknown hypothesis: {hyp}"
 
 
+def test_every_poll_has_a_hypothesis():
+    """Chaque sondage de polls.csv doit déclarer une hypothèse.
+
+    Sans hypothèse, un sondage échappe à tous les tests de cohérence (candidats connus,
+    correspondance avec les résultats, doublons).
+    """
+    with (ROOT / "polls.csv").open("r", encoding="utf-8") as f:
+        missing = [row.get("poll_id") for row in csv.DictReader(f) if not (row.get("hypothese") or "").strip()]
+    assert not missing, (
+        f"Sondages sans hypothèse dans polls.csv : {missing}. "
+        "Renseigner la colonne hypothese (créer l'hypothèse dans hypotheses.csv si besoin)."
+    )
+
+
 def test_hypothesis_references_in_presidentielle2027_are_valid():
     """Toute hypothèse citée dans presidentielle2027.csv (fichier généré) doit exister dans hypotheses.csv."""
     valid_hypotheses = set(_load_hypotheses())
