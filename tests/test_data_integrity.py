@@ -1,11 +1,34 @@
 """Validate integrity of metadata CSVs and cross-references."""
 
 import csv
+import unicodedata
 from pathlib import Path
 
 import pytest
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def _split_candidates(hypothese_complete: str) -> list:
+    """Découpe une hypothèse en noms de candidats (espaces retirés, entrées vides ignorées)."""
+    return [c.strip() for c in hypothese_complete.split(",") if c.strip()]
+
+
+def _normalize_name(name: str) -> str:
+    """Normalise un nom pour comparaison : casse et accents ignorés (même logique que merge.py)."""
+    nfd = unicodedata.normalize("NFD", name.strip().casefold())
+    return "".join(c for c in nfd if not unicodedata.combining(c))
+
+
+def _load_hypotheses() -> dict:
+    """Retourne {id_hypothese: [candidats]} depuis hypotheses.csv."""
+    hypotheses = {}
+    with (ROOT / "hypotheses.csv").open("r", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            hid = row.get("id_hypothese", "").strip()
+            if hid:
+                hypotheses[hid] = _split_candidates(row.get("hypothese_complete", ""))
+    return hypotheses
 
 
 def test_polls_csv_references_existing_files():
@@ -176,47 +199,65 @@ def test_hypothesis_references_in_polls_are_valid():
                 assert hyp in valid_hypotheses, f"Poll {row.get('poll_id')} references unknown hypothesis: {hyp}"
 
 
+def test_hypothesis_references_in_presidentielle2027_are_valid():
+    """Toute hypothèse citée dans presidentielle2027.csv (fichier généré) doit exister dans hypotheses.csv."""
+    valid_hypotheses = set(_load_hypotheses())
+
+    unknown = set()
+    with (ROOT / "presidentielle2027.csv").open("r", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            hyp = row.get("hypothese", "").strip()
+            if hyp and hyp not in valid_hypotheses:
+                unknown.add((row.get("poll_id", "").strip(), hyp))
+
+    assert not unknown, "presidentielle2027.csv référence des hypothèses inconnues de hypotheses.csv :\n" + "\n".join(
+        f"  sondage {poll_id} → {hyp}" for poll_id, hyp in sorted(unknown)
+    )
+
+
+def test_hypotheses_candidates_exist_in_candidats_csv():
+    """Chaque nom d'une hypothèse doit figurer dans la colonne complete_name de candidats.csv.
+
+    Évite qu'une modalité de réponse (« Ne se prononcent pas », « Blanc / nul »…)
+    ou une faute de frappe soit saisie comme candidat (cf. #348).
+    """
+    with (ROOT / "candidats.csv").open("r", encoding="utf-8") as f:
+        known = {row.get("complete_name", "").strip() for row in csv.DictReader(f)}
+
+    offenders = [
+        (hid, name) for hid, candidates in _load_hypotheses().items() for name in candidates if name not in known
+    ]
+
+    assert not offenders, (
+        "Hypothèses contenant des noms absents de candidats.csv (complete_name) :\n"
+        + "\n".join(f"  {hid} : « {name} »" for hid, name in offenders)
+        + "\n  → corriger le nom (orthographe exacte de candidats.csv) ou ajouter le candidat à candidats.csv."
+    )
+
+
 def test_hypotheses_have_no_duplicates():
-    """Each hypothesis should have a unique set of candidates (no redundant hypotheses)."""
-    hypotheses_csv = ROOT / "hypotheses.csv"
+    """Deux hypothèses ne doivent pas avoir le même ensemble de candidats.
 
-    # Map normalized candidate sets to hypothesis IDs
-    candidate_sets = {}
+    L'ordre, les espaces, la casse, les accents et les entrées vides (virgule finale) sont ignorés.
+    """
+    ids_by_set = {}
+    for hid, candidates in _load_hypotheses().items():
+        if not candidates:
+            continue
+        key = frozenset(_normalize_name(c) for c in candidates)
+        ids_by_set.setdefault(key, []).append(hid)
 
-    with hypotheses_csv.open("r", encoding="utf-8") as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            hid = row.get("id_hypothese", "").strip()
-            candidates_str = row.get("hypothese_complete", "").strip()
-
-            if not hid or not candidates_str:
-                continue
-
-            # Normalize: split by comma, strip whitespace, sort alphabetically, ignore empty strings
-            candidates = [c.strip() for c in candidates_str.split(",") if c.strip()]
-            candidates_normalized = tuple(sorted(c.lower() for c in candidates))
-
-            if candidates_normalized in candidate_sets:
-                existing_hid = candidate_sets[candidates_normalized]
-                pytest.fail(
-                    f"Redundant hypothesis detected:\n"
-                    f"  {hid} and {existing_hid} have the same candidates:\n"
-                    f"  {', '.join(sorted(candidates))}\n"
-                    f"  Consider removing one of these hypotheses or verifying the data."
-                )
-
-            candidate_sets[candidates_normalized] = hid
+    duplicates = [ids for ids in ids_by_set.values() if len(ids) > 1]
+    assert not duplicates, (
+        "Hypothèses redondantes (même ensemble de candidats) :\n"
+        + "\n".join(f"  {' = '.join(ids)}" for ids in duplicates)
+        + "\n  → garder l'identifiant le plus ancien et y rediriger les références de polls.csv."
+    )
 
 
 def test_poll_candidates_match_declared_hypothesis():
     """Verify that candidates in each poll file match the declared hypothesis."""
-    import unicodedata
-
-    def normalize_name(name: str) -> str:
-        """Normalize candidate name for comparison (same logic as merge.py)."""
-        # NFD decomposition + filter combining marks
-        nfd = unicodedata.normalize("NFD", name.strip().lower())
-        return "".join(c for c in nfd if not unicodedata.combining(c))
+    normalize_name = _normalize_name
 
     hypotheses_csv = ROOT / "hypotheses.csv"
     polls_csv = ROOT / "polls.csv"
