@@ -47,6 +47,10 @@ CHECKED_SUM_ANOMALIES = {
     "20261012_1015_yg_D": 101,
     "20261012_1015_yg_E": 99,
     "20261021_1022_ow_A": 101,
+    # YouGov / Le HuffPost, notice 10382 : scores publiés arrondis à l'entier.
+    "20261112_1117_yg_B": 101,
+    "20261112_1117_yg_C": 101,
+    "20261112_1117_yg_E": 102,
 }
 
 IGNORED_SUM_ANOMALIES = {
