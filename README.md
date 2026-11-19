@@ -102,6 +102,7 @@ Une fois mergé, `presidentielle2027.csv` est mis à jour automatiquement.
 ## 🔗 Projets qui utilisent ces données
 
 - **[Ballottage](https://ballottage.com)** : un jeu gratuit de pronos sur la présidentielle 2027, entre potes et sans argent. Il lit ces sondages via [rolling-2027](https://github.com/EnzoSim/rolling-2027), un fork de ce dépôt.
+- **[Sondage Présidentielle](https://sondage-presidentielle.fr/)** : les intentions de vote au premier tour de la présidentielle 2027, par candidat et par institut, avec leur moyenne.
 
 ## 📜 Licence
 
